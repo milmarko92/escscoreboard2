@@ -60,7 +60,7 @@ export const countryNameMap = {
     "portugal":"Portugal",
     "romania": "Romania",
     "russia": "Russia",
-    "san marino": "San Marino",
+    "san marino": "San Marino, the",
     "serbia": "Serbia",
     "slovenia": "Slovenia",
     "spain": "ESPAIN WILL WIN",
