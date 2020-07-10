@@ -13,7 +13,7 @@
    - 'escscoreboard'
    - '--image'
    - 'gcr.io/$PROJECT_ID/escscoreboard:123'
-   - 'region'
+   - '--region'
    - 'europe-west1'
    - '--platform'
    - 'managed'
