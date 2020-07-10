@@ -14,7 +14,7 @@
    - '--image'
    - 'gcr.io/$PROJECT_ID/escscoreboard:$COMMIT_SHA'
    - '--region'
-   - 'europe-west3-c'
+   - 'europe-west3'
    - '--platform'
    - 'managed'
  images:
