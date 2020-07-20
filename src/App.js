@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import NameComponent from "./NameComponent";
-import OngoingRankComponent from "./OngoingRankComponent";
 import ScoreboardComponent from "./ScoreboardComponent";
 import {countryNameMap, countries, rankToPointsMap, all_voters} from "./constants";
-import VotingComponent from "./VotingComponent";
 import FlipMove from "react-flip-move";
-import VotingButtonComponent from "./VotingButtonComponent";
-import OngoingRankCountryComponent from "./OngoingRankCountryComponent";
 import { saveAs } from 'file-saver';
+import {getFlagForCountry} from "./images";
 
 class App extends Component {
     constructor(props) {
@@ -153,6 +150,19 @@ class App extends Component {
         this.state.count--;
     }
 
+    votingButtonComponent(country) {
+        return (
+            <div className={"country country--tiny"} onClick={e => this.pushVote(country)}>
+                <span className={"country__flag"}>
+                    <img src={getFlagForCountry(country)}/>
+                </span>
+                <span className={"country__name"}>
+                    {countryNameMap[country.toLowerCase()]}
+                </span>
+            </div>
+        )
+
+    }
     votingPanel(ranking){
         var list = []
         for(var i = 0; i < countries.length; i++) {
@@ -167,7 +177,7 @@ class App extends Component {
                     list.map(
                         (value, index) => {
                             return (
-                                <span key={value}><button key={value} value={value} onClick={e => this.pushVote(e.target.value)}> <VotingButtonComponent country={value} key={value}/></button></span>
+                                <span key={value}>{this.votingButtonComponent(value)}</span>
                             )
                         }
                     )
@@ -190,6 +200,22 @@ class App extends Component {
         return items
     }
 
+    ongoingRankCountryComponent(country, rank){
+        return (
+            <div className={"country country--small"} onClick={ e => this.popVote(country)}>
+            <span className={"country__rank"}>
+                #{rank}
+            </span>
+                <span className={"country__flag"}>
+                <img src={getFlagForCountry(country)}/>
+            </span>
+                <span className={"country__name"}>
+                {countryNameMap[country.toLowerCase()]}
+            </span>
+            </div>
+        )
+    }
+
     ongoingRank() {
         const ranked = this.sortDict(this.state.currentVoting)
         if (!ranked || !ranked.length){
@@ -202,7 +228,8 @@ class App extends Component {
                     ranked.map(
                         (value, index) => {
                             return (
-                                <span key={value[0]}><button key={value[0]} value={value[0]}  onClick={ e => this.popVote(e.target.value)} ><OngoingRankCountryComponent country={value[0]} rank={value[1]}/></button></span>
+                                // <span key={value[0]}><button key={value[0]} value={value[0]}  onClick={ e => this.popVote(e.target.value)} ><OngoingRankCountryComponent country={value[0]} rank={value[1]}/></button></span>
+                                <span key={value[0]}>{ this.ongoingRankCountryComponent(value[0], value[1])}</span>
                             )
                         }
                     )
