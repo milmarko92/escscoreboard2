@@ -12,11 +12,8 @@ $color-primary: #111;
 body {
   margin: 0;
   padding: 0;
-  background-image: url("img/we-are-one.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  font-family: "Tahoma", sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #111;
   overflow: hidden;
 }
@@ -26,16 +23,15 @@ body {
 }
 
 .Button {
-  background: #930005;
-  color: white;
+  background: white;
+  color: black;
   border: 0;
   display: inline-block;
   margin-left: 16px;
   padding: 8px 12px;
   font-weight: 700;
-  border-radius: 240px;
   transition: .4s ease;
-  font-family: "Gotham";
+  font-family: "Arial";
   text-transform: uppercase;
 
   &:hover {
@@ -49,11 +45,8 @@ body {
   padding: 48px 48px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 240px auto 156px;
-  background-image: url("img/confluence.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  grid-template-rows: 156px auto 56px;
+  grid-gap: 24px;
   height: 100vh;
   align-items: center;
   grid-template-areas:
@@ -61,6 +54,22 @@ body {
     "scoreboard votes"
     "footer votes"
     "votingbuttons votes";
+}
+
+.Ranking {
+  button {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgba(white, 0.5);
+    color: white;
+    font-weight: 700;
+    margin: 24px auto;
+    display: block;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
 }
 
 .Logo {
@@ -71,18 +80,17 @@ body {
 .country {
   text-align: left;
   flex-grow: 1;
-  color: #030076;
-  background-image: linear-gradient(to right, #e4f2fa 0%, #e4f2fa 85%, transparent 100%);
   margin: 0 32px 12px 0;
-  padding: 1px 32px 1px 8px;
+  padding: 2px 2px 2px 8px;
   width: 100%;
   font-size: 22px;
   break-inside: avoid;
   text-transform: uppercase;
   position: relative;
   font-weight: 700;
-  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .2);
-  border-radius: 2px 0 0 2px;
+  border-top: 2px solid rgba(white, 0.5);
+  border-bottom: 2px solid rgba(white, 0.5);
+  color: white;
 
   &--small {
     position: relative;
@@ -108,7 +116,7 @@ body {
 
   &--tiny {
     position: relative;
-    font-size: 8px;
+    font-size: 10px;
     padding: 2px 8px;
     margin: 0 0 2px;
     min-width: 100px;
@@ -123,9 +131,6 @@ body {
     }
   }
 
-  &:not(&--small):nth-of-type(-n+10) {
-    background-color: #1a3a41;
-  }
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -179,31 +184,13 @@ body {
   h1 {
     text-align: center;
     display: block;
-    color: #030076;
     position: relative;
-    padding: 16px 0 16px 56px;
+    padding: 16px 0;
     text-transform: uppercase;
     height: 72px;
     font-size: 28px;
     margin-bottom: 24px;
-    background-image: url("img/splash.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     position: relative;
-    &:before {
-      content: "";
-      display: block;
-      width: 128px;
-      height: 128px;
-      background-image: url("img/treble.png");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: -32px;
-      left: 16px;
-    }
   }
 }
 
@@ -221,9 +208,29 @@ body {
 .VotingButtons {
   grid-area: votingbuttons;
   width: 100%;
-  padding: 0 36px;
+  padding: 0;
+  text-align: center;
 
   >div {
-    columns: 7;
+    columns: 4;
+  }
+}
+
+.VotingButtons {
+  & + div {
+    text-align: center;
+    button {
+      appearance: none;
+      color: white;
+      text-transform: uppercase;
+      padding: 2px;
+      border: 2px solid rgba(white, 0.5);
+      background-color: transparent;
+      margin: 0 8px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
   }
 }
