@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Medium.otf');
+  font-family: 'Dom Casual';
+  src: url('fonts/DomCasual.woff');
 }
 
 $color-primary: #111;
@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Arial", sans-serif;
+  font-family: "Dom Casual", sans-serif;
   background-color: #111;
   overflow: hidden;
 }
@@ -23,21 +23,19 @@ body {
 }
 
 .Button {
-  background: white;
-  color: black;
-  border: 0;
-  display: inline-block;
-  margin-left: 16px;
-  padding: 8px 12px;
-  font-weight: 700;
+  appearance: none;
+  background-color: rgba(white, 0.2);
+  color: white;
+  display: block;
   transition: .4s ease;
-  font-family: "Arial";
+  font-family: "Dom Casual";
   text-transform: uppercase;
-
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
   &:hover {
     cursor: pointer;
-    color: white;
-    background-color: lighten($color-primary, 5%);
+    opacity: 0.5;
   }
 }
 
@@ -46,7 +44,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 156px auto 56px;
-  grid-gap: 24px;
+  grid-gap: 8px;
   height: 100vh;
   align-items: center;
   grid-template-areas:
@@ -59,16 +57,38 @@ body {
 .Ranking {
   button {
     appearance: none;
-    background-color: transparent;
-    border: 2px solid rgba(white, 0.5);
+    background-color: rgba(white, 0.2);
     color: white;
-    font-weight: 700;
     margin: 24px auto;
     display: block;
+    transition: .4s ease;
+    font-family: "Dom Casual";
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
     &:hover {
       cursor: pointer;
       opacity: 0.5;
     }
+  }
+}
+
+.save-button {
+  appearance: none;
+  background-color: rgba(white, 0.2);
+  color: white;
+  margin: 24px auto;
+  display: block;
+  transition: .4s ease;
+  font-family: "Dom Casual";
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
   }
 }
 
@@ -80,49 +100,62 @@ body {
 .country {
   text-align: left;
   flex-grow: 1;
-  margin: 0 32px 12px 0;
-  padding: 2px 2px 2px 8px;
+  margin: 0 16px 4px 0;
   width: 100%;
-  font-size: 22px;
+  font-size: 24px;
   break-inside: avoid;
   text-transform: uppercase;
   position: relative;
   font-weight: 700;
-  border-top: 2px solid rgba(white, 0.5);
-  border-bottom: 2px solid rgba(white, 0.5);
   color: white;
+  background-color: teal;
+  -webkit-text-stroke: 0.5px rgba(#1e5061, 0.8);
+  -webkit-text-fill-color: white;
+  background-image: linear-gradient(to right, #07868b 0%, #c2ebff 80%, #07648b 100%);
 
   &--small {
     position: relative;
     font-size: 14px;
     padding: 2px 8px;
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     min-width: 326px;
+    -webkit-text-stroke: 0;
+    -webkit-text-fill-color: 0;
 
     .country {
       &__flag {
         float: none;
-        margin-left: 0;
-        border-left: 0;
+        margin: 0;
         img {
           width: 22px;
           height: 18px;
         }
       }
       &__rank {
+        width: 16px;
       }
     }
   }
 
   &--tiny {
     position: relative;
-    font-size: 10px;
+    font-size: 14px;
     padding: 2px 8px;
-    margin: 0 0 2px;
-    min-width: 100px;
+    margin: 0 0 4px;
+    -webkit-text-stroke: 0;
+    -webkit-text-fill-color: 0;
+    background-image: none;
+    background-color: rgba(white, 0.2);
+    cursor: pointer;
+    transition: .4s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+
 
     .country {
       &__flag {
+        margin: 0;
         img {
           width: 22px;
           height: 18px;
@@ -136,29 +169,29 @@ body {
   align-items: center;
 
   &__rank {
-    width: 32px;
+    width: 48px;
     margin-right: 16px;
     text-align: center;
   }
 
   &__name {
-
+    padding: 4px 0 2px 8px;
   }
 
   &__flag {
-    margin-right: 16px;
+    margin-right: 32px;
 
     img {
       display: block;
-      width: 22px;
-      height: 24px;
+      width: 38px;
+      height: 32px;
     }
   }
 
   &__average {
     margin-left: auto;
     text-align: right;
-    margin-right: 16px;
+    padding: 4px 8px 2px 8px;
   }
 }
 
@@ -170,6 +203,7 @@ body {
 
   >div {
     columns: 2;
+    column-gap: 12px;
   }
 }
 
@@ -188,7 +222,7 @@ body {
     padding: 16px 0;
     text-transform: uppercase;
     height: 72px;
-    font-size: 28px;
+    font-size: 48px;
     margin-bottom: 24px;
     position: relative;
   }
@@ -212,21 +246,27 @@ body {
   text-align: center;
 
   >div {
-    columns: 4;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    > span {
+      margin: 0 4px 0 0;
+    }
   }
 }
 
 .VotingButtons {
   & + div {
-    text-align: center;
     button {
       appearance: none;
       color: white;
       text-transform: uppercase;
-      padding: 2px;
-      border: 2px solid rgba(white, 0.5);
-      background-color: transparent;
-      margin: 0 8px;
+      font-size: 14px;
+      padding: 4px;
+      background-color: rgba(white, 0.2);
+      border: none;
+      font-family: "Dom Casual";
+      margin: 0 4px 0 0;
       &:hover {
         cursor: pointer;
         opacity: 0.5;

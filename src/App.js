@@ -262,10 +262,6 @@ class App extends Component {
                 {this.ongoingRank()}
             </div>
           </div>
-          <div className={"Buttons"}>
-            {/*<button className={"Button Button--random"} onClick={this.addRandomVote.bind(this)}>Random vote</button>*/}
-            <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
-          </div>
           <div className={"VotingButtons"}>
               {this.votingPanel()}
           </div>
@@ -278,7 +274,11 @@ class App extends Component {
                   }
               )}
           </div>
-          <button onClick={e => {
+          <div className={"Buttons"}>
+            {/*<button className={"Button Button--random"} onClick={this.addRandomVote.bind(this)}>Random vote</button>*/}
+            <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
+          </div>
+          <button className={"save-button"} onClick={e => {
               let content = []
               content.push("country,")
               content.push(this.state.voters)
