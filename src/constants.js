@@ -119,7 +119,7 @@ export const countryFlagMap = {
     "france": "FR.png",
     "germany": "DE.png",
     "russia": "RU.png",
-    "spain": "ES.png",
+    "spain": "ES1.png",
     "yugoslavia": "YU.png",
     "luxembourg": "LU.png",
     "italy": "IT.png",
