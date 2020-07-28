@@ -23,10 +23,9 @@ body {
   border: none;
   padding: 8px 16px;
   font-size: 14px; }
-
-.Button:hover {
-  cursor: pointer;
-  opacity: 0.5; }
+  .Button:hover {
+    cursor: pointer;
+    opacity: 0.5; }
 
 .App {
   padding: 48px 48px;
@@ -50,10 +49,9 @@ body {
   border: none;
   padding: 8px 16px;
   font-size: 14px; }
-
-.Ranking button:hover {
-  cursor: pointer;
-  opacity: 0.5; }
+  .Ranking button:hover {
+    cursor: pointer;
+    opacity: 0.5; }
 
 .save-button {
   appearance: none;
@@ -67,10 +65,9 @@ body {
   border: none;
   padding: 8px 16px;
   font-size: 14px; }
-
-.save-button:hover {
-  cursor: pointer;
-  opacity: 0.5; }
+  .save-button:hover {
+    cursor: pointer;
+    opacity: 0.5; }
 
 .Logo {
   grid-area: logo;
@@ -91,65 +88,53 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center; }
-
-.country--small {
-  position: relative;
-  font-size: 14px;
-  padding: 2px 8px;
-  margin: 0 0 4px;
-  min-width: 326px; }
-
-.country--small .country__flag {
-  float: none;
-  margin: 0; }
-
-.country--small .country__flag img {
-  width: 22px;
-  height: 18px; }
-
-.country--small .country__rank {
-  width: 16px; }
-
-.country--tiny {
-  position: relative;
-  font-size: 14px;
-  padding: 2px 8px;
-  margin: 0 0 4px;
-  background-image: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #b79c70;
-  cursor: pointer;
-  transition: .4s ease; }
-
-.country--tiny:hover {
-  opacity: 0.5; }
-
-.country--tiny .country__flag {
-  margin: 0; }
-
-.country--tiny .country__flag img {
-  width: 22px;
-  height: 18px; }
-
-.country__rank {
-  width: 48px;
-  margin-right: 16px;
-  text-align: center; }
-
-.country__name {
-  padding: 4px 0 2px 8px; }
-
-.country__flag img {
-  display: block;
-  width: 38px;
-  height: 32px; }
-
-.country__average {
-  margin-left: auto;
-  text-align: right;
-  padding: 4px 8px 2px 8px;
-  font-family: "Arial Narrow";
-  letter-spacing: 4px; }
+  .country--small {
+    position: relative;
+    font-size: 14px;
+    padding: 2px 8px;
+    margin: 0 0 4px;
+    min-width: 326px; }
+    .country--small .country__flag {
+      float: none;
+      margin: 0; }
+      .country--small .country__flag img {
+        width: 22px;
+        height: 18px; }
+    .country--small .country__rank {
+      width: 16px; }
+  .country--tiny {
+    position: relative;
+    font-size: 14px;
+    padding: 2px 8px;
+    margin: 0 0 4px;
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #b79c70;
+    cursor: pointer;
+    transition: .4s ease; }
+    .country--tiny:hover {
+      opacity: 0.5; }
+    .country--tiny .country__flag {
+      margin: 0; }
+      .country--tiny .country__flag img {
+        width: 22px;
+        height: 18px; }
+  .country__rank {
+    width: 48px;
+    margin-right: 16px;
+    text-align: center; }
+  .country__name {
+    padding: 4px 0 2px 8px; }
+  .country__flag img {
+    display: block;
+    width: 38px;
+    height: 32px; }
+  .country__average {
+    margin-left: auto;
+    text-align: right;
+    padding: 4px 8px 2px 8px;
+    font-family: "Arial Narrow";
+    letter-spacing: 4px; }
 
 .Scoreboard {
   grid-area: scoreboard;
@@ -165,20 +150,19 @@ body {
   position: relative;
   min-height: 68vh;
   min-width: calc(326px + 24px + 24px); }
-
-.Voting h1 {
-  color: #b79c70;
-  font-weight: 400;
-  letter-spacing: 4px;
-  text-align: center;
-  display: block;
-  position: relative;
-  padding: 16px 0;
-  text-transform: uppercase;
-  height: 72px;
-  font-size: 48px;
-  margin-bottom: 24px;
-  position: relative; }
+  .Voting h1 {
+    color: #b79c70;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 16px 0;
+    text-transform: uppercase;
+    height: 72px;
+    font-size: 48px;
+    margin-bottom: 24px;
+    position: relative; }
 
 .Buttons {
   grid-area: footer; }
@@ -193,14 +177,12 @@ body {
   width: 100%;
   padding: 0;
   text-align: center; }
-
-.VotingButtons > div {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center; }
-
-.VotingButtons > div > span {
-  margin: 0 4px 0 0; }
+  .VotingButtons > div {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center; }
+    .VotingButtons > div > span {
+      margin: 0 4px 0 0; }
 
 .VotingButtons + div button {
   appearance: none;
@@ -212,7 +194,6 @@ body {
   border: none;
   font-family: "Gill Sans";
   margin: 0 4px 0 0; }
-
-.VotingButtons + div button:hover {
-  cursor: pointer;
-  opacity: 0.5; }
+  .VotingButtons + div button:hover {
+    cursor: pointer;
+    opacity: 0.5; }

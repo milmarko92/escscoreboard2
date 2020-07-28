@@ -11,18 +11,6 @@ export const countries = [
     "monaco",
     "germany",
     "ireland",
-    // "sweden",
-    // "denmark",
-    // "norway",
-    // "austria",
-    // "cyprus",
-    // "finland",
-    // "greece",
-    // "iceland",
-    // "israel",
-    // "portugal",
-    // "spain",
-    // "turkey",
 ]
 const fireEmoji = String.fromCodePoint(0x1F525)
 export const countryNameMap = {
