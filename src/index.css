@@ -1,7 +1,3 @@
-@font-face {
-  font-family: 'Dom Casual';
-  src: url("fonts/DomCasual.woff"); }
-
 * {
   box-sizing: border-box; }
 
@@ -9,8 +5,8 @@ body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Dom Casual", sans-serif;
-  background-color: #111;
+  font-family: "Gill Sans", sans-serif;
+  background-color: #373817;
   overflow: hidden; }
 
 .Buttons {
@@ -19,10 +15,10 @@ body {
 .Button {
   appearance: none;
   background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #b79c70;
   display: block;
   transition: .4s ease;
-  font-family: "Dom Casual";
+  font-family: "Gill Sans";
   text-transform: uppercase;
   border: none;
   padding: 8px 16px;
@@ -45,11 +41,11 @@ body {
 .Ranking button {
   appearance: none;
   background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #b79c70;
   margin: 24px auto;
   display: block;
   transition: .4s ease;
-  font-family: "Dom Casual";
+  font-family: "Gill Sans";
   text-transform: uppercase;
   border: none;
   padding: 8px 16px;
@@ -62,11 +58,11 @@ body {
 .save-button {
   appearance: none;
   background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #b79c70;
   margin: 24px auto;
   display: block;
   transition: .4s ease;
-  font-family: "Dom Casual";
+  font-family: "Gill Sans";
   text-transform: uppercase;
   border: none;
   padding: 8px 16px;
@@ -89,12 +85,9 @@ body {
   break-inside: avoid;
   text-transform: uppercase;
   position: relative;
-  font-weight: 700;
-  color: white;
-  background-color: teal;
-  -webkit-text-stroke: 0.5px rgba(30, 80, 97, 0.8);
-  -webkit-text-fill-color: white;
-  background-image: linear-gradient(to right, #07868b 0%, #c2ebff 80%, #07648b 100%);
+  font-weight: 400;
+  color: #b79c70;
+  background-color: #1b1307;
   display: flex;
   flex-flow: row nowrap;
   align-items: center; }
@@ -104,9 +97,7 @@ body {
   font-size: 14px;
   padding: 2px 8px;
   margin: 0 0 4px;
-  min-width: 326px;
-  -webkit-text-stroke: 0;
-  -webkit-text-fill-color: 0; }
+  min-width: 326px; }
 
 .country--small .country__flag {
   float: none;
@@ -124,10 +115,9 @@ body {
   font-size: 14px;
   padding: 2px 8px;
   margin: 0 0 4px;
-  -webkit-text-stroke: 0;
-  -webkit-text-fill-color: 0;
   background-image: none;
   background-color: rgba(255, 255, 255, 0.2);
+  color: #b79c70;
   cursor: pointer;
   transition: .4s ease; }
 
@@ -149,9 +139,6 @@ body {
 .country__name {
   padding: 4px 0 2px 8px; }
 
-.country__flag {
-  margin-right: 32px; }
-
 .country__flag img {
   display: block;
   width: 38px;
@@ -160,17 +147,15 @@ body {
 .country__average {
   margin-left: auto;
   text-align: right;
-  padding: 4px 8px 2px 8px; }
+  padding: 4px 8px 2px 8px;
+  font-family: "Arial Narrow";
+  letter-spacing: 4px; }
 
 .Scoreboard {
   grid-area: scoreboard;
   border-right: 0;
   width: 100%;
   padding: 0; }
-
-.Scoreboard > div {
-  columns: 2;
-  column-gap: 12px; }
 
 .Voting {
   grid-area: votes;
@@ -182,6 +167,9 @@ body {
   min-width: calc(326px + 24px + 24px); }
 
 .Voting h1 {
+  color: #b79c70;
+  font-weight: 400;
+  letter-spacing: 4px;
   text-align: center;
   display: block;
   position: relative;
@@ -216,13 +204,13 @@ body {
 
 .VotingButtons + div button {
   appearance: none;
-  color: white;
+  color: #b79c70;
   text-transform: uppercase;
   font-size: 14px;
   padding: 4px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  font-family: "Dom Casual";
+  font-family: "Gill Sans";
   margin: 0 4px 0 0; }
 
 .VotingButtons + div button:hover {
