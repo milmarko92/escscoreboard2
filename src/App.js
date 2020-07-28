@@ -172,9 +172,9 @@ class App extends Component {
             }
         }
         return(
-            <FlipMove  enterLeaveAnimation="elevator" >
+            <FlipMove  enterLeaveAniation="elevator" >
                 {
-                    list.map(
+                    list.sort().map(
                         (value, index) => {
                             return (
                                 <span key={value}>{this.votingButtonComponent(value)}</span>
