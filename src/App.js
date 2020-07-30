@@ -38,6 +38,9 @@ class App extends Component {
 
         countryVoteList.push(data.new_rank)
         ranking[data.country] = countryVoteList
+        console.info(countryVoteList)
+        console.info(currentVotes)
+        console.info(ranking)
         this.setState({"currentVoting": currentVotes, "overallRanking": ranking})
     }
 
@@ -46,13 +49,21 @@ class App extends Component {
         let ranking = this.state.overallRanking
         for (var country in currentVotes){
             if(currentVotes[country] < currentVotes[data.country]){
-                currentVotes[country]++;
+                const updatedTempVote = currentVotes[country] + 1
+                currentVotes[country] = updatedTempVote
+                let countryVoteList = ranking[country]
+                countryVoteList.pop()
+                countryVoteList.push(currentVotes[country])
+                ranking[country] = countryVoteList
             }
         }
         delete currentVotes[data.country]
         let countryVoteList = ranking[data.country]
         countryVoteList.pop()
-
+        ranking[data.country] = countryVoteList
+        console.info(countryVoteList)
+        console.info(currentVotes)
+        console.info(ranking)
         this.setState({"currentVoting": currentVotes, "overallRanking": ranking})
 
     }
