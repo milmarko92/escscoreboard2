@@ -1,26 +1,26 @@
 export const countries = [
-    "netherlands",
-    "switzerland",
+    "portugal",
     "italy",
-    "yugoslavia",
-    "belgium",
-    "france",
-    "united kingdom",
-    "luxembourg",
-    "spain",
-    "monaco",
-    "germany",
+    "denmark",
     "ireland",
-    // "sweden",
-    // "denmark",
-    // "norway",
-    // "austria",
+    "finland",
+    "monaco",
+    "greece",
+    "switzerland",
+    "germany",
+    "israel",
+    "france",
+    "belgium",
+    "luxembourg",
+    "netherlands",
+    "sweden",
+    "norway",
+    "united kingdom",
+    "austria",
+    "spain",
+    // "yugoslavia",
     // "cyprus",
-    // "finland",
-    // "greece",
     // "iceland",
-    // "israel",
-    // "portugal",
     // "spain",
     // "turkey",
 ]
@@ -163,6 +163,6 @@ export const rankToPointsMap = {
     "29": 0
 }
 
-export const all_voters = ["Marko", "Rinor", "Luke",  "Wiv", "Simon", "Matteo", "Costa", "Rodrigo", "Pedro", "Vladan", "Philip", "Oliver", "Thomas", "Tommy", "RITA", "Eirik"] // , "Nathan", "Hlynur", "Aivis", "Ed",]
+export const all_voters = ["Marko", "Rinor", "Luke",  "Wiv", "Simon", "Matteo", "Costa", "Rodrigo", "Pedro", "Vladan", "Philip", "Oliver", "Thomas", "Tommy", "RITA", "Eirik", "Victoria"] // , "Nathan", "Hlynur", "Aivis", "Ed",]
 
 export default countries
