@@ -1,16 +1,35 @@
 export const countries = [
-    "netherlands",
-    "switzerland",
-    "italy",
-    "yugoslavia",
-    "belgium",
-    "france",
-    "united kingdom",
-    "luxembourg",
-    "spain",
-    "monaco",
-    "germany",
+    "poland",
     "ireland",
+    "germany",
+    "bosnia and herzegovina",
+    "norway",
+    "russia",
+    "iceland",
+    "austria",
+    "spain",
+    "turkey",
+    "croatia",
+    "france",
+    "hungary",
+    "belgium",
+    "united kingdom",
+    "portugal",
+    "cyprus",
+    "sweden",
+    "denmark",
+    "slovenia",
+    "israel",
+    "malta",
+    "greece",
+    // "italy",
+    // "finland",
+    // "monaco",
+    // "switzerland",
+    // "luxembourg",
+    // "netherlands",
+    // "yugoslavia",
+    // "iceland",
 ]
 const fireEmoji = String.fromCodePoint(0x1F525)
 export const countryNameMap = {
@@ -56,7 +75,7 @@ export const countryNameMap = {
     "san marino": "San Marino, the",
     "serbia": "Serbia",
     "slovenia": "Slovenia",
-    "spain": "ESPAIN WILL WIN",
+    "spain": "ESPAIN WILL actually WIN?",
     "sweden": "Costa's favs",
     "switzerland": "Switzerland",
     "turkey": "Turkey",
@@ -107,7 +126,7 @@ export const countryFlagMap = {
     "france": "FR.png",
     "germany": "DE.png",
     "russia": "RU.png",
-    "spain": "ES1.png",
+    "spain": "ES.png",
     "yugoslavia": "YU.png",
     "luxembourg": "LU.png",
     "italy": "IT.png",
@@ -151,6 +170,6 @@ export const rankToPointsMap = {
     "29": 0
 }
 
-export const all_voters = ["Marko", "Rinor", "Luke",  "Wiv", "Simon", "Matteo", "Costa", "Rodrigo", "Pedro", "Vladan", "Philip", "Oliver", "Thomas", "Tommy", "RITA", "Eirik"] // , "Nathan", "Hlynur", "Aivis", "Ed",]
+export const all_voters = ["Marko", "Rinor", "Luke",  "Wiv", "Simon", "Matteo", "Costa", "Rodrigo", "Pedro", "Vladan", "Philip", "Oliver", "Thomas", "Tommy", "RITA", "Eirik", "Victoria"] // , "Nathan", "Hlynur", "Aivis", "Ed",]
 
 export default countries
