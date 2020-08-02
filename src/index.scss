@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #373817;
   overflow: hidden;
 }
@@ -19,11 +19,11 @@ body {
 
 .Button {
   appearance: none;
-  background-color: rgba(white, 0.2);
-  color: #b79c70;
+  color: #98ffff;
+  background-color: rgba(#014286, 0.75);
   display: block;
   transition: .4s ease;
-  font-family: "Gill Sans";
+  font-family: "Arial";
   text-transform: uppercase;
   border: none;
   padding: 8px 16px;
@@ -41,9 +41,10 @@ body {
   grid-template-rows: 156px auto 56px;
   grid-gap: 8px;
   height: 100vh;
+  background-image: url("img/1995.jpg");
   align-items: center;
   grid-template-areas:
-    "logo votes"
+    "scoreboard votes"
     "scoreboard votes"
     "footer votes"
     "votingbuttons votes";
@@ -52,12 +53,12 @@ body {
 .Ranking {
   button {
     appearance: none;
-    background-color: rgba(white, 0.2);
-    color: #b79c70;
+    color: #98ffff;
+    background-color: rgba(#014286, 0.75);
     margin: 24px auto;
     display: block;
     transition: .4s ease;
-    font-family: "Gill Sans";
+    font-family: "Arial";
     text-transform: uppercase;
     border: none;
     padding: 8px 16px;
@@ -71,12 +72,12 @@ body {
 
 .save-button {
   appearance: none;
-  background-color: rgba(white, 0.2);
-  color: #b79c70;
+  color: #98ffff;
+  background-color: rgba(#014286, 0.75);
   margin: 24px auto;
   display: block;
   transition: .4s ease;
-  font-family: "Gill Sans";
+  font-family: "Arial";
   text-transform: uppercase;
   border: none;
   padding: 8px 16px;
@@ -95,22 +96,29 @@ body {
 .country {
   text-align: left;
   flex-grow: 1;
-  margin: 0 16px 4px 0;
+  margin: 0;
   width: 100%;
   font-size: 24px;
   break-inside: avoid;
   text-transform: uppercase;
   position: relative;
   font-weight: 400;
-  color: #b79c70;
-  background-color: #1b1307;
+  color: rgba(white, 0.75);
+  background-color: rgba(#004583, 0.75);
+  border: 2px solid #22749a;
+  border-top: 0;
+  border-left: 0;
 
   &--small {
     position: relative;
     font-size: 14px;
     padding: 2px 8px;
-    margin: 0 0 4px;
     min-width: 326px;
+    border: 2px solid #22749a;
+    border-bottom: 0;
+    &:last-of-type {
+      border-bottom: 2px solid #22749a;
+    }
 
     .country {
       &__flag {
@@ -129,12 +137,15 @@ body {
 
   &--tiny {
     position: relative;
-    font-size: 14px;
+    font-size: 13px;
     padding: 2px 8px;
-    margin: 0 0 4px;
     background-image: none;
-    background-color: rgba(white, 0.2);
-    color: #b79c70;
+    color: #98ffff;
+    background-color: rgba(#014286, 0.75);
+    border-bottom: 0;
+    margin: 0 0 4px 0;
+    
+    border: 0;
     cursor: pointer;
     transition: .4s ease;
     &:hover {
@@ -179,21 +190,26 @@ body {
   &__average {
     margin-left: auto;
     text-align: right;
-    padding: 4px 8px 2px 8px;
-    font-family: "Arial Narrow";
-    letter-spacing: 4px;
+    padding: 8px 8px 6px 8px;
+    background-color: rgba(#047d50, 0.5);
+    width: 96px;
+    color: #99faef;
+    font-weight: 700;
   }
 }
 
 .Scoreboard {
+  border-top: 8px solid #1db3aa;
+  border-left: 8px solid #1db3aa;
+  border-right: 8px solid #1db3aa;
+  border-bottom: 8px solid #1db3aa;
   grid-area: scoreboard;
-  border-right: 0;
   width: 100%;
   padding: 0;
 
   >div {
     columns: 2;
-    column-gap: 12px;
+    column-gap: 0;
   }
 }
 
@@ -206,18 +222,16 @@ body {
   min-height: 68vh;
   min-width: calc(326px + 24px + 24px);
   h1 {
-    color: #b79c70;
-    font-weight: 400;
-    letter-spacing: 4px;
+    font-weight: 700;
     text-align: center;
     display: block;
     position: relative;
     padding: 16px 0;
     text-transform: uppercase;
-    height: 72px;
     font-size: 48px;
     margin-bottom: 24px;
     position: relative;
+    background-color: #03458f;
   }
 }
 
@@ -252,13 +266,13 @@ body {
   & + div {
     button {
       appearance: none;
-      color: #b79c70;
+      color: #98ffff;
+      background-color: rgba(#014286, 0.75);
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 13px;
       padding: 4px;
-      background-color: rgba(white, 0.2);
       border: none;
-      font-family: "Gill Sans";
+      font-family: "Arial";
       margin: 0 4px 0 0;
       &:hover {
         cursor: pointer;

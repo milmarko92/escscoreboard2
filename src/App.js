@@ -261,9 +261,9 @@ class App extends Component {
         console.log(this.state.overallRanking)
     return (
       <div className="App">
-          <div className={"Logo"}>
+          {/* <div className={"Logo"}>
             <img src={require('./img/logo.svg')} />
-          </div>
+          </div> */}
           <div className={"Scoreboard"}>
             <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves}/>
           </div>
