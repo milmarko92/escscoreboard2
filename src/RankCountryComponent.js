@@ -7,7 +7,7 @@ export default class RankCountryComponent extends Component {
 
     render() {
         return(
-            <div className={this.props.inCurrentVotes ? "country1" : "country"}>
+            <div className={this.props.gotLastVote ? "country2" : this.props.inCurrentVotes ? "country1" : "country"}>
                 <span className={"country__rank"}>
                     {this.props.rank}
                 </span>

@@ -23,7 +23,8 @@ class App extends Component {
             "twelves": false,
             "count": countries.length,
             "remainingVoters": all_voters,
-            "completedVoters": 0
+            "completedVoters": 0,
+            "lastVotedCountry": ""
         }
         this.eventSource = new EventSource("http://localhost:5000/stream");
     }
@@ -39,10 +40,7 @@ class App extends Component {
 
         countryVoteList.push(data.new_rank)
         ranking[data.country] = countryVoteList
-        console.info(countryVoteList)
-        console.info(currentVotes)
-        console.info(ranking)
-        this.setState({"currentVoting": currentVotes, "overallRanking": ranking})
+        this.setState({"currentVoting": currentVotes, "overallRanking": ranking, "lastVotedCountry": data.country})
     }
 
     removeVote(data){
@@ -134,7 +132,8 @@ class App extends Component {
             arrayOfVotes.forEach( x => twelvePointSum += rankToPointsMap[x] || 0)
             const avg = (sum / arrayOfVotes.length) || 0;
             const gotVotesNow = arrayOfVotes.length > this.state.completedVoters
-            ranking.push({"country": country, "averageRank": avg, "twelvePointRank": twelvePointSum, "inCurrentVotes": gotVotesNow})
+            const lastVoted = this.state.lastVotedCountry === country
+            ranking.push({"country": country, "averageRank": avg, "twelvePointRank": twelvePointSum, "inCurrentVotes": gotVotesNow, "lastVoted": lastVoted})
         }
         return ranking
     }
@@ -262,7 +261,6 @@ class App extends Component {
 
 
     render() {
-        console.log(this.state.overallRanking)
     return (
       <div className="App">
           <div className={"Logo"}>

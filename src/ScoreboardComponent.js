@@ -50,6 +50,7 @@ class ScoreboardComponent extends Component {
                                 twelvePointRank={value.twelvePointRank}
                                 use12P={this.props.twelvePointSystem}
                                 inCurrentVotes={value.inCurrentVotes}
+                                gotLastVote={value.lastVoted}
                             />
                         )
                     }
