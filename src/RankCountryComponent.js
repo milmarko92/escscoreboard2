@@ -7,7 +7,7 @@ export default class RankCountryComponent extends Component {
 
     render() {
         return(
-            <div className={"country"}>
+            <div className={this.props.inCurrentVotes ? "country1" : "country"}>
                 <span className={"country__rank"}>
                     {this.props.rank}
                 </span>
@@ -17,17 +17,11 @@ export default class RankCountryComponent extends Component {
                 <span className={"country__name"}>
                     {countryNameMap[this.props.country.toLowerCase()]}
                 </span>
-                {
-                    this.props.use12P
-                            ?
-                        <span className={"country__average"}>
-                            {this.props.twelvePointRank}
-                        </span>
-                            :
-                        <span className={"country__average"}>
-                            {this.props.averageRank.toFixed(2)}
-                        </span>
-                }
+                <span className={"country__average"}>
+                    {
+                        this.props.use12P ? this.props.twelvePointRank : this.props.averageRank.toFixed(2)
+                    }
+                </span>
             </div>
         )
     }

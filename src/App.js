@@ -22,7 +22,8 @@ class App extends Component {
             "currentVoter": "",
             "twelves": false,
             "count": countries.length,
-            "remainingVoters": all_voters
+            "remainingVoters": all_voters,
+            "completedVoters": 0
         }
         this.eventSource = new EventSource("http://localhost:5000/stream");
     }
@@ -87,6 +88,9 @@ class App extends Component {
     }
 
     endvote(){
+        if (Object.keys(this.state.currentVoting).length !== countries.length || this.state.currentVoter === "Up next..." || this.state.currentVoter === "" ){
+            return
+        }
         let voters = this.state.voters
         voters.push(this.state.currentVoter)
         let remaining = []
@@ -101,7 +105,8 @@ class App extends Component {
             "voters": voters,
             "count": countries.length,
             "currentVoter": "Up next...",
-            "remainingVoters": remaining
+            "remainingVoters": remaining,
+            "completedVoters": this.state.completedVoters + 1
         })
     }
 
@@ -127,9 +132,9 @@ class App extends Component {
             const sum = arrayOfVotes.reduce((a, b) => parseInt(a) + parseInt(b), 0);
             let twelvePointSum = 0
             arrayOfVotes.forEach( x => twelvePointSum += rankToPointsMap[x] || 0)
-            console.log("points "+ arrayOfVotes + " 12p sum " + twelvePointSum)
             const avg = (sum / arrayOfVotes.length) || 0;
-            ranking.push({"country": country, "averageRank": avg, "twelvePointRank": twelvePointSum})
+            const gotVotesNow = arrayOfVotes.length > this.state.completedVoters
+            ranking.push({"country": country, "averageRank": avg, "twelvePointRank": twelvePointSum, "inCurrentVotes": gotVotesNow})
         }
         return ranking
     }
@@ -156,7 +161,6 @@ class App extends Component {
     pushVote(event){
         if(!event)
             return
-        console.log("uuu" + event)
         this.addVote({"country": event, "new_rank": this.state.count})
         this.state.count--;
     }
@@ -265,7 +269,7 @@ class App extends Component {
             <img src={require('./img/logo.svg')} />
           </div>
           <div className={"Scoreboard"}>
-            <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves}/>
+            <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} completedVoters={this.state.completedVoters}/>
           </div>
           <div className={"Voting"}>
             <NameComponent voterName={this.state.currentVoter}/>
