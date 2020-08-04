@@ -1,455 +1,72 @@
-$color-primary: #111;
-
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Groteska";
+  src: url("fonts/Groteska.ttf");
 }
 
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Gill Sans", sans-serif;
-  background-color: #373817;
-  overflow: hidden;
-}
-
-.Buttons {
-  text-align: center;
-}
-
-.Button {
-  appearance: none;
-  background-color: rgba(white, 0.2);
-  color: #b79c70;
-  display: block;
-  transition: .4s ease;
-  font-family: "Gill Sans";
-  text-transform: uppercase;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
+  font-family: "Groteska", sans-serif;
+  background-color: #2b0d27;
+  color: white;
 }
 
 .App {
-  padding: 48px 48px;
+  background-color: #391b35;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 156px auto 56px;
-  grid-gap: 8px;
-  height: 100vh;
-  align-items: center;
-  grid-template-areas:
-    "logo votes"
-    "scoreboard votes"
-    "footer votes"
-    "votingbuttons votes";
-}
-
-.Ranking {
-  button {
-    appearance: none;
-    background-color: rgba(white, 0.2);
-    color: #b79c70;
-    margin: 24px auto;
-    display: block;
-    transition: .4s ease;
-    font-family: "Gill Sans";
-    text-transform: uppercase;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    &:hover {
-      cursor: pointer;
-      opacity: 0.5;
-    }
-  }
-}
-
-.save-button {
-  appearance: none;
-  background-color: rgba(white, 0.2);
-  color: #b79c70;
-  margin: 24px auto;
-  display: block;
-  transition: .4s ease;
-  font-family: "Gill Sans";
-  text-transform: uppercase;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
-}
-
-.Logo {
-  grid-area: logo;
-  text-align: center;
+  grid-gap: 24px;
 }
 
 .country {
-  text-align: left;
-  flex-grow: 1;
-  margin: 0 16px 4px 0;
-  width: 100%;
-  font-size: 24px;
+  padding: 4px;
+  background-image: linear-gradient(to bottom, #7e5188 0%, #463144 100%);
+  box-shadow: 2px 2px 0 0 rgba(black, 0.75);
   break-inside: avoid;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 400;
-  color: #b79c70;
-  background-color: #1b1307;
-
-  &--small {
-    position: relative;
-    font-size: 14px;
-    padding: 2px 8px;
-    margin: 0 0 4px;
-    min-width: 326px;
-
-    .country {
-      &__flag {
-        float: none;
-        margin: 0;
-        img {
-          width: 22px;
-          height: 18px;
-        }
-      }
-      &__rank {
-        width: 16px;
-      }
-    }
-  }
-
-  &--tiny {
-    position: relative;
-    font-size: 14px;
-    padding: 2px 8px;
-    margin: 0 0 4px;
-    background-image: none;
-    background-color: rgba(white, 0.2);
-    color: #b79c70;
-    cursor: pointer;
-    transition: .4s ease;
-    &:hover {
-      opacity: 0.5;
-    }
-
-
-    .country {
-      &__flag {
-        margin: 0;
-        img {
-          width: 22px;
-          height: 18px;
-        }
-      }
-    }
-  }
-
   display: flex;
-  flex-flow: row nowrap;
   align-items: center;
-
+  flex-flow: row nowrap;
+  color: #caafd2;
+  text-shadow: 0 0 2px rgba(black, 0.5);
+  margin-bottom: 4px;
+  font-size: 24px;
   &__rank {
-    width: 48px;
-    margin-right: 16px;
-    text-align: center;
+    width: 64px;
   }
-
-  &__name {
-    padding: 4px 0 2px 8px;
-  }
-
   &__flag {
-
+    vertical-align: middle;
+    margin-right: 8px;
     img {
       display: block;
-      width: 38px;
-      height: 32px;
+      width: 40px;
+      height: auto;
     }
   }
-
   &__average {
     margin-left: auto;
-    text-align: right;
-    padding: 4px 8px 2px 8px;
-    font-family: "Arial Narrow";
-    letter-spacing: 4px;
   }
-}
-
-.country1 {
-  text-align: left;
-  flex-grow: 1;
-  margin: 0 16px 4px 0;
-  width: 100%;
-  font-size: 24px;
-  break-inside: avoid;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 400;
-  color: #d58206;
-  background-color: #e7ded0;
-
   &--small {
-    position: relative;
-    font-size: 14px;
-    padding: 2px 8px;
-    margin: 0 0 4px;
-    min-width: 326px;
-
-    .country {
-      &__flag {
-        float: none;
-        margin: 0;
-        img {
-          width: 22px;
-          height: 18px;
-        }
-      }
-      &__rank {
-        width: 16px;
+    font-size: 16px;
+    transition: .4s ease;
+    .country__flag {
+      img {
+        width: 24px;
       }
     }
-  }
-
-  &--tiny {
-    position: relative;
-    font-size: 14px;
-    padding: 2px 8px;
-    margin: 0 0 4px;
-    background-image: none;
-    background-color: rgba(white, 0.2);
-    color: #b79c70;
-    cursor: pointer;
-    transition: .4s ease;
     &:hover {
       opacity: 0.5;
+      cursor: pointer;
     }
-
-
-    .country {
-      &__flag {
-        margin: 0;
-        img {
-          width: 22px;
-          height: 18px;
-        }
-      }
-    }
-  }
-
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-
-  &__rank {
-    width: 48px;
-    margin-right: 16px;
-    text-align: center;
-  }
-
-  &__name {
-    padding: 4px 0 2px 8px;
-  }
-
-  &__flag {
-
-    img {
-      display: block;
-      width: 38px;
-      height: 32px;
-    }
-  }
-
-  &__average {
-    margin-left: auto;
-    text-align: right;
-    padding: 4px 8px 2px 8px;
-    font-family: "Arial Narrow";
-    letter-spacing: 4px;
-  }
-}
-
-.country2 {
-  text-align: left;
-  flex-grow: 1;
-  margin: 0 16px 4px 0;
-  width: 100%;
-  font-size: 24px;
-  break-inside: avoid;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 400;
-  color: #d58206;
-  background-color: #d00c82;
-
-  &--small {
-    position: relative;
-    font-size: 14px;
-    padding: 2px 8px;
-    margin: 0 0 4px;
-    min-width: 326px;
-
-    .country {
-      &__flag {
-        float: none;
-        margin: 0;
-        img {
-          width: 22px;
-          height: 18px;
-        }
-      }
-      &__rank {
-        width: 16px;
-      }
-    }
-  }
-
-  &--tiny {
-    position: relative;
-    font-size: 14px;
-    padding: 2px 8px;
-    margin: 0 0 4px;
-    background-image: none;
-    background-color: rgba(white, 0.2);
-    color: #b79c70;
-    cursor: pointer;
-    transition: .4s ease;
-    &:hover {
-      opacity: 0.5;
-    }
-
-
-    .country {
-      &__flag {
-        margin: 0;
-        img {
-          width: 22px;
-          height: 18px;
-        }
-      }
-    }
-  }
-
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-
-  &__rank {
-    width: 48px;
-    margin-right: 16px;
-    text-align: center;
-  }
-
-  &__name {
-    padding: 4px 0 2px 8px;
-  }
-
-  &__flag {
-
-    img {
-      display: block;
-      width: 38px;
-      height: 32px;
-    }
-  }
-
-  &__average {
-    margin-left: auto;
-    text-align: right;
-    padding: 4px 8px 2px 8px;
-    font-family: "Arial Narrow";
-    letter-spacing: 4px;
   }
 }
 
 .Scoreboard {
-  grid-area: scoreboard;
-  border-right: 0;
-  width: 100%;
-  padding: 0;
-
-  >div {
+  > div {
     columns: 2;
-    column-gap: 12px;
-  }
-}
-
-.Voting {
-  grid-area: votes;
-  padding: 12px 24px;
-  width: 100%;
-  color: white;
-  position: relative;
-  min-height: 68vh;
-  min-width: calc(326px + 24px + 24px);
-  h1 {
-    color: #b79c70;
-    font-weight: 400;
-    letter-spacing: 4px;
-    text-align: center;
-    display: block;
-    position: relative;
-    padding: 16px 0;
-    text-transform: uppercase;
-    height: 72px;
-    font-size: 48px;
-    margin-bottom: 24px;
-    position: relative;
-  }
-}
-
-.Buttons {
-  grid-area: footer;
-}
-
-.Ranking {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-
-.VotingButtons {
-  grid-area: votingbuttons;
-  width: 100%;
-  padding: 0;
-  text-align: center;
-
-  >div {
-    display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-    > span {
-      margin: 0 4px 0 0;
-    }
-  }
-}
-
-.VotingButtons {
-  & + div {
-    button {
-      appearance: none;
-      color: #b79c70;
-      text-transform: uppercase;
-      font-size: 14px;
-      padding: 4px;
-      background-color: rgba(white, 0.2);
-      border: none;
-      font-family: "Gill Sans";
-      margin: 0 4px 0 0;
-      &:hover {
-        cursor: pointer;
-        opacity: 0.5;
-      }
-    }
   }
 }
