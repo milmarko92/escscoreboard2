@@ -265,7 +265,7 @@ class App extends Component {
             <img src={require('./img/logo.svg')} />
           </div> */}
           <div className={"Scoreboard"}>
-            <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves}/>
+            <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} currentVoting={this.state.currentVoting}/>
           </div>
           <div className={"Voting"}>
             <NameComponent voterName={this.state.currentVoter}/>

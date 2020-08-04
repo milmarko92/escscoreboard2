@@ -32,7 +32,6 @@ class ScoreboardComponent extends Component {
                             const key = index >= limit ? (index +1 - limit) * 2 : (index+1) * 2 - 1
                             value["key"] = key
                             value["rank"] = index+1
-
                             return value
                         }
                     ).
