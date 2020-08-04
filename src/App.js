@@ -22,7 +22,9 @@ class App extends Component {
             "currentVoter": "",
             "twelves": false,
             "count": countries.length,
-            "remainingVoters": all_voters
+            "remainingVoters": all_voters,
+            "completedVoters": 0,
+            "lastVotedCountry": ""
         }
         this.eventSource = new EventSource("http://localhost:5000/stream");
     }
@@ -38,10 +40,7 @@ class App extends Component {
 
         countryVoteList.push(data.new_rank)
         ranking[data.country] = countryVoteList
-        console.info(countryVoteList)
-        console.info(currentVotes)
-        console.info(ranking)
-        this.setState({"currentVoting": currentVotes, "overallRanking": ranking})
+        this.setState({"currentVoting": currentVotes, "overallRanking": ranking, "lastVotedCountry": data.country})
     }
 
     removeVote(data){
@@ -87,6 +86,9 @@ class App extends Component {
     }
 
     endvote(){
+        if (Object.keys(this.state.currentVoting).length !== countries.length || this.state.currentVoter === "Up next..." || this.state.currentVoter === "" ){
+            return
+        }
         let voters = this.state.voters
         voters.push(this.state.currentVoter)
         let remaining = []
@@ -101,7 +103,9 @@ class App extends Component {
             "voters": voters,
             "count": countries.length,
             "currentVoter": "Up next...",
-            "remainingVoters": remaining
+            "remainingVoters": remaining,
+            "completedVoters": this.state.completedVoters + 1,
+            "lastVotedCountry": ""
         })
     }
 
@@ -127,9 +131,10 @@ class App extends Component {
             const sum = arrayOfVotes.reduce((a, b) => parseInt(a) + parseInt(b), 0);
             let twelvePointSum = 0
             arrayOfVotes.forEach( x => twelvePointSum += rankToPointsMap[x] || 0)
-            console.log("points "+ arrayOfVotes + " 12p sum " + twelvePointSum)
             const avg = (sum / arrayOfVotes.length) || 0;
-            ranking.push({"country": country, "averageRank": avg, "twelvePointRank": twelvePointSum})
+            const gotVotesNow = arrayOfVotes.length > this.state.completedVoters
+            const lastVoted = this.state.lastVotedCountry === country
+            ranking.push({"country": country, "averageRank": avg, "twelvePointRank": twelvePointSum, "inCurrentVotes": gotVotesNow, "lastVoted": lastVoted})
         }
         return ranking
     }
@@ -156,14 +161,13 @@ class App extends Component {
     pushVote(event){
         if(!event)
             return
-        console.log("uuu" + event)
         this.addVote({"country": event, "new_rank": this.state.count})
         this.state.count--;
     }
 
     votingButtonComponent(country) {
         return (
-            <div className={"country country--tiny"} onClick={e => this.pushVote(country)}>
+            <div className={"country country--small"} onClick={e => this.pushVote(country)}>
                 <span className={"country__flag"}>
                     <img src={getFlagForCountry(country)}/>
                 </span>
@@ -258,23 +262,34 @@ class App extends Component {
 
 
     render() {
-        console.log(this.state.overallRanking)
     return (
       <div className="App">
           {/* <div className={"Logo"}>
             <img src={require('./img/logo.svg')} />
           </div> */}
           <div className={"Scoreboard"}>
-            <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} currentVoting={this.state.currentVoting}/>
+              <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} completedVoters={this.state.completedVoters} currentVoting={this.state.currentVoting}/>
           </div>
           <div className={"Voting"}>
             <NameComponent voterName={this.state.currentVoter}/>
             <div className={"Ranking"}>
                 {this.ongoingRank()}
             </div>
-          </div>
-          <div className={"VotingButtons"}>
-              {this.votingPanel()}
+            {this.votingPanel()}
+            <button className={"save-button"} onClick={e => {
+                let content = []
+                content.push("country,")
+                content.push(this.state.voters)
+                content.push("\n")
+
+                for (var country in this.state.overallRanking){
+                    var line = [this.capitalizeWords(country)]
+                    line.push(this.state.overallRanking[country])
+                    line.push("\n")
+                    content.push(line)
+                }
+                saveAs(new Blob(content, {type: "text/csv;charset=utf-8"}), "test.txt")
+            }}>Save file</button>
           </div>
           <div>
               {this.state.remainingVoters.map(
@@ -284,25 +299,8 @@ class App extends Component {
                       )
                   }
               )}
+              <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
           </div>
-          <div className={"Buttons"}>
-            {/*<button className={"Button Button--random"} onClick={this.addRandomVote.bind(this)}>Random vote</button>*/}
-            <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
-          </div>
-          <button className={"save-button"} onClick={e => {
-              let content = []
-              content.push("country,")
-              content.push(this.state.voters)
-              content.push("\n")
-
-              for (var country in this.state.overallRanking){
-                  var line = [this.capitalizeWords(country)]
-                  line.push(this.state.overallRanking[country])
-                  line.push("\n")
-                  content.push(line)
-              }
-              saveAs(new Blob(content, {type: "text/csv;charset=utf-8"}), "test.txt")
-          }}>Save file</button>
       </div>
     );
   }

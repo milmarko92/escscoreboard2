@@ -15,7 +15,6 @@ class ScoreboardComponent extends Component {
         }
         const limit = Math.trunc(this.props.ranking.length/2)
         return(
-            <div>
                 <FlipMove duration={250} staggerDurationBy={20} staggerDelayBy={20} enterAnimation="elevator" leaveAnimation="elevator" appearAnimation={"accordionVertical"} >
                 {this.props.ranking
                     .sort((a,b) => {
@@ -32,6 +31,9 @@ class ScoreboardComponent extends Component {
                             const key = index >= limit ? (index +1 - limit) * 2 : (index+1) * 2 - 1
                             value["key"] = key
                             value["rank"] = index+1
+                            value["currentRank"] = value["country"] in this.props.currentVoting
+                                ? this.props.currentVoting[value["country"]]
+                                : 0
                             return value
                         }
                     ).
@@ -41,13 +43,22 @@ class ScoreboardComponent extends Component {
                     map(
                     (value, index) => {
                         return (
-                            <RankCountryComponent className={``} key={value.country} country={value.country} rank={value.rank} averageRank={value.averageRank} twelvePointRank={value.twelvePointRank} use12P={this.props.twelvePointSystem}/>
+                            <RankCountryComponent
+                                className={``}
+                                key={value.country}
+                                country={value.country}
+                                rank={value.rank}
+                                averageRank={value.averageRank}
+                                twelvePointRank={value.twelvePointRank}
+                                use12P={this.props.twelvePointSystem}
+                                inCurrentVotes={value.inCurrentVotes}
+                                gotLastVote={value.lastVoted}
+                                currentRank={value.currentRank}
+                            />
                         )
                     }
                 )}
             </FlipMove>
-                <br/>
-            </div>
         )
     }
 
