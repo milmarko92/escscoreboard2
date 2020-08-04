@@ -104,7 +104,8 @@ class App extends Component {
             "count": countries.length,
             "currentVoter": "Up next...",
             "remainingVoters": remaining,
-            "completedVoters": this.state.completedVoters + 1
+            "completedVoters": this.state.completedVoters + 1,
+            "lastVotedCountry": ""
         })
     }
 
@@ -267,7 +268,7 @@ class App extends Component {
             <img src={require('./img/logo.svg')} />
           </div>
           <div className={"Scoreboard"}>
-            <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} completedVoters={this.state.completedVoters}/>
+              <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} completedVoters={this.state.completedVoters} currentVoting={this.state.currentVoting}/>
           </div>
           <div className={"Voting"}>
             <NameComponent voterName={this.state.currentVoter}/>

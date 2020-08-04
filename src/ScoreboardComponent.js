@@ -32,6 +32,9 @@ class ScoreboardComponent extends Component {
                             const key = index >= limit ? (index +1 - limit) * 2 : (index+1) * 2 - 1
                             value["key"] = key
                             value["rank"] = index+1
+                            value["currentRank"] = value["country"] in this.props.currentVoting
+                                ? this.props.currentVoting[value["country"]]
+                                : 0
                             return value
                         }
                     ).
@@ -51,6 +54,7 @@ class ScoreboardComponent extends Component {
                                 use12P={this.props.twelvePointSystem}
                                 inCurrentVotes={value.inCurrentVotes}
                                 gotLastVote={value.lastVoted}
+                                currentRank={value.currentRank}
                             />
                         )
                     }
