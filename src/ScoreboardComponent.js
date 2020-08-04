@@ -15,7 +15,6 @@ class ScoreboardComponent extends Component {
         }
         const limit = Math.trunc(this.props.ranking.length/2)
         return(
-            <div>
                 <FlipMove duration={250} staggerDurationBy={20} staggerDelayBy={20} enterAnimation="elevator" leaveAnimation="elevator" appearAnimation={"accordionVertical"} >
                 {this.props.ranking
                     .sort((a,b) => {
@@ -60,8 +59,6 @@ class ScoreboardComponent extends Component {
                     }
                 )}
             </FlipMove>
-                <br/>
-            </div>
         )
     }
 

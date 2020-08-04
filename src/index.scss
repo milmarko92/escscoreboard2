@@ -20,13 +20,30 @@ body {
   background-color: #391b35;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: 90% 10%;
   grid-gap: 24px;
+  height: 100vh;
+  padding: 48px;
+}
+
+.Voting {
+  text-align: center;
+}
+
+.Scoreboard {
+  padding: 200px 0;
+}
+
+.Ranking {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(white, 0.2);
 }
 
 .country {
   padding: 4px;
   background-image: linear-gradient(to bottom, #7e5188 0%, #463144 100%);
-  box-shadow: 2px 2px 0 0 rgba(black, 0.75);
+  box-shadow: 2px 2px 0 0 rgba(black, 0.25);
   break-inside: avoid;
   display: flex;
   align-items: center;
@@ -35,29 +52,91 @@ body {
   text-shadow: 0 0 2px rgba(black, 0.5);
   margin-bottom: 4px;
   font-size: 24px;
+
   &__rank {
-    width: 64px;
+    width: 48px;
+    text-align: center;
   }
+
   &__flag {
     vertical-align: middle;
     margin-right: 8px;
+
     img {
       display: block;
       width: 40px;
       height: auto;
     }
   }
+
+  &__current-rank {
+    margin: 0 10px 0 6px;
+    color: white;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow:
+      inset 0 0 50px #ec80ba,
+      /* inner white */
+      inset 20px 0 80px #d73d93,
+      /* inner left magenta short */
+      inset -20px 0 80px #ec80ba,
+      /* inner right cyan short */
+      inset 20px 0 300px #d73d93,
+      /* inner left magenta broad */
+      inset -20px 0 300px #ec80ba,
+      /* inner right cyan broad */
+      0 0 50px #ec80ba,
+      /* outer white */
+      -10px 0 80px #d73d93,
+      /* outer left magenta */
+      10px 0 80px #ec80ba;
+    /* outer right cyan */
+  }
+
+  &--2 {
+    .country__current-rank {
+      box-shadow:
+        inset 0 0 50px #e5d566,
+        /* inner white */
+        inset 20px 0 80px #b18135,
+        /* inner left magenta short */
+        inset -20px 0 80px #e5d566,
+        /* inner right cyan short */
+        inset 20px 0 300px #b18135,
+        /* inner left magenta broad */
+        inset -20px 0 300px #e5d566,
+        /* inner right cyan broad */
+        0 0 50px #e5d566,
+        /* outer white */
+        -10px 0 80px #b18135,
+        /* outer left magenta */
+        10px 0 80px #e5d566;
+      /* outer right cyan */
+    }
+    .country__name {
+
+    }
+  }
+
   &__average {
     margin-left: auto;
   }
+
   &--small {
     font-size: 16px;
     transition: .4s ease;
+
     .country__flag {
       img {
         width: 24px;
       }
     }
+
     &:hover {
       opacity: 0.5;
       cursor: pointer;
@@ -66,7 +145,21 @@ body {
 }
 
 .Scoreboard {
-  > div {
+  >div {
     columns: 2;
+  }
+}
+
+button {
+  appearance: none;
+  background-color: rgba(black, 0.2);
+  color: rgba(white, 0.2);
+  border: none;
+  padding: 8px 12px;
+  display: inline-block;
+  margin-top: 24px;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
 }

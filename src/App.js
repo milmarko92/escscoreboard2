@@ -167,7 +167,7 @@ class App extends Component {
 
     votingButtonComponent(country) {
         return (
-            <div className={"country country--tiny"} onClick={e => this.pushVote(country)}>
+            <div className={"country country--small"} onClick={e => this.pushVote(country)}>
                 <span className={"country__flag"}>
                     <img src={getFlagForCountry(country)}/>
                 </span>
@@ -264,9 +264,9 @@ class App extends Component {
     render() {
     return (
       <div className="App">
-          <div className={"Logo"}>
+          {/* <div className={"Logo"}>
             <img src={require('./img/logo.svg')} />
-          </div>
+          </div> */}
           <div className={"Scoreboard"}>
               <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} completedVoters={this.state.completedVoters} currentVoting={this.state.currentVoting}/>
           </div>
@@ -275,9 +275,21 @@ class App extends Component {
             <div className={"Ranking"}>
                 {this.ongoingRank()}
             </div>
-          </div>
-          <div className={"VotingButtons"}>
-              {this.votingPanel()}
+            {this.votingPanel()}
+            <button className={"save-button"} onClick={e => {
+                let content = []
+                content.push("country,")
+                content.push(this.state.voters)
+                content.push("\n")
+
+                for (var country in this.state.overallRanking){
+                    var line = [this.capitalizeWords(country)]
+                    line.push(this.state.overallRanking[country])
+                    line.push("\n")
+                    content.push(line)
+                }
+                saveAs(new Blob(content, {type: "text/csv;charset=utf-8"}), "test.txt")
+            }}>Save file</button>
           </div>
           <div>
               {this.state.remainingVoters.map(
@@ -287,25 +299,8 @@ class App extends Component {
                       )
                   }
               )}
+              <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
           </div>
-          <div className={"Buttons"}>
-            {/*<button className={"Button Button--random"} onClick={this.addRandomVote.bind(this)}>Random vote</button>*/}
-            <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
-          </div>
-          <button className={"save-button"} onClick={e => {
-              let content = []
-              content.push("country,")
-              content.push(this.state.voters)
-              content.push("\n")
-
-              for (var country in this.state.overallRanking){
-                  var line = [this.capitalizeWords(country)]
-                  line.push(this.state.overallRanking[country])
-                  line.push("\n")
-                  content.push(line)
-              }
-              saveAs(new Blob(content, {type: "text/csv;charset=utf-8"}), "test.txt")
-          }}>Save file</button>
       </div>
     );
   }

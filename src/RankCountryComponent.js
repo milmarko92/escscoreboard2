@@ -8,7 +8,7 @@ export default class RankCountryComponent extends Component {
     flagOrRanking(){
         if(this.props.currentRank > 0 && this.props.currentRank <= 10){
             return (
-                <span className={"country__current_rank"}>
+                <span className={"country__current-rank"}>
                     {this.props.currentRank}
                 </span>
             )
@@ -22,7 +22,7 @@ export default class RankCountryComponent extends Component {
 
     render() {
         return(
-            <div className={this.props.gotLastVote ? "country2" : this.props.inCurrentVotes ? "country1" : "country"}>
+            <div className={this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
                 <span className={"country__rank"}>
                     {this.props.rank}
                 </span>
