@@ -1,29 +1,29 @@
 export const countries = [
-    "moldova",
-    "russia",
-    "estonia",
-    "slovakia",
-    "finland",
-    "latvia",
-    "serbia",
-    "bosnia and herzegovina",
-    "poland",
-    "belgium",
-    "malta",
     "albania",
+    "armenia",
+    "belgium",
+    "bosnia and herzegovina",
+    "croatia",
+    "cyprus",
+    "denmark",
+    "finland",
+    "france",
+    "georgia",
+    "germany",
     "greece",
-    "portugal",
-    "macedonia",
-    "belarus",
     "iceland",
-    // "italy",
-    // "finland",
-    // "monaco",
-    // "switzerland",
-    // "luxembourg",
-    // "netherlands",
-    // "yugoslavia",
-    // "iceland",
+    "israel",
+    "moldova",
+    "norway",
+    "portugal",
+    "romania",
+    "serbia",
+    "slovakia",
+    "spain",
+    "sweden",
+    "turkey",
+    "ukraine",
+    "united kingdom"
 ]
 const fireEmoji = String.fromCodePoint(0x1F525)
 export const countryNameMap = {
@@ -165,6 +165,6 @@ export const rankToPointsMap = {
     "29": 0
 }
 
-export const all_voters = ["Marko", "Rinor", "Luke",  "Wiv", "Simon", "Matteo", "Costa", "Rodrigo", "Pedro", "Vladan", "Philip", "Oliver", "Thomas", "Tommy", "RITA", "Eirik", "Victoria"] // , "Nathan", "Hlynur", "Aivis", "Ed",]
+export const all_voters = ["Marko", "Alex", "Rinor", "Luke",  "Wiv", "Simon", "Matteo", "Costa", "Rodrigo", "Pedro", "Vladan", "Philip", "Oliver", "Thomas", "Tommy", "Eirik", "Nathan"] // , "Nathan", "Hlynur", "Aivis", "Ed",]
 
 export default countries

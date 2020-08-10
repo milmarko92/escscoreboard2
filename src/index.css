@@ -45,50 +45,41 @@ body {
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 4px;
   font-size: 24px; }
-
-.country__rank {
-  width: 48px;
-  text-align: center; }
-
-.country__flag {
-  vertical-align: middle;
-  margin-right: 8px; }
-
-.country__flag img {
-  display: block;
-  width: 40px;
-  height: auto; }
-
-.country__current-rank {
-  margin: 0 10px 0 6px;
-  color: white;
-  border-radius: 100%;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  box-shadow: inset 0 0 50px #ec80ba, inset 20px 0 80px #d73d93, inset -20px 0 80px #ec80ba, inset 20px 0 300px #d73d93, inset -20px 0 300px #ec80ba, 0 0 50px #ec80ba, -10px 0 80px #d73d93, 10px 0 80px #ec80ba;
-  /* outer right cyan */ }
-
-.country--2 .country__current-rank {
-  box-shadow: inset 0 0 50px #e5d566, inset 20px 0 80px #b18135, inset -20px 0 80px #e5d566, inset 20px 0 300px #b18135, inset -20px 0 300px #e5d566, 0 0 50px #e5d566, -10px 0 80px #b18135, 10px 0 80px #e5d566;
-  /* outer right cyan */ }
-
-.country__average {
-  margin-left: auto; }
-
-.country--small {
-  font-size: 16px;
-  transition: .4s ease; }
-
-.country--small .country__flag img {
-  width: 24px; }
-
-.country--small:hover {
-  opacity: 0.5;
-  cursor: pointer; }
+  .country__rank {
+    width: 48px;
+    text-align: center; }
+  .country__flag {
+    vertical-align: middle;
+    margin-right: 8px; }
+    .country__flag img {
+      display: block;
+      width: 40px;
+      height: auto; }
+  .country__current-rank {
+    margin: 0 10px 0 6px;
+    color: white;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: inset 0 0 50px #ec80ba, inset 20px 0 80px #d73d93, inset -20px 0 80px #ec80ba, inset 20px 0 300px #d73d93, inset -20px 0 300px #ec80ba, 0 0 50px #ec80ba, -10px 0 80px #d73d93, 10px 0 80px #ec80ba;
+    /* outer right cyan */ }
+  .country--2 .country__current-rank {
+    box-shadow: inset 0 0 50px #e5d566, inset 20px 0 80px #b18135, inset -20px 0 80px #e5d566, inset 20px 0 300px #b18135, inset -20px 0 300px #e5d566, 0 0 50px #e5d566, -10px 0 80px #b18135, 10px 0 80px #e5d566;
+    /* outer right cyan */ }
+  .country__average {
+    margin-left: auto; }
+  .country--small {
+    font-size: 16px;
+    transition: .4s ease; }
+    .country--small .country__flag img {
+      width: 24px; }
+    .country--small:hover {
+      opacity: 0.5;
+      cursor: pointer; }
 
 .Scoreboard > div {
   columns: 2; }
@@ -101,7 +92,6 @@ button {
   padding: 8px 12px;
   display: inline-block;
   margin-top: 24px; }
-
-button:hover {
-  opacity: 0.5;
-  cursor: pointer; }
+  button:hover {
+    opacity: 0.5;
+    cursor: pointer; }
