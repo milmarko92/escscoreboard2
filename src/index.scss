@@ -14,6 +14,7 @@ body {
   font-family: "Gotham", sans-serif;
   background-color: #2b0d27;
   color: white;
+  filter: grayscale(100%);
 }
 
 .App {
@@ -148,7 +149,7 @@ body {
       &__current-rank {
         margin: 0 0 0 8px;
         color: white;
-        width: 42px;
+        width: 36px;
         height: 35px;
         line-height: 35px;
         text-align: center;
