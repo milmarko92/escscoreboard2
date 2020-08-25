@@ -218,13 +218,13 @@ class App extends Component {
     ongoingRankCountryComponent(country, rank){
         return (
             <div className={"country country--small"} onClick={ e => this.popVote(country)}>
+            <span className={"country__flag"}>
+                <img src={getFlagForCountry(country)}/>
+            </span>
             <span className={"country__rank"}>
                 #{rank}
             </span>
-                <span className={"country__flag"}>
-                <img src={getFlagForCountry(country)}/>
-            </span>
-                <span className={"country__name"}>
+            <span className={"country__name"}>
                 {countryNameMap[country.toLowerCase()]}
             </span>
             </div>
@@ -233,9 +233,9 @@ class App extends Component {
 
     ongoingRank() {
         const ranked = this.sortDict(this.state.currentVoting)
-        if (!ranked || !ranked.length){
-            return "May we have your votes please?"
-        }
+        // if (!ranked || !ranked.length){
+        //     return "May we have your votes please?"
+        // }
         return(
             <span>
             <FlipMove  enterLeaveAnimation="elevator" >
@@ -250,7 +250,7 @@ class App extends Component {
                     )
                 }
             </FlipMove>
-                <button onClick={this.endvote.bind(this)}>Submit</button>
+            <button onClick={this.endvote.bind(this)}>Submit</button>
             </span>
         )
     }
@@ -264,9 +264,6 @@ class App extends Component {
     render() {
     return (
       <div className="App">
-          {/* <div className={"Logo"}>
-            <img src={require('./img/logo.svg')} />
-          </div> */}
           <div className={"Scoreboard"}>
               <ScoreboardComponent ranking={this.getRanking()} twelvePointSystem={this.state.twelves} completedVoters={this.state.completedVoters} currentVoting={this.state.currentVoting}/>
           </div>
