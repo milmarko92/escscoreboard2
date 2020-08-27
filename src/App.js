@@ -221,11 +221,11 @@ class App extends Component {
             <span className={"country__flag"}>
                 <img src={getFlagForCountry(country)}/>
             </span>
-            <span className={"country__rank"}>
-                #{rank}
-            </span>
             <span className={"country__name"}>
                 {countryNameMap[country.toLowerCase()]}
+            </span>
+            <span className={"country__rank"}>
+                #{rank}
             </span>
             </div>
         )
