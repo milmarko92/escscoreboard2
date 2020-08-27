@@ -137,6 +137,9 @@ body {
 .country--1 .country__average, .country--2 .country__average {
   background-image: linear-gradient(to bottom, #2464d5 0%, #0b259c 100%); }
 
+.country--1 .country__rank, .country--2 .country__rank {
+  color: white; }
+
 .country--1 .country__current-rank, .country--2 .country__current-rank {
   margin: 0 0 0 8px;
   color: white;
