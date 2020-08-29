@@ -117,7 +117,7 @@ body {
   }
 
   &--small {
-    font-size: 13px;
+    font-size: 10px;
     transition: .4s ease;
     .country {
       &__rank {
@@ -129,14 +129,14 @@ body {
         font-size: 10px;
       }
       &__name {
-        padding: 4px;
+        padding: 3px 4px;
       }
       &__flag {
         padding: 0 4px 2px 4px;
         margin: 0 0 0 2px;
         img {
-          width: 24px;
-          height: 16px;
+          width: 20px;
+          height: 12px;
         }
       }
     }
@@ -160,7 +160,7 @@ body {
         color: white;
       }
       &__current-rank {
-        margin: 0 0 0 8px;
+        margin: 0 8px 0 8px;
         color: white;
         width: 36px;
         height: 35px;

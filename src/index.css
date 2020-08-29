@@ -102,7 +102,7 @@ body {
   background-image: linear-gradient(to bottom, #020d3d 0%, #112552 100%); }
 
 .country--small {
-  font-size: 13px;
+  font-size: 10px;
   transition: .4s ease; }
 
 .country--small .country__rank {
@@ -114,15 +114,15 @@ body {
   font-size: 10px; }
 
 .country--small .country__name {
-  padding: 4px; }
+  padding: 3px 4px; }
 
 .country--small .country__flag {
   padding: 0 4px 2px 4px;
   margin: 0 0 0 2px; }
 
 .country--small .country__flag img {
-  width: 24px;
-  height: 16px; }
+  width: 20px;
+  height: 12px; }
 
 .country--small:hover {
   opacity: 0.5;
@@ -141,7 +141,7 @@ body {
   color: white; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank {
-  margin: 0 0 0 8px;
+  margin: 0 8px 0 8px;
   color: white;
   width: 36px;
   height: 35px;

@@ -296,7 +296,7 @@ class App extends Component {
                       )
                   }
               )}
-              <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Use Ranking" :  "Use 12p system" }</button>
+              <button className={"Button Button--12"} onClick={this.switchTwelveState.bind(this)}>{this.state.twelves ? "Averages" :  "12-points" }</button>
           </div>
       </div>
     );
