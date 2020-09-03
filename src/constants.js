@@ -1,30 +1,23 @@
 export const countries = [
     "austria",
-    "malta",
-    "monaco",
-    "switzerland",
-    "germany",
-    "spain",
-    "france",
+    "turkey",
+    "greece",
     "luxembourg",
-    "united kingdom",
-    "belgium",
+    "morocco",
     "italy",
+    "denmark",
     "sweden",
-    "ireland",
-    "netherlands",
-    "portugal",
-    "yugoslavia",
+    "switzerland",
     "finland",
     "norway",
-    // "montenegro",
-    // "malta",
-    // "switzerland",
-    // "austria",
-    // "denmark",
-    // "netherlands",
-    // "israel",
-    // "united kingdom"
+    "germany",
+    "united kingdom",
+    "portugal",
+    "netherlands",
+    "france",
+    "ireland",
+    "spain",
+    "belgium"
 ]
 const fireEmoji = String.fromCodePoint(0x1F525)
 export const countryNameMap = {
@@ -61,6 +54,7 @@ export const countryNameMap = {
     "moldova": "Moldova",
     "monaco": "Monaco",
     "montenegro": "Montenegro",
+    "morocco": "Morocco",
     "netherlands": "The Netherlands",
     "norway": "Norway",
     "poland": "Poland",
@@ -131,13 +125,7 @@ export const countryFlagMap = {
     "san marino": "san-marino.png",
     "australia": "australia.png",
     "georgia": "georgia.png",
-    "netherlands2": "netherlands.png",
-    "switzerland2": "switzerland.png",
-    "belgium2": "belgium.png",
-    "germany2": "germany.png",
-    "france2": "france.png",
-    "luxembourg2": "luxembourg.png",
-    "italy2": "italy.png"
+    "morocco": "morocco.png",
 }
 
 
