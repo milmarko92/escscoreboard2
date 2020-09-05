@@ -1,23 +1,22 @@
 export const countries = [
-    "austria",
-    "turkey",
-    "greece",
-    "luxembourg",
-    "morocco",
-    "italy",
-    "denmark",
-    "sweden",
-    "switzerland",
-    "finland",
-    "norway",
     "germany",
-    "united kingdom",
+    "denmark",
+    "belgium",
+    "luxembourg",
+    "yugoslavia",
+    "norway",
+    "finland",
     "portugal",
-    "netherlands",
-    "france",
-    "ireland",
+    "austria",
+    "sweden",
     "spain",
-    "belgium"
+    "switzerland",
+    "monaco",
+    "italy",
+    "france",
+    "netherlands",
+    "ireland",
+    "united kingdom"
 ]
 const fireEmoji = String.fromCodePoint(0x1F525)
 export const countryNameMap = {

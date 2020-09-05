@@ -14,7 +14,7 @@ body {
   color: white; }
 
 .App {
-  background-color: #8395a7;
+  background-color: #aaa;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 90% 10%;
@@ -27,7 +27,7 @@ body {
 
 .Voting {
   text-align: center;
-  background-color: white;
+  background-color: #666;
   padding: 8px;
   display: flex;
   flex-flow: column nowrap;
@@ -35,7 +35,7 @@ body {
 
 .Voting h1 {
   text-transform: uppercase;
-  color: #002488;
+  color: white;
   font-size: 24px; }
 
 .Ranking button {
@@ -65,16 +65,17 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  color: #002488;
+  background-color: #222;
+  color: white;
   font-size: 16px;
-  margin: 4px 0; }
+  margin: 0 0 4px; }
 
 .country__rank {
   margin-left: auto;
   text-align: right;
   margin-right: 12px;
   font-size: 13px;
-  color: #002488; }
+  color: white; }
 
 .country__name {
   padding: 8px 0;
@@ -84,7 +85,7 @@ body {
   padding: 2px 0 4px;
   vertical-align: middle;
   margin: 0 8px 0;
-  filter: saturate(2); }
+  filter: grayscale(100%); }
 
 .country__flag img {
   display: block;
@@ -95,13 +96,13 @@ body {
   text-align: right;
   padding: 8px;
   width: 72px;
-  background-color: black;
-  color: #ee5253; }
+  background-color: transparent;
+  color: white; }
 
 .country--small {
   font-size: 12px;
   transition: .4s ease;
-  margin: 0; }
+  margin: 0 0 4px; }
 
 .country--small .country__rank {
   padding: 0 8px;
@@ -137,23 +138,24 @@ body {
   line-height: 35px;
   text-align: center;
   font-size: 18px;
-  color: #ee5253; }
+  color: white; }
 
 .Scoreboard {
   padding: 16px;
   display: flex;
   align-items: center;
-  background-color: white; }
+  background-color: #666; }
 
 .Scoreboard > div {
   columns: 2;
-  column-gap: 0;
+  column-gap: 4px;
   width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  color: #185eb8;
+  background-color: #666;
+  color: white;
   font-family: "Gotham", sans-serif;
   padding: 2px 4px;
   display: inline-block;
