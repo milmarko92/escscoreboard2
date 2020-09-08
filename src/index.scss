@@ -17,14 +17,13 @@ body {
 }
 
 .App {
-  background-color: #391b35;
+  background-color: #aaa;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 90% 10%;
   grid-gap: 24px;
   height: 100vh;
   padding: 72px 128px;
-  background-image: url("img/join-us.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -32,8 +31,7 @@ body {
 
 .Voting {
   text-align: center;
-  background-color: #002488;
-  border: 3px solid rgba(#2c61c5, 0.5);
+  background-color: #666;
   padding: 8px;
   display: flex;
   flex-flow: column nowrap;
@@ -41,7 +39,7 @@ body {
 
   h1 {
     text-transform: uppercase;
-    color: #bee9ff;
+    color: white;
     font-size: 24px;
   }
 }
@@ -54,7 +52,7 @@ body {
     background-color: transparent;
     background-image: none;
     box-shadow: none;
-    color: #185eb8;
+    color: #999;
     border-top: none;
   }
   & + div {
@@ -68,27 +66,26 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: #185eb8;
+  color: #999;
   border-top: none;
 }
 
 .country {
-  background-image: linear-gradient(to bottom, #112552 0%, #020d3d 100%);
-  border-top: 2px solid #1c2e59;
-  box-shadow: 2px 2px 0 0 rgba(black, 0.2);
   break-inside: avoid;
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
+  background-color: #222;
   color: white;
   font-size: 16px;
+  margin: 0 0 4px;
 
   &__rank {
     margin-left: auto;
     text-align: right;
     margin-right: 12px;
     font-size: 13px;
-    color: #185eb8;
+    color: white;
   }
 
   &__name {
@@ -97,10 +94,10 @@ body {
   }
 
   &__flag {
-    padding: 4px 0;
+    padding: 2px 0 4px;
     vertical-align: middle;
     margin: 0 8px 0;
-    filter: saturate(2);
+    filter: grayscale(100%);
 
     img {
       display: block;
@@ -113,23 +110,25 @@ body {
     text-align: right;
     padding: 8px;
     width: 72px;
-    background-image: linear-gradient(to bottom, #020d3d 0%, #112552 100%);
+    background-color: transparent;
+    color: white;
   }
 
   &--small {
-    font-size: 10px;
+    font-size: 12px;
     transition: .4s ease;
+    margin: 0 0 4px;
     .country {
       &__rank {
         padding: 0 8px;
-        color: #185eb8;
+        color: white;
         float: right;
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
       }
       &__name {
-        padding: 3px 4px;
+        padding: 4px;
       }
       &__flag {
         padding: 0 4px 2px 4px;
@@ -149,15 +148,12 @@ body {
 
   &--1, &--2 {
     background-image: none;
-    background-color: #0f3482;
-    box-shadow: inset 0px 38px 60px -28px #2f5db3, inset 0px -15px 60px -10px #063180;
-    border-top: 2px solid rgba(#426bb7, 0.8);
     .country {
       &__average {
-        background-image: linear-gradient(to bottom, #2464d5 0%, #0b259c 100%);
+        
       }
       &__rank {
-        color: white;
+        
       }
       &__current-rank {
         margin: 0 8px 0 8px;
@@ -167,37 +163,28 @@ body {
         line-height: 35px;
         text-align: center;
         font-size: 18px;
-        margin-top: -2px;
-        border-top: 2px solid rgba(#3390d0, 0.5);
-        border-bottom: 2px solid rgba(#1e5dab, 0.5);
-        background-image: linear-gradient(to bottom, #153fab 0%, #021966 100%);
-        color: #68e8fd;
-        box-shadow: 0 0 24px rgba(black, 0.25);
+        color: white;
       }
     }
   }
 }
 
 .Scoreboard {
-  background-color: rgba(#071b47, 0.75);
   padding: 16px;
   display: flex;
   align-items: center;
-  border-top: 3px solid rgba(#42206f, 0.5);
-  border-left: 3px solid rgba(#240093, 0.5);
+  background-color: #666;
   >div {
     columns: 2;
-    column-gap: 0;
+    column-gap: 4px;
     width: 100%;
   }
 }
 
 button {
   appearance: none;
-  background-image: linear-gradient(to bottom, #112552 0%, #020d3d 100%);
   border: none;
-  border-top: 2px solid #1c2e59;
-  box-shadow: 2px 2px 0 0 rgba(black, 0.25);
+  background-color: #666;
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 2px 4px;
