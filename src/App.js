@@ -6,25 +6,39 @@ import {countryNameMap, countries, rankToPointsMap, all_voters} from "./constant
 import FlipMove from "react-flip-move";
 import { saveAs } from 'file-saver';
 import {getFlagForCountry} from "./images";
+import queryString from 'query-string';
 
 class App extends Component {
     constructor(props) {
         super(props);
         let initial = {}
-        countries.forEach(country => {
+        let country_list = countries
+        let params = queryString.parse(location.search)
+        console.log(params)
+        if ("country_list" in params){
+            country_list = params["country_list"].toLowerCase().split(",")
+        }
+        let voter_list = all_voters
+        if ("voters" in params){
+            voter_list = params["voters"].toLowerCase().split(",")
+        }
+
+        country_list.forEach(country => {
             initial[country.toLowerCase()] = []
         })
 //        initial = {"serbia": []}
+
         this.state = {
             "overallRanking":initial,
             "currentVoting": {},
             "voters": [],
             "currentVoter": "",
             "twelves": false,
-            "count": countries.length,
-            "remainingVoters": all_voters,
+            "count": country_list.length,
+            "remainingVoters": voter_list,
             "completedVoters": 0,
-            "lastVotedCountry": ""
+            "lastVotedCountry": "",
+            "country_list": country_list
         }
         this.eventSource = new EventSource("http://localhost:5000/stream");
     }
@@ -86,7 +100,7 @@ class App extends Component {
     }
 
     endvote(){
-        if (Object.keys(this.state.currentVoting).length !== countries.length || this.state.currentVoter === "Up next..." || this.state.currentVoter === "" ){
+        if (Object.keys(this.state.currentVoting).length !== this.state.country_list.length || this.state.currentVoter === "Up next..." || this.state.currentVoter === "" ){
             return
         }
         let voters = this.state.voters
@@ -101,7 +115,7 @@ class App extends Component {
         this.setState({
             "currentVoting":{},
             "voters": voters,
-            "count": countries.length,
+            "count": this.state.country_list.length,
             "currentVoter": "Up next...",
             "remainingVoters": remaining,
             "completedVoters": this.state.completedVoters + 1,
@@ -141,8 +155,8 @@ class App extends Component {
 
     addRandomVote(){
         const votes = this.state.currentVoting
-        const country = countries[Math.floor(Math.random() * countries.length)].toLowerCase()
-        const rank = Math.floor(Math.random() * countries.length)+1
+        const country = this.state.country_list[Math.floor(Math.random() * this.state.country_list.length)].toLowerCase()
+        const rank = Math.floor(Math.random() * this.state.country_list.length)+1
         this.addVote({"country": country, "new_rank": rank})
         this.setState({"currentVoting": votes})
     }
@@ -180,8 +194,8 @@ class App extends Component {
     }
     votingPanel(ranking){
         var list = []
-        for(var i = 0; i < countries.length; i++) {
-            const country = countries[i]
+        for(var i = 0; i < this.state.country_list.length; i++) {
+            const country = this.state.country_list[i]
             if (!(country in this.state.currentVoting)){
                 list.push(country)
             }
