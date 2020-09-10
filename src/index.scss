@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @font-face {
   font-family: "Gotham";
   src: url("fonts/Gotham-Medium.otf");
+}
+@font-face {
+  font-family: "Digii";
+  src: url("fonts/Digii.TTF");
 }
 
 body {
@@ -12,12 +18,12 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #2b0d27;
+  background-color: #000;
   color: white;
 }
 
 .App {
-  background-color: #aaa;
+  background-color: #000;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 90% 10%;
@@ -31,7 +37,7 @@ body {
 
 .Voting {
   text-align: center;
-  background-color: #666;
+  background-color: #111;
   padding: 8px;
   display: flex;
   flex-flow: column nowrap;
@@ -41,6 +47,7 @@ body {
     text-transform: uppercase;
     color: white;
     font-size: 24px;
+    font-family: "Bebas Neue";
   }
 }
 
@@ -77,8 +84,9 @@ body {
   flex-flow: row nowrap;
   background-color: #222;
   color: white;
-  font-size: 16px;
+  font-size: 28px;
   margin: 0 0 4px;
+  font-family: "Bebas Neue";
 
   &__rank {
     margin-left: auto;
@@ -94,10 +102,10 @@ body {
   }
 
   &__flag {
-    padding: 2px 0 4px;
+    padding: 0;
     vertical-align: middle;
     margin: 0 8px 0;
-    filter: grayscale(100%);
+    border: 2px solid white;
 
     img {
       display: block;
@@ -108,14 +116,15 @@ body {
   
   &__average {
     text-align: right;
-    padding: 8px;
+    padding: 8px 16px;
     width: 72px;
     background-color: transparent;
     color: white;
+    font-family: "Digii";
   }
 
   &--small {
-    font-size: 12px;
+    font-size: 14px;
     transition: .4s ease;
     margin: 0 0 4px;
     .country {
@@ -131,8 +140,8 @@ body {
         padding: 4px;
       }
       &__flag {
-        padding: 0 4px 2px 4px;
-        margin: 0 0 0 2px;
+        padding: 0;
+        margin: 0 2px 0 4px;
         img {
           width: 20px;
           height: 12px;
@@ -158,7 +167,7 @@ body {
       &__current-rank {
         margin: 0 8px 0 8px;
         color: white;
-        width: 36px;
+        width: 40px;
         height: 35px;
         line-height: 35px;
         text-align: center;
@@ -173,10 +182,11 @@ body {
   padding: 16px;
   display: flex;
   align-items: center;
-  background-color: #666;
+  background-color: #111;
   >div {
     columns: 2;
-    column-gap: 4px;
+    column-gap: 32px;
+    column-rule: 2px solid white;
     width: 100%;
   }
 }
