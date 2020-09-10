@@ -37,12 +37,11 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center; }
-
-.Voting h1 {
-  text-transform: uppercase;
-  color: white;
-  font-size: 24px;
-  font-family: "Bebas Neue"; }
+  .Voting h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 24px;
+    font-family: "Bebas Neue"; }
 
 .Ranking button {
   width: 100%;
@@ -76,89 +75,75 @@ body {
   font-size: 28px;
   margin: 0 0 4px;
   font-family: "Bebas Neue"; }
-
-.country__rank {
-  margin-left: auto;
-  text-align: right;
-  margin-right: 12px;
-  font-size: 13px;
-  color: white; }
-
-.country__name {
-  padding: 8px 0;
-  text-transform: uppercase; }
-
-.country__flag {
-  padding: 0;
-  vertical-align: middle;
-  margin: 0 8px 0;
-  border: 2px solid white; }
-
-.country__flag img {
-  display: block;
-  width: 36px;
-  height: 22px; }
-
-.country__average {
-  text-align: right;
-  padding: 8px 16px;
-  width: 72px;
-  background-color: transparent;
-  color: white;
-  font-family: "Digii"; }
-
-.country--small {
-  font-size: 14px;
-  transition: .4s ease;
-  margin: 0 0 4px; }
-
-.country--small .country__rank {
-  padding: 0 8px;
-  color: white;
-  float: right;
-  margin-left: auto;
-  margin-right: 0;
-  font-size: 10px; }
-
-.country--small .country__name {
-  padding: 4px; }
-
-.country--small .country__flag {
-  padding: 0;
-  margin: 0 2px 0 4px; }
-
-.country--small .country__flag img {
-  width: 20px;
-  height: 12px; }
-
-.country--small:hover {
-  opacity: 0.5;
-  cursor: pointer; }
-
-.country--1, .country--2 {
-  background-image: none; }
-
-.country--1 .country__current-rank, .country--2 .country__current-rank {
-  margin: 0 8px 0 8px;
-  color: white;
-  width: 40px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  font-size: 18px;
-  color: white; }
+  .country__rank {
+    margin-left: auto;
+    text-align: right;
+    margin-right: 12px;
+    font-size: 13px;
+    color: white; }
+  .country__name {
+    padding: 8px 0;
+    text-transform: uppercase; }
+  .country__flag {
+    padding: 0;
+    vertical-align: middle;
+    margin: 0 8px 0;
+    border: 2px solid white; }
+    .country__flag img {
+      display: block;
+      width: 36px;
+      height: 22px; }
+  .country__average {
+    text-align: right;
+    padding: 8px 16px;
+    width: 96px;
+    background-color: transparent;
+    color: white;
+    font-family: "Digii"; }
+  .country--small {
+    font-size: 14px;
+    transition: .4s ease;
+    margin: 0 0 4px; }
+    .country--small .country__rank {
+      padding: 0 8px;
+      color: white;
+      float: right;
+      margin-left: auto;
+      margin-right: 0;
+      font-size: 10px; }
+    .country--small .country__name {
+      padding: 4px; }
+    .country--small .country__flag {
+      padding: 0;
+      margin: 0 2px 0 4px; }
+      .country--small .country__flag img {
+        width: 20px;
+        height: 12px; }
+    .country--small:hover {
+      opacity: 0.5;
+      cursor: pointer; }
+  .country--1, .country--2 {
+    background-image: none; }
+    .country--1 .country__current-rank, .country--2 .country__current-rank {
+      margin: 0 8px 0 8px;
+      color: white;
+      width: 40px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 18px;
+      color: white; }
 
 .Scoreboard {
   padding: 16px;
   display: flex;
   align-items: center;
   background-color: #111; }
-
-.Scoreboard > div {
-  columns: 2;
-  column-gap: 32px;
-  column-rule: 2px solid white;
-  width: 100%; }
+  .Scoreboard > div {
+    columns: 2;
+    column-gap: 32px;
+    column-rule: 2px solid white;
+    width: 100%; }
 
 button {
   appearance: none;
@@ -173,7 +158,6 @@ button {
   text-transform: uppercase;
   margin: 2px;
   transition: .4s ease; }
-
-button:hover {
-  opacity: 0.75;
-  cursor: pointer; }
+  button:hover {
+    opacity: 0.75;
+    cursor: pointer; }
