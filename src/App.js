@@ -6,22 +6,21 @@ import {countryNameMap, countries, rankToPointsMap, all_voters} from "./constant
 import FlipMove from "react-flip-move";
 import { saveAs } from 'file-saver';
 import {getFlagForCountry} from "./images";
-import queryString from 'query-string';
 
 class App extends Component {
     constructor(props) {
         super(props);
         let initial = {}
         let country_list = countries
-        let params = queryString.parse(location.search)
-        console.log(params)
-        if ("country_list" in params){
-            country_list = params["country_list"].toLowerCase().split(",")
-        }
+        // let params = queryString.parse(location.search)
+        // console.log(params)
+        // if ("country_list" in params){
+        //     country_list = params["country_list"].toLowerCase().split(",")
+        // }
         let voter_list = all_voters
-        if ("voters" in params){
-            voter_list = params["voters"].toLowerCase().split(",")
-        }
+        // if ("voters" in params){
+        //     voter_list = params["voters"].toLowerCase().split(",")
+        // }
 
         country_list.forEach(country => {
             initial[country.toLowerCase()] = []
