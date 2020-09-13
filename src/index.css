@@ -37,12 +37,11 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center; }
-
-.Voting h1 {
-  color: #18265b;
-  font-size: 32px;
-  font-family: "Vallejo";
-  background-color: #ebeee8; }
+  .Voting h1 {
+    color: #18265b;
+    font-size: 32px;
+    font-family: "Vallejo";
+    background-color: #ebeee8; }
 
 .Ranking button {
   width: 100%;
@@ -78,97 +77,82 @@ body {
   font-family: "Vallejo";
   border-right: 3px solid #808d9c;
   border-bottom: 3px solid #808d9c; }
-
-.country__rank {
-  margin-left: auto;
-  text-align: right;
-  margin-right: 12px;
-  font-size: 13px;
-  color: white; }
-
-.country__name {
-  padding: 2px 8px;
-  letter-spacing: 1px; }
-
-.country__flag {
-  padding: 0;
-  vertical-align: middle;
-  margin: 0;
-  border-right: 2px solid #808d9c; }
-
-.country__flag img {
-  display: block;
-  width: 56px;
-  height: 38px;
-  filter: saturate(1.5); }
-
-.country__average {
-  text-align: right;
-  padding: 2px 8px;
-  width: 96px;
-  background-color: transparent;
-  color: white;
-  border-left: 2px solid #808d9c; }
-
-.country--small {
-  font-size: 14px;
-  transition: .4s ease;
-  margin: 0 0 2px;
-  border: 0; }
-
-.country--small .country__rank {
-  padding: 0 8px;
-  color: white;
-  float: right;
-  margin-left: auto;
-  margin-right: 0;
-  font-size: 10px; }
-
-.country--small .country__name {
-  padding: 0; }
-
-.country--small .country__flag {
-  padding: 0;
-  margin: 0 4px 0 0;
-  border: 0; }
-
-.country--small .country__flag img {
-  width: 24px;
-  height: 16px; }
-
-.country--small:hover {
-  opacity: 0.5;
-  cursor: pointer; }
-
-.country--1, .country--2 {
-  background-image: none;
-  background-color: #3055d7; }
-
-.country--1 .country__current-rank, .country--2 .country__current-rank {
-  margin: 0;
-  color: white;
-  width: 56px;
-  height: 38px;
-  line-height: 38px;
-  text-align: center;
-  font-size: 24px;
-  background-color: #18265b; }
-
-.country--1 .country__average, .country--2 .country__average {
-  color: #18265b;
-  background-color: #ebeee8; }
+  .country__rank {
+    margin-left: auto;
+    text-align: right;
+    margin-right: 12px;
+    font-size: 13px;
+    color: white; }
+  .country__name {
+    padding: 2px 8px;
+    letter-spacing: 1px; }
+  .country__flag {
+    padding: 0;
+    vertical-align: middle;
+    margin: 0;
+    border-right: 2px solid #808d9c; }
+    .country__flag img {
+      display: block;
+      width: 56px;
+      height: 38px;
+      filter: saturate(1.5); }
+  .country__average {
+    text-align: right;
+    padding: 2px 8px;
+    width: 96px;
+    background-color: transparent;
+    color: white;
+    border-left: 2px solid #808d9c; }
+  .country--small {
+    font-size: 14px;
+    transition: .4s ease;
+    margin: 0 0 2px;
+    border: 0; }
+    .country--small .country__rank {
+      padding: 0 8px;
+      color: white;
+      float: right;
+      margin-left: auto;
+      margin-right: 0;
+      font-size: 10px; }
+    .country--small .country__name {
+      padding: 0; }
+    .country--small .country__flag {
+      padding: 0;
+      margin: 0 4px 0 0;
+      border: 0; }
+      .country--small .country__flag img {
+        width: 24px;
+        height: 16px; }
+    .country--small:hover {
+      opacity: 0.5;
+      cursor: pointer; }
+  .country--1, .country--2 {
+    background-image: none;
+    background-color: #3055d7; }
+    .country--1 .country__current-rank, .country--2 .country__current-rank {
+      margin: 0;
+      color: white;
+      width: 56px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      font-size: 24px;
+      background-color: #18265b; }
+    .country--1 .country__average, .country--2 .country__average {
+      color: #18265b;
+      background-color: #ebeee8; }
 
 .Scoreboard {
   padding: 0;
   display: flex;
   align-items: center; }
-
-.Scoreboard > div {
-  padding: 8px;
-  background: radial-gradient(circle, white 0%, #4b5a5f 100%);
-  columns: 2;
-  column-gap: 0;
-  width: 100%; }
+  .Scoreboard > div {
+    padding: 8px;
+    background: radial-gradient(circle, white 0%, #4b5a5f 100%);
+    columns: 2;
+    column-gap: 0;
+    width: 100%; }
 
 button {
   appearance: none;
@@ -183,7 +167,6 @@ button {
   text-transform: uppercase;
   margin: 2px;
   transition: .4s ease; }
-
-button:hover {
-  opacity: 0.75;
-  cursor: pointer; }
+  button:hover {
+    opacity: 0.75;
+    cursor: pointer; }
