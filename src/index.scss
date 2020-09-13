@@ -8,9 +8,10 @@
   font-family: "Gotham";
   src: url("fonts/Gotham-Medium.otf");
 }
+
 @font-face {
-  font-family: "Digii";
-  src: url("fonts/Digii.TTF");
+  font-family: "Vallejo";
+  src: url("fonts/Vallejo.otf");
 }
 
 body {
@@ -26,28 +27,28 @@ body {
   background-color: #000;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 90% 10%;
+  grid-template-rows: 88% 12%;
   grid-gap: 24px;
   height: 100vh;
   padding: 72px 128px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url("img/water.jpg");
 }
 
 .Voting {
   text-align: center;
-  background-color: #111;
   padding: 8px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 
   h1 {
-    text-transform: uppercase;
-    color: white;
-    font-size: 24px;
-    font-family: "Bebas Neue";
+    color: #18265b;
+    font-size: 32px;
+    font-family: "Vallejo";
+    background-color: #ebeee8;
   }
 }
 
@@ -82,11 +83,13 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  background-color: #222;
+  background-color: #18265b;
   color: white;
   font-size: 28px;
-  margin: 0 0 4px;
-  font-family: "Bebas Neue";
+  margin: 0;
+  font-family: "Vallejo";
+  border-right: 3px solid #808d9c;
+  border-bottom: 3px solid #808d9c;
 
   &__rank {
     margin-left: auto;
@@ -97,36 +100,37 @@ body {
   }
 
   &__name {
-    padding: 8px 0;
-    text-transform: uppercase;
+    padding: 2px 8px;
+    letter-spacing: 1px;
   }
 
   &__flag {
     padding: 0;
     vertical-align: middle;
-    margin: 0 8px 0;
-    border: 2px solid white;
+    margin: 0;
+    border-right: 2px solid #808d9c;
 
     img {
       display: block;
-      width: 36px;
-      height: 22px;
+      width: 56px;
+      height: 38px;
     }
   }
   
   &__average {
     text-align: right;
-    padding: 8px 16px;
+    padding: 2px 8px;
     width: 96px;
     background-color: transparent;
     color: white;
-    font-family: "Digii";
+    border-left: 2px solid #808d9c;
   }
 
   &--small {
     font-size: 14px;
     transition: .4s ease;
-    margin: 0 0 4px;
+    margin: 0 0 2px;
+    border: 0;
     .country {
       &__rank {
         padding: 0 8px;
@@ -137,14 +141,15 @@ body {
         font-size: 10px;
       }
       &__name {
-        padding: 4px;
+        padding: 0;
       }
       &__flag {
         padding: 0;
-        margin: 0 2px 0 4px;
+        margin: 0 4px 0 0;
+        border: 0;
         img {
-          width: 20px;
-          height: 12px;
+          width: 24px;
+          height: 16px;
         }
       }
     }
@@ -157,6 +162,7 @@ body {
 
   &--1, &--2 {
     background-image: none;
+    background-color: #3055d7;
     .country {
       &__average {
         
@@ -165,28 +171,32 @@ body {
         
       }
       &__current-rank {
-        margin: 0 8px 0 8px;
+        margin: 0;
         color: white;
-        width: 40px;
-        height: 35px;
-        line-height: 35px;
+        width: 56px;
+        height: 38px;
+        line-height: 38px;
         text-align: center;
-        font-size: 18px;
-        color: white;
+        font-size: 24px;
+        background-color: #18265b;
+      }
+      &__average {
+        color: #18265b;
+        background-color: #ebeee8;
       }
     }
   }
 }
 
 .Scoreboard {
-  padding: 16px;
+  padding: 0;
   display: flex;
   align-items: center;
-  background-color: #111;
   >div {
+    padding: 8px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(75,90,95,1) 100%);
     columns: 2;
-    column-gap: 32px;
-    column-rule: 2px solid white;
+    column-gap: 0;
     width: 100%;
   }
 }
@@ -194,7 +204,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #666;
+  background-color: #3055d7;
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 2px 4px;
