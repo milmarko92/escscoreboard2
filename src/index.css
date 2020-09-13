@@ -99,7 +99,8 @@ body {
 .country__flag img {
   display: block;
   width: 56px;
-  height: 38px; }
+  height: 38px;
+  filter: saturate(1.5); }
 
 .country__average {
   text-align: right;
