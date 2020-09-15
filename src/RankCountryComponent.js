@@ -21,7 +21,6 @@ export default class RankCountryComponent extends Component {
     }
 
     render() {
-        console.log(this.props)
         return(
             <div className={this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
                 { this.flagOrRanking() }
