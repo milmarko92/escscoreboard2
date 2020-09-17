@@ -9,11 +9,6 @@
   src: url("fonts/Gotham-Medium.otf");
 }
 
-@font-face {
-  font-family: "Vallejo";
-  src: url("fonts/Vallejo.otf");
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -34,21 +29,24 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/water.jpg");
+  background-image: url("img/vienna.gif");
 }
 
 .Voting {
-  text-align: center;
-  padding: 8px;
+  background: rgba(#0b061e, 0.5);
+  box-shadow: 0px 0px 12px 0px rgba(138,132,150,0.75);
+  border-radius: 32px;
+  text-align: left;
+  padding: 24px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 
   h1 {
-    color: #18265b;
+    color: white;
     font-size: 32px;
-    font-family: "Vallejo";
-    background-color: #ebeee8;
+    text-transform: uppercase;
+    margin: 0 0 8px;
   }
 }
 
@@ -56,12 +54,13 @@ body {
   button {
     width: 100%;
     margin: 0;
-    padding: 8px 4px;
+    padding: 4px;
     background-color: transparent;
     background-image: none;
     box-shadow: none;
-    color: #999;
+    color: white;
     border-top: none;
+    text-align: left;
   }
   & + div {
     clear: both;
@@ -70,12 +69,13 @@ body {
 
 .save-button {
   margin: 0;
-  padding: 8px 4px;
+  padding: 4px;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: #999;
+  color: white;
   border-top: none;
+  text-align: left;
 }
 
 .country {
@@ -83,13 +83,11 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  background-color: #18265b;
   color: white;
-  font-size: 28px;
-  margin: 0;
-  font-family: "Vallejo";
-  border-right: 3px solid #808d9c;
-  border-bottom: 3px solid #808d9c;
+  font-size: 16px;
+  margin: 0 0 8px;
+  border-radius: 240px;
+  position: relative;
 
   &__rank {
     margin-left: auto;
@@ -97,41 +95,42 @@ body {
     margin-right: 12px;
     font-size: 13px;
     color: white;
+    padding: 8px 0 4px;
+    opacity: 0.2;
   }
 
   &__name {
-    padding: 2px 8px;
-    letter-spacing: 1px;
+    padding: 6px 8px 4px;
+    text-transform: uppercase;
   }
 
   &__flag {
     padding: 0;
     vertical-align: middle;
-    margin: 0;
-    border-right: 2px solid #808d9c;
+    margin: 0 8px;
 
     img {
       display: block;
-      width: 56px;
-      height: 38px;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
       filter: saturate(1.5);
     }
   }
   
   &__average {
     text-align: right;
-    padding: 2px 8px;
+    padding: 6px 8px 4px;
     width: 96px;
     background-color: transparent;
-    color: white;
-    border-left: 2px solid #808d9c;
+    color: #9f9fb7;
   }
 
   &--small {
-    font-size: 14px;
+    font-size: 11px;
     transition: .4s ease;
     margin: 0 0 2px;
-    border: 0;
+    background-color: rgba(#3f405f, 0.5);
     .country {
       &__rank {
         padding: 0 8px;
@@ -142,14 +141,14 @@ body {
         font-size: 10px;
       }
       &__name {
-        padding: 0;
+        padding: 4px 0 3px;
       }
       &__flag {
         padding: 0;
-        margin: 0 4px 0 0;
+        margin: 0 8px 0 4px;
         border: 0;
         img {
-          width: 24px;
+          width: 16px;
           height: 16px;
         }
       }
@@ -162,8 +161,7 @@ body {
   }
 
   &--1, &--2 {
-    background-image: none;
-    background-color: #3055d7;
+    background-color: rgba(#3f405f, 0.5);
     .country {
       &__average {
         
@@ -174,30 +172,34 @@ body {
       &__current-rank {
         margin: 0;
         color: white;
-        width: 56px;
-        height: 38px;
-        line-height: 38px;
+        width: 28px;
+        height: 28px;
+        line-height: 32px;
         text-align: center;
-        font-size: 24px;
-        background-color: #18265b;
+        background-color: #ebebe9;
+        color: black;
+        position: absolute;
+        left: 0;
+        font-size: 13px;
+        border-radius: 100%;
       }
       &__average {
-        color: #18265b;
-        background-color: #ebeee8;
+        
       }
     }
   }
 }
 
 .Scoreboard {
-  padding: 0;
   display: flex;
   align-items: center;
+  padding: 24px;
+  background: rgba(#0b061e, 0.5);
+  box-shadow: 0px 0px 12px 0px rgba(138,132,150,0.75);
+  border-radius: 32px;
   >div {
-    padding: 8px;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(75,90,95,1) 100%);
     columns: 2;
-    column-gap: 0;
+    column-gap: 24px;
     width: 100%;
   }
 }
@@ -205,18 +207,47 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #3055d7;
-  color: white;
+  background-color: #ebebe9;
+  color: #3f405f;
   font-family: "Gotham", sans-serif;
-  padding: 2px 4px;
+  padding: 4px 8px 3px;
   display: inline-block;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 2px;
   transition: .4s ease;
+  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
+  }
+}
+
+#picker {
+  padding: 48px;
+  .country {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    background-color: white;
+    color: #0b061e;
+    &__flag {
+      display: inline-block;
+    }
+    &__name {
+      display: inline-block;
+      padding: 4px 6px 3px 0;
+    }
+    &__name2 {
+      display: inline-block;
+      padding: 4px 6px 2px 6px;
+      text-transform: uppercase;
+    }
+  }
+  > button {
+    float: right;
+    font-size: 11px;
+    margin-top: 24px;
+    padding-bottom: 2px;
   }
 }

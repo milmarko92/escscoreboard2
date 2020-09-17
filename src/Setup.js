@@ -80,7 +80,7 @@ class Setup extends Component {
                 })
                 console.log(this.state["selected_voters"])
             }}>
-                <span className={"country__flag"}>
+                <span className={"country__name2"}>
                     {voter}
                 </span>
             </div>
@@ -99,7 +99,7 @@ class Setup extends Component {
                     "remaining_voter": new_remaining
                 })
             }}>
-                <span className={"country__flag"}>
+                <span className={"country__name2"}>
                     {voter}
                 </span>
             </div>
@@ -120,41 +120,33 @@ class Setup extends Component {
         }
 
         return (
-            <div>
+            <section id="picker">
                 <div>
+                    <h2>Selected Countries</h2>
                     {
                         this.state["selected_countries"].map((country, index) => this.selectedCountryElement(country))
                     }
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 <div>
+                    <h2>List of Countries</h2>
                     {
                         this.state["remaining_countries"].map((country, index) => this.countryElement(country))
                     }
                 </div>
                 <div>
+                    <h2>Selected Voters</h2>
                     {
                         this.state["selected_voters"].map((voter, index) => this.selectedVoterElement(voter))
                     }
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 <div>
+                    <h2>List of Voters</h2>
                     {
                         this.state["remaining_voters"].map((voter, index) => this.voterElement(voter))
                     }
                 </div>
                 <button onClick={() => this.setState({"done": true})}>Save</button>
-            </div>
-
-
+            </section>
                     // countries.forEach(country => this.votingButtonComponent(country))
         )
     }

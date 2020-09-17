@@ -45,7 +45,7 @@ class Scoreboard extends Component {
 
     addVote(data){
         if (data.country === "sweden" && data.new_rank < 5){
-            var audio = new Audio(process.env.PUBLIC_URL + "/audio/swe.wav")
+            var audio = new Audio(process.env.PUBLIC_URL + "/audio/fucking-sweden.wav")
             audio.play()
         }
         else if (data.new_rank <= 3 && this.state.completedVoters < 3){
