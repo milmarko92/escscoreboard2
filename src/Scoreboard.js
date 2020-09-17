@@ -48,7 +48,7 @@ class Scoreboard extends Component {
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/fucking-sweden.wav")
             audio.play()
         }
-        else if (data.new_rank <= 3 && this.state.completedVoters < 3){
+        else if (data.new_rank <= 3){
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
             audio.play()
         }
