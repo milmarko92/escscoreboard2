@@ -32,7 +32,7 @@ body {
 }
 
 .Voting {
-  border: 1px solid #b9b6af;
+  background-color: rgba(#b9b6af, 0.1);
   text-align: left;
   padding: 24px;
   display: flex;
@@ -190,7 +190,7 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  border: 1px solid #b9b6af;
+  border: 1px solid rgba(#b9b6af, 0.5);
   >div {
     columns: 2;
     column-gap: 8px;
