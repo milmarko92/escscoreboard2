@@ -15,7 +15,7 @@ body {
   background-position: center;
   font-family: "Gotham", sans-serif;
   background-color: #000;
-  color: white;
+  color: #b9b6af;
 }
 
 .App {
@@ -29,13 +29,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/vienna.gif");
 }
 
 .Voting {
-  background: rgba(#0b061e, 0.5);
-  box-shadow: 0px 0px 12px 0px rgba(138,132,150,0.75);
-  border-radius: 32px;
+  border: 1px solid #b9b6af;
   text-align: left;
   padding: 24px;
   display: flex;
@@ -43,7 +40,7 @@ body {
   justify-content: center;
 
   h1 {
-    color: white;
+    color: #b9b6af;
     font-size: 32px;
     text-transform: uppercase;
     margin: 0 0 8px;
@@ -54,11 +51,11 @@ body {
   button {
     width: 100%;
     margin: 0;
-    padding: 4px;
+    padding: 4px 0;
     background-color: transparent;
     background-image: none;
     box-shadow: none;
-    color: white;
+    color: #b9b6af;
     border-top: none;
     text-align: left;
   }
@@ -69,11 +66,11 @@ body {
 
 .save-button {
   margin: 0;
-  padding: 4px;
+  padding: 4px 0;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: white;
+  color: #b9b6af;
   border-top: none;
   text-align: left;
 }
@@ -83,19 +80,19 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  color: white;
+  color: #b9b6af;
   font-size: 16px;
   margin: 0 0 8px;
-  border-radius: 240px;
   position: relative;
+  background-color: rgba(#b9b6af, 0.1);
 
   &__rank {
     margin-left: auto;
     text-align: right;
     margin-right: 12px;
     font-size: 13px;
-    color: white;
-    padding: 8px 0 4px;
+    color: #b9b6af;
+    padding: 4px 0;
     opacity: 0.2;
   }
 
@@ -107,13 +104,12 @@ body {
   &__flag {
     padding: 0;
     vertical-align: middle;
-    margin: 0 8px;
+    margin: 0 4px 0 0;
 
     img {
       display: block;
-      width: 24px;
-      height: 24px;
-      border-radius: 100%;
+      width: 40px;
+      height: 28px;
       filter: saturate(1.5);
     }
   }
@@ -121,35 +117,35 @@ body {
   &__average {
     text-align: right;
     padding: 6px 8px 4px;
-    width: 96px;
+    width: 64px;
     background-color: transparent;
-    color: #9f9fb7;
+    color: #b9b6af;
   }
 
   &--small {
     font-size: 11px;
     transition: .4s ease;
-    margin: 0 0 2px;
-    background-color: rgba(#3f405f, 0.5);
+    margin: 0 0 4px;
+    background-color: rgba(#b9b6af, 0.1);
     .country {
       &__rank {
         padding: 0 8px;
-        color: white;
+        color: #b9b6af;
         float: right;
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
       }
       &__name {
-        padding: 4px 0 3px;
+        padding: 4px 0;
       }
       &__flag {
         padding: 0;
-        margin: 0 8px 0 4px;
+        margin: -2px 8px 0 0;
         border: 0;
         img {
-          width: 16px;
-          height: 16px;
+          width: 28px;
+          height: 20px;
         }
       }
     }
@@ -161,7 +157,7 @@ body {
   }
 
   &--1, &--2 {
-    background-color: rgba(#3f405f, 0.5);
+    background-color: rgba(white, 0.15);
     .country {
       &__average {
         
@@ -171,17 +167,17 @@ body {
       }
       &__current-rank {
         margin: 0;
-        color: white;
-        width: 28px;
+        color: #b9b6af;
+        width: 40px;
         height: 28px;
         line-height: 32px;
         text-align: center;
-        background-color: #ebebe9;
+        background-color: #b9b6af;
         color: black;
         position: absolute;
         left: 0;
         font-size: 13px;
-        border-radius: 100%;
+        z-index: 5;
       }
       &__average {
         
@@ -194,12 +190,10 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background: rgba(#0b061e, 0.5);
-  box-shadow: 0px 0px 12px 0px rgba(138,132,150,0.75);
-  border-radius: 32px;
+  border: 1px solid #b9b6af;
   >div {
     columns: 2;
-    column-gap: 24px;
+    column-gap: 8px;
     width: 100%;
   }
 }
@@ -207,8 +201,8 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #ebebe9;
-  color: #3f405f;
+  background-color: #b9b6af;
+  color: black;
   font-family: "Gotham", sans-serif;
   padding: 4px 8px 3px;
   display: inline-block;
@@ -217,7 +211,6 @@ button {
   text-transform: uppercase;
   margin: 2px;
   transition: .4s ease;
-  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -229,7 +222,7 @@ button {
   .country {
     display: inline-block;
     margin: 0 8px 8px 0;
-    background-color: white;
+    background-color: #b9b6af;
     color: #0b061e;
     &__flag {
       display: inline-block;

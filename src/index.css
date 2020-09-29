@@ -12,7 +12,7 @@ body {
   background-position: center;
   font-family: "Gotham", sans-serif;
   background-color: #000;
-  color: white; }
+  color: #b9b6af; }
 
 .App {
   background-color: #000;
@@ -24,32 +24,30 @@ body {
   padding: 72px 128px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("img/vienna.gif"); }
+  background-position: center; }
 
 .Voting {
-  background: rgba(11, 6, 30, 0.5);
-  box-shadow: 0px 0px 12px 0px rgba(138, 132, 150, 0.75);
-  border-radius: 32px;
+  border: 1px solid #b9b6af;
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center; }
-  .Voting h1 {
-    color: white;
-    font-size: 32px;
-    text-transform: uppercase;
-    margin: 0 0 8px; }
+
+.Voting h1 {
+  color: #b9b6af;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 0 0 8px; }
 
 .Ranking button {
   width: 100%;
   margin: 0;
-  padding: 4px;
+  padding: 4px 0;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: white;
+  color: #b9b6af;
   border-top: none;
   text-align: left; }
 
@@ -58,11 +56,11 @@ body {
 
 .save-button {
   margin: 0;
-  padding: 4px;
+  padding: 4px 0;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: white;
+  color: #b9b6af;
   border-top: none;
   text-align: left; }
 
@@ -71,95 +69,106 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  color: white;
+  color: #b9b6af;
   font-size: 16px;
   margin: 0 0 8px;
-  border-radius: 240px;
-  position: relative; }
-  .country__rank {
-    margin-left: auto;
-    text-align: right;
-    margin-right: 12px;
-    font-size: 13px;
-    color: white;
-    padding: 8px 0 4px;
-    opacity: 0.2; }
-  .country__name {
-    padding: 6px 8px 4px;
-    text-transform: uppercase; }
-  .country__flag {
-    padding: 0;
-    vertical-align: middle;
-    margin: 0 8px; }
-    .country__flag img {
-      display: block;
-      width: 24px;
-      height: 24px;
-      border-radius: 100%;
-      filter: saturate(1.5); }
-  .country__average {
-    text-align: right;
-    padding: 6px 8px 4px;
-    width: 96px;
-    background-color: transparent;
-    color: #9f9fb7; }
-  .country--small {
-    font-size: 11px;
-    transition: .4s ease;
-    margin: 0 0 2px;
-    background-color: rgba(63, 64, 95, 0.5); }
-    .country--small .country__rank {
-      padding: 0 8px;
-      color: white;
-      float: right;
-      margin-left: auto;
-      margin-right: 0;
-      font-size: 10px; }
-    .country--small .country__name {
-      padding: 4px 0 3px; }
-    .country--small .country__flag {
-      padding: 0;
-      margin: 0 8px 0 4px;
-      border: 0; }
-      .country--small .country__flag img {
-        width: 16px;
-        height: 16px; }
-    .country--small:hover {
-      opacity: 0.5;
-      cursor: pointer; }
-  .country--1, .country--2 {
-    background-color: rgba(63, 64, 95, 0.5); }
-    .country--1 .country__current-rank, .country--2 .country__current-rank {
-      margin: 0;
-      color: white;
-      width: 28px;
-      height: 28px;
-      line-height: 32px;
-      text-align: center;
-      background-color: #ebebe9;
-      color: black;
-      position: absolute;
-      left: 0;
-      font-size: 13px;
-      border-radius: 100%; }
+  position: relative;
+  background-color: rgba(185, 182, 175, 0.1); }
+
+.country__rank {
+  margin-left: auto;
+  text-align: right;
+  margin-right: 12px;
+  font-size: 13px;
+  color: #b9b6af;
+  padding: 4px 0;
+  opacity: 0.2; }
+
+.country__name {
+  padding: 6px 8px 4px;
+  text-transform: uppercase; }
+
+.country__flag {
+  padding: 0;
+  vertical-align: middle;
+  margin: 0 4px 0 0; }
+
+.country__flag img {
+  display: block;
+  width: 40px;
+  height: 28px;
+  filter: saturate(1.5); }
+
+.country__average {
+  text-align: right;
+  padding: 6px 8px 4px;
+  width: 64px;
+  background-color: transparent;
+  color: #b9b6af; }
+
+.country--small {
+  font-size: 11px;
+  transition: .4s ease;
+  margin: 0 0 4px;
+  background-color: rgba(185, 182, 175, 0.1); }
+
+.country--small .country__rank {
+  padding: 0 8px;
+  color: #b9b6af;
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 10px; }
+
+.country--small .country__name {
+  padding: 4px 0; }
+
+.country--small .country__flag {
+  padding: 0;
+  margin: -2px 8px 0 0;
+  border: 0; }
+
+.country--small .country__flag img {
+  width: 28px;
+  height: 20px; }
+
+.country--small:hover {
+  opacity: 0.5;
+  cursor: pointer; }
+
+.country--1, .country--2 {
+  background-color: rgba(255, 255, 255, 0.15); }
+
+.country--1 .country__current-rank, .country--2 .country__current-rank {
+  margin: 0;
+  color: #b9b6af;
+  width: 40px;
+  height: 28px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #b9b6af;
+  color: black;
+  position: absolute;
+  left: 0;
+  font-size: 13px;
+  z-index: 5; }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background: rgba(11, 6, 30, 0.5);
-  box-shadow: 0px 0px 12px 0px rgba(138, 132, 150, 0.75);
-  border-radius: 32px; }
-  .Scoreboard > div {
-    columns: 2;
-    column-gap: 24px;
-    width: 100%; }
+  border: 1px solid #b9b6af; }
+
+.Scoreboard > div {
+  columns: 2;
+  column-gap: 8px;
+  width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  background-color: #ebebe9;
-  color: #3f405f;
+  background-color: #b9b6af;
+  color: black;
   font-family: "Gotham", sans-serif;
   padding: 4px 8px 3px;
   display: inline-block;
@@ -167,30 +176,35 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   margin: 2px;
-  transition: .4s ease;
-  border-radius: 240px; }
-  button:hover {
-    opacity: 0.75;
-    cursor: pointer; }
+  transition: .4s ease; }
+
+button:hover {
+  opacity: 0.75;
+  cursor: pointer; }
 
 #picker {
   padding: 48px; }
-  #picker .country {
-    display: inline-block;
-    margin: 0 8px 8px 0;
-    background-color: white;
-    color: #0b061e; }
-    #picker .country__flag {
-      display: inline-block; }
-    #picker .country__name {
-      display: inline-block;
-      padding: 4px 6px 3px 0; }
-    #picker .country__name2 {
-      display: inline-block;
-      padding: 4px 6px 2px 6px;
-      text-transform: uppercase; }
-  #picker > button {
-    float: right;
-    font-size: 11px;
-    margin-top: 24px;
-    padding-bottom: 2px; }
+
+#picker .country {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  background-color: #b9b6af;
+  color: #0b061e; }
+
+#picker .country__flag {
+  display: inline-block; }
+
+#picker .country__name {
+  display: inline-block;
+  padding: 4px 6px 3px 0; }
+
+#picker .country__name2 {
+  display: inline-block;
+  padding: 4px 6px 2px 6px;
+  text-transform: uppercase; }
+
+#picker > button {
+  float: right;
+  font-size: 11px;
+  margin-top: 24px;
+  padding-bottom: 2px; }
