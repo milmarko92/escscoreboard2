@@ -11,11 +11,12 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #000;
-  color: #b9b6af; }
+  background-color: black;
+  color: white; }
 
 .App {
-  background-color: #000;
+  background-color: black;
+  background-image: url("img/pebble.png");
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -32,13 +33,13 @@ body {
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center; }
+  justify-content: center;
+  border-radius: 16px; }
 
 .Voting h1 {
-  color: #b9b6af;
+  text-transform: capitalize;
   font-size: 32px;
-  text-transform: uppercase;
-  margin: 0 0 8px; }
+  margin: 0 0 24px; }
 
 .Ranking button {
   width: 100%;
@@ -69,27 +70,25 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  color: #b9b6af;
+  color: white;
   font-size: 16px;
   margin: 0 0 8px;
-  position: relative;
-  background-color: rgba(185, 182, 175, 0.1); }
+  position: relative; }
 
 .country__rank {
   margin-left: auto;
   text-align: right;
   margin-right: 12px;
   font-size: 13px;
-  color: #b9b6af;
-  padding: 4px 0;
+  color: white;
+  padding: 8px 0;
   opacity: 0.2; }
 
 .country__name {
-  padding: 6px 8px 4px;
-  text-transform: uppercase; }
+  padding: 8px 8px 6px; }
 
 .country__flag {
-  padding: 0;
+  padding: 4px;
   vertical-align: middle;
   margin: 0 4px 0 0; }
 
@@ -101,20 +100,17 @@ body {
 
 .country__average {
   text-align: right;
-  padding: 6px 8px 4px;
+  padding: 6px 12px 4px;
   width: 64px;
-  background-color: transparent;
-  color: #b9b6af; }
+  background-color: transparent; }
 
 .country--small {
   font-size: 11px;
   transition: .4s ease;
-  margin: 0 0 4px;
-  background-color: rgba(185, 182, 175, 0.1); }
+  margin: 0 0 4px; }
 
 .country--small .country__rank {
   padding: 0 8px;
-  color: #b9b6af;
   float: right;
   margin-left: auto;
   margin-right: 0;
@@ -137,38 +133,44 @@ body {
   cursor: pointer; }
 
 .country--1, .country--2 {
-  background-color: rgba(255, 255, 255, 0.15); }
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 240px; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank {
   margin: 0;
-  color: #b9b6af;
   width: 40px;
   height: 28px;
   line-height: 32px;
   text-align: center;
-  background-color: #b9b6af;
   color: black;
+  background-image: url("img/blob.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
   position: absolute;
   left: 0;
   font-size: 13px;
-  z-index: 5; }
+  z-index: 5;
+  border: none; }
+
+.country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag {
+  visibility: hidden; }
 
 .Scoreboard {
   display: flex;
   align-items: center;
-  padding: 24px;
-  border: 1px solid rgba(185, 182, 175, 0.5); }
+  padding: 24px; }
 
 .Scoreboard > div {
   columns: 2;
-  column-gap: 8px;
+  column-gap: 36px;
   width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  background-color: #b9b6af;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
   font-family: "Gotham", sans-serif;
   padding: 4px 8px 3px;
   display: inline-block;
@@ -176,7 +178,8 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   margin: 2px;
-  transition: .4s ease; }
+  transition: .4s ease;
+  border-radius: 240px; }
 
 button:hover {
   opacity: 0.75;
