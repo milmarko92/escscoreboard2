@@ -17,7 +17,7 @@ export default class RankCountryComponent extends Component {
 
     render() {
         return(
-            <div className={this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
+            <div className={this.props.currentRank == 1 ? "country country--3" : this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
                 { this.flagOrRanking() }
                 <span className={"country__flag"}>
                     <img src={getFlagForCountry(this.props.country)}/>

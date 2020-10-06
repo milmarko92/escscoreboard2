@@ -20,7 +20,7 @@ body {
 
 .App {
   background-color: black;
-  background-image: url("img/pebble.png");
+  background-image: url("img/come-together.jpg");
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -33,18 +33,18 @@ body {
 }
 
 .Voting {
-  background-color: rgba(#b9b6af, 0.1);
+  background-color: rgba(#122232, 0.8);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  border-radius: 16px;
 
   h1 {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 32px;
     margin: 0 0 24px;
+    text-align: center;
   }
 }
 
@@ -56,9 +56,9 @@ body {
     background-color: transparent;
     background-image: none;
     box-shadow: none;
-    color: #b9b6af;
+    color: rgba(white, 0.5);
     border-top: none;
-    text-align: left;
+    text-align: center;
   }
   & + div {
     clear: both;
@@ -71,9 +71,9 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: #b9b6af;
+  color: rgba(white, 0.5);
   border-top: none;
-  text-align: left;
+  text-align: center;
 }
 
 .country {
@@ -81,10 +81,13 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
+  background-color: #131c2d;
   color: white;
   font-size: 16px;
   margin: 0 0 8px;
   position: relative;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 
   &__rank {
     margin-left: auto;
@@ -92,24 +95,27 @@ body {
     margin-right: 12px;
     font-size: 13px;
     color: white;
-    padding: 8px 0;
+    padding-top: 4px;
     opacity: 0.2;
   }
 
   &__name {
     padding: 8px 8px 6px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(black, 0.25);
   }
 
   &__flag {
-    padding: 4px;
     vertical-align: middle;
-    margin: 0 4px 0 0;
+    box-shadow: inset 2px 2px 8px rgba(black, 0.5);
+    margin: 6px 10px 6px 6px;
 
     img {
       display: block;
       width: 40px;
-      height: 28px;
+      height: 20px;
       filter: saturate(1.5);
+      z-index: -1;
     }
   }
   
@@ -123,7 +129,7 @@ body {
   &--small {
     font-size: 11px;
     transition: .4s ease;
-    margin: 0 0 4px;
+    margin: 0 0 2px;
     .country {
       &__rank {
         padding: 0 8px;
@@ -137,11 +143,11 @@ body {
       }
       &__flag {
         padding: 0;
-        margin: -2px 8px 0 0;
+        margin: 0 8px 0 4px;
         border: 0;
         img {
           width: 28px;
-          height: 20px;
+          height: 16px;
         }
       }
     }
@@ -152,9 +158,10 @@ body {
     }
   }
 
-  &--1, &--2 {
-    background-color: rgba(white, 0.1);
-    border-radius: 240px;
+  &--1, &--2, &--3 {
+    background-image: linear-gradient(to right, #31a697 0%, #31a697 33%, #2e3f66 100%);
+    border-top: 2px solid rgba(white, 0.05);
+    border-bottom: 2px solid rgba(black, 0.05);
     .country {
       &__average {
         
@@ -164,20 +171,19 @@ body {
       }
       &__current-rank {
         margin: 0;
-        width: 40px;
-        height: 28px;
-        line-height: 32px;
+        width: 52px;
+        height: 36px;
+        line-height: 40px;
+        text-shadow: 1px 1px 4px rgba(black, 0.5);
         text-align: center;
-        color: black;
-        background-image: url("img/blob.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center;
+        color: white;
         position: absolute;
         left: 0;
-        font-size: 13px;
+        font-size: 28px;
+        font-weight: 400;
         z-index: 5;
         border: none;
+        background-image: linear-gradient(#6bded4 0%, #4ecfbe 100%);
         & + .country__flag {
           visibility: hidden;
         }
@@ -190,12 +196,21 @@ body {
       }
     }
   }
+  &--3 {
+    background-image: linear-gradient(to right, #91008c 0%, #660064 100%);
+    .country {
+      &__current-rank {
+        background-image: linear-gradient(to bottom, #bd00ab 0%, #af008f 100%);
+      }
+    }
+  }
 }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
+  background-color: rgba(#122232, 0.8);
   >div {
     columns: 2;
     column-gap: 36px;
@@ -216,7 +231,6 @@ button {
   text-transform: uppercase;
   margin: 2px;
   transition: .4s ease;
-  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -228,8 +242,8 @@ button {
   .country {
     display: inline-block;
     margin: 0 8px 8px 0;
-    background-color: #b9b6af;
-    color: #0b061e;
+    background-color: #131c2d;
+    color: white;
     &__flag {
       display: inline-block;
     }
