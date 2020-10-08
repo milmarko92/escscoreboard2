@@ -48,14 +48,14 @@ class Scoreboard extends Component {
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/fucking-sweden.wav")
             audio.play()
         }
-        else if (data.new_rank <= 3){
-            var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
-            audio.play()
-        }
-        // else if (Object.keys(this.state.currentVoting).length === 0 ){
-        //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/haha.wav")
+        // else if (data.new_rank <= 3){
+        //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
         //     audio.play()
         // }
+        else if (Object.keys(this.state.currentVoting).length === 0 ){
+             var audio = new Audio(process.env.PUBLIC_URL + "/audio/haha.wav")
+             audio.play()
+        }
         let currentVotes = this.state.currentVoting
         let ranking = this.state.overallRanking
         let countryVoteList = ranking[data.country]

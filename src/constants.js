@@ -194,6 +194,6 @@ export const rankToPointsMap = {
     "29": 0
 }
 
-export const all_voters = ["Aivis", "Alex", "Costa", "Ed", "Eirik", "Hlynur", "Luke", "Marko", "Matteo", "Nathan", "Oliver", "Pedro", "Philip", "Rinor", "Rita", "Rodrigo", "Simon", "Thomas", "Tommy", "Victoria", "Vladan", "Wiv"]
+export const all_voters = ["Aivis", "Alex", "Cecilia", "Costa", "Ed", "Eirik", "Hlynur", "Luke", "Maria", "Marko", "Matteo", "Nathan", "Oliver", "Pedro", "Philip", "Rinor", "Rita", "Rodrigo", "Simon", "Thomas", "Tommy", "Victoria", "Vladan", "Wiv"]
 
 export default countries
