@@ -52,8 +52,12 @@ class Scoreboard extends Component {
         //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
         //     audio.play()
         // }
+        else if (data.country === "belgium" && data.new_rank === 25){
+            var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
+            audio.play()
+        }
         else if (Object.keys(this.state.currentVoting).length === 0 ){
-             var audio = new Audio(process.env.PUBLIC_URL + "/audio/haha.wav")
+             var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
              audio.play()
         }
         let currentVotes = this.state.currentVoting

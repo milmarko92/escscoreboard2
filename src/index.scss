@@ -42,8 +42,8 @@ body {
 
   h1 {
     text-transform: uppercase;
-    font-size: 32px;
-    margin: 0 0 24px;
+    font-size: 24px;
+    margin: 0 0 16px;
     text-align: center;
   }
 }
@@ -127,9 +127,9 @@ body {
   }
 
   &--small {
-    font-size: 11px;
+    font-size: 10px;
     transition: .4s ease;
-    margin: 0 0 2px;
+    margin: 0 0 1px;
     .country {
       &__rank {
         padding: 0 8px;
@@ -139,15 +139,15 @@ body {
         font-size: 10px;
       }
       &__name {
-        padding: 4px 0;
+        padding: 2px 0;
       }
       &__flag {
         padding: 0;
         margin: 0 8px 0 4px;
         border: 0;
         img {
-          width: 28px;
-          height: 16px;
+          width: 20px;
+          height: 12px;
         }
       }
     }
