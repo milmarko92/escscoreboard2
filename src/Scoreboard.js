@@ -52,7 +52,7 @@ class Scoreboard extends Component {
         //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
         //     audio.play()
         // }
-        else if (data.country === "belgium" && data.new_rank === 25){
+        else if (data.country === "belgium" && data.new_rank >= 24){
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
             audio.play()
         }
