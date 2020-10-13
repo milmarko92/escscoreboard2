@@ -45,15 +45,19 @@ class Scoreboard extends Component {
 
     addVote(data){
         if (data.country === "sweden" && data.new_rank <= 3){
-            var audio = new Audio(process.env.PUBLIC_URL + "/audio/fucking-sweden.wav")
+            var audio = new Audio(process.env.PUBLIC_URL + "/audio/fucking-sweden-maria.mp3")
             audio.play()
         }
         // else if (data.new_rank <= 3){
         //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
         //     audio.play()
         // }
-        else if (data.country === "belgium" && data.new_rank >= 24){
-            var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
+        // else if (data.country === "belgium" && data.new_rank >= 24){
+        //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
+        //     audio.play()
+        // }
+        else if (data.country === "greece" && data.new_rank <= 3){
+            var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-love-greece.mp3")
             audio.play()
         }
         else if (Object.keys(this.state.currentVoting).length === 0 ){

@@ -2,11 +2,14 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 @font-face {
   font-family: "Gotham";
   src: url("fonts/Gotham-Medium.otf");
+}
+
+@font-face {
+  font-family: "Rotis";
+  src: url("fonts/Rotis.ttf");
 }
 
 body {
@@ -14,17 +17,16 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: black;
+  background-color: #0f1110;
   color: white;
 }
 
 .App {
-  background-color: black;
-  background-image: url("img/come-together.jpg");
+  background-color: #0f1110;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
-  grid-gap: 24px;
+  grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
   background-size: cover;
@@ -33,18 +35,18 @@ body {
 }
 
 .Voting {
-  background-color: rgba(#122232, 0.8);
+  background-color: white;
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
 
   h1 {
-    text-transform: uppercase;
-    font-size: 24px;
+    font-size: 48px;
     margin: 0 0 16px;
-    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    font-family: "Rotis";
   }
 }
 
@@ -56,9 +58,9 @@ body {
     background-color: transparent;
     background-image: none;
     box-shadow: none;
-    color: rgba(white, 0.5);
+    color: rgba(black, 0.5);
     border-top: none;
-    text-align: center;
+    text-align: left;
   }
   & + div {
     clear: both;
@@ -71,9 +73,9 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(white, 0.5);
+  color: rgba(black, 0.5);
   border-top: none;
-  text-align: center;
+  text-align: left;
 }
 
 .country {
@@ -81,13 +83,13 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  background-color: #131c2d;
+  background-color: rgba(#2f3c33, 0.5);
   color: white;
-  font-size: 16px;
-  margin: 0 0 8px;
+  font-size: 24px;
+  margin: 0;
   position: relative;
   border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid #858e7f;
 
   &__rank {
     margin-left: auto;
@@ -100,22 +102,20 @@ body {
   }
 
   &__name {
-    padding: 8px 8px 6px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 4px rgba(black, 0.25);
+    padding: 8px 8px 0;
+    font-family: "Rotis";
   }
 
   &__flag {
     vertical-align: middle;
-    box-shadow: inset 2px 2px 8px rgba(black, 0.5);
-    margin: 6px 10px 6px 6px;
+    margin: 0;
+    padding: 0 0 0 12px;
 
     img {
       display: block;
-      width: 40px;
+      width: 32px;
       height: 20px;
       filter: saturate(1.5);
-      z-index: -1;
     }
   }
   
@@ -124,29 +124,34 @@ body {
     padding: 6px 12px 4px;
     width: 64px;
     background-color: transparent;
+    font-size: 16px;
   }
 
   &--small {
-    font-size: 10px;
+    font-size: 13px;
     transition: .4s ease;
     margin: 0 0 1px;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(#858e7f, 0.2);
     .country {
       &__rank {
-        padding: 0 8px;
+        padding: 0;
         float: right;
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
+        color: black;
       }
       &__name {
-        padding: 2px 0;
+        padding: 4px 0 0;
+        color: black;
       }
       &__flag {
         padding: 0;
-        margin: 0 8px 0 4px;
+        margin: 0 4px 0 0;
         border: 0;
         img {
-          width: 20px;
+          width: 18px;
           height: 12px;
         }
       }
@@ -159,9 +164,6 @@ body {
   }
 
   &--1, &--2, &--3 {
-    background-image: linear-gradient(to right, #31a697 0%, #31a697 33%, #2e3f66 100%);
-    border-top: 2px solid rgba(white, 0.05);
-    border-bottom: 2px solid rgba(black, 0.05);
     .country {
       &__average {
         
@@ -170,20 +172,19 @@ body {
         
       }
       &__current-rank {
-        margin: 0;
-        width: 52px;
-        height: 36px;
+        margin: 0 0 0 12px;
+        width: 32px;
+        height: 40px;
         line-height: 40px;
-        text-shadow: 1px 1px 4px rgba(black, 0.5);
         text-align: center;
         color: white;
         position: absolute;
         left: 0;
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-image: linear-gradient(#6bded4 0%, #4ecfbe 100%);
+        background-color: #d7ad54;
         & + .country__flag {
           visibility: hidden;
         }
@@ -197,10 +198,10 @@ body {
     }
   }
   &--3 {
-    background-image: linear-gradient(to right, #91008c 0%, #660064 100%);
+    background-color: rgba(#d7ad54, 0.75);
     .country {
       &__current-rank {
-        background-image: linear-gradient(to bottom, #bd00ab 0%, #af008f 100%);
+        
       }
     }
   }
@@ -210,7 +211,11 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(#122232, 0.8);
+  background-color: rgba(#2f3c33, 0.2);
+  background-image: url("img/2001.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   >div {
     columns: 2;
     column-gap: 36px;
@@ -221,7 +226,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(white, 0.1);
+  background-color: rgba(#76c2aa, 1);
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 4px 8px 3px;
