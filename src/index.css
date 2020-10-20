@@ -5,10 +5,6 @@
   font-family: "Gotham";
   src: url("fonts/Gotham-Medium.otf"); }
 
-@font-face {
-  font-family: "Rotis";
-  src: url("fonts/Rotis.ttf"); }
-
 body {
   margin: 0;
   padding: 0;
@@ -25,23 +21,29 @@ body {
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
+  background-image: url(img/tel-aviv.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
 .Voting {
-  background-color: white;
+  background-color: rgba(14, 61, 105, 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  border-top: 2px solid rgba(85, 145, 195, 0.75);
+  border-bottom: 1px solid rgba(85, 145, 195, 0.5);
+  justify-content: center; }
 
 .Voting h1 {
-  font-size: 48px;
-  margin: 0 0 16px;
+  font-size: 32px;
+  margin: 0 0 24px;
   text-transform: capitalize;
-  color: black;
-  font-family: "Rotis"; }
+  color: white;
+  font-family: "Gotham";
+  font-weight: 400;
+  text-align: center; }
 
 .Ranking button {
   width: 100%;
@@ -50,9 +52,9 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-top: none;
-  text-align: left; }
+  text-align: center; }
 
 .Ranking + div {
   clear: both; }
@@ -63,22 +65,22 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-top: none;
-  text-align: left; }
+  text-align: center; }
 
 .country {
   break-inside: avoid;
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  background-color: rgba(47, 60, 51, 0.5);
   color: white;
-  font-size: 24px;
+  font-size: 16px;
   margin: 0;
   position: relative;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid #858e7f; }
+  background-color: #102144;
+  text-transform: uppercase;
+  margin-bottom: 3px; }
 
 .country__rank {
   margin-left: auto;
@@ -90,18 +92,19 @@ body {
   opacity: 0.2; }
 
 .country__name {
-  padding: 8px 8px 0;
-  font-family: "Rotis"; }
+  padding: 10px 0 9px;
+  font-family: "Gotham"; }
 
 .country__flag {
   vertical-align: middle;
   margin: 0;
-  padding: 0 0 0 12px; }
+  padding-left: 6px;
+  margin-right: 16px; }
 
 .country__flag img {
   display: block;
-  width: 32px;
-  height: 20px;
+  width: 48px;
+  height: 28px;
   filter: saturate(1.5); }
 
 .country__average {
@@ -112,42 +115,40 @@ body {
   font-size: 16px; }
 
 .country--small {
-  font-size: 13px;
+  font-size: 11px;
   transition: .4s ease;
-  margin: 0 0 1px;
-  background-color: transparent;
-  border-bottom: 2px solid rgba(133, 142, 127, 0.2); }
+  margin: 0 0 1px; }
 
 .country--small .country__rank {
-  padding: 0;
+  padding: 0 8px;
   float: right;
   margin-left: auto;
   margin-right: 0;
-  font-size: 10px;
-  color: black; }
+  font-size: 10px; }
 
 .country--small .country__name {
-  padding: 4px 0 0;
-  color: black; }
+  padding: 4px 0; }
 
 .country--small .country__flag {
-  padding: 0;
-  margin: 0 4px 0 0;
-  border: 0; }
+  margin-right: 8px; }
 
 .country--small .country__flag img {
-  width: 18px;
+  width: 20px;
   height: 12px; }
 
 .country--small:hover {
   opacity: 0.5;
   cursor: pointer; }
 
+.country--1, .country--2, .country--3 {
+  background-image: linear-gradient(to right, #0f3872 0%, #0c7fe5 100%);
+  position: relative; }
+
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
-  margin: 0 0 0 12px;
-  width: 32px;
-  height: 40px;
-  line-height: 40px;
+  margin: 0;
+  width: 56px;
+  height: 38px;
+  line-height: 38px;
   text-align: center;
   color: white;
   position: absolute;
@@ -156,38 +157,50 @@ body {
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #d7ad54; }
+  background-color: #0886e5; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: rgba(215, 173, 84, 0.75); }
+  background-color: #f7f0c3;
+  color: #070100;
+  background-image: none;
+  box-shadow: 0 0 32px 4px rgba(247, 240, 195, 0.5); }
+
+.country--3 .country__current-rank {
+  background-color: #feffeb;
+  color: #070100;
+  box-shadow: 0 0 32px 4px rgba(249, 225, 163, 0.75); }
+
+.country--3 .country__rank {
+  color: rgba(7, 1, 0, 0.75); }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(47, 60, 51, 0.2);
-  background-image: url("img/2001.png");
+  background-image: radial-gradient(circle at top, rgba(40, 120, 176, 0.75) 0%, rgba(16, 33, 68, 0.75) 100%);
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  border-top: 2px solid rgba(85, 145, 195, 0.75);
+  border-bottom: 1px solid rgba(85, 145, 195, 0.5); }
 
 .Scoreboard > div {
   columns: 2;
-  column-gap: 36px;
+  column-gap: 8px;
   width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  background-color: #76c2aa;
+  background-color: #0886e5;
   color: white;
   font-family: "Gotham", sans-serif;
-  padding: 4px 8px 3px;
+  padding: 6px 8px;
   display: inline-block;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 2px;
@@ -196,6 +209,10 @@ button {
 button:hover {
   opacity: 0.75;
   cursor: pointer; }
+
+.Button--12 {
+  background-color: #f7f0c3;
+  color: #070100; }
 
 #picker {
   padding: 48px; }
@@ -209,22 +226,23 @@ button:hover {
 
 #picker .country__flag {
   display: inline-block;
-  padding: 4px; }
+  padding: 0;
+  vertical-align: middle;
+  margin: 0 4px; }
 
 #picker .country__name {
   display: inline-block;
-  padding: 4px 6px 3px 0;
+  padding: 4px 4px 4px 0;
   text-transform: uppercase;
   font-family: "Gotham"; }
 
 #picker .country__name2 {
   display: inline-block;
-  padding: 4px 6px 2px 6px;
+  padding: 4px 6px 4px 6px;
   text-transform: uppercase;
   font-family: "Gotham"; }
 
 #picker > button {
   float: right;
   font-size: 11px;
-  margin-top: 24px;
-  padding-bottom: 2px; }
+  margin-top: 24px; }
