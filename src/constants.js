@@ -82,7 +82,7 @@ export const countryNameMap = {
     "latvia": "Latvia",
     "lithuania": "Lithuania",
     "luxembourg": "Luxembourg",
-    "macedonia": "F.Y.R. Macedonia",
+    "macedonia": "North Macedonia",
     "malta": "Malta",
     "moldova": "Moldova",
     "monaco": "Monaco",
