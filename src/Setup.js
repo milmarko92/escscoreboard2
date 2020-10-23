@@ -11,7 +11,8 @@ class Setup extends Component {
             "remaining_countries": countries,
             "selected_voters": [],
             "remaining_voters": all_voters,
-            "done": false
+            "done": false,
+            "additional_voter": ""
         }
     }
 
@@ -91,7 +92,7 @@ class Setup extends Component {
     selectedVoterElement(voter) {
         return (
             <div className={"country country--small"} onClick={e => {
-                let new_remaining = this.state["remaining_voter"]
+                let new_remaining = this.state["remaining_voters"]
                 new_remaining.push(voter)
                 let new_selected = this.remove_from_list(this.state["selected_voters"], voter)
                 this.setState({
@@ -104,6 +105,12 @@ class Setup extends Component {
                 </span>
             </div>
         )
+    }
+
+    add_voter(){
+        let voters = this.state.remaining_voters
+        voters.push(this.state.additional_voter)
+        this.setState({"remaining_voters": voters, "additional_voter": ""})
     }
 
     render() {
@@ -144,6 +151,19 @@ class Setup extends Component {
                     {
                         this.state["remaining_voters"].map((voter, index) => this.voterElement(voter))
                     }
+                </div>
+                <div>
+                    <input type={"text"} value={this.state.additional_voter} onChange={event =>
+                    {
+                        console.log(event.target.value)
+                        this.setState({"additional_voter": event.target.value})
+                    }}
+                    onKeyUp = { event => {
+                    if (event.keyCode === 13) {
+                        this.add_voter()
+                    }
+                    }}/>
+                    <button onClick={this.add_voter.bind(this)}>Add voter</button>
                 </div>
                 <button onClick={() => this.setState({"done": true})}>Save</button>
             </section>
