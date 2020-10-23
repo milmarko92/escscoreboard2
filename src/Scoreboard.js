@@ -34,7 +34,7 @@ class Scoreboard extends Component {
             "voters": [],
             "currentVoter": "",
             "twelves": false,
-            "count": country_list.length,
+            "count": 1,
             "remainingVoters": voter_list,
             "completedVoters": 0,
             "lastVotedCountry": "",
@@ -60,7 +60,7 @@ class Scoreboard extends Component {
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-love-greece.mp3")
             audio.play()
         }
-        else if (Object.keys(this.state.currentVoting).length === 0 ){
+        else if (this.state.country_list.length === data.new_rank ){
              var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
              audio.play()
         }
@@ -132,7 +132,7 @@ class Scoreboard extends Component {
         this.setState({
             "currentVoting":{},
             "voters": voters,
-            "count": this.state.country_list.length,
+            "count": 1,
             "currentVoter": "Up next...",
             "remainingVoters": remaining,
             "completedVoters": this.state.completedVoters + 1,
@@ -193,7 +193,7 @@ class Scoreboard extends Component {
         if(!event)
             return
         this.addVote({"country": event, "new_rank": this.state.count})
-        this.state.count--;
+        this.state.count++;
     }
 
     votingButtonComponent(country) {
