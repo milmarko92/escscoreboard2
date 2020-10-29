@@ -5,42 +5,44 @@
   font-family: "Gotham";
   src: url("fonts/Gotham-Medium.otf"); }
 
-@font-face {
-  font-family: "Bauhaus";
-  src: url("fonts/Bauhaus.ttf"); }
-
 body {
   margin: 0;
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #d1b3c6;
+  background-color: #0f1110;
   color: white; }
 
 .App {
-  background-color: #d1b3c6;
+  background-color: #0f1110;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
   grid-gap: 24px 0;
   height: 100vh;
-  padding: 72px 128px; }
+  padding: 72px 128px;
+  background-image: url(img/peoples-choice.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .Voting {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #001b46;
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
+  border-top: 2px solid #003992;
+  border-bottom: 1px solid #003992;
   justify-content: center; }
 
 .Voting h1 {
-  font-size: 64px;
+  font-size: 32px;
   margin: 0 0 24px;
-  text-transform: uppercase;
-  color: white;
-  font-family: "Bauhaus";
-  font-weight: 400;
+  text-transform: capitalize;
+  color: #ffd404;
+  font-family: "Gotham";
+  font-weight: 700;
   text-align: center; }
 
 .Ranking button {
@@ -50,7 +52,7 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-top: none;
   text-align: center; }
 
@@ -63,7 +65,7 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-top: none;
   text-align: center; }
 
@@ -72,12 +74,13 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  color: #d2e1d5;
+  color: white;
   font-size: 16px;
   margin: 0;
   position: relative;
+  background-color: #000e23;
   text-transform: uppercase;
-  background-color: #626960; }
+  margin-bottom: 3px; }
 
 .country__rank {
   margin-left: auto;
@@ -86,15 +89,13 @@ body {
   font-size: 13px;
   color: white;
   padding-top: 4px;
-  opacity: 0.2; }
+  opacity: 0.5; }
 
 .country__name {
-  padding: 5px 9px 4px;
-  font-family: "Bauhaus";
-  font-size: 28px; }
+  padding: 10px 0 9px;
+  font-family: "Gotham"; }
 
 .country__flag {
-  display: none;
   vertical-align: middle;
   margin: 0;
   padding-left: 6px;
@@ -108,30 +109,10 @@ body {
 
 .country__average {
   text-align: right;
-  padding: 10px 8px 9px;
-  width: 128px;
+  padding: 6px 12px 4px;
+  width: 64px;
   background-color: transparent;
-  font-size: 16px;
-  letter-spacing: 4px;
-  background-color: #0a0003;
-  border: 6px solid #e19950;
-  text-align: center;
-  margin-right: 50px; }
-
-.country__average:after {
-  content: "";
-  display: block;
-  background-color: #8f2e18;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-image: url(img/triangle.svg);
-  transform: rotate(-90deg);
-  background-position: center 16px;
-  background-repeat: no-repeat;
-  background-size: 28px; }
+  font-size: 16px; }
 
 .country--small {
   font-size: 11px;
@@ -146,12 +127,9 @@ body {
   font-size: 10px; }
 
 .country--small .country__name {
-  padding: 4px 0;
-  font-family: "Gotham";
-  font-size: 13px; }
+  padding: 2px 0; }
 
 .country--small .country__flag {
-  display: block;
   margin-right: 8px; }
 
 .country--small .country__flag img {
@@ -163,44 +141,56 @@ body {
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
+  background-color: #002f79;
   position: relative; }
-
-.country--1 .country__average:after, .country--2 .country__average:after, .country--3 .country__average:after {
-  background-color: #cd8195; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 56px;
+  height: 38px;
+  line-height: 38px;
   text-align: center;
-  color: white;
+  color: #00255f;
   position: absolute;
-  right: 0;
+  left: 0;
   font-size: 20px;
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #d493a4; }
+  background-color: #ffd404; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
+.country--3 {
+  background-color: #ffd404;
+  color: #070100;
+  background-image: none; }
+
+.country--3 .country__current-rank {
+  background-color: white;
+  color: #00255f; }
+
+.country--3 .country__rank {
+  color: rgba(0, 37, 95, 0.75); }
+
 .Scoreboard {
-  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
-  padding: 24px; }
+  padding: 24px;
+  background-color: #00255f;
+  border-top: 2px solid #003992;
+  border-bottom: 1px solid #003992; }
 
 .Scoreboard > div {
   columns: 2;
-  column-gap: 32px;
+  column-gap: 8px;
   width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  background-color: rgba(212, 147, 164, 0.5);
+  background-color: #00255f;
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -216,8 +206,8 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #d493a4;
-  color: white; }
+  background-color: #ffd404;
+  color: #070100; }
 
 #picker {
   padding: 48px; }
