@@ -60,9 +60,23 @@ class Scoreboard extends Component {
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-love-greece.mp3")
             audio.play()
         }
-        else if (Object.keys(this.state.currentVoting).length === 0 ){
-             var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
-             audio.play()
+        else if (Object.keys(this.state.currentVoting).length === this.state.country_list.length -1 ){
+            if(this.state["remainingVoters"].length % 4 === 0) {
+                var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
+                audio.play()
+            }
+            else if(this.state["remainingVoters"].length % 4 === 1) {
+                var audio = new Audio(process.env.PUBLIC_URL + "/audio/shit_song.m4a")
+                audio.play()
+            }
+            else if(this.state["remainingVoters"].length % 4 === 2) {
+                var audio = new Audio(process.env.PUBLIC_URL + "/audio/its_dire.m4a")
+                audio.play()
+            }
+            else if(this.state["remainingVoters"].length % 4 === 3) {
+                var audio = new Audio(process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a")
+                audio.play()
+            }
         }
         let currentVotes = this.state.currentVoting
         let ranking = this.state.overallRanking
@@ -132,7 +146,7 @@ class Scoreboard extends Component {
         this.setState({
             "currentVoting":{},
             "voters": voters,
-            "count": this.state.country_list.length,
+            "count": 1,
             "currentVoter": "Up next...",
             "remainingVoters": remaining,
             "completedVoters": this.state.completedVoters + 1,
