@@ -34,7 +34,7 @@ class Scoreboard extends Component {
             "voters": [],
             "currentVoter": "",
             "twelves": false,
-            "count": country_list.length,
+            "count": 1,
             "remainingVoters": voter_list,
             "completedVoters": 0,
             "lastVotedCountry": "",
@@ -193,7 +193,7 @@ class Scoreboard extends Component {
         if(!event)
             return
         this.addVote({"country": event, "new_rank": this.state.count})
-        this.state.count--;
+        this.state.count++;
     }
 
     votingButtonComponent(country) {
