@@ -2,16 +2,11 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Gotham";
-  src: url("fonts/Gotham-Medium.otf");
-}
-
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Gotham", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   background-color: #0f1110;
   color: white;
 }
@@ -24,28 +19,28 @@ body {
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
-  background-image: url(img/peoples-choice.jpg);
+  background-image: url(img/shitshow.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .Voting {
-  background-color: darken(#00255f, 5%);
+  background-color: darken(#873a28, 5%);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid lighten(#00255f, 10%);
-  border-bottom: 1px solid lighten(#00255f, 10%);
+  border-top: 2px solid lighten(#873a28, 10%);
+  border-bottom: 1px solid lighten(#873a28, 10%);
   justify-content: center;
 
   h1 {
     font-size: 32px;
     margin: 0 0 16px;
     text-transform: capitalize;
-    color: #ffd404;
-    font-family: "Gotham";
+    color: #d35400;
+    font-family: "Comic Sans MS";
     font-weight: 700;
   }
 }
@@ -87,7 +82,7 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: #000e23;
+  background-color: #572f23;
   margin-bottom: 3px;
 
   &__rank {
@@ -102,7 +97,7 @@ body {
 
   &__name {
     padding: 10px 0 9px;
-    font-family: "Gotham";
+    font-family: "Comic Sans MS";
   }
 
   &__flag {
@@ -113,7 +108,7 @@ body {
 
     img {
       display: block;
-      width: 48px;
+      width: 32px;
       height: 28px;
       filter: saturate(1.5);
     }
@@ -122,9 +117,11 @@ body {
   &__average {
     text-align: right;
     padding: 6px 12px 4px;
-    width: 64px;
+    width: 72px;
     background-color: transparent;
     font-size: 16px;
+    color: #d35400;
+    font-weight: 700;
   }
 
   &--small {
@@ -147,7 +144,7 @@ body {
         padding: 0;
         margin-right: 8px;
         img {
-          width: 16px;
+          width: 12px;
           height: 10px;
         }
       }
@@ -160,7 +157,7 @@ body {
   }
 
   &--1, &--2, &--3 {
-    background-color: lighten(#00255f, 5%);
+    background-color: darken(#572f23, 10%);
     position: relative;
     .country {
       &__average {
@@ -171,18 +168,20 @@ body {
       }
       &__current-rank {
         margin: 0;
-        width: 56px;
-        height: 38px;
-        line-height: 38px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
         text-align: center;
-        color: #00255f;
+        color: #623426;
         position: absolute;
         left: 0;
         font-size: 20px;
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-color: #ffd404;
+        background-color: #d35400;
+        font-weight: 700;
+        font-style: italic;
         & + .country__flag {
           visibility: hidden;
         }
@@ -196,16 +195,20 @@ body {
     }
   }
   &--3 {
-    background-color: #ffd404;
+    background-color: #d35400;
     color: #070100;
     background-image: none;
+    font-weight: 700;
     .country {
       &__current-rank {
         background-color: white;   
-        color: #00255f; 
+        color: #623426; 
       }
       &__rank {
-        color: rgba(#00255f, 0.75);
+        color: rgba(#623426, 0.75);
+      }
+      &__average {
+        color: white;
       }
     }
   }
@@ -215,9 +218,9 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #00255f;
-  border-top: 2px solid lighten(#00255f, 10%);
-  border-bottom: 1px solid lighten(#00255f, 10%);
+  background-color: #623426;
+  border-top: 2px solid lighten(#623426, 10%);
+  border-bottom: 1px solid lighten(#623426, 10%);
   >div {
     columns: 2;
     column-gap: 8px;
@@ -228,9 +231,9 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#00255f, 1);
+  background-color: rgba(#623426, 1);
   color: white;
-  font-family: "Gotham", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
@@ -246,7 +249,7 @@ button {
 
 .Button {
   &--12 {
-    background-color: #ffd404;
+    background-color: #d35400;
     color: #070100;
   }
 }
@@ -269,13 +272,13 @@ button {
       display: inline-block;
       padding: 4px 4px 4px 0;
       text-transform: uppercase;
-      font-family: "Gotham";
+      font-family: "Comic Sans MS";
     }
     &__name2 {
       display: inline-block;
       padding: 4px 6px 4px 6px;
       text-transform: uppercase;
-      font-family: "Gotham";
+      font-family: "Comic Sans MS";
     }
   }
   > button {

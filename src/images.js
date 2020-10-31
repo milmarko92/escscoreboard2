@@ -7,7 +7,7 @@ function importAll(r) {
     return images;
 }
 
-const images = importAll(require.context('./flags', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('./flags/poop', false, /\.(png|jpe?g|svg)$/));
 
 export function getFlagForCountry(country){
     return images[countryFlagMap[country.toLowerCase()]]
