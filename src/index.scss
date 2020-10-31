@@ -124,6 +124,42 @@ body {
     font-weight: 700;
   }
 
+  &:nth-of-type(3n) {
+    .country {
+      &__name {
+        transform: scale(1.1) rotate(5deg);
+      }
+      &__rank {
+        transform: rotate(180deg);
+      }
+      &__average {
+        transform: rotate(25deg);
+      }
+    }
+  }
+
+  &:nth-of-type(3n+1) {
+    .country {
+      &__name {
+        transform: skew(-5deg, 5deg);
+      }
+      &__rank {
+        transform: rotate(-90deg);
+      }
+      &__average {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+
+  &:nth-of-type(3n+2) {
+    .country {
+      &__average {
+        transform: rotate(5deg);
+      }
+    }
+  }
+
   &--small {
     font-size: 11px;
     transition: .4s ease;
@@ -136,9 +172,11 @@ body {
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
+        transform: none !important;
       }
       &__name {
         padding: 2px 0;
+        transform: none !important;
       }
       &__flag {
         padding: 0;
@@ -244,6 +282,18 @@ button {
   &:hover {
     opacity: 0.75;
     cursor: pointer;
+  }
+  &:nth-of-type(4n) {
+    transform: rotate(-15deg);
+  }
+  &:nth-of-type(4n+1) {
+    transform: skew(-15deg, 5deg);
+  }
+  &:nth-of-type(4n+2) {
+    transform: rotate(-180deg);
+  }
+  &:nth-of-type(4n+3) {
+    transform: skew(5deg, -20deg);
   }
 }
 

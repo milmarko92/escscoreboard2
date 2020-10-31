@@ -110,6 +110,27 @@ body {
   color: #d35400;
   font-weight: 700; }
 
+.country:nth-of-type(3n) .country__name {
+  transform: scale(1.1) rotate(5deg); }
+
+.country:nth-of-type(3n) .country__rank {
+  transform: rotate(180deg); }
+
+.country:nth-of-type(3n) .country__average {
+  transform: rotate(25deg); }
+
+.country:nth-of-type(3n+1) .country__name {
+  transform: skew(-5deg, 5deg); }
+
+.country:nth-of-type(3n+1) .country__rank {
+  transform: rotate(-90deg); }
+
+.country:nth-of-type(3n+1) .country__average {
+  transform: rotate(-15deg); }
+
+.country:nth-of-type(3n+2) .country__average {
+  transform: rotate(5deg); }
+
 .country--small {
   font-size: 11px;
   transition: .4s ease;
@@ -121,10 +142,12 @@ body {
   float: right;
   margin-left: auto;
   margin-right: 0;
-  font-size: 10px; }
+  font-size: 10px;
+  transform: none !important; }
 
 .country--small .country__name {
-  padding: 2px 0; }
+  padding: 2px 0;
+  transform: none !important; }
 
 .country--small .country__flag {
   padding: 0;
@@ -208,6 +231,18 @@ button {
 button:hover {
   opacity: 0.75;
   cursor: pointer; }
+
+button:nth-of-type(4n) {
+  transform: rotate(-15deg); }
+
+button:nth-of-type(4n+1) {
+  transform: skew(-15deg, 5deg); }
+
+button:nth-of-type(4n+2) {
+  transform: rotate(-180deg); }
+
+button:nth-of-type(4n+3) {
+  transform: skew(5deg, -20deg); }
 
 .Button--12 {
   background-color: #d35400;
