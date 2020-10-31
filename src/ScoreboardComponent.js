@@ -47,7 +47,7 @@ class ScoreboardComponent extends Component {
                                 className={``}
                                 key={value.country}
                                 country={value.country}
-                                rank={value.rank}
+                                rank={value.rank + 1602}
                                 averageRank={value.averageRank}
                                 twelvePointRank={value.twelvePointRank}
                                 use12P={this.props.twelvePointSystem}
