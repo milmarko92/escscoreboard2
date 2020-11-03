@@ -207,7 +207,7 @@ class Scoreboard extends Component {
         if(!event)
             return
         this.addVote({"country": event, "new_rank": this.state.count})
-        this.state.count++;
+        this.state.count--;
     }
 
     votingButtonComponent(country) {
