@@ -2,11 +2,18 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: "Gotham";
+  src: url("fonts/Gotham-Medium.otf");
+}
+
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Gotham", sans-serif;
   background-color: #0f1110;
   color: white;
 }
@@ -19,29 +26,43 @@ body {
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
-  background-image: url(img/shitshow.jpg);
+  background-image: url(img/gullfinalen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .Voting {
-  background-color: darken(#873a28, 5%);
+  background-color: darken(#292c31, 10%);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid lighten(#873a28, 10%);
-  border-bottom: 1px solid lighten(#873a28, 10%);
+  border-top: 2px solid lighten(#292c31, 10%);
+  border-bottom: 1px solid lighten(#292c31, 10%);
   justify-content: center;
+  position: relative;
 
   h1 {
-    font-size: 32px;
+    font-size: 64px;
     margin: 0 0 16px;
     text-transform: capitalize;
-    color: #d35400;
-    font-family: "Comic Sans MS";
-    font-weight: 700;
+    color: #edc559;
+    font-family: "Bebas Neue";
+    font-weight: 400;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 128px;
+    height: 128px;
+    background-image: url(img/golden-ball.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -64px;
+    right: -64px;
   }
 }
 
@@ -82,8 +103,10 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: #572f23;
+  background-color: darken(#292c31, 10%);
+  text-transform: uppercase;
   margin-bottom: 3px;
+  border-radius: 240px;
 
   &__rank {
     margin-left: auto;
@@ -96,8 +119,9 @@ body {
   }
 
   &__name {
-    padding: 10px 0 9px;
-    font-family: "Comic Sans MS";
+    padding: 6px 0 5px;
+    font-family: "Bebas Neue";
+    font-size: 24px;
   }
 
   &__flag {
@@ -108,8 +132,9 @@ body {
 
     img {
       display: block;
-      width: 32px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
       filter: saturate(1.5);
     }
   }
@@ -117,54 +142,16 @@ body {
   &__average {
     text-align: right;
     padding: 6px 12px 4px;
-    width: 72px;
+    width: 64px;
     background-color: transparent;
     font-size: 16px;
-    color: #d35400;
-    font-weight: 700;
-  }
-
-  &:nth-of-type(3n) {
-    .country {
-      &__name {
-        transform: scale(1.1) rotate(5deg);
-      }
-      &__rank {
-        transform: rotate(180deg);
-      }
-      &__average {
-        transform: rotate(25deg);
-      }
-    }
-  }
-
-  &:nth-of-type(3n+1) {
-    .country {
-      &__name {
-        transform: skew(-5deg, 5deg);
-      }
-      &__rank {
-        transform: rotate(-90deg);
-      }
-      &__average {
-        transform: rotate(-15deg);
-      }
-    }
-  }
-
-  &:nth-of-type(3n+2) {
-    .country {
-      &__average {
-        transform: rotate(5deg);
-      }
-    }
   }
 
   &--small {
     font-size: 11px;
     transition: .4s ease;
     margin: 0 0 1px;
-    background-color: transparent;
+    background: transparent;
     .country {
       &__rank {
         padding: 0 8px;
@@ -172,18 +159,18 @@ body {
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
-        transform: none !important;
       }
       &__name {
         padding: 2px 0;
-        transform: none !important;
+        font-family: "Gotham";
+        font-size: 12px;
+        text-transform: capitalize;
       }
       &__flag {
-        padding: 0;
         margin-right: 8px;
         img {
           width: 12px;
-          height: 10px;
+          height: 12px;
         }
       }
     }
@@ -195,7 +182,7 @@ body {
   }
 
   &--1, &--2, &--3 {
-    background-color: darken(#572f23, 10%);
+    background-color: lighten(#292c31, 5%);
     position: relative;
     .country {
       &__average {
@@ -206,20 +193,22 @@ body {
       }
       &__current-rank {
         margin: 0;
-        width: 42px;
-        height: 42px;
-        line-height: 42px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
         text-align: center;
-        color: #623426;
+        color: white;
         position: absolute;
         left: 0;
         font-size: 20px;
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-color: #d35400;
-        font-weight: 700;
-        font-style: italic;
+        background-image: url("img/golden-ball.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-shadow: 0 0 8px black;
         & + .country__flag {
           visibility: hidden;
         }
@@ -233,20 +222,12 @@ body {
     }
   }
   &--3 {
-    background-color: #d35400;
+    background-color: #edc559;
     color: #070100;
     background-image: none;
-    font-weight: 700;
     .country {
-      &__current-rank {
-        background-color: white;   
-        color: #623426; 
-      }
       &__rank {
-        color: rgba(#623426, 0.75);
-      }
-      &__average {
-        color: white;
+        color: rgba(#070100, 0.5);
       }
     }
   }
@@ -256,50 +237,56 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #623426;
-  border-top: 2px solid lighten(#623426, 10%);
-  border-bottom: 1px solid lighten(#623426, 10%);
+  background-color: rgba(#292c31, 0.5);
+  border-top: 2px solid lighten(#292c31, 10%);
+  border-bottom: 1px solid lighten(#292c31, 10%);
   >div {
     columns: 2;
     column-gap: 8px;
     width: 100%;
+  }
+  .country {
+    &:first-of-type {
+      &:before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        display: block;
+        background-image: url("img/crown.png");
+        background-size: 100%;
+        position: absolute;
+        top: -36px;
+        background-repeat: no-repeat;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#623426, 1);
+  background-color: rgba(#292c31, 1);
   color: white;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Gotham", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin: 2px;
   transition: .4s ease;
+  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
-  }
-  &:nth-of-type(4n) {
-    transform: rotate(-15deg);
-  }
-  &:nth-of-type(4n+1) {
-    transform: skew(-15deg, 5deg);
-  }
-  &:nth-of-type(4n+2) {
-    transform: rotate(-180deg);
-  }
-  &:nth-of-type(4n+3) {
-    transform: skew(5deg, -20deg);
   }
 }
 
 .Button {
   &--12 {
-    background-color: #d35400;
+    background-color: #edc559;
     color: #070100;
   }
 }
@@ -322,13 +309,13 @@ button {
       display: inline-block;
       padding: 4px 4px 4px 0;
       text-transform: uppercase;
-      font-family: "Comic Sans MS";
+      font-family: "Gotham";
     }
     &__name2 {
       display: inline-block;
       padding: 4px 6px 4px 6px;
       text-transform: uppercase;
-      font-family: "Comic Sans MS";
+      font-family: "Gotham";
     }
   }
   > button {
