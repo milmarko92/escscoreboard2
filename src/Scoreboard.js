@@ -34,7 +34,7 @@ class Scoreboard extends Component {
             "voters": [],
             "currentVoter": "",
             "twelves": false,
-            "count": 1,
+            "count": country_list.length,
             "remainingVoters": voter_list,
             "completedVoters": 0,
             "lastVotedCountry": "",
@@ -48,36 +48,36 @@ class Scoreboard extends Component {
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/fucking-sweden-maria.mp3")
             audio.play()
         }
-        // else if (data.new_rank <= 3){
-        //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
-        //     audio.play()
-        // }
-        // else if (data.country === "belgium" && data.new_rank >= 24){
-        //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
-        //     audio.play()
-        // }
         else if (data.country === "greece" && data.new_rank <= 3){
             var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-love-greece.mp3")
             audio.play()
         }
-        else if (Object.keys(this.state.currentVoting).length === this.state.country_list.length -1 ){
-            if(this.state["remainingVoters"].length % 4 === 0) {
-                var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
-                audio.play()
-            }
-            else if(this.state["remainingVoters"].length % 4 === 1) {
-                var audio = new Audio(process.env.PUBLIC_URL + "/audio/shit_song.m4a")
-                audio.play()
-            }
-            else if(this.state["remainingVoters"].length % 4 === 2) {
-                var audio = new Audio(process.env.PUBLIC_URL + "/audio/its_dire.m4a")
-                audio.play()
-            }
-            else if(this.state["remainingVoters"].length % 4 === 3) {
-                var audio = new Audio(process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a")
-                audio.play()
-            }
+        else if (data.new_rank <= 3){
+            var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
+            audio.play()
         }
+        // else if (data.country === "belgium" && data.new_rank >= 24){
+        //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
+        //     audio.play()
+        // }
+        // else if (Object.keys(this.state.currentVoting).length === this.state.country_list.length -1 ){
+        //     if(this.state["remainingVoters"].length % 4 === 0) {
+        //         var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
+        //         audio.play()
+        //     }
+        //     else if(this.state["remainingVoters"].length % 4 === 1) {
+        //         var audio = new Audio(process.env.PUBLIC_URL + "/audio/shit_song.m4a")
+        //         audio.play()
+        //     }
+        //     else if(this.state["remainingVoters"].length % 4 === 2) {
+        //         var audio = new Audio(process.env.PUBLIC_URL + "/audio/its_dire.m4a")
+        //         audio.play()
+        //     }
+        //     else if(this.state["remainingVoters"].length % 4 === 3) {
+        //         var audio = new Audio(process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a")
+        //         audio.play()
+        //     }
+        // }
         let currentVotes = this.state.currentVoting
         let ranking = this.state.overallRanking
         let countryVoteList = ranking[data.country]
@@ -146,7 +146,7 @@ class Scoreboard extends Component {
         this.setState({
             "currentVoting":{},
             "voters": voters,
-            "count": 1,
+            "count": this.state.country_list.length,
             "currentVoter": "Up next...",
             "remainingVoters": remaining,
             "completedVoters": this.state.completedVoters + 1,
