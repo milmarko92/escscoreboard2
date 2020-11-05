@@ -37,24 +37,26 @@ body {
   border-bottom: 1px solid #40454d;
   justify-content: center;
   position: relative; }
-  .Voting h1 {
-    font-size: 64px;
-    margin: 0 0 16px;
-    text-transform: capitalize;
-    color: #edc559;
-    font-family: "Bebas Neue";
-    font-weight: 400; }
-  .Voting:after {
-    content: "";
-    display: block;
-    width: 128px;
-    height: 128px;
-    background-image: url(img/golden-ball.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -64px;
-    right: -64px; }
+
+.Voting h1 {
+  font-size: 64px;
+  margin: 0 0 16px;
+  text-transform: capitalize;
+  color: #edc559;
+  font-family: "Bebas Neue";
+  font-weight: 400; }
+
+.Voting:after {
+  content: "";
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-image: url(img/golden-ball.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -64px;
+  right: -64px; }
 
 .Ranking button {
   width: 100%;
@@ -93,88 +95,104 @@ body {
   text-transform: uppercase;
   margin-bottom: 3px;
   border-radius: 240px; }
-  .country__rank {
-    margin-left: auto;
-    text-align: right;
-    margin-right: 12px;
-    font-size: 13px;
-    color: white;
-    padding-top: 4px;
-    opacity: 0.5; }
-  .country__name {
-    padding: 6px 0 5px;
-    font-family: "Bebas Neue";
-    font-size: 24px; }
-  .country__flag {
-    vertical-align: middle;
-    margin: 0;
-    padding-left: 6px;
-    margin-right: 16px; }
-    .country__flag img {
-      display: block;
-      width: 24px;
-      height: 24px;
-      border-radius: 100%;
-      filter: saturate(1.5); }
-  .country__average {
-    text-align: right;
-    padding: 6px 12px 4px;
-    width: 64px;
-    background-color: transparent;
-    font-size: 16px; }
-  .country--small {
-    font-size: 11px;
-    transition: .4s ease;
-    margin: 0 0 1px;
-    background: transparent; }
-    .country--small .country__rank {
-      padding: 0 8px;
-      float: right;
-      margin-left: auto;
-      margin-right: 0;
-      font-size: 10px; }
-    .country--small .country__name {
-      padding: 2px 0;
-      font-family: "Gotham";
-      font-size: 12px;
-      text-transform: capitalize; }
-    .country--small .country__flag {
-      margin-right: 8px; }
-      .country--small .country__flag img {
-        width: 12px;
-        height: 12px; }
-    .country--small:hover {
-      opacity: 0.5;
-      cursor: pointer; }
-  .country--1, .country--2, .country--3 {
-    background-color: #35383f;
-    position: relative; }
-    .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
-      margin: 0;
-      width: 38px;
-      height: 38px;
-      line-height: 38px;
-      text-align: center;
-      color: white;
-      position: absolute;
-      left: 0;
-      font-size: 20px;
-      font-weight: 400;
-      z-index: 5;
-      border: none;
-      background-image: url("img/golden-ball.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      text-shadow: 0 0 8px black; }
-      .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
-        visibility: hidden; }
-  .country--3 {
-    background-color: #edc559;
-    color: #070100;
-    background-image: none; }
-    .country--3 .country__rank {
-      color: rgba(7, 1, 0, 0.5); }
+
+.country__rank {
+  margin-left: auto;
+  text-align: right;
+  margin-right: 12px;
+  font-size: 13px;
+  color: white;
+  padding-top: 4px;
+  opacity: 0.5; }
+
+.country__name {
+  padding: 6px 0 5px;
+  font-family: "Bebas Neue";
+  font-size: 24px; }
+
+.country__flag {
+  vertical-align: middle;
+  margin: 0;
+  padding-left: 6px;
+  margin-right: 16px; }
+
+.country__flag img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  filter: saturate(1.5); }
+
+.country__average {
+  text-align: right;
+  padding: 6px 12px 4px;
+  width: 72px;
+  background-color: transparent;
+  font-size: 16px; }
+
+.country--small {
+  font-size: 11px;
+  transition: .4s ease;
+  margin: 0 0 1px;
+  background: transparent; }
+
+.country--small .country__rank {
+  padding: 0 8px;
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 10px; }
+
+.country--small .country__name {
+  padding: 2px 0;
+  font-family: "Gotham";
+  font-size: 12px;
+  text-transform: capitalize; }
+
+.country--small .country__flag {
+  margin-right: 8px; }
+
+.country--small .country__flag img {
+  width: 12px;
+  height: 12px; }
+
+.country--small:hover {
+  opacity: 0.5;
+  cursor: pointer; }
+
+.country--1, .country--2, .country--3 {
+  background-color: #35383f;
+  position: relative; }
+
+.country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
+  margin: 0;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  font-weight: 400;
+  z-index: 5;
+  border: none;
+  background-image: url("img/golden-ball.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 0 0 8px black; }
+
+.country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
+  visibility: hidden; }
+
+.country--3 {
+  background-color: #edc559;
+  color: #070100;
+  background-image: none; }
+
+.country--3 .country__rank {
+  color: rgba(7, 1, 0, 0.5); }
 
 .Scoreboard {
   display: flex;
@@ -183,22 +201,24 @@ body {
   background-color: rgba(41, 44, 49, 0.5);
   border-top: 2px solid #40454d;
   border-bottom: 1px solid #40454d; }
-  .Scoreboard > div {
-    columns: 2;
-    column-gap: 8px;
-    width: 100%; }
-  .Scoreboard .country:first-of-type:before {
-    content: "";
-    width: 40px;
-    height: 40px;
-    display: block;
-    background-image: url("img/crown.png");
-    background-size: 100%;
-    position: absolute;
-    top: -36px;
-    background-repeat: no-repeat;
-    left: 50%;
-    transform: translateX(-50%); }
+
+.Scoreboard > div {
+  columns: 2;
+  column-gap: 8px;
+  width: 100%; }
+
+.Scoreboard .country:first-of-type:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-image: url("img/crown.png");
+  background-size: 100%;
+  position: absolute;
+  top: -36px;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translateX(-50%); }
 
 button {
   appearance: none;
@@ -214,9 +234,10 @@ button {
   margin: 2px;
   transition: .4s ease;
   border-radius: 240px; }
-  button:hover {
-    opacity: 0.75;
-    cursor: pointer; }
+
+button:hover {
+  opacity: 0.75;
+  cursor: pointer; }
 
 .Button--12 {
   background-color: #edc559;
@@ -224,28 +245,33 @@ button {
 
 #picker {
   padding: 48px; }
-  #picker .country {
-    display: inline-block;
-    margin: 0 8px 8px 0;
-    background-color: white;
-    color: black;
-    border: none; }
-    #picker .country__flag {
-      display: inline-block;
-      padding: 0;
-      vertical-align: middle;
-      margin: 0 4px; }
-    #picker .country__name {
-      display: inline-block;
-      padding: 4px 4px 4px 0;
-      text-transform: uppercase;
-      font-family: "Gotham"; }
-    #picker .country__name2 {
-      display: inline-block;
-      padding: 4px 6px 4px 6px;
-      text-transform: uppercase;
-      font-family: "Gotham"; }
-  #picker > button {
-    float: right;
-    font-size: 11px;
-    margin-top: 24px; }
+
+#picker .country {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  background-color: white;
+  color: black;
+  border: none; }
+
+#picker .country__flag {
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle;
+  margin: 0 4px; }
+
+#picker .country__name {
+  display: inline-block;
+  padding: 4px 4px 4px 0;
+  text-transform: uppercase;
+  font-family: "Gotham"; }
+
+#picker .country__name2 {
+  display: inline-block;
+  padding: 4px 6px 4px 6px;
+  text-transform: uppercase;
+  font-family: "Gotham"; }
+
+#picker > button {
+  float: right;
+  font-size: 11px;
+  margin-top: 24px; }
