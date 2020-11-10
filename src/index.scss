@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 @font-face {
   font-family: "Gotham";
@@ -19,50 +19,37 @@ body {
 }
 
 .App {
-  background-color: #0f1110;
+  background-color: #353b48;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
-  background-image: url(img/gullfinalen.jpg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url("img/brush.svg");
 }
 
 .Voting {
-  background-color: darken(#292c31, 10%);
+  background-color: darken(#353b48, 10%);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid lighten(#292c31, 10%);
-  border-bottom: 1px solid lighten(#292c31, 10%);
+  border-top: 2px solid lighten(#353b48, 10%);
+  border-bottom: 1px solid lighten(#353b48, 10%);
   justify-content: center;
   position: relative;
 
   h1 {
     font-size: 64px;
-    margin: 0 0 16px;
+    margin: 0 0 8px;
     text-transform: capitalize;
-    color: #edc559;
-    font-family: "Bebas Neue";
+    color: #fed330;
+    font-family: "Caveat Brush";
     font-weight: 400;
-  }
-
-  &:after {
-    content: "";
-    display: block;
-    width: 128px;
-    height: 128px;
-    background-image: url(img/golden-ball.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -64px;
-    right: -64px;
   }
 }
 
@@ -103,10 +90,8 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: darken(#292c31, 10%);
-  text-transform: uppercase;
+  background-color: darken(#353b48, 10%);
   margin-bottom: 3px;
-  border-radius: 240px;
 
   &__rank {
     margin-left: auto;
@@ -119,22 +104,18 @@ body {
   }
 
   &__name {
-    padding: 6px 0 5px;
-    font-family: "Bebas Neue";
-    font-size: 24px;
+    padding: 10px 0 9px;
   }
 
   &__flag {
     vertical-align: middle;
     margin: 0;
-    padding-left: 6px;
-    margin-right: 16px;
+    margin-right: 12px;
 
     img {
       display: block;
-      width: 24px;
-      height: 24px;
-      border-radius: 100%;
+      width: 56px;
+      height: 36px;
       filter: saturate(1.5);
     }
   }
@@ -169,7 +150,7 @@ body {
       &__flag {
         margin-right: 8px;
         img {
-          width: 12px;
+          width: 18px;
           height: 12px;
         }
       }
@@ -182,7 +163,7 @@ body {
   }
 
   &--1, &--2, &--3 {
-    background-color: lighten(#292c31, 5%);
+    background-color: lighten(#353b48, 1%);
     position: relative;
     .country {
       &__average {
@@ -193,8 +174,8 @@ body {
       }
       &__current-rank {
         margin: 0;
-        width: 38px;
-        height: 38px;
+        width: 56px;
+        height: 36px;
         line-height: 38px;
         text-align: center;
         color: white;
@@ -204,11 +185,8 @@ body {
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-image: url("img/golden-ball.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        text-shadow: 0 0 8px black;
+        background-color: #fdd22f;
+        color: #eb3b5a;
         & + .country__flag {
           visibility: hidden;
         }
@@ -222,12 +200,12 @@ body {
     }
   }
   &--3 {
-    background-color: #edc559;
-    color: #070100;
+    background-color: #eb3b5a;
+    color: #fed330;
     background-image: none;
     .country {
       &__rank {
-        color: rgba(#070100, 0.5);
+        color: rgba(#fed330, 0.5);
       }
     }
   }
@@ -237,37 +215,20 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(#292c31, 0.5);
-  border-top: 2px solid lighten(#292c31, 10%);
-  border-bottom: 1px solid lighten(#292c31, 10%);
+  background-color: darken(#353b48, 5%);
+  border-top: 2px solid lighten(#353b48, 10%);
+  border-bottom: 1px solid lighten(#353b48, 10%);
   >div {
     columns: 2;
-    column-gap: 8px;
+    column-gap: 24px;
     width: 100%;
-  }
-  .country {
-    &:first-of-type {
-      &:before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        display: block;
-        background-image: url("img/crown.png");
-        background-size: 100%;
-        position: absolute;
-        top: -36px;
-        background-repeat: no-repeat;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
   }
 }
 
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#292c31, 1);
+  background-color: rgba(#eb3b5a, 1);
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -277,7 +238,6 @@ button {
   text-transform: uppercase;
   margin: 2px;
   transition: .4s ease;
-  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
