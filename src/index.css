@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -15,26 +15,26 @@ body {
   color: white; }
 
 .App {
-  background-color: #353b48;
+  background-color: #565656;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/brush.svg"); }
+  background-image: url("img/runners-up.jpg"); }
 
 .Voting {
-  background-color: #1f232b;
+  background-color: #3d3d3d;
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid #4b5365;
-  border-bottom: 1px solid #4b5365;
+  border-top: 2px solid #707070;
+  border-bottom: 1px solid #707070;
   justify-content: center;
   position: relative; }
 
@@ -42,8 +42,8 @@ body {
   font-size: 64px;
   margin: 0 0 8px;
   text-transform: capitalize;
-  color: #fed330;
-  font-family: "Caveat Brush";
+  color: #d1d1d1;
+  font-family: "Covered By Your Grace";
   font-weight: 400; }
 
 .Ranking button {
@@ -79,7 +79,7 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: #1f232b;
+  background-color: #3d3d3d;
   margin-bottom: 3px; }
 
 .country__rank {
@@ -143,43 +143,43 @@ body {
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
-  background-color: #373d4b;
+  background-color: #595959;
   position: relative; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
   width: 56px;
-  height: 36px;
+  height: 38px;
   line-height: 38px;
   text-align: center;
   color: white;
   position: absolute;
   left: 0;
-  font-size: 20px;
+  font-size: 36px;
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #fdd22f;
-  color: #eb3b5a; }
+  background-color: #969696;
+  font-family: "Covered By Your Grace", sans-serif; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #eb3b5a;
-  color: #fed330;
+  background-color: #ffffff;
+  color: #565656;
   background-image: none; }
 
 .country--3 .country__rank {
-  color: rgba(254, 211, 48, 0.5); }
+  color: rgba(86, 86, 86, 0.5); }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #2a2f39;
-  border-top: 2px solid #4b5365;
-  border-bottom: 1px solid #4b5365; }
+  background-color: #494949;
+  border-top: 2px solid #707070;
+  border-bottom: 1px solid #707070; }
 
 .Scoreboard > div {
   columns: 2;
@@ -189,14 +189,14 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #eb3b5a;
-  color: white;
+  background-color: white;
+  color: #565656;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 2px;
   transition: .4s ease; }
 
@@ -205,8 +205,8 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #edc559;
-  color: #070100; }
+  background-color: #575757;
+  color: white; }
 
 #picker {
   padding: 48px; }
