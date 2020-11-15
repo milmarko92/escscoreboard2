@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {getFlagForCountry} from "./images";
 import {countryNameMap} from "./constants";
-
+import {Droppable} from 'react-beautiful-dnd'
 
 export default class RankCountryComponent extends Component {
 
@@ -17,23 +17,29 @@ export default class RankCountryComponent extends Component {
 
     render() {
         return(
-            <div className={this.props.currentRank == 1 ? "country country--3" : this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
-                { this.flagOrRanking() }
-                <span className={"country__flag"}>
-                    <img src={getFlagForCountry(this.props.country)}/>
-                </span>
-                <span className={"country__name"}>
-                    {countryNameMap[this.props.country.toLowerCase()]}
-                </span>
-                <span className={"country__rank"}>
-                    {this.props.rank}
-                </span>
-                <span className={"country__average"}>
-                    {
-                        this.props.use12P ? this.props.twelvePointRank : this.props.averageRank.toFixed(2)
-                    }
-                </span>
-            </div>
+            <Droppable droppableId={this.props.country}>
+                {(provided) => (<div
+                    {...provided.droppableProps}
+                    className={this.props.currentRank === 1 ? "country country--3" : this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
+                    {this.flagOrRanking()}
+                    <span className={"country__flag"}>
+                        <img src={getFlagForCountry(this.props.country)}/>
+                    </span>
+                    <span className={"country__name"}>
+                        {countryNameMap[this.props.country.toLowerCase()]}
+                    </span>
+                    <span className={"country__rank"}>
+                        {this.props.rank}
+                    </span>
+                    <span className={"country__average"}>
+                        {
+                            this.props.use12P ? this.props.twelvePointRank : this.props.averageRank.toFixed(2)
+                        }
+                    </span>
+                    {provided.placeholder}
+                </div>)
+                }
+            </Droppable>
         )
     }
 }

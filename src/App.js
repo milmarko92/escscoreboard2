@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Setup from "./Setup";
 import Scoreboard from "./Scoreboard";
+import Vote from "./vote";
 
 export default function App() {
     return (
@@ -34,6 +35,9 @@ export default function App() {
                     </Route>
                     <Route path="/users">
                         <Users />
+                    </Route>
+                    <Route path="/vote">
+                        <Vote />
                     </Route>
                     <Route path="/">
                         <Setup />
