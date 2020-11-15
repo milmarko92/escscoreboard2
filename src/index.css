@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -15,7 +15,7 @@ body {
   color: white; }
 
 .App {
-  background-color: #565656;
+  background-color: #3a0969;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -25,25 +25,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/runners-up.jpg"); }
+  background-image: url("img/robbed.jpg"); }
 
 .Voting {
-  background-color: #3d3d3d;
+  background-color: #20053a;
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid #707070;
-  border-bottom: 1px solid #707070;
+  border-top: 2px solid #540d98;
+  border-bottom: 1px solid #540d98;
   justify-content: center;
   position: relative; }
 
 .Voting h1 {
   font-size: 64px;
   margin: 0 0 8px;
-  text-transform: capitalize;
-  color: #d1d1d1;
-  font-family: "Covered By Your Grace";
+  text-transform: uppercase;
+  color: #bb37a9;
+  font-family: "Anton";
   font-weight: 400; }
 
 .Ranking button {
@@ -79,7 +79,7 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: #3d3d3d;
+  background-color: #20053a;
   margin-bottom: 3px; }
 
 .country__rank {
@@ -97,12 +97,13 @@ body {
 .country__flag {
   vertical-align: middle;
   margin: 0;
-  margin-right: 12px; }
+  margin-right: 4px;
+  padding: 8px; }
 
 .country__flag img {
   display: block;
-  width: 56px;
-  height: 36px;
+  width: 32px;
+  height: 20px;
   filter: saturate(1.5); }
 
 .country__average {
@@ -114,7 +115,7 @@ body {
 
 .country--small {
   font-size: 11px;
-  transition: .4s ease;
+  transition: 0.4s ease;
   margin: 0 0 1px;
   background: transparent; }
 
@@ -128,11 +129,12 @@ body {
 .country--small .country__name {
   padding: 2px 0;
   font-family: "Gotham";
-  font-size: 12px;
+  font-size: 11px;
   text-transform: capitalize; }
 
 .country--small .country__flag {
-  margin-right: 8px; }
+  margin-right: 8px;
+  padding: 0; }
 
 .country--small .country__flag img {
   width: 18px;
@@ -143,43 +145,47 @@ body {
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
-  background-color: #595959;
+  background-color: #3d096e;
   position: relative; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
-  width: 56px;
-  height: 38px;
-  line-height: 38px;
+  width: 48px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
   color: white;
   position: absolute;
   left: 0;
-  font-size: 36px;
+  font-size: 16px;
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #969696;
-  font-family: "Covered By Your Grace", sans-serif; }
+  background-color: #bb37a9;
+  font-family: "Anton", sans-serif; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #ffffff;
-  color: #565656;
+  background-color: #bb37a9;
+  color: white;
   background-image: none; }
 
 .country--3 .country__rank {
-  color: rgba(86, 86, 86, 0.5); }
+  color: rgba(58, 9, 105, 0.5); }
+
+.country--3 .country__current-rank {
+  background-color: white;
+  color: #3a0969; }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #494949;
-  border-top: 2px solid #707070;
-  border-bottom: 1px solid #707070; }
+  background-color: #2d0752;
+  border-top: 2px solid #540d98;
+  border-bottom: 1px solid #540d98; }
 
 .Scoreboard > div {
   columns: 2;
@@ -190,7 +196,7 @@ button {
   appearance: none;
   border: none;
   background-color: white;
-  color: #565656;
+  color: #3a0969;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
   display: inline-block;
@@ -198,14 +204,14 @@ button {
   font-weight: 700;
   text-transform: capitalize;
   margin: 2px;
-  transition: .4s ease; }
+  transition: 0.4s ease; }
 
 button:hover {
   opacity: 0.75;
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #575757;
+  background-color: #bb37a9;
   color: white; }
 
 #picker {

@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 @font-face {
   font-family: "Gotham";
@@ -19,7 +19,7 @@ body {
 }
 
 .App {
-  background-color: #565656;
+  background-color: #3a0969;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -29,26 +29,26 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/runners-up.jpg");
+  background-image: url("img/robbed.jpg");
 }
 
 .Voting {
-  background-color: darken(#565656, 10%);
+  background-color: darken(#3a0969, 10%);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid lighten(#565656, 10%);
-  border-bottom: 1px solid lighten(#565656, 10%);
+  border-top: 2px solid lighten(#3a0969, 10%);
+  border-bottom: 1px solid lighten(#3a0969, 10%);
   justify-content: center;
   position: relative;
 
   h1 {
     font-size: 64px;
     margin: 0 0 8px;
-    text-transform: capitalize;
-    color: #d1d1d1;
-    font-family: "Covered By Your Grace";
+    text-transform: uppercase;
+    color: #bb37a9;
+    font-family: "Anton";
     font-weight: 400;
   }
 }
@@ -90,7 +90,7 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: darken(#565656, 10%);
+  background-color: darken(#3a0969, 10%);
   margin-bottom: 3px;
 
   &__rank {
@@ -110,16 +110,17 @@ body {
   &__flag {
     vertical-align: middle;
     margin: 0;
-    margin-right: 12px;
+    margin-right: 4px;
+    padding: 8px;
 
     img {
       display: block;
-      width: 56px;
-      height: 36px;
+      width: 32px;
+      height: 20px;
       filter: saturate(1.5);
     }
   }
-  
+
   &__average {
     text-align: right;
     padding: 6px 12px 4px;
@@ -130,7 +131,7 @@ body {
 
   &--small {
     font-size: 11px;
-    transition: .4s ease;
+    transition: 0.4s ease;
     margin: 0 0 1px;
     background: transparent;
     .country {
@@ -144,11 +145,12 @@ body {
       &__name {
         padding: 2px 0;
         font-family: "Gotham";
-        font-size: 12px;
+        font-size: 11px;
         text-transform: capitalize;
       }
       &__flag {
         margin-right: 8px;
+        padding: 0;
         img {
           width: 18px;
           height: 12px;
@@ -162,50 +164,52 @@ body {
     }
   }
 
-  &--1, &--2, &--3 {
-    background-color: lighten(#565656, 1%);
+  &--1,
+  &--2,
+  &--3 {
+    background-color: lighten(#3a0969, 1%);
     position: relative;
     .country {
       &__average {
-        
       }
       &__rank {
-        
       }
       &__current-rank {
         margin: 0;
-        width: 56px;
-        height: 38px;
-        line-height: 38px;
+        width: 48px;
+        height: 36px;
+        line-height: 36px;
         text-align: center;
         color: white;
         position: absolute;
         left: 0;
-        font-size: 36px;
+        font-size: 16px;
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-color: #969696;
-        font-family: "Covered By Your Grace", sans-serif;
+        background-color: #bb37a9;
+        font-family: "Anton", sans-serif;
         & + .country__flag {
           visibility: hidden;
         }
       }
       &__flag {
-        
       }
       &__average {
-        
       }
     }
   }
   &--3 {
-    background-color: #ffffff;
-    color: #565656;
+    background-color: #bb37a9;
+    color: white;
     background-image: none;
     .country {
       &__rank {
-        color: rgba(#565656, 0.5);
+        color: rgba(#3a0969, 0.5);
+      }
+      &__current-rank {
+        background-color: white;
+        color: #3a0969;
       }
     }
   }
@@ -215,10 +219,10 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: darken(#565656, 5%);
-  border-top: 2px solid lighten(#565656, 10%);
-  border-bottom: 1px solid lighten(#565656, 10%);
-  >div {
+  background-color: darken(#3a0969, 5%);
+  border-top: 2px solid lighten(#3a0969, 10%);
+  border-bottom: 1px solid lighten(#3a0969, 10%);
+  > div {
     columns: 2;
     column-gap: 24px;
     width: 100%;
@@ -229,7 +233,7 @@ button {
   appearance: none;
   border: none;
   background-color: rgba(#ffffff, 1);
-  color: #565656;
+  color: #3a0969;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
   display: inline-block;
@@ -237,7 +241,7 @@ button {
   font-weight: 700;
   text-transform: capitalize;
   margin: 2px;
-  transition: .4s ease;
+  transition: 0.4s ease;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -246,7 +250,7 @@ button {
 
 .Button {
   &--12 {
-    background-color: #575757;
+    background-color: #bb37a9;
     color: white;
   }
 }

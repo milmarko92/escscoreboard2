@@ -67,7 +67,7 @@ class Scoreboard extends Component {
     //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
     //     audio.play()
     // }
-    else if (data.new_rank === 24) {
+    else if (data.new_rank === 28) {
       // if(this.state["remainingVoters"].length % 4 === 0) {
       //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
       //     audio.play()
