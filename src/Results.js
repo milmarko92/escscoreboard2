@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import countries, {all_voters} from "./constants";
+import countries, {countryNameMap} from "./constants";
 
 
 export default class Results extends Component {
@@ -54,7 +54,7 @@ export default class Results extends Component {
                 <span>"vi har ett resultat"</span>
                 {
                     this.state["strings"].map( (value, index) => {
-                        return (<button key={"q"+index}>{value}</button>)
+                        return (<button key={"q"+index}>{countryNameMap[value]}</button>)
                     })
                 }
                 <br/>
