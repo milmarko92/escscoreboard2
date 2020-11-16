@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import countries, {all_voters, countryNameMap} from "./constants";
 import {getFlagForCountry} from "./images";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 export default class Vote extends Component {
     constructor(props) {
@@ -53,14 +55,20 @@ export default class Vote extends Component {
         console.log(votes)
         // open the request with the verb and the url
         xhr.open('POST', 'https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote')
-        xhr.send(JSON.stringify({ name: 'test',  votes: votes}))
+        xhr.send(JSON.stringify({ name: this.state["currentVoter"],  votes: votes}))
         // send the request
         xhr.send()
+    }
+
+    _onSelect(event){
+        console.log(event)
+        this.setState({"currentVoter": event.value})
     }
 
     render() {
         return (
             <div>
+            <Dropdown options={all_voters} onChange={this._onSelect.bind(this)} value={all_voters[0]} placeholder="Who are you??" />
             <DragDropContext onDragEnd={this.onDragEnd}>
                 <Droppable droppableId="votes">
                     {
@@ -79,6 +87,8 @@ export default class Vote extends Component {
                                     )
                                 })
                                 }
+
+                                {provided.placeholder}
                             </div>
                         )
                     }

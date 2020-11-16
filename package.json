@@ -15,6 +15,7 @@
     "react-flip-toolkit": "^7.0.9",
     "react-router-dom": "5.2.0",
     "react-scripts": "0.9.5",
+    "react-dropdown": "1.9.0",
     "require-context": "^1.1.0"
   },
   "scripts": {
