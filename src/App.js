@@ -8,6 +8,7 @@ import {
 import Setup from "./Setup";
 import Scoreboard from "./Scoreboard";
 import Vote from "./vote";
+import Results from "./Results";
 
 export default function App() {
     return (
@@ -38,6 +39,9 @@ export default function App() {
                     </Route>
                     <Route path="/vote">
                         <Vote />
+                    </Route>
+                    <Route path="/result">
+                        <Results />
                     </Route>
                     <Route path="/">
                         <Setup />
