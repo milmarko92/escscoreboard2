@@ -5,6 +5,13 @@ import {getFlagForCountry} from "./images";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error("Did you pick a name?");
+    }
+    return response;
+}
+
 export default class Vote extends Component {
     constructor(props) {
         super(props);
@@ -39,25 +46,34 @@ export default class Vote extends Component {
     }
 
     sendVote(){
-        console.log("cdfvgbh")
-        var xhr = new XMLHttpRequest()
-
-        // get a callback when the server responds
-        xhr.addEventListener('load', () => {
-            // update the state of the component with the result here
-            console.log(xhr.responseText)
-        })
         const votes = this.state["all_countries"].map(
             (value, index) => {
                 return {rank: index+1, code: value}
             }
         )
-        console.log(votes)
-        // open the request with the verb and the url
-        xhr.open('POST', 'https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote')
-        xhr.send(JSON.stringify({ name: this.state["currentVoter"],  votes: votes}))
-        // send the request
-        xhr.send()
+        fetch('https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote', {
+            method: 'post',
+            body: JSON.stringify({ name: this.state["currentVoter"],  votes: votes})
+        })
+            .then(handleErrors)
+            .then((response) => {alert(this.state["currentVoter"] + ", thank you for your vote")}).catch((error) => {alert(error)})
+        // console.log("cdfvgbh")
+        // var xhr = new XMLHttpRequest()
+        //
+        // // get a callback when the server responds
+        // xhr.addEventListener('load', () => {
+        //     // update the state of the component with the result here
+        //     console.log(xhr.responseText)
+        // })
+        // const votes = this.state["all_countries"].map(
+        //     (value, index) => {
+        //         return {rank: index+1, code: value}
+        //     }
+        // )
+        // console.log(votes)
+        // // open the request with the verb and the url
+        // xhr.open('POST', 'https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote')
+        // xhr.send(JSON.stringify({ name: this.state["currentVoter"],  votes: votes}))
     }
 
     _onSelect(event){
