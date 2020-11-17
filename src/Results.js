@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import countries, {countryNameMap} from "./constants";
+import countries, {audioMap, countryNameMap} from "./constants";
+import {getFlagForCountry} from "./images";
 
 
 export default class Results extends Component {
@@ -44,7 +45,12 @@ export default class Results extends Component {
         displayed.push(qualifiers[num])
         console.log(displayed)
         var strings = this.state["strings"]
-        strings[num] = qualifiers[num]["entry"]
+        const entry = qualifiers[num]["entry"]
+        strings[num] = entry
+        var audio = new Audio(
+            process.env.PUBLIC_URL + "/audio/" + audioMap[entry]
+        );
+        audio.play()
         this.setState({"displayed": displayed, "strings": strings})
     }
 
@@ -54,7 +60,10 @@ export default class Results extends Component {
                 <span>"vi har ett resultat"</span>
                 {
                     this.state["strings"].map( (value, index) => {
-                        return (<button key={"q"+index}>{countryNameMap[value]}</button>)
+                        return (<div key={"q"+index}>
+                            <img src={getFlagForCountry(value)}/>
+                            {countryNameMap[value]}
+                        </div>)
                     })
                 }
                 <br/>

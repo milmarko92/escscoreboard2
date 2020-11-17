@@ -342,4 +342,28 @@ export const all_voters = [
   "Wiv",
 ];
 
+export const audioMap = {
+  "fin16": "nf-pc-1/fin16.mp3",
+  "spa18": "nf-pc-1/spa18.mp3",
+  "ita17": "nf-pc-1/ita17.mp3",
+  "den12": "nf-pc-1/den12.mp3",
+  "fra19": "nf-pc-1/fra19.mp3",
+  "swe11a": "nf-pc-1/swe11a.mp3",
+  "swe11b": "nf-pc-1/swe11b.mp3",
+  "swe11c": "nf-pc-1/swe11c.mp3",
+  "ice12": "nf-pc-1/ice12.mp3",
+  "est14": "nf-pc-1/est14.mp3",
+  "sam04": "nf-pc-1/sam04.mp3",
+  "swe17": "nf-pc-1/swe17.mp3",
+  "spa14": "nf-pc-1/spa14.mp3",
+  "spa10": "nf-pc-1/spa10.mp3",
+  "lit17": "nf-pc-1/lit17.mp3",
+  "den11": "nf-pc-1/den11.mp3",
+  "alb19": "nf-pc-1/alb19.mp3",
+  "swe18": "nf-pc-1/swe18.mp3",
+  "den09": "nf-pc-1/den09.mp3",
+  "hun17": "nf-pc-1/hun17.mp3",
+};
+
+
 export default countries;

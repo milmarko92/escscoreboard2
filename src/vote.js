@@ -84,7 +84,7 @@ export default class Vote extends Component {
     render() {
         return (
             <div>
-            <Dropdown options={all_voters} onChange={this._onSelect.bind(this)} value={all_voters[0]} placeholder="Who are you??" />
+            <Dropdown options={all_voters} onChange={this._onSelect.bind(this)} value={"Choose Your Name!"} placeholder="Choose Your Name!" />
             <DragDropContext onDragEnd={this.onDragEnd}>
                 <Droppable droppableId="votes">
                     {
