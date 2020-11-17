@@ -70,6 +70,16 @@ export default class Results extends Component {
     this.setState({ displayed: displayed, strings: strings });
   }
 
+
+    all_countries(){
+        return countries.map((value, index) => {
+            return (<div>
+                <img src={getFlagForCountry(value)}/>
+                {countryNameMap[value]}
+            </div>)
+        })
+    }
+
   ett_resultat() {
     return (
       <div>
@@ -84,6 +94,9 @@ export default class Results extends Component {
         <button onClick={this.displayQualifier.bind(this)}>
           BIG RED BUTTON
         </button>
+         <br/>
+         <br/>
+          {this.all_countries()}
       </div>
     );
   }
@@ -98,6 +111,8 @@ export default class Results extends Component {
   }
 
   render() {
-    return <div>{this.whatever()}</div>;
+    return <div>{
+        this.whatever()
+    }</div>;
   }
 }
