@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -11,11 +11,15 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #0f1110;
-  color: white; }
+  background-color: #0984e3;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("img/injusticia.jpg"); }
 
 .App {
-  background-color: #3a0969;
+  background-color: #0984e3;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -25,25 +29,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/robbed.jpg"); }
+  background-image: url("img/injusticia.jpg"); }
 
 .Voting {
-  background-color: #20053a;
+  background-color: rgba(7, 103, 178, 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid #540d98;
-  border-bottom: 1px solid #540d98;
+  border-top: 2px solid #299df6;
+  border-bottom: 1px solid #299df6;
   justify-content: center;
   position: relative; }
 
 .Voting h1 {
   font-size: 64px;
   margin: 0 0 8px;
-  text-transform: uppercase;
-  color: #bb37a9;
-  font-family: "Anton";
+  text-transform: lowercase;
+  color: white;
+  font-family: "Fascinate";
   font-weight: 400; }
 
 .Ranking button {
@@ -79,8 +83,9 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: #20053a;
-  margin-bottom: 3px; }
+  background-color: #0767b2;
+  margin-bottom: 3px;
+  border-radius: 240px; }
 
 .country__rank {
   margin-left: auto;
@@ -102,8 +107,8 @@ body {
 
 .country__flag img {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   filter: saturate(1.5);
   border-radius: 100%; }
 
@@ -117,8 +122,8 @@ body {
 .country--small {
   font-size: 11px;
   transition: 0.4s ease;
-  margin: 0 0 1px;
-  background: transparent; }
+  margin: 0 0 4px;
+  background-color: transparent; }
 
 .country--small .country__rank {
   padding: 0 8px;
@@ -138,65 +143,64 @@ body {
   padding: 0; }
 
 .country--small .country__flag img {
-  width: 18px;
-  height: 18px; }
+  width: 16px;
+  height: 16px; }
 
 .country--small:hover {
   opacity: 0.5;
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
-  background-color: #3d096e;
+  background-color: #0987e8;
   position: relative; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
-  width: 48px;
-  height: 36px;
-  line-height: 36px;
+  width: 40px;
+  height: 40px;
+  line-height: 32px;
   text-align: center;
   color: white;
   position: absolute;
   left: 0;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #bb37a9;
-  font-family: "Anton", sans-serif; }
+  background-image: url("img/red-ball.png");
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Fascinate", sans-serif; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #bb37a9;
+  background-color: #d63031;
   color: white;
   background-image: none; }
 
 .country--3 .country__rank {
-  color: rgba(58, 9, 105, 0.5); }
-
-.country--3 .country__current-rank {
-  background-color: white;
-  color: #3a0969; }
+  color: rgba(255, 255, 255, 0.75); }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #2d0752;
-  border-top: 2px solid #540d98;
-  border-bottom: 1px solid #540d98; }
+  background-color: rgba(8, 118, 202, 0.25);
+  border-top: 2px solid rgba(41, 157, 246, 0.25);
+  border-bottom: 1px solid rgba(41, 157, 246, 0.25); }
 
 .Scoreboard > div {
   columns: 2;
-  column-gap: 24px;
+  column-gap: 8px;
   width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  background-color: #3a0969;
+  background-color: #0984e3;
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -205,14 +209,15 @@ button {
   font-weight: 700;
   text-transform: capitalize;
   margin: 2px;
-  transition: 0.4s ease; }
+  transition: 0.4s ease;
+  border-radius: 240px; }
 
 button:hover {
   opacity: 0.75;
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #bb37a9;
+  background-color: #d63031;
   color: white; }
 
 #picker {
@@ -223,17 +228,18 @@ button:hover {
   margin: 0 8px 8px 0;
   background-color: white;
   color: black;
-  border: none; }
+  border: none;
+  border-radius: 240px; }
 
 #picker .country__flag {
   display: inline-block;
   padding: 0;
   vertical-align: middle;
-  margin: 0 4px; }
+  margin: 0 6px 0 4px; }
 
 #picker .country__name {
   display: inline-block;
-  padding: 4px 4px 4px 0;
+  padding: 6px 8px 6px 0;
   text-transform: uppercase;
   font-family: "Gotham"; }
 
@@ -249,16 +255,54 @@ button:hover {
   margin-top: 24px; }
 
 .vote {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 8px 12px;
-  margin: 0 auto 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px 1px;
+  margin: 0 0 4px;
   border-radius: 240px;
-  background-color: #005daa;
-  max-width: 320px; }
+  counter-increment: count;
+  position: relative; }
 
 .vote .country__name {
   font-size: 13px;
-  padding: 4px 0 2px; }
+  padding: 6px 0 2px; }
+
+.vote:after {
+  content: "#" counter(count);
+  opacity: 0.5;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%); }
 
 .votingPanel {
-  background-color: #2386c1; }
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: rgba(8, 118, 202, 0.25);
+  padding: 24px;
+  counter-set: count; }
+
+.votingPanel h2 {
+  margin: 0 0 8px;
+  font-size: 16px; }
+
+.votingPanel .Dropdown-root {
+  margin-bottom: 36px; }
+
+.votingPanel .Dropdown-control {
+  font-size: 13px;
+  padding: 6px 52px 4px 10px;
+  border: none;
+  border-radius: 0; }
+
+.votingPanel .Dropdown-arrow {
+  top: 11px; }
+
+.votingPanel .Dropdown-menu {
+  font-size: 13px; }
+
+.votingPanel button {
+  background-color: #d63031;
+  margin: 24px auto 0;
+  text-align: center;
+  display: block; }

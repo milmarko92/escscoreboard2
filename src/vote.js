@@ -54,7 +54,7 @@ export default class Vote extends Component {
     })
       .then(handleErrors)
       .then((response) => {
-        alert(this.state["currentVoter"] + ", thank you for your vote");
+        alert(this.state["currentVoter"] + ", thank you for your vote.");
       })
       .catch((error) => {
         alert(error);
