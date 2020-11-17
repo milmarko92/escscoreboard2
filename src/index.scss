@@ -299,7 +299,7 @@ button {
 }
 
 .vote {
-  background-color: rgba(white, 0.2);
+  background-color: darken(#0984e3, 10%);
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   border-radius: 240px;
@@ -330,6 +330,10 @@ button {
   background-color: rgba(darken(#0984e3, 5%), 0.25);
   padding: 24px;
   counter-set: count;
+
+  @media screen and (max-width: 720px) {
+    max-width: 100%;    
+  }
 
   h2 {
     margin: 0 0 8px;
