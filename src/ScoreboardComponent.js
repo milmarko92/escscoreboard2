@@ -36,11 +36,7 @@ class ScoreboardComponent extends Component {
                                 : 0
                             return value
                         }
-                    ).
-                    // sort(
-                    //     (a,b) =>  a.key - b.key
-                    // ).
-                    map(
+                    ).map(
                     (value, index) => {
                         return (
                             <RankCountryComponent

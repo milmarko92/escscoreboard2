@@ -116,8 +116,9 @@ body {
     img {
       display: block;
       width: 32px;
-      height: 20px;
+      height: 32px;
       filter: saturate(1.5);
+      border-radius: 100%;
     }
   }
 
@@ -153,7 +154,7 @@ body {
         padding: 0;
         img {
           width: 18px;
-          height: 12px;
+          height: 18px;
         }
       }
     }
@@ -232,8 +233,8 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#ffffff, 1);
-  color: #3a0969;
+  background-color: rgba(#3a0969, 1);
+  color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
   display: inline-block;
@@ -287,4 +288,23 @@ button {
     font-size: 11px;
     margin-top: 24px;
   }
+}
+
+.vote {
+  background-color: rgba(white, 0.1);
+  padding: 8px 12px;
+  margin: 0 auto 8px;
+  border-radius: 240px;
+  background-color: #005daa;
+  max-width: 320px;
+  .country {
+    &__name {
+      font-size: 13px;
+      padding: 4px 0 2px;
+    }
+  }
+}
+
+.votingPanel {
+  background-color: #2386c1;
 }
