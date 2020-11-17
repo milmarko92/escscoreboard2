@@ -32,6 +32,27 @@ export default class Results extends Component {
     }
     return false;
   }
+
+
+  shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
   getResults() {
     console.log("ddddaaaa");
     fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result")
@@ -40,12 +61,11 @@ export default class Results extends Component {
         this.setState({
           result: data["results"],
           fetched: true,
-          qualifiers: data["results"].slice(0, 10),
+          qualifiers: this.shuffle(data["results"].slice(0, 10)),
         });
         console.log(data);
       });
   }
-
   displayQualifier() {
     if (this.state["displayed"].length === 10) {
       return;
