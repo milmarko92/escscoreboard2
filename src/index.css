@@ -310,3 +310,42 @@ button:hover {
   margin: 24px auto 0;
   text-align: center;
   display: block; }
+
+.results {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 100%;
+  grid-gap: 24px 0;
+  height: 100vh;
+  padding: 72px 128px; }
+
+.results__qualifiers {
+  columns: 2;
+  column-gap: 8px; }
+
+.results__left {
+  display: flex;
+  flex-flow: row wrap;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(8, 118, 202, 0.25);
+  border-top: 2px solid rgba(41, 157, 246, 0.25);
+  border-bottom: 1px solid rgba(41, 157, 246, 0.25); }
+
+.results__countries {
+  background-color: rgba(7, 103, 178, 0.75);
+  text-align: left;
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-top: 2px solid #299df6;
+  border-bottom: 1px solid #299df6;
+  justify-content: center;
+  position: relative; }
+
+.results button {
+  background-color: #d63031;
+  margin: 24px auto 0;
+  text-align: center;
+  display: block; }

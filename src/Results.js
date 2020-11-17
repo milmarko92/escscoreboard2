@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import countries, { audioMap, countryNameMap } from "./constants";
-import {getFlagForCountry} from "./images";
+import { getFlagForCountry } from "./images";
 
 export default class Results extends Component {
   constructor(props) {
@@ -61,42 +61,45 @@ export default class Results extends Component {
     displayed.push(qualifiers[num]);
     console.log(displayed);
     var strings = this.state["strings"];
-      const entry = qualifiers[num]["entry"]
-      strings[num] = entry
-      var audio = new Audio(
-          process.env.PUBLIC_URL + "/audio/" + audioMap[entry]
-      );
-      audio.play()
+    const entry = qualifiers[num]["entry"];
+    strings[num] = entry;
+    var audio = new Audio(process.env.PUBLIC_URL + "/audio/" + audioMap[entry]);
+    audio.play();
     this.setState({ displayed: displayed, strings: strings });
   }
 
-
-    all_countries(){
-        return countries.map((value, index) => {
-            return (<div>
-                <img src={getFlagForCountry(value)}/>
-                {countryNameMap[value]}
-            </div>)
-        })
-    }
+  all_countries() {
+    return countries.map((value, index) => {
+      return (
+        <div class="country country--small">
+          <span className="country__flag">
+            <img src={getFlagForCountry(value)} />
+          </span>
+          <span className="country__name">{countryNameMap[value]}</span>
+        </div>
+      );
+    });
+  }
 
   ett_resultat() {
     return (
-      <div>
-        <span>"vi har ett resultat"</span>
-        {this.state["strings"].map((value, index) => {
-            return (<div key={"q"+index}>
-                <img src={getFlagForCountry(value)}/>
-                {countryNameMap[value]}
-            </div>)
-        })}
-        <br />
-        <button onClick={this.displayQualifier.bind(this)}>
-          BIG RED BUTTON
-        </button>
-         <br/>
-         <br/>
-          {this.all_countries()}
+      <div className="results">
+        <div className="results__left">
+          <div className="results__qualifiers">
+            {this.state["strings"].map((value, index) => {
+              return (
+                <div className="country" key={"q" + index}>
+                  <span className="country__flag">
+                    <img src={getFlagForCountry(value)} />
+                  </span>
+                  <span className="country__name">{countryNameMap[value]}</span>
+                </div>
+              );
+            })}
+          </div>
+          <button onClick={this.displayQualifier.bind(this)}>Blow</button>
+        </div>
+        <div className="results__countries">{this.all_countries()}</div>
       </div>
     );
   }
@@ -111,8 +114,6 @@ export default class Results extends Component {
   }
 
   render() {
-    return <div>{
-        this.whatever()
-    }</div>;
+    return <div>{this.whatever()}</div>;
   }
 }
