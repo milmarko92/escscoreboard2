@@ -39,7 +39,7 @@ class Setup extends Component {
                 console.log(this.state["selected_countries"])
             }}>
                 <span className={"country__flag"}>
-                    <img src={getFlagForCountry(country)}/>
+                    <img alt="" src={getFlagForCountry(country)}/>
                 </span>
                 <span className={"country__name"}>
                     {countryNameMap[country.toLowerCase()]}
@@ -61,7 +61,7 @@ class Setup extends Component {
                 })
             }}>
                 <span className={"country__flag"}>
-                    <img src={getFlagForCountry(country)}/>
+                    <img alt="" src={getFlagForCountry(country)}/>
                 </span>
                 <span className={"country__name"}>
                     {countryNameMap[country.toLowerCase()]}
@@ -158,7 +158,7 @@ class Setup extends Component {
                         console.log(event.target.value)
                         this.setState({"additional_voter": event.target.value})
                     }}
-                    onKeyUp = { event => {
+                    onKeyUp={ event => {
                     if (event.keyCode === 13) {
                         this.add_voter()
                     }
