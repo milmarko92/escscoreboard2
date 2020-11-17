@@ -69,7 +69,7 @@ export default class Results extends Component {
   }
 
   all_countries() {
-    return countries.map((value, index) => {
+    return countries.sort().map((value, index) => {
       return (
         <div class="country country--small">
           <span className="country__flag">
