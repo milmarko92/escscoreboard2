@@ -52,7 +52,7 @@ export default class Vote extends Component {
     });
     fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote", {
       method: "post",
-      body: JSON.stringify({ name: this.state["currentVoter"], votes: votes }),
+      body: JSON.stringify({ name: this.state["currentVoter"], votes: votes , edition: 3}),
     })
       .then(handleErrors)
       .then((response) => {
