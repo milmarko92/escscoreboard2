@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import countries, { audioMap, countryNameMap } from "./constants";
+import countries, {audioMap, countryNameMap, magic_code} from "./constants";
 import { getFlagForCountry } from "./images";
 
 export default class Results extends Component {
@@ -20,6 +20,8 @@ export default class Results extends Component {
         "???",
         "???",
       ],
+      unlocked: false,
+      code: "",
     };
     this.getResults();
   }
@@ -90,8 +92,13 @@ export default class Results extends Component {
 
   all_countries() {
     return countries.sort().map((value, index) => {
+      const qualified = this.array_contains(this.state["strings"], value)
+      let classname = "country country--small"
+      if (qualified === true){
+        classname = "country country--small country--qualified"
+      }
       return (
-        <div class="country country--small">
+        <div class={classname}>
           <span className="country__flag">
             <img src={getFlagForCountry(value)} />
           </span>
@@ -133,7 +140,32 @@ export default class Results extends Component {
     }
   }
 
+  check_code(){
+    if(this.state["code"] === magic_code){
+      this.setState({"unlocked": true})
+    }
+  }
+
+  block_entry(){
+    return (
+        <div>
+          <input type={"text"} value={""} onChange={event =>
+          {
+            this.setState({"code": event.target.value})
+          }}
+                 onKeyUp={ event => {
+                   if (event.keyCode === 13) {
+                     this.check_code()
+                   }
+                 }}/>
+          <button onClick={this.check_code.bind(this)}>Enter</button>
+        </div>
+    )
+  }
+
   render() {
-    return <div>{this.whatever()}</div>;
+    console.log(this.state["unlocked"])
+    const to_render = this.state["unlocked"] ? this.block_entry(): this.whatever()
+    return (<div>{to_render}}</div>);
   }
 }

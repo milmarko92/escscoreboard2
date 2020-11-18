@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import countries, { all_voters, countryNameMap } from "./constants";
+import countries, {all_voters, countryNameMap, magic_code} from "./constants";
 import { getFlagForCountry } from "./images";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -17,6 +17,8 @@ export default class Vote extends Component {
     super(props);
     this.state = {
       all_countries: countries,
+      unlocked: false,
+      code: "",
     };
   }
 
@@ -83,48 +85,77 @@ export default class Vote extends Component {
     this.setState({ currentVoter: event.value });
   }
 
-  render() {
-    return (
-      <div className="votingPanel">
-        <h2>Select your name</h2>
-        <Dropdown
-          options={all_voters}
-          onChange={this._onSelect.bind(this)}
-          value={"Choose Your Name!"}
-          placeholder="Who are you??"
-        />
-        <DragDropContext onDragEnd={this.onDragEnd}>
-          <Droppable droppableId="votes">
-            {(provided) => (
-              <div
-                className="votes"
-                {...provided.droppableProps}
-                ref={provided.innerRef}
-              >
-                {this.state["all_countries"].map((value, index) => {
-                  return (
-                    <Draggable key={value} draggableId={value} index={index}>
-                      {(provided) => (
-                        <div
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                          className="vote"
-                        >
-                          {this.votingButtonComponent(value)}
-                        </div>
-                      )}
-                    </Draggable>
-                  );
-                })}
+  check_code(){
+    if(this.state["code"] === magic_code){
+      this.setState({"unlocked": true})
+    }
+  }
 
-                {provided.placeholder}
-              </div>
-            )}
-          </Droppable>
-        </DragDropContext>
-        <button onClick={this.sendVote.bind(this)}>Submit</button>
-      </div>
+  block_entry(){
+    return (
+        <div>
+          <input type={"text"} value={this.state["code"]} onChange={event =>
+          {
+            this.setState({"code": event.target.value})
+          }}
+                 onKeyUp={ event => {
+                   if (event.keyCode === 13) {
+                     this.check_code()
+                   }
+                 }}/>
+          <button onClick={this.check_code.bind(this)}>Enter</button>
+        </div>
+    )
+  }
+
+  whatever(){
+    return (
+        <div className="votingPanel">
+          <h2>Select your name</h2>
+          <Dropdown
+              options={all_voters}
+              onChange={this._onSelect.bind(this)}
+              value={"Choose Your Name!"}
+              placeholder="Who are you??"
+          />
+          <DragDropContext onDragEnd={this.onDragEnd}>
+            <Droppable droppableId="votes">
+              {(provided) => (
+                  <div
+                      className="votes"
+                      {...provided.droppableProps}
+                      ref={provided.innerRef}
+                  >
+                    {this.state["all_countries"].map((value, index) => {
+                      return (
+                          <Draggable key={value} draggableId={value} index={index}>
+                            {(provided) => (
+                                <div
+                                    ref={provided.innerRef}
+                                    {...provided.draggableProps}
+                                    {...provided.dragHandleProps}
+                                    className="vote"
+                                >
+                                  {this.votingButtonComponent(value)}
+                                </div>
+                            )}
+                          </Draggable>
+                      );
+                    })}
+
+                    {provided.placeholder}
+                  </div>
+              )}
+            </Droppable>
+          </DragDropContext>
+          <button onClick={this.sendVote.bind(this)}>Submit</button>
+        </div>
     );
+  }
+
+  render() {
+    console.log(this.state["unlocked"])
+    const to_render = this.state["unlocked"] ? this.whatever() : this.block_entry()
+    return (to_render);
   }
 }
