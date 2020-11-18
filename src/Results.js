@@ -20,8 +20,6 @@ export default class Results extends Component {
         "???",
         "???",
       ],
-      unlocked: false,
-      code: "",
     };
     this.getResults();
   }
@@ -163,9 +161,8 @@ export default class Results extends Component {
     )
   }
 
+
   render() {
-    console.log(this.state["unlocked"])
-    const to_render = this.state["unlocked"] ? this.block_entry(): this.whatever()
-    return (<div>{to_render}}</div>);
+    return <div>{this.whatever()}</div>;
   }
 }
