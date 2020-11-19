@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import countries, {audioMap, countryNameMap, currentEdition, magic_code} from "./constants";
+import countries, {
+  audioMap,
+  countryNameMap,
+  currentEdition,
+  magic_code,
+} from "./constants";
 import { getFlagForCountry } from "./images";
 
 export default class Results extends Component {
@@ -33,13 +38,13 @@ export default class Results extends Component {
     return false;
   }
 
-
   shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length,
+      temporaryValue,
+      randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
@@ -55,7 +60,11 @@ export default class Results extends Component {
 
   getResults() {
     console.log("ddddaaaa");
-    fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result/" + currentEdition+"/")
+    fetch(
+      "https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result/" +
+        currentEdition +
+        "/"
+    )
       .then((response) => response.json())
       .then((data) => {
         this.setState({
@@ -90,10 +99,10 @@ export default class Results extends Component {
 
   all_countries() {
     return countries.sort().map((value, index) => {
-      const qualified = this.array_contains(this.state["strings"], value)
-      let classname = "country country--small"
-      if (qualified === true){
-        classname = "country country--small country--qualified"
+      const qualified = this.array_contains(this.state["strings"], value);
+      let classname = "country country--small";
+      if (qualified === true) {
+        classname = "country country--small country--qualified";
       }
       return (
         <div class={classname}>
@@ -123,7 +132,9 @@ export default class Results extends Component {
               );
             })}
           </div>
-          <button onClick={this.displayQualifier.bind(this)}>Click Me with Your Mouse</button>
+          <button onClick={this.displayQualifier.bind(this)}>
+            Click Me with Your Mouse
+          </button>
         </div>
         <div className="results__countries">{this.all_countries()}</div>
       </div>
@@ -139,29 +150,31 @@ export default class Results extends Component {
     }
   }
 
-  check_code(){
-    if(this.state["code"].toLowerCase() === magic_code){
-      this.setState({"unlocked": true})
+  check_code() {
+    if (this.state["code"].toLowerCase() === magic_code) {
+      this.setState({ unlocked: true });
     }
   }
 
-  block_entry(){
+  block_entry() {
     return (
-        <div className="votingPassword">
-          <input type={"text"} value={""} onChange={event =>
-          {
-            this.setState({"code": event.target.value})
+      <div className="votingPassword">
+        <input
+          type={"text"}
+          value={""}
+          onChange={(event) => {
+            this.setState({ code: event.target.value });
           }}
-                 onKeyUp={ event => {
-                   if (event.keyCode === 13) {
-                     this.check_code()
-                   }
-                 }}/>
-          <button onClick={this.check_code.bind(this)}>Enter</button>
-        </div>
-    )
+          onKeyUp={(event) => {
+            if (event.keyCode === 13) {
+              this.check_code();
+            }
+          }}
+        />
+        <button onClick={this.check_code.bind(this)}>Enter</button>
+      </div>
+    );
   }
-
 
   render() {
     return <div>{this.whatever()}</div>;
