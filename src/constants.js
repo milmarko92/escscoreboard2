@@ -129,7 +129,7 @@ export const countryNameMap = {
   "spa08": "La revolución sexual",
   "swi13": "J'avais rendez-vous",
   "fin13": "We Should Be Through ",
-  "swe04": "Min Karlek",
+  "swe04": "Min Kärlek",
   "slo19": "KAOS",
   "mac15": "Brod Shto Tone",
   "nor18": "Tengo otra",
