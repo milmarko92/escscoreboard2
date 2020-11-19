@@ -110,6 +110,7 @@ export default class Results extends Component {
     return (
       <div className="results">
         <div className="results__left">
+          <h2>Qualified for the Final</h2>
           <div className="results__qualifiers">
             {this.state["strings"].map((value, index) => {
               return (
@@ -122,7 +123,7 @@ export default class Results extends Component {
               );
             })}
           </div>
-          <button onClick={this.displayQualifier.bind(this)}>Blow</button>
+          <button onClick={this.displayQualifier.bind(this)}>Click Me with Your Mouse</button>
         </div>
         <div className="results__countries">{this.all_countries()}</div>
       </div>
