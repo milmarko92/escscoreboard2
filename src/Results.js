@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import countries, {audioMap, countryNameMap, magic_code} from "./constants";
+import countries, {audioMap, countryNameMap, currentEdition, magic_code} from "./constants";
 import { getFlagForCountry } from "./images";
 
 export default class Results extends Component {
@@ -55,7 +55,7 @@ export default class Results extends Component {
 
   getResults() {
     console.log("ddddaaaa");
-    fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result")
+    fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result/" + currentEdition+"/")
       .then((response) => response.json())
       .then((data) => {
         this.setState({
@@ -139,7 +139,7 @@ export default class Results extends Component {
   }
 
   check_code(){
-    if(this.state["code"] === magic_code){
+    if(this.state["code"].toLowerCase() === magic_code){
       this.setState({"unlocked": true})
     }
   }

@@ -67,7 +67,7 @@ export const countries = [
   "ger08",
   "sam06",
   "alb20",
-  "ice12",
+  "ice12a",
   "mol20",
 ];
 
@@ -140,7 +140,7 @@ export const countryNameMap = {
   "ger08":"IPSUM",
   "sam06":"IPSUM",
   "alb20":"IPSUM",
-  "ice12":"IPSUM",
+  "ice12a":"IPSUM",
   "mol20":"IPSUM",
 
 };
@@ -214,7 +214,7 @@ export const countryFlagMap = {
   "ger08":"germany.png",
   "sam06":"yugoslavia.png",
   "alb20":"albania.png",
-  "ice12":"iceland.png",
+  "ice12a":"iceland.png",
   "mol20":"moldova.png",
 };
 
@@ -288,7 +288,7 @@ export const audioMap = {
   "swe11a": "nf-pc-1/swe11a.mp3",
   "swe11b": "nf-pc-1/swe11b.mp3",
   "swe11c": "nf-pc-1/swe11c.mp3",
-  "ice12": "nf-pc-1/ice12.mp3",
+  "ice12a": "nf-pc-1/ice12a.mp3",
   "est14": "nf-pc-1/est14.mp3",
   "sam04": "nf-pc-1/sam04.mp3",
   "swe17": "nf-pc-1/swe17.mp3",
@@ -303,5 +303,7 @@ export const audioMap = {
 };
 
 export const magic_code = "loveunlimited"
+
+export const currentEdition = "3"
 
 export default countries;
