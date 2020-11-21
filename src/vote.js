@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import countries, {all_voters, countryNameMap, magic_code} from "./constants";
+import countries, {all_voters, countryNameMap, currentEdition, magic_code} from "./constants";
 import { getFlagForCountry } from "./images";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -52,7 +52,7 @@ export default class Vote extends Component {
     });
     fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote", {
       method: "post",
-      body: JSON.stringify({ name: this.state["currentVoter"], votes: votes , edition: 3}),
+      body: JSON.stringify({ name: this.state["currentVoter"], votes: votes , edition: currentEdition}),
     })
       .then(handleErrors)
       .then((response) => {
