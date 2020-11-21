@@ -93,7 +93,7 @@ export default class Vote extends Component {
 
   block_entry(){
     return (
-        <div>
+        <div className="votingPassword">
           <input type={"text"} value={this.state["code"]} onChange={event =>
           {
             this.setState({"code": event.target.value})
