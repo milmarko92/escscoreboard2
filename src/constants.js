@@ -51,6 +51,7 @@ export const countries = [
   // "united kingdom",
   // "yugoslavia",
 
+  "swe11a",
   "alb19",
   "den12",
   "sam04",
@@ -126,11 +127,11 @@ export const countryNameMap = {
   // yugoslavia: "Yugoslavia",
   "alb19": "Ajër",
   "den12": "Overflow",
-  "sam04": "Zbunjena ",
+  "sam04": "Zbunjena",
   "swe11b": "Something In Your Eyes",
   "ita17": "Ora esisti solo tu",
   "alb20": "Me Tana",
-  "fin13": "We Should Be Through ",
+  "fin13": "We Should Be Through",
   "swe09": "Stay the Night",
   "spa14": "Más (Run)",
   "ice12": "Stund Með Þér",
@@ -143,6 +144,7 @@ export const countryNameMap = {
   "fra18": "OK ou KO",
   "mac15": "Brod Shto Tone",
   "spa18": "Lo Malo",
+  "swe11a": "I'm In Love"
 };
 
 export const countryFlagMap = {
@@ -198,6 +200,7 @@ export const countryFlagMap = {
   // georgia: "georgia.png",
   // morocco: "morocco.png",
   "swe09":"sweden.png",
+  "swe11a":"sweden.png",
   "fra18":"france.png",
   "nor19":"norway.png",
   "spa08":"spain.png",

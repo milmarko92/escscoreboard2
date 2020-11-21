@@ -41,14 +41,13 @@ body {
   border-bottom: 1px solid #299df6;
   justify-content: center;
   position: relative; }
-
-.Voting h1 {
-  font-size: 64px;
-  margin: 0 0 8px;
-  text-transform: lowercase;
-  color: white;
-  font-family: "Fascinate";
-  font-weight: 400; }
+  .Voting h1 {
+    font-size: 64px;
+    margin: 0 0 8px;
+    text-transform: lowercase;
+    color: white;
+    font-family: "Fascinate";
+    font-weight: 400; }
 
 .Ranking button {
   width: 100%;
@@ -86,106 +85,89 @@ body {
   background-color: #0767b2;
   margin-bottom: 3px;
   border-radius: 240px; }
-
-.country__rank {
-  margin-left: auto;
-  text-align: right;
-  margin-right: 12px;
-  font-size: 13px;
-  color: white;
-  padding-top: 4px;
-  opacity: 0.5; }
-
-.country__name {
-  padding: 10px 0 9px; }
-
-.country__flag {
-  vertical-align: middle;
-  margin: 0;
-  margin-right: 4px;
-  padding: 8px; }
-
-.country__flag img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: saturate(1.5);
-  border-radius: 100%; }
-
-.country__average {
-  text-align: right;
-  padding: 6px 12px 4px;
-  width: 72px;
-  background-color: transparent;
-  font-size: 16px; }
-
-.country--qualified {
-  opacity: 0.2; }
-
-.country--small {
-  font-size: 11px;
-  transition: 0.4s ease;
-  margin: 0 0 4px;
-  background-color: transparent; }
-
-.country--small .country__rank {
-  padding: 0 8px;
-  float: right;
-  margin-left: auto;
-  margin-right: 0;
-  font-size: 10px; }
-
-.country--small .country__name {
-  padding: 2px 0;
-  font-family: "Gotham";
-  font-size: 11px;
-  text-transform: capitalize; }
-
-.country--small .country__flag {
-  margin-right: 8px;
-  padding: 0; }
-
-.country--small .country__flag img {
-  width: 16px;
-  height: 16px; }
-
-.country--small:hover {
-  opacity: 0.5;
-  cursor: pointer; }
-
-.country--1, .country--2, .country--3 {
-  background-color: #0987e8;
-  position: relative; }
-
-.country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
-  margin: 0;
-  width: 40px;
-  height: 40px;
-  line-height: 32px;
-  text-align: center;
-  color: white;
-  position: absolute;
-  left: 0;
-  font-size: 24px;
-  font-weight: 400;
-  z-index: 5;
-  border: none;
-  background-image: url("img/red-ball.png");
-  background-size: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: "Fascinate", sans-serif; }
-
-.country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
-  visibility: hidden; }
-
-.country--3 {
-  background-color: #d63031;
-  color: white;
-  background-image: none; }
-
-.country--3 .country__rank {
-  color: rgba(255, 255, 255, 0.75); }
+  .country__rank {
+    margin-left: auto;
+    text-align: right;
+    margin-right: 12px;
+    font-size: 13px;
+    color: white;
+    padding-top: 4px;
+    opacity: 0.5; }
+  .country__name {
+    padding: 10px 0 9px; }
+  .country__flag {
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 4px;
+    padding: 8px; }
+    .country__flag img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      filter: saturate(1.5);
+      border-radius: 100%; }
+  .country__average {
+    text-align: right;
+    padding: 6px 12px 4px;
+    width: 72px;
+    background-color: transparent;
+    font-size: 16px; }
+  .country--qualified {
+    opacity: 0.2; }
+  .country--small {
+    font-size: 11px;
+    transition: 0.4s ease;
+    margin: 0 0 4px;
+    background-color: transparent; }
+    .country--small .country__rank {
+      padding: 0 8px;
+      float: right;
+      margin-left: auto;
+      margin-right: 0;
+      font-size: 10px; }
+    .country--small .country__name {
+      padding: 2px 0;
+      font-family: "Gotham";
+      font-size: 11px;
+      text-transform: capitalize; }
+    .country--small .country__flag {
+      margin-right: 8px;
+      padding: 0; }
+      .country--small .country__flag img {
+        width: 16px;
+        height: 16px; }
+    .country--small:hover {
+      opacity: 0.5;
+      cursor: pointer; }
+  .country--1, .country--2, .country--3 {
+    background-color: #0987e8;
+    position: relative; }
+    .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
+      margin: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 32px;
+      text-align: center;
+      color: white;
+      position: absolute;
+      left: 0;
+      font-size: 24px;
+      font-weight: 400;
+      z-index: 5;
+      border: none;
+      background-image: url("img/red-ball.png");
+      background-size: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: "Fascinate", sans-serif; }
+      .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
+        visibility: hidden; }
+  .country--3 {
+    background-color: #d63031;
+    color: white;
+    background-image: none; }
+    .country--3 .country__rank {
+      color: rgba(255, 255, 255, 0.75); }
 
 .Scoreboard {
   display: flex;
@@ -194,11 +176,10 @@ body {
   background-color: rgba(8, 118, 202, 0.25);
   border-top: 2px solid rgba(41, 157, 246, 0.25);
   border-bottom: 1px solid rgba(41, 157, 246, 0.25); }
-
-.Scoreboard > div {
-  columns: 2;
-  column-gap: 8px;
-  width: 100%; }
+  .Scoreboard > div {
+    columns: 2;
+    column-gap: 8px;
+    width: 100%; }
 
 button {
   appearance: none;
@@ -214,10 +195,9 @@ button {
   margin: 2px;
   transition: 0.4s ease;
   border-radius: 240px; }
-
-button:hover {
-  opacity: 0.75;
-  cursor: pointer; }
+  button:hover {
+    opacity: 0.75;
+    cursor: pointer; }
 
 .Button--12 {
   background-color: #d63031;
@@ -225,37 +205,32 @@ button:hover {
 
 #picker {
   padding: 48px; }
-
-#picker .country {
-  display: inline-block;
-  margin: 0 8px 8px 0;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 240px; }
-
-#picker .country__flag {
-  display: inline-block;
-  padding: 0;
-  vertical-align: middle;
-  margin: 0 6px 0 4px; }
-
-#picker .country__name {
-  display: inline-block;
-  padding: 6px 8px 6px 0;
-  text-transform: uppercase;
-  font-family: "Gotham"; }
-
-#picker .country__name2 {
-  display: inline-block;
-  padding: 4px 6px 4px 6px;
-  text-transform: uppercase;
-  font-family: "Gotham"; }
-
-#picker > button {
-  float: right;
-  font-size: 11px;
-  margin-top: 24px; }
+  #picker .country {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 240px; }
+    #picker .country__flag {
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+      margin: 0 6px 0 4px; }
+    #picker .country__name {
+      display: inline-block;
+      padding: 6px 8px 6px 0;
+      text-transform: uppercase;
+      font-family: "Gotham"; }
+    #picker .country__name2 {
+      display: inline-block;
+      padding: 4px 6px 4px 6px;
+      text-transform: uppercase;
+      font-family: "Gotham"; }
+  #picker > button {
+    float: right;
+    font-size: 11px;
+    margin-top: 24px; }
 
 .vote {
   background-color: #0767b2;
@@ -264,19 +239,17 @@ button:hover {
   border-radius: 240px;
   counter-increment: count;
   position: relative; }
-
-.vote .country__name {
-  font-size: 13px;
-  padding: 6px 0 2px; }
-
-.vote:after {
-  content: "#" counter(count);
-  opacity: 0.5;
-  font-size: 10px;
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%); }
+  .vote .country__name {
+    font-size: 13px;
+    padding: 6px 0 2px; }
+  .vote:after {
+    content: "#" counter(count);
+    opacity: 0.5;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%); }
 
 .votingPanel {
   max-width: 480px;
@@ -284,35 +257,28 @@ button:hover {
   background-color: rgba(8, 118, 202, 0.25);
   padding: 24px;
   counter-set: count; }
-
-@media screen and (max-width: 720px) {
-  .votingPanel {
-    max-width: 100%; } }
-
-.votingPanel h2 {
-  margin: 0 0 8px;
-  font-size: 16px; }
-
-.votingPanel .Dropdown-root {
-  margin-bottom: 36px; }
-
-.votingPanel .Dropdown-control {
-  font-size: 13px;
-  padding: 6px 52px 4px 10px;
-  border: none;
-  border-radius: 0; }
-
-.votingPanel .Dropdown-arrow {
-  top: 11px; }
-
-.votingPanel .Dropdown-menu {
-  font-size: 13px; }
-
-.votingPanel button {
-  background-color: #d63031;
-  margin: 24px auto 0;
-  text-align: center;
-  display: block; }
+  @media screen and (max-width: 720px) {
+    .votingPanel {
+      max-width: 100%; } }
+  .votingPanel h2 {
+    margin: 0 0 8px;
+    font-size: 16px; }
+  .votingPanel .Dropdown-root {
+    margin-bottom: 36px; }
+  .votingPanel .Dropdown-control {
+    font-size: 13px;
+    padding: 6px 52px 4px 10px;
+    border: none;
+    border-radius: 0; }
+  .votingPanel .Dropdown-arrow {
+    top: 11px; }
+  .votingPanel .Dropdown-menu {
+    font-size: 13px; }
+  .votingPanel button {
+    background-color: #d63031;
+    margin: 24px auto 0;
+    text-align: center;
+    display: block; }
 
 .results {
   display: grid;
@@ -321,43 +287,37 @@ button:hover {
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px; }
-
-.results__qualifiers {
-  columns: 2;
-  column-gap: 8px; }
-
-.results__left {
-  display: flex;
-  flex-flow: row wrap;
-  flex-flow: column nowrap;
-  justify-content: center;
-  padding: 24px;
-  background-color: rgba(8, 118, 202, 0.25);
-  border-top: 2px solid rgba(41, 157, 246, 0.25);
-  border-bottom: 1px solid rgba(41, 157, 246, 0.25); }
-
-.results__left h2 {
-  text-align: center; }
-
-.results__countries {
-  background-color: rgba(7, 103, 178, 0.75);
-  text-align: left;
-  padding: 24px;
-  display: flex;
-  flex-flow: column nowrap;
-  border-top: 2px solid #299df6;
-  border-bottom: 1px solid #299df6;
-  justify-content: center;
-  position: relative; }
-
-.results__countries .country {
-  margin-bottom: 8px; }
-
-.results button {
-  background-color: #d63031;
-  margin: 24px auto 0;
-  text-align: center;
-  display: block; }
+  .results__qualifiers {
+    columns: 2;
+    column-gap: 8px; }
+  .results__left {
+    display: flex;
+    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(8, 118, 202, 0.25);
+    border-top: 2px solid rgba(41, 157, 246, 0.25);
+    border-bottom: 1px solid rgba(41, 157, 246, 0.25); }
+    .results__left h2 {
+      text-align: center; }
+  .results__countries {
+    background-color: rgba(7, 103, 178, 0.75);
+    text-align: left;
+    padding: 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-top: 2px solid #299df6;
+    border-bottom: 1px solid #299df6;
+    justify-content: center;
+    position: relative; }
+    .results__countries .country {
+      margin-bottom: 8px; }
+  .results button {
+    background-color: #d63031;
+    margin: 24px auto 0;
+    text-align: center;
+    display: block; }
 
 .votingPassword {
   display: flex;
@@ -366,13 +326,12 @@ button:hover {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
-
-.votingPassword input {
-  border-radius: 240px;
-  display: block;
-  height: 25px;
-  border: none;
-  box-shadow: none;
-  padding: 0 8px;
-  font-family: "Gotham";
-  margin-right: 8px; }
+  .votingPassword input {
+    border-radius: 240px;
+    display: block;
+    height: 25px;
+    border: none;
+    box-shadow: none;
+    padding: 0 8px;
+    font-family: "Gotham";
+    margin-right: 8px; }
