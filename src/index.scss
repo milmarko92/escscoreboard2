@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&display=swap');
 
 @font-face {
   font-family: "Gotham";
@@ -13,17 +13,17 @@ body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Gotham", sans-serif;
-  background-color: #0984e3;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #2d3436;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/injusticia.jpg");
+  background-image: url("img/dsq.jpg");
 }
 
 .App {
-  background-color: #0984e3;
+  background-color: #2d3436;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -33,27 +33,28 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/injusticia.jpg");
+  background-image: url("img/dsq.jpg");
 }
 
 .Voting {
-  background-color: rgba(darken(#0984e3, 10%), 0.75);
+  background-color: rgba(darken(#2d3436, 10%), 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid lighten(#0984e3, 10%);
-  border-bottom: 1px solid lighten(#0984e3, 10%);
+  border-top: 2px solid lighten(#2d3436, 10%);
+  border-bottom: 1px solid lighten(#2d3436, 10%);
   justify-content: center;
   position: relative;
 
   h1 {
-    font-size: 64px;
-    margin: 0 0 8px;
-    text-transform: lowercase;
+    font-size: 56px;
+    margin: 0;
+    text-transform: uppercase;
     color: white;
-    font-family: "Fascinate";
-    font-weight: 400;
+    font-family: "IBM Plex Sans";
+    font-weight: 700;
+    font-style: italic;
   }
 }
 
@@ -94,9 +95,8 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: darken(#0984e3, 10%);
+  background-color: lighten(#181a1a, 5%);
   margin-bottom: 3px;
-  border-radius: 240px;
 
   &__rank {
     margin-left: auto;
@@ -110,20 +110,20 @@ body {
 
   &__name {
     padding: 10px 0 9px;
+    font-style: italic;
+    font-weight: 700;
   }
 
   &__flag {
     vertical-align: middle;
     margin: 0;
-    margin-right: 4px;
-    padding: 8px;
+    margin-right: 12px;
 
     img {
       display: block;
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
       filter: saturate(1.5);
-      border-radius: 100%;
     }
   }
 
@@ -140,9 +140,9 @@ body {
   }
 
   &--small {
-    font-size: 11px;
+    font-size: 10px;
     transition: 0.4s ease;
-    margin: 0 0 4px;
+    margin: 0 0 2px;
     background-color: transparent;
     .country {
       &__rank {
@@ -154,9 +154,9 @@ body {
       }
       &__name {
         padding: 2px 0;
-        font-family: "Gotham";
-        font-size: 11px;
+        font-family: "IBM Plex Sans";
         text-transform: capitalize;
+        font-style: normal;
       }
       &__flag {
         margin-right: 8px;
@@ -177,7 +177,7 @@ body {
   &--1,
   &--2,
   &--3 {
-    background-color: lighten(#0984e3, 1%);
+    background-color: lighten(#2d3436, 1%);
     position: relative;
     .country {
       &__average {
@@ -188,7 +188,7 @@ body {
         margin: 0;
         width: 40px;
         height: 40px;
-        line-height: 32px;
+        line-height: 40px;
         text-align: center;
         color: white;
         position: absolute;
@@ -196,12 +196,11 @@ body {
         font-size: 24px;
         font-weight: 400;
         z-index: 5;
+        background-color: #20bf6b;
         border: none;
-        background-image: url("img/red-ball.png");
         background-size: 40px;
         background-position: center;
         background-repeat: no-repeat;
-        font-family: "Fascinate", sans-serif;
         & + .country__flag {
           visibility: hidden;
         }
@@ -213,7 +212,7 @@ body {
     }
   }
   &--3 {
-    background-color: #d63031;
+    background-color: #eb3b5a;
     color: white;
     background-image: none;
     .country {
@@ -230,9 +229,9 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(darken(#0984e3, 5%), 0.25);
-  border-top: 2px solid rgba(lighten(#0984e3, 10%), 0.25);
-  border-bottom: 1px solid rgba(lighten(#0984e3, 10%), 0.25);
+  background-color: rgba(darken(#2d3436, 5%), 0.25);
+  border-top: 2px solid rgba(lighten(#2d3436, 10%), 0.25);
+  border-bottom: 1px solid rgba(lighten(#2d3436, 10%), 0.25);
   > div {
     columns: 2;
     column-gap: 8px;
@@ -243,9 +242,9 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#0984e3, 1);
+  background-color: rgba(#2d3436, 1);
   color: #fff;
-  font-family: "Gotham", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
@@ -253,7 +252,6 @@ button {
   text-transform: capitalize;
   margin: 2px;
   transition: 0.4s ease;
-  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -262,7 +260,7 @@ button {
 
 .Button {
   &--12 {
-    background-color: #d63031;
+    background-color: #eb3b5a;
     color: white;
   }
 }
@@ -286,13 +284,13 @@ button {
       display: inline-block;
       padding: 6px 8px 6px 0;
       text-transform: uppercase;
-      font-family: "Gotham";
+      font-family: "IBM Plex Sans";
     }
     &__name2 {
       display: inline-block;
       padding: 4px 6px 4px 6px;
       text-transform: uppercase;
-      font-family: "Gotham";
+      font-family: "IBM Plex Sans";
     }
   }
   > button {
@@ -303,7 +301,7 @@ button {
 }
 
 .vote {
-  background-color: darken(#0984e3, 10%);
+  background-color: darken(#2d3436, 10%);
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   border-radius: 240px;
@@ -331,7 +329,7 @@ button {
 .votingPanel {
   max-width: 480px;
   margin: 0 auto;
-  background-color: rgba(darken(#0984e3, 5%), 0.25);
+  background-color: rgba(darken(#2d3436, 5%), 0.25);
   padding: 24px;
   counter-set: count;
 
@@ -364,7 +362,7 @@ button {
   }
 
   button {
-    background-color: #d63031;
+    background-color: #eb3b5a;
     margin: 24px auto 0;
     text-align: center;
     display: block;
@@ -388,21 +386,21 @@ button {
     flex-flow: column nowrap;
     justify-content: center;
     padding: 24px;
-    background-color: rgba(darken(#0984e3, 5%), 0.25);
-    border-top: 2px solid rgba(lighten(#0984e3, 10%), 0.25);
-    border-bottom: 1px solid rgba(lighten(#0984e3, 10%), 0.25);
+    background-color: rgba(darken(#2d3436, 5%), 0.25);
+    border-top: 2px solid rgba(lighten(#2d3436, 10%), 0.25);
+    border-bottom: 1px solid rgba(lighten(#2d3436, 10%), 0.25);
     h2 {
       text-align: center;
     }
   }
   &__countries {
-    background-color: rgba(darken(#0984e3, 10%), 0.75);
+    background-color: rgba(darken(#2d3436, 10%), 0.75);
     text-align: left;
     padding: 24px;
     display: flex;
     flex-flow: column nowrap;
-    border-top: 2px solid lighten(#0984e3, 10%);
-    border-bottom: 1px solid lighten(#0984e3, 10%);
+    border-top: 2px solid lighten(#2d3436, 10%);
+    border-bottom: 1px solid lighten(#2d3436, 10%);
     justify-content: center;
     position: relative;
     .country {
@@ -410,7 +408,7 @@ button {
     }
   }
   button {
-    background-color: #d63031;
+    background-color: #eb3b5a;
     margin: 24px auto 0;
     text-align: center;
     display: block;
@@ -431,7 +429,7 @@ button {
     border: none;
     box-shadow: none;
     padding: 0 8px;
-    font-family: "Gotham";
+    font-family: "IBM Plex Sans";
     margin-right: 8px;
   }
 }
