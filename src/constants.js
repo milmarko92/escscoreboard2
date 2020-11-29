@@ -308,6 +308,6 @@ export const audioMap = {
 
 export const magic_code = "loveunlimited";
 
-export const currentEdition = "4";
+export const currentEdition = "5";
 
 export default countries;
