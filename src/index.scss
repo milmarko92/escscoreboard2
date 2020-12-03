@@ -12,7 +12,7 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #ec3eae;
+  background-color: #b10f17;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body {
 }
 
 .App {
-  background-color: #ec3eae;
+  background-color: #b10f17;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -30,11 +30,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/marry-2.jpg");
+  background-image: url("img/kill.jpg");
 }
 
 .Voting {
-  background-color: rgba(white, 0.75);
+  background-color: rgba(black, 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
@@ -46,7 +46,7 @@ body {
     font-size: 48px;
     margin: 0 0 8px;
     text-transform: uppercase;
-    color: #ec3eae;
+    color: #b10f17;
     font-family: "Gotham";
     font-weight: 700;
   }
@@ -85,13 +85,12 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  color: #333;
+  color: white;
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: white;
+  background-color: #111;
   margin-bottom: 8px;
-  box-shadow: 0 0 8px rgba(black, 0.1);
 
   &__rank {
     margin-left: auto;
@@ -140,7 +139,7 @@ body {
     transition: 0.4s ease;
     margin: 0 0 4px;
     background-color: transparent;
-    color: #333;
+    color: white;
     .country {
       &__rank {
         padding: 0 8px;
@@ -148,7 +147,7 @@ body {
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
-        color: #ec3eae;
+        color: #b10f17;
       }
       &__name {
         padding: 2px 0;
@@ -175,13 +174,13 @@ body {
   &--1,
   &--2,
   &--3 {
-    background-color: white;
+    background-color: #222;
     position: relative;
     .country {
       &__average {
       }
       &__rank {
-        color: #ec3eae;
+        color: #b10f17;
       }
       &__name {
 
@@ -199,7 +198,7 @@ body {
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-color: #ec3eae;
+        background-color: #b10f17;
         & + .country__flag {
           visibility: hidden;
         }
@@ -211,7 +210,7 @@ body {
     }
   }
   &--3 {
-    background-color: #ec3eae;
+    background-color: #b10f17;
     color: white;
     background-image: none;
     .country {
@@ -220,7 +219,7 @@ body {
       }
       &__current-rank {
         background-color: white;
-        color: #ec3eae;
+        color: #b10f17;
       }
     }
   }
@@ -230,7 +229,7 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(white, 0.9);
+  background-color: rgba(black, 0.5);
   > div {
     columns: 2;
     column-gap: 8px;
@@ -241,7 +240,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#ec3eae, 1);
+  background-color: rgba(#b10f17, 1);
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -260,7 +259,7 @@ button {
 .Button {
   &--12 {
     background-color: white;
-    color: #ec3eae;
+    color: #b10f17;
   }
 }
 
@@ -299,7 +298,7 @@ button {
 }
 
 .vote {
-  background-color: darken(#ec3eae, 10%);
+  background-color: darken(#b10f17, 10%);
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   counter-increment: count;
@@ -326,7 +325,7 @@ button {
 .votingPanel {
   max-width: 480px;
   margin: 0 auto;
-  background-color: rgba(darken(#ec3eae, 5%), 0.25);
+  background-color: rgba(darken(#b10f17, 5%), 0.25);
   padding: 24px;
   counter-set: count;
 
@@ -383,21 +382,21 @@ button {
     flex-flow: column nowrap;
     justify-content: center;
     padding: 24px;
-    background-color: rgba(darken(#ec3eae, 5%), 0.25);
-    border-top: 2px solid rgba(lighten(#ec3eae, 10%), 0.25);
-    border-bottom: 1px solid rgba(lighten(#ec3eae, 10%), 0.25);
+    background-color: rgba(darken(#b10f17, 5%), 0.25);
+    border-top: 2px solid rgba(lighten(#b10f17, 10%), 0.25);
+    border-bottom: 1px solid rgba(lighten(#b10f17, 10%), 0.25);
     h2 {
       text-align: center;
     }
   }
   &__countries {
-    background-color: rgba(darken(#ec3eae, 10%), 0.75);
+    background-color: rgba(darken(#b10f17, 10%), 0.75);
     text-align: left;
     padding: 24px;
     display: flex;
     flex-flow: column nowrap;
-    border-top: 2px solid lighten(#ec3eae, 10%);
-    border-bottom: 1px solid lighten(#ec3eae, 10%);
+    border-top: 2px solid lighten(#b10f17, 10%);
+    border-bottom: 1px solid lighten(#b10f17, 10%);
     justify-content: center;
     position: relative;
     .country {
