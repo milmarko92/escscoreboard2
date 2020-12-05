@@ -10,14 +10,14 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #b10f17;
+  background-color: #333;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
 .App {
-  background-color: #b10f17;
+  background-color: #333;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -42,7 +42,7 @@ body {
   font-size: 48px;
   margin: 0 0 8px;
   text-transform: uppercase;
-  color: #b10f17;
+  color: #999;
   font-family: "Gotham";
   font-weight: 700; }
 
@@ -53,7 +53,7 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-top: none;
   text-align: left; }
 
@@ -66,7 +66,7 @@ body {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-top: none;
   text-align: left; }
 
@@ -76,11 +76,11 @@ body {
   align-items: center;
   flex-flow: row nowrap;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
   position: relative;
   background-color: #111;
-  margin-bottom: 8px; }
+  margin-bottom: 4px; }
 
 .country__rank {
   margin-left: auto;
@@ -131,7 +131,7 @@ body {
   margin-left: auto;
   margin-right: 0;
   font-size: 10px;
-  color: #b10f17; }
+  color: #333; }
 
 .country--small .country__name {
   padding: 2px 0;
@@ -156,7 +156,7 @@ body {
   position: relative; }
 
 .country--1 .country__rank, .country--2 .country__rank, .country--3 .country__rank {
-  color: #b10f17; }
+  color: #333; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
@@ -171,13 +171,13 @@ body {
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #b10f17; }
+  background-color: #333; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #b10f17;
+  background-color: #333;
   color: white;
   background-image: none; }
 
@@ -186,7 +186,7 @@ body {
 
 .country--3 .country__current-rank {
   background-color: white;
-  color: #b10f17; }
+  color: #333; }
 
 .Scoreboard {
   display: flex;
@@ -196,13 +196,13 @@ body {
 
 .Scoreboard > div {
   columns: 2;
-  column-gap: 8px;
+  column-gap: 4px;
   width: 100%; }
 
 button {
   appearance: none;
   border: none;
-  background-color: #b10f17;
+  background-color: #333333;
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -219,7 +219,7 @@ button:hover {
 
 .Button--12 {
   background-color: white;
-  color: #b10f17; }
+  color: #333; }
 
 #picker {
   padding: 48px; }
@@ -255,7 +255,7 @@ button:hover {
   margin-top: 24px; }
 
 .vote {
-  background-color: #820b11;
+  background-color: #1a1a1a;
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   counter-increment: count;
@@ -277,7 +277,7 @@ button:hover {
 .votingPanel {
   max-width: 480px;
   margin: 0 auto;
-  background-color: rgba(153, 13, 20, 0.25);
+  background-color: rgba(38, 38, 38, 0.25);
   padding: 24px;
   counter-set: count; }
 
@@ -328,21 +328,21 @@ button:hover {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 24px;
-  background-color: rgba(153, 13, 20, 0.25);
-  border-top: 2px solid rgba(224, 19, 29, 0.25);
-  border-bottom: 1px solid rgba(224, 19, 29, 0.25); }
+  background-color: rgba(38, 38, 38, 0.25);
+  border-top: 2px solid rgba(77, 77, 77, 0.25);
+  border-bottom: 1px solid rgba(77, 77, 77, 0.25); }
 
 .results__left h2 {
   text-align: center; }
 
 .results__countries {
-  background-color: rgba(130, 11, 17, 0.75);
+  background-color: rgba(26, 26, 26, 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid #e0131d;
-  border-bottom: 1px solid #e0131d;
+  border-top: 2px solid #4d4d4d;
+  border-bottom: 1px solid #4d4d4d;
   justify-content: center;
   position: relative; }
 
