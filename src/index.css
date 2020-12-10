@@ -44,7 +44,7 @@ body {
 .Voting h1 {
   font-size: 48px;
   margin: 0 0 8px;
-  color: #ecda4c;
+  color: #f39eb2;
   font-family: "Permanent Marker"; }
 
 .Ranking button {
@@ -170,14 +170,14 @@ body {
   font-weight: 400;
   z-index: 5;
   border: none;
-  background-color: #ecda4c;
+  background-color: #f39eb2;
   border-radius: 100%; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #ecda4c;
+  background-color: #f39eb2;
   color: #333;
   background-image: none; }
 
@@ -218,7 +218,7 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #ecda4c;
+  background-color: #f39eb2;
   color: #333; }
 
 #picker {

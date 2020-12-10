@@ -49,7 +49,7 @@ body {
   h1 {
     font-size: 48px;
     margin: 0 0 8px;
-    color: #ecda4c;
+    color: #f39eb2;
     font-family: "Permanent Marker";
   }
 }
@@ -201,7 +201,7 @@ body {
         font-weight: 400;
         z-index: 5;
         border: none;
-        background-color: #ecda4c;
+        background-color: #f39eb2;
         border-radius: 100%;
         & + .country__flag {
           visibility: hidden;
@@ -214,7 +214,7 @@ body {
     }
   }
   &--3 {
-    background-color: #ecda4c;
+    background-color: #f39eb2;
     color: #333;
     background-image: none;
     .country {
@@ -262,7 +262,7 @@ button {
 
 .Button {
   &--12 {
-    background-color: #ecda4c;
+    background-color: #f39eb2;
     color: #333;
   }
 }
