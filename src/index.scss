@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Permanent Marker";
-  src: url("fonts/PermanentMarker-Regular.ttf");
+  font-family: "American Typewriter";
+  src: url("fonts/AmericanTypewriter.ttc");
 }
 
 body {
@@ -35,10 +35,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url(img/pritis-pick.jpg);
 }
 
 .Voting {
-  background-color: rgba(black, 0.75);
+  background-color: darken(#6cc4d7, 10%);
   text-align: left;
   padding: 24px;
   display: flex;
@@ -49,8 +50,9 @@ body {
   h1 {
     font-size: 48px;
     margin: 0 0 8px;
-    color: #f39eb2;
-    font-family: "Permanent Marker";
+    color: white;
+    font-family: "American Typewriter";
+    font-weight: 700;
   }
 }
 
@@ -91,7 +93,7 @@ body {
   font-size: 15px;
   margin: 0;
   position: relative;
-  background-color: #111;
+  background-color: darken(#6cc4d7, 10%);
   margin-bottom: 8px;
 
   &__rank {
@@ -99,12 +101,14 @@ body {
     text-align: right;
     margin-right: 12px;
     font-size: 13px;
-    color: #999999;
+    color: white;
+    opacity: 0.5;
     padding-top: 4px;
   }
 
   &__name {
     padding: 10px 0 9px;
+    font-family: "American Typewriter";
   }
 
   &__flag {
@@ -118,7 +122,6 @@ body {
       width: 24px;
       height: 24px;
       filter: saturate(1.5);
-      border-radius: 100%;
     }
   }
 
@@ -150,7 +153,7 @@ body {
         margin-left: auto;
         margin-right: 0;
         font-size: 10px;
-        color: #333;
+        color: white;
       }
       &__name {
         padding: 2px 0;
@@ -177,7 +180,7 @@ body {
   &--1,
   &--2,
   &--3 {
-    background-color: #222;
+    background-color: darken(#6cc4d7, 20%);
     position: relative;
     .country {
       &__average {
@@ -190,19 +193,18 @@ body {
       }
       &__current-rank {
         margin: 0;
-        width: 24px;
-        height: 24px;
-        line-height: 26px;
+        width: 32px;
+        height: 40px;
+        line-height: 42px;
         text-align: center;
-        color: #333;
+        color: white;
         position: absolute;
-        left: 8px;
-        font-size: 14px;
-        font-weight: 400;
+        left: 0;
+        font-size: 16px;
+        font-weight: 700;
         z-index: 5;
         border: none;
-        background-color: #f39eb2;
-        border-radius: 100%;
+        background-color: #ff5f5c;
         & + .country__flag {
           visibility: hidden;
         }
@@ -214,8 +216,8 @@ body {
     }
   }
   &--3 {
-    background-color: #f39eb2;
-    color: #333;
+    background-color: #ff5f5c;
+    color: white;
     background-image: none;
     .country {
       &__rank {
@@ -223,7 +225,7 @@ body {
       }
       &__current-rank {
         background-color: white;
-        color: #333;
+        color: #6cc4d7;
       }
     }
   }
@@ -233,7 +235,7 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(black, 0.5);
+  background-color: rgba(#6cc4d7, 0.9);
   > div {
     columns: 2;
     column-gap: 8px;
@@ -244,7 +246,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#333, 1);
+  background-color: rgba(#ff5f5c, 1);
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -262,8 +264,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: #f39eb2;
-    color: #333;
+    background-color: white;
+    color: #ff5f5c;
   }
 }
 
@@ -329,7 +331,7 @@ button {
 .votingPanel {
   max-width: 480px;
   margin: 0 auto;
-  background-color: rgba(darken(#333, 5%), 0.25);
+  background-color: rgba(darken(white, 5%), 0.2);
   padding: 24px;
   counter-set: count;
 

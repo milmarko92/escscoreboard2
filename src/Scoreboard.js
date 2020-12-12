@@ -67,21 +67,45 @@ class Scoreboard extends Component {
     //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
     //     audio.play()
     // }
-    else if (data.new_rank === 28) {
+    else if (data.new_rank === 23) {
       // if(this.state["remainingVoters"].length % 4 === 0) {
       //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
       //     audio.play()
       // }
-      if (this.state["remainingVoters"].length % 3 === 0) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/shit_song.m4a");
+      if (this.state["remainingVoters"].length % 5 === 0) {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/all-so-shitty.m4a");
         audio.play();
-      } else if (this.state["remainingVoters"].length % 3 === 1) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/its_dire.m4a");
+      } else if (this.state["remainingVoters"].length % 5 === 1) {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-need-more-wine.m4a");
         audio.play();
-      } else if (this.state["remainingVoters"].length % 3 === 2) {
+      } else if (this.state["remainingVoters"].length % 5 === 2) {
         var audio = new Audio(
           process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a"
         );
+        audio.play();
+      } else if (this.state["remainingVoters"].length % 5 === 3) {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/pure-torture.m4a"
+        );
+        audio.play();
+      } else if (this.state["remainingVoters"].length % 5 === 4) {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/its-dire.m4a"
+        );
+        audio.play();
+      }
+    }
+    else if (data.new_rank === 1) {
+      if (this.state["remainingVoters"].length % 3 === 0) {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/highest-moment-of-my-life.m4a");
+        audio.play();
+      }
+      if (this.state["remainingVoters"].length % 3 === 1) {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/wunderbar.m4a");
+        audio.play();
+      }
+      if (this.state["remainingVoters"].length % 3 === 2) {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/great-song.m4a");
         audio.play();
       }
     }

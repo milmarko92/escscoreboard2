@@ -6,8 +6,8 @@
   src: url("fonts/Gotham-Medium.otf"); }
 
 @font-face {
-  font-family: "Permanent Marker";
-  src: url("fonts/PermanentMarker-Regular.ttf"); }
+  font-family: "American Typewriter";
+  src: url("fonts/AmericanTypewriter.ttc"); }
 
 body {
   margin: 0;
@@ -30,10 +30,11 @@ body {
   padding: 72px 128px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  background-image: url(img/pritis-pick.jpg); }
 
 .Voting {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #44b4cc;
   text-align: left;
   padding: 24px;
   display: flex;
@@ -44,8 +45,9 @@ body {
 .Voting h1 {
   font-size: 48px;
   margin: 0 0 8px;
-  color: #f39eb2;
-  font-family: "Permanent Marker"; }
+  color: white;
+  font-family: "American Typewriter";
+  font-weight: 700; }
 
 .Ranking button {
   width: 100%;
@@ -80,7 +82,7 @@ body {
   font-size: 15px;
   margin: 0;
   position: relative;
-  background-color: #111;
+  background-color: #44b4cc;
   margin-bottom: 8px; }
 
 .country__rank {
@@ -88,11 +90,13 @@ body {
   text-align: right;
   margin-right: 12px;
   font-size: 13px;
-  color: #999999;
+  color: white;
+  opacity: 0.5;
   padding-top: 4px; }
 
 .country__name {
-  padding: 10px 0 9px; }
+  padding: 10px 0 9px;
+  font-family: "American Typewriter"; }
 
 .country__flag {
   vertical-align: middle;
@@ -104,8 +108,7 @@ body {
   display: block;
   width: 24px;
   height: 24px;
-  filter: saturate(1.5);
-  border-radius: 100%; }
+  filter: saturate(1.5); }
 
 .country__average {
   text-align: right;
@@ -133,7 +136,7 @@ body {
   margin-left: auto;
   margin-right: 0;
   font-size: 10px;
-  color: #333; }
+  color: white; }
 
 .country--small .country__name {
   padding: 2px 0;
@@ -154,31 +157,30 @@ body {
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
-  background-color: #222;
+  background-color: #2f97ae;
   position: relative; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
-  width: 24px;
-  height: 24px;
-  line-height: 26px;
+  width: 32px;
+  height: 40px;
+  line-height: 42px;
   text-align: center;
-  color: #333;
+  color: white;
   position: absolute;
-  left: 8px;
-  font-size: 14px;
-  font-weight: 400;
+  left: 0;
+  font-size: 16px;
+  font-weight: 700;
   z-index: 5;
   border: none;
-  background-color: #f39eb2;
-  border-radius: 100%; }
+  background-color: #ff5f5c; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #f39eb2;
-  color: #333;
+  background-color: #ff5f5c;
+  color: white;
   background-image: none; }
 
 .country--3 .country__rank {
@@ -186,13 +188,13 @@ body {
 
 .country--3 .country__current-rank {
   background-color: white;
-  color: #333; }
+  color: #6cc4d7; }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(108, 196, 215, 0.9); }
 
 .Scoreboard > div {
   columns: 2;
@@ -202,7 +204,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #333333;
+  background-color: #ff5f5c;
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -218,8 +220,8 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #f39eb2;
-  color: #333; }
+  background-color: white;
+  color: #ff5f5c; }
 
 #picker {
   padding: 48px; }
@@ -277,7 +279,7 @@ button:hover {
 .votingPanel {
   max-width: 480px;
   margin: 0 auto;
-  background-color: rgba(38, 38, 38, 0.25);
+  background-color: rgba(242, 242, 242, 0.2);
   padding: 24px;
   counter-set: count; }
 
