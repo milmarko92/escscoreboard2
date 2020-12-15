@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "American Typewriter";
-  src: url("fonts/AmericanTypewriter.ttc");
+  font-family: "Intro";
+  src: url("fonts/Intro.ttf");
 }
 
 body {
@@ -35,11 +35,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(img/pritis-pick.jpg);
+  background-image: url(img/injusticia-2.jpg);
 }
 
 .Voting {
-  background-color: darken(#6cc4d7, 10%);
+  background-color: rgba(black, 0.2);
   text-align: left;
   padding: 24px;
   display: flex;
@@ -50,8 +50,8 @@ body {
   h1 {
     font-size: 48px;
     margin: 0 0 8px;
-    color: white;
-    font-family: "American Typewriter";
+    color: #ec1182;
+    font-family: "Intro";
     font-weight: 700;
   }
 }
@@ -93,8 +93,9 @@ body {
   font-size: 15px;
   margin: 0;
   position: relative;
-  background-color: darken(#6cc4d7, 10%);
+  background-color: rgba(black, 0.2);
   margin-bottom: 8px;
+  border-radius: 240px;
 
   &__rank {
     margin-left: auto;
@@ -108,13 +109,13 @@ body {
 
   &__name {
     padding: 10px 0 9px;
-    font-family: "American Typewriter";
+    font-family: "Intro";
   }
 
   &__flag {
     vertical-align: middle;
     margin: 0;
-    margin-right: 0;
+    margin-right: 8px;
     padding: 8px;
 
     img {
@@ -122,6 +123,7 @@ body {
       width: 24px;
       height: 24px;
       filter: saturate(1.5);
+      border-radius: 100%;
     }
   }
 
@@ -180,7 +182,7 @@ body {
   &--1,
   &--2,
   &--3 {
-    background-color: darken(#6cc4d7, 20%);
+    background-color: rgba(white, 0.1);
     position: relative;
     .country {
       &__average {
@@ -193,18 +195,20 @@ body {
       }
       &__current-rank {
         margin: 0;
-        width: 32px;
+        width: 40px;
         height: 40px;
         line-height: 42px;
         text-align: center;
         color: white;
         position: absolute;
         left: 0;
+        top: 0;
         font-size: 16px;
         font-weight: 700;
         z-index: 5;
         border: none;
-        background-color: #ff5f5c;
+        background-color: #9c37e4;
+        border-radius: 100%;
         & + .country__flag {
           visibility: hidden;
         }
@@ -216,7 +220,7 @@ body {
     }
   }
   &--3 {
-    background-color: #ff5f5c;
+    background-color: #ec1182;
     color: white;
     background-image: none;
     .country {
@@ -225,7 +229,7 @@ body {
       }
       &__current-rank {
         background-color: white;
-        color: #6cc4d7;
+        color: #ec1182;
       }
     }
   }
@@ -235,7 +239,7 @@ body {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: rgba(#6cc4d7, 0.9);
+  background-color: rgba(black, 0.1);
   > div {
     columns: 2;
     column-gap: 8px;
@@ -246,7 +250,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#ff5f5c, 1);
+  background-color: rgba(#9c37e4, 1);
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -256,6 +260,7 @@ button {
   text-transform: capitalize;
   margin: 2px;
   transition: 0.4s ease;
+  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -264,8 +269,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: white;
-    color: #ff5f5c;
+    background-color: #ec1182;
+    color: white;
   }
 }
 
