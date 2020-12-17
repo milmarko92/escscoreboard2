@@ -35,7 +35,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(img/injusticia-2.jpg);
+  background-image: url(img/bilingual.jpg);
 }
 
 .Voting {
@@ -50,7 +50,7 @@ body {
   h1 {
     font-size: 48px;
     margin: 0 0 8px;
-    color: #ec1182;
+    color: #fbd861;
     font-family: "Intro";
     font-weight: 700;
   }
@@ -95,7 +95,6 @@ body {
   position: relative;
   background-color: rgba(black, 0.2);
   margin-bottom: 8px;
-  border-radius: 240px;
 
   &__rank {
     margin-left: auto;
@@ -123,7 +122,6 @@ body {
       width: 24px;
       height: 24px;
       filter: saturate(1.5);
-      border-radius: 100%;
     }
   }
 
@@ -145,7 +143,7 @@ body {
     box-shadow: none;
     font-size: 10px;
     transition: 0.4s ease;
-    margin: 0 0 4px;
+    margin: 0 0 2px;
     background-color: transparent;
     color: white;
     .country {
@@ -207,8 +205,7 @@ body {
         font-weight: 700;
         z-index: 5;
         border: none;
-        background-color: #9c37e4;
-        border-radius: 100%;
+        background-color: #56b9bd;
         & + .country__flag {
           visibility: hidden;
         }
@@ -220,8 +217,8 @@ body {
     }
   }
   &--3 {
-    background-color: #ec1182;
-    color: white;
+    background-color: #fbd861;
+    color: rgba(#333, 0.75);
     background-image: none;
     .country {
       &__rank {
@@ -229,7 +226,7 @@ body {
       }
       &__current-rank {
         background-color: white;
-        color: #ec1182;
+        color: rgba(#333, 0.75);
       }
     }
   }
@@ -250,7 +247,7 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#9c37e4, 1);
+  background-color: rgba(#56b9bd, 1);
   color: #fff;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -260,7 +257,6 @@ button {
   text-transform: capitalize;
   margin: 2px;
   transition: 0.4s ease;
-  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -269,7 +265,7 @@ button {
 
 .Button {
   &--12 {
-    background-color: #ec1182;
+    background-color: #fbd861;
     color: white;
   }
 }
