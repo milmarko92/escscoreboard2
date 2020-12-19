@@ -6,14 +6,14 @@
   src: url("fonts/Gotham-Medium.otf"); }
 
 @font-face {
-  font-family: "Intro";
-  src: url("fonts/Intro.ttf"); }
+  font-family: "UNicod";
+  src: url("fonts/UNicod.ttf"); }
 
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Gotham", sans-serif;
+  font-family: "UNicod", sans-serif;
   background-color: #333;
   color: white;
   background-size: cover;
@@ -31,10 +31,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(img/bilingual.jpg); }
+  background-image: url(img/melfest.jpg); }
 
 .Voting {
-  background-color: rgba(0, 0, 0, 0.2);
   text-align: left;
   padding: 24px;
   display: flex;
@@ -44,10 +43,11 @@ body {
 
 .Voting h1 {
   font-size: 48px;
-  margin: 0 0 8px;
-  color: #fbd861;
-  font-family: "Intro";
-  font-weight: 700; }
+  margin: 0;
+  color: #f9c538;
+  font-family: "UNicod";
+  text-transform: uppercase;
+  font-weight: 500; }
 
 .Ranking button {
   width: 100%;
@@ -79,11 +79,10 @@ body {
   align-items: center;
   flex-flow: row nowrap;
   color: white;
-  font-size: 15px;
+  font-size: 23px;
   margin: 0;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 8px; }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
 .country__rank {
   margin-left: auto;
@@ -95,27 +94,24 @@ body {
   padding-top: 4px; }
 
 .country__name {
-  padding: 10px 0 9px;
-  font-family: "Intro"; }
+  padding: 6px 0 0;
+  text-transform: uppercase; }
 
 .country__flag {
   vertical-align: middle;
   margin: 0;
   margin-right: 8px;
-  padding: 8px; }
-
-.country__flag img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: saturate(1.5); }
+  padding: 10px 0 4px;
+  width: 48px;
+  display: inline-block;
+  color: #006aac;
+  text-align: center; }
 
 .country__average {
   text-align: right;
-  padding: 8px 12px 6px;
+  padding: 6px 12px 0;
   width: 72px;
   background-color: transparent;
-  font-size: 16px;
   display: block;
   text-align: right; }
 
@@ -124,10 +120,11 @@ body {
 
 .country--small {
   box-shadow: none;
-  font-size: 10px;
+  font-size: 12px;
   transition: 0.4s ease;
-  margin: 0 0 2px;
+  margin: 0;
   background-color: transparent;
+  border-bottom: 0;
   color: white; }
 
 .country--small .country__rank {
@@ -139,63 +136,66 @@ body {
   color: white; }
 
 .country--small .country__name {
-  padding: 2px 0;
-  font-family: "Gotham";
-  font-size: 10px;
-  text-transform: capitalize; }
+  padding: 2px 0 0;
+  font-family: "UNicod";
+  text-transform: none; }
 
 .country--small .country__flag {
   margin-right: 8px;
-  padding: 0; }
-
-.country--small .country__flag img {
-  width: 16px;
-  height: 16px; }
+  padding: 2px 0 0;
+  width: 16px; }
 
 .country--small:hover {
   opacity: 0.5;
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
-  background-color: rgba(255, 255, 255, 0.1);
   position: relative; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
-  width: 40px;
-  height: 40px;
-  line-height: 42px;
+  width: 48px;
+  background: linear-gradient(to right, #f9c538 0%, rgba(249, 197, 56, 0.5) 100%);
+  height: 44px;
+  line-height: 46px;
   text-align: center;
   color: white;
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 16px;
   font-weight: 700;
   z-index: 5;
-  border: none;
-  background-color: #56b9bd; }
+  border: none; }
+
+.country--1 .country__current-rank:after, .country--2 .country__current-rank:after, .country--3 .country__current-rank:after {
+  content: "";
+  width: 16px;
+  height: 44px;
+  background: linear-gradient(to right, rgba(249, 197, 56, 0.5) 0%, transparent 100%);
+  position: absolute;
+  left: 48px; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
+.country--1 .country__flag, .country--2 .country__flag, .country--3 .country__flag {
+  color: #f9c538; }
+
 .country--3 {
-  background-color: #fbd861;
-  color: rgba(51, 51, 51, 0.75);
+  background-color: #f9c538;
+  color: #002841;
   background-image: none; }
 
 .country--3 .country__rank {
-  color: rgba(51, 51, 51, 0.75); }
+  color: #002841; }
 
 .country--3 .country__current-rank {
-  background-color: white;
-  color: rgba(51, 51, 51, 0.75); }
+  color: #002841; }
 
 .Scoreboard {
   display: flex;
   align-items: center;
-  padding: 24px;
-  background-color: rgba(0, 0, 0, 0.1); }
+  padding-right: 32px; }
 
 .Scoreboard > div {
   columns: 2;
@@ -205,9 +205,9 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #56b9bd;
+  background-color: #006aac;
   color: #fff;
-  font-family: "Gotham", sans-serif;
+  font-family: "UNicod", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
@@ -221,7 +221,7 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #fbd861;
+  background-color: #f9c538;
   color: white; }
 
 #picker {
@@ -244,13 +244,13 @@ button:hover {
   display: inline-block;
   padding: 6px 8px 6px 0;
   text-transform: uppercase;
-  font-family: "Gotham"; }
+  font-family: "UNicod"; }
 
 #picker .country__name2 {
   display: inline-block;
   padding: 4px 6px 4px 6px;
   text-transform: uppercase;
-  font-family: "Gotham"; }
+  font-family: "UNicod"; }
 
 #picker > button {
   float: right;
@@ -372,5 +372,5 @@ button:hover {
   border: none;
   box-shadow: none;
   padding: 0 8px;
-  font-family: "Gotham";
+  font-family: "UNicod";
   margin-right: 8px; }

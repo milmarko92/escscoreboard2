@@ -8,15 +8,15 @@
 }
 
 @font-face {
-  font-family: "Intro";
-  src: url("fonts/Intro.ttf");
+  font-family: "UNicod";
+  src: url("fonts/UNicod.ttf");
 }
 
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "Gotham", sans-serif;
+  font-family: "UNicod", sans-serif;
   background-color: #333;
   color: white;
   background-size: cover;
@@ -35,11 +35,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(img/bilingual.jpg);
+  background-image: url(img/melfest.jpg);
 }
 
 .Voting {
-  background-color: rgba(black, 0.2);
   text-align: left;
   padding: 24px;
   display: flex;
@@ -49,10 +48,11 @@ body {
 
   h1 {
     font-size: 48px;
-    margin: 0 0 8px;
-    color: #fbd861;
-    font-family: "Intro";
-    font-weight: 700;
+    margin: 0;
+    color: #f9c538;
+    font-family: "UNicod";
+    text-transform: uppercase;
+    font-weight: 500;
   }
 }
 
@@ -90,11 +90,10 @@ body {
   align-items: center;
   flex-flow: row nowrap;
   color: white;
-  font-size: 15px;
+  font-size: 23px;
   margin: 0;
   position: relative;
-  background-color: rgba(black, 0.2);
-  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(white, 0.2);
 
   &__rank {
     margin-left: auto;
@@ -107,30 +106,26 @@ body {
   }
 
   &__name {
-    padding: 10px 0 9px;
-    font-family: "Intro";
+    padding: 6px 0 0;
+    text-transform: uppercase;
   }
 
   &__flag {
     vertical-align: middle;
     margin: 0;
     margin-right: 8px;
-    padding: 8px;
-
-    img {
-      display: block;
-      width: 24px;
-      height: 24px;
-      filter: saturate(1.5);
-    }
+    padding: 10px 0 4px;
+    width: 48px;
+    display: inline-block;
+    color: #006aac;
+    text-align: center;
   }
 
   &__average {
     text-align: right;
-    padding: 8px 12px 6px;
+    padding: 6px 12px 0;
     width: 72px;
     background-color: transparent;
-    font-size: 16px;
     display: block;
     text-align: right;
   }
@@ -141,10 +136,11 @@ body {
 
   &--small {
     box-shadow: none;
-    font-size: 10px;
+    font-size: 12px;
     transition: 0.4s ease;
-    margin: 0 0 2px;
+    margin: 0;
     background-color: transparent;
+    border-bottom: 0;
     color: white;
     .country {
       &__rank {
@@ -156,18 +152,14 @@ body {
         color: white;
       }
       &__name {
-        padding: 2px 0;
-        font-family: "Gotham";
-        font-size: 10px;
-        text-transform: capitalize;
+        padding: 2px 0 0;
+        font-family: "UNicod";
+        text-transform: none;
       }
       &__flag {
         margin-right: 8px;
-        padding: 0;
-        img {
-          width: 16px;
-          height: 16px;
-        }
+        padding: 2px 0 0;
+        width: 16px;
       }
     }
 
@@ -180,53 +172,65 @@ body {
   &--1,
   &--2,
   &--3 {
-    background-color: rgba(white, 0.1);
     position: relative;
     .country {
       &__average {
       }
       &__rank {
-        
       }
       &__name {
-
       }
       &__current-rank {
         margin: 0;
-        width: 40px;
-        height: 40px;
-        line-height: 42px;
+        width: 48px;
+        background: linear-gradient(
+          to right,
+          #f9c538 0%,
+          rgba(#f9c538, 0.5) 100%
+        );
+        height: 44px;
+        line-height: 46px;
         text-align: center;
         color: white;
         position: absolute;
         left: 0;
         top: 0;
-        font-size: 16px;
         font-weight: 700;
         z-index: 5;
         border: none;
-        background-color: #56b9bd;
+        &:after {
+          content: "";
+          width: 16px;
+          height: 44px;
+          background: linear-gradient(
+            to right,
+            rgba(#f9c538, 0.5) 0%,
+            transparent 100%
+          );
+          position: absolute;
+          left: 48px;
+        }
         & + .country__flag {
           visibility: hidden;
         }
       }
       &__flag {
+        color: #f9c538;
       }
       &__average {
       }
     }
   }
   &--3 {
-    background-color: #fbd861;
-    color: rgba(#333, 0.75);
+    background-color: #f9c538;
+    color: #002841;
     background-image: none;
     .country {
       &__rank {
-        color: rgba(#333, 0.75);
+        color: #002841;
       }
       &__current-rank {
-        background-color: white;
-        color: rgba(#333, 0.75);
+        color: #002841;
       }
     }
   }
@@ -235,8 +239,7 @@ body {
 .Scoreboard {
   display: flex;
   align-items: center;
-  padding: 24px;
-  background-color: rgba(black, 0.1);
+  padding-right: 32px;
   > div {
     columns: 2;
     column-gap: 8px;
@@ -247,9 +250,9 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#56b9bd, 1);
+  background-color: rgba(#006aac, 1);
   color: #fff;
-  font-family: "Gotham", sans-serif;
+  font-family: "UNicod", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
@@ -265,7 +268,7 @@ button {
 
 .Button {
   &--12 {
-    background-color: #fbd861;
+    background-color: #f9c538;
     color: white;
   }
 }
@@ -288,13 +291,13 @@ button {
       display: inline-block;
       padding: 6px 8px 6px 0;
       text-transform: uppercase;
-      font-family: "Gotham";
+      font-family: "UNicod";
     }
     &__name2 {
       display: inline-block;
       padding: 4px 6px 4px 6px;
       text-transform: uppercase;
-      font-family: "Gotham";
+      font-family: "UNicod";
     }
   }
   > button {
@@ -337,7 +340,7 @@ button {
   counter-set: count;
 
   @media screen and (max-width: 720px) {
-    max-width: 100%;    
+    max-width: 100%;
   }
 
   h2 {
@@ -431,7 +434,7 @@ button {
     border: none;
     box-shadow: none;
     padding: 0 8px;
-    font-family: "Gotham";
+    font-family: "UNicod";
     margin-right: 8px;
   }
 }

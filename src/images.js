@@ -10,5 +10,5 @@ function importAll(r) {
 const images = importAll(require.context('./flags/circle', false, /\.(png|jpe?g|svg)$/));
 
 export function getFlagForCountry(country){
-    return images[countryFlagMap[country.toLowerCase()]]
+    return countryFlagMap[country.toLowerCase()]
 }
