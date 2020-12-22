@@ -1,27 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 * {
   box-sizing: border-box; }
-
-@font-face {
-  font-family: "Gotham";
-  src: url("fonts/Gotham-Medium.otf"); }
-
-@font-face {
-  font-family: "UNicod";
-  src: url("fonts/UNicod.ttf"); }
 
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "UNicod", sans-serif;
-  background-color: #333;
+  font-family: "Noto Sans", sans-serif;
+  background-color: #004ca6;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
 .App {
-  background-color: #222;
+  background-color: #004ca6;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -30,8 +23,7 @@ body {
   padding: 72px 128px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(img/melfest.jpg); }
+  background-position: center; }
 
 .Voting {
   text-align: left;
@@ -43,11 +35,10 @@ body {
 
 .Voting h1 {
   font-size: 48px;
-  margin: 0;
-  color: #f9c538;
-  font-family: "UNicod";
-  text-transform: uppercase;
-  font-weight: 500; }
+  margin: 0 0 8px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .Ranking button {
   width: 100%;
@@ -79,10 +70,11 @@ body {
   align-items: center;
   flex-flow: row nowrap;
   color: white;
-  font-size: 23px;
+  font-size: 16px;
   margin: 0;
   position: relative;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px; }
 
 .country__rank {
   margin-left: auto;
@@ -94,22 +86,23 @@ body {
   padding-top: 4px; }
 
 .country__name {
-  padding: 6px 0 0;
-  text-transform: uppercase; }
+  padding: 10px 0; }
 
 .country__flag {
   vertical-align: middle;
   margin: 0;
   margin-right: 8px;
-  padding: 10px 0 4px;
-  width: 48px;
-  display: inline-block;
-  color: #006aac;
-  text-align: center; }
+  padding: 8px; }
+
+.country__flag img {
+  display: block;
+  width: 36px;
+  height: 24px;
+  filter: saturate(1.5); }
 
 .country__average {
   text-align: right;
-  padding: 6px 12px 0;
+  padding: 8px 12px 6px;
   width: 72px;
   background-color: transparent;
   display: block;
@@ -120,11 +113,10 @@ body {
 
 .country--small {
   box-shadow: none;
-  font-size: 12px;
+  font-size: 10px;
   transition: 0.4s ease;
-  margin: 0;
+  margin: 0 0 2px;
   background-color: transparent;
-  border-bottom: 0;
   color: white; }
 
 .country--small .country__rank {
@@ -136,66 +128,63 @@ body {
   color: white; }
 
 .country--small .country__name {
-  padding: 2px 0 0;
-  font-family: "UNicod";
-  text-transform: none; }
+  padding: 2px 0;
+  font-family: "Noto Sans";
+  font-size: 10px;
+  text-transform: capitalize; }
 
 .country--small .country__flag {
   margin-right: 8px;
-  padding: 2px 0 0;
-  width: 16px; }
+  padding: 0; }
+
+.country--small .country__flag img {
+  width: 22px;
+  height: 16px; }
 
 .country--small:hover {
   opacity: 0.5;
   cursor: pointer; }
 
 .country--1, .country--2, .country--3 {
+  background-color: rgba(255, 255, 255, 0.1);
   position: relative; }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   margin: 0;
-  width: 48px;
-  background: linear-gradient(to right, #f9c538 0%, rgba(249, 197, 56, 0.5) 100%);
-  height: 44px;
-  line-height: 46px;
+  width: 52px;
+  height: 42px;
+  line-height: 42px;
   text-align: center;
   color: white;
   position: absolute;
   left: 0;
   top: 0;
+  font-size: 24px;
   font-weight: 700;
   z-index: 5;
-  border: none; }
-
-.country--1 .country__current-rank:after, .country--2 .country__current-rank:after, .country--3 .country__current-rank:after {
-  content: "";
-  width: 16px;
-  height: 44px;
-  background: linear-gradient(to right, rgba(249, 197, 56, 0.5) 0%, transparent 100%);
-  position: absolute;
-  left: 48px; }
+  border: none;
+  background-color: #00408d;
+  color: #fdc41d; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
-.country--1 .country__flag, .country--2 .country__flag, .country--3 .country__flag {
-  color: #f9c538; }
-
 .country--3 {
-  background-color: #f9c538;
-  color: #002841;
+  background-color: #fdc41d;
+  color: #004ca6;
   background-image: none; }
 
 .country--3 .country__rank {
-  color: #002841; }
+  color: #004ca6; }
 
 .country--3 .country__current-rank {
-  color: #002841; }
+  background-color: white;
+  color: #004ca6; }
 
 .Scoreboard {
   display: flex;
   align-items: center;
-  padding-right: 32px; }
+  padding: 0 24px 0 0; }
 
 .Scoreboard > div {
   columns: 2;
@@ -205,9 +194,9 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: #006aac;
+  background-color: rgba(0, 0, 0, 0.1);
   color: #fff;
-  font-family: "UNicod", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
@@ -221,8 +210,8 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #f9c538;
-  color: white; }
+  background-color: #fdc41d;
+  color: #004ca6; }
 
 #picker {
   padding: 48px; }
@@ -244,13 +233,13 @@ button:hover {
   display: inline-block;
   padding: 6px 8px 6px 0;
   text-transform: uppercase;
-  font-family: "UNicod"; }
+  font-family: "Noto Sans"; }
 
 #picker .country__name2 {
   display: inline-block;
   padding: 4px 6px 4px 6px;
   text-transform: uppercase;
-  font-family: "UNicod"; }
+  font-family: "Noto Sans"; }
 
 #picker > button {
   float: right;
@@ -258,7 +247,7 @@ button:hover {
   margin-top: 24px; }
 
 .vote {
-  background-color: #1a1a1a;
+  background-color: #003573;
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   counter-increment: count;
@@ -308,7 +297,7 @@ button:hover {
   font-size: 13px; }
 
 .votingPanel button {
-  background-color: #d63031;
+  background-color: #fdc41d;
   margin: 24px auto 0;
   text-align: center;
   display: block; }
@@ -331,21 +320,21 @@ button:hover {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 24px;
-  background-color: rgba(38, 38, 38, 0.25);
-  border-top: 2px solid rgba(77, 77, 77, 0.25);
-  border-bottom: 1px solid rgba(77, 77, 77, 0.25); }
+  background-color: rgba(0, 64, 141, 0.25);
+  border-top: 2px solid rgba(0, 99, 217, 0.25);
+  border-bottom: 1px solid rgba(0, 99, 217, 0.25); }
 
 .results__left h2 {
   text-align: center; }
 
 .results__countries {
-  background-color: rgba(26, 26, 26, 0.75);
+  background-color: rgba(0, 53, 115, 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid #4d4d4d;
-  border-bottom: 1px solid #4d4d4d;
+  border-top: 2px solid #0063d9;
+  border-bottom: 1px solid #0063d9;
   justify-content: center;
   position: relative; }
 
@@ -353,7 +342,7 @@ button:hover {
   margin-bottom: 8px; }
 
 .results button {
-  background-color: #d63031;
+  background-color: #fdc41d;
   margin: 24px auto 0;
   text-align: center;
   display: block; }
@@ -372,5 +361,5 @@ button:hover {
   border: none;
   box-shadow: none;
   padding: 0 8px;
-  font-family: "UNicod";
+  font-family: "Noto Sans";
   margin-right: 8px; }

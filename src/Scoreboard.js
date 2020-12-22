@@ -67,7 +67,7 @@ class Scoreboard extends Component {
     //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
     //     audio.play()
     // }
-    else if (data.new_rank === 26) {
+    else if (data.new_rank === 24) {
       // if(this.state["remainingVoters"].length % 4 === 0) {
       //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
       //     audio.play()
@@ -265,7 +265,7 @@ class Scoreboard extends Component {
         onClick={(e) => this.pushVote(country)}
       >
         <span className={"country__flag"}>
-          {getFlagForCountry(country)}
+          <img src={getFlagForCountry(country)} />
         </span>
         <span className={"country__name"}>
           {countryNameMap[country.toLowerCase()]}
@@ -310,7 +310,7 @@ class Scoreboard extends Component {
         onClick={(e) => this.popVote(country)}
       >
         <span className={"country__flag"}>
-          {getFlagForCountry(country)}
+          <img src={getFlagForCountry(country)} />
         </span>
         <span className={"country__name"}>
           {countryNameMap[country.toLowerCase()]}

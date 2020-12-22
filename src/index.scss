@@ -2,22 +2,14 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Gotham";
-  src: url("fonts/Gotham-Medium.otf");
-}
-
-@font-face {
-  font-family: "UNicod";
-  src: url("fonts/UNicod.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   background-position: center;
-  font-family: "UNicod", sans-serif;
-  background-color: #333;
+  font-family: "Noto Sans", sans-serif;
+  background-color: #004ca6;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,7 +17,7 @@ body {
 }
 
 .App {
-  background-color: #222;
+  background-color: #004ca6;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
@@ -35,7 +27,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(img/melfest.jpg);
 }
 
 .Voting {
@@ -48,11 +39,10 @@ body {
 
   h1 {
     font-size: 48px;
-    margin: 0;
-    color: #f9c538;
-    font-family: "UNicod";
+    margin: 0 0 8px;
+    color: white;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: 500;
   }
 }
 
@@ -90,10 +80,11 @@ body {
   align-items: center;
   flex-flow: row nowrap;
   color: white;
-  font-size: 23px;
+  font-size: 16px;
   margin: 0;
   position: relative;
-  border-bottom: 2px solid rgba(white, 0.2);
+  background-color: rgba(black, 0.2);
+  margin-bottom: 8px;
 
   &__rank {
     margin-left: auto;
@@ -106,24 +97,26 @@ body {
   }
 
   &__name {
-    padding: 6px 0 0;
-    text-transform: uppercase;
+    padding: 10px 0;
   }
 
   &__flag {
     vertical-align: middle;
     margin: 0;
     margin-right: 8px;
-    padding: 10px 0 4px;
-    width: 48px;
-    display: inline-block;
-    color: #006aac;
-    text-align: center;
+    padding: 8px;
+
+    img {
+      display: block;
+      width: 36px;
+      height: 24px;
+      filter: saturate(1.5);
+    }
   }
 
   &__average {
     text-align: right;
-    padding: 6px 12px 0;
+    padding: 8px 12px 6px;
     width: 72px;
     background-color: transparent;
     display: block;
@@ -136,11 +129,10 @@ body {
 
   &--small {
     box-shadow: none;
-    font-size: 12px;
+    font-size: 10px;
     transition: 0.4s ease;
-    margin: 0;
+    margin: 0 0 2px;
     background-color: transparent;
-    border-bottom: 0;
     color: white;
     .country {
       &__rank {
@@ -152,14 +144,18 @@ body {
         color: white;
       }
       &__name {
-        padding: 2px 0 0;
-        font-family: "UNicod";
-        text-transform: none;
+        padding: 2px 0;
+        font-family: "Noto Sans";
+        font-size: 10px;
+        text-transform: capitalize;
       }
       &__flag {
         margin-right: 8px;
-        padding: 2px 0 0;
-        width: 16px;
+        padding: 0;
+        img {
+          width: 22px;
+          height: 16px;
+        }
       }
     }
 
@@ -172,65 +168,54 @@ body {
   &--1,
   &--2,
   &--3 {
+    background-color: rgba(white, 0.1);
     position: relative;
     .country {
       &__average {
       }
       &__rank {
+        
       }
       &__name {
+
       }
       &__current-rank {
         margin: 0;
-        width: 48px;
-        background: linear-gradient(
-          to right,
-          #f9c538 0%,
-          rgba(#f9c538, 0.5) 100%
-        );
-        height: 44px;
-        line-height: 46px;
+        width: 52px;
+        height: 42px;
+        line-height: 42px;
         text-align: center;
         color: white;
         position: absolute;
         left: 0;
         top: 0;
+        font-size: 24px;
         font-weight: 700;
         z-index: 5;
         border: none;
-        &:after {
-          content: "";
-          width: 16px;
-          height: 44px;
-          background: linear-gradient(
-            to right,
-            rgba(#f9c538, 0.5) 0%,
-            transparent 100%
-          );
-          position: absolute;
-          left: 48px;
-        }
+        background-color: darken(#004ca6, 5%);
+        color: #fdc41d;
         & + .country__flag {
           visibility: hidden;
         }
       }
       &__flag {
-        color: #f9c538;
       }
       &__average {
       }
     }
   }
   &--3 {
-    background-color: #f9c538;
-    color: #002841;
+    background-color: #fdc41d;
+    color: #004ca6;
     background-image: none;
     .country {
       &__rank {
-        color: #002841;
+        color: #004ca6;
       }
       &__current-rank {
-        color: #002841;
+        background-color: white;
+        color: #004ca6;
       }
     }
   }
@@ -239,7 +224,7 @@ body {
 .Scoreboard {
   display: flex;
   align-items: center;
-  padding-right: 32px;
+  padding: 0 24px 0 0;
   > div {
     columns: 2;
     column-gap: 8px;
@@ -250,9 +235,9 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(#006aac, 1);
+  background-color: rgba(black, 0.1);
   color: #fff;
-  font-family: "UNicod", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   padding: 6px 8px;
   display: inline-block;
   font-size: 11px;
@@ -268,8 +253,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: #f9c538;
-    color: white;
+    background-color: #fdc41d;
+    color: #004ca6;
   }
 }
 
@@ -291,13 +276,13 @@ button {
       display: inline-block;
       padding: 6px 8px 6px 0;
       text-transform: uppercase;
-      font-family: "UNicod";
+      font-family: "Noto Sans";
     }
     &__name2 {
       display: inline-block;
       padding: 4px 6px 4px 6px;
       text-transform: uppercase;
-      font-family: "UNicod";
+      font-family: "Noto Sans";
     }
   }
   > button {
@@ -308,7 +293,7 @@ button {
 }
 
 .vote {
-  background-color: darken(#333, 10%);
+  background-color: darken(#004ca6, 10%);
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   counter-increment: count;
@@ -340,7 +325,7 @@ button {
   counter-set: count;
 
   @media screen and (max-width: 720px) {
-    max-width: 100%;
+    max-width: 100%;    
   }
 
   h2 {
@@ -368,7 +353,7 @@ button {
   }
 
   button {
-    background-color: #d63031;
+    background-color: #fdc41d;
     margin: 24px auto 0;
     text-align: center;
     display: block;
@@ -392,21 +377,21 @@ button {
     flex-flow: column nowrap;
     justify-content: center;
     padding: 24px;
-    background-color: rgba(darken(#333, 5%), 0.25);
-    border-top: 2px solid rgba(lighten(#333, 10%), 0.25);
-    border-bottom: 1px solid rgba(lighten(#333, 10%), 0.25);
+    background-color: rgba(darken(#004ca6, 5%), 0.25);
+    border-top: 2px solid rgba(lighten(#004ca6, 10%), 0.25);
+    border-bottom: 1px solid rgba(lighten(#004ca6, 10%), 0.25);
     h2 {
       text-align: center;
     }
   }
   &__countries {
-    background-color: rgba(darken(#333, 10%), 0.75);
+    background-color: rgba(darken(#004ca6, 10%), 0.75);
     text-align: left;
     padding: 24px;
     display: flex;
     flex-flow: column nowrap;
-    border-top: 2px solid lighten(#333, 10%);
-    border-bottom: 1px solid lighten(#333, 10%);
+    border-top: 2px solid lighten(#004ca6, 10%);
+    border-bottom: 1px solid lighten(#004ca6, 10%);
     justify-content: center;
     position: relative;
     .country {
@@ -414,7 +399,7 @@ button {
     }
   }
   button {
-    background-color: #d63031;
+    background-color: #fdc41d;
     margin: 24px auto 0;
     text-align: center;
     display: block;
@@ -434,7 +419,7 @@ button {
     border: none;
     box-shadow: none;
     padding: 0 8px;
-    font-family: "UNicod";
+    font-family: "Noto Sans";
     margin-right: 8px;
   }
 }
