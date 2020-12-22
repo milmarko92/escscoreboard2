@@ -83,7 +83,7 @@ body {
   font-size: 16px;
   margin: 0;
   position: relative;
-  background-color: rgba(black, 0.2);
+  background-color: rgba(black, 0.1);
   margin-bottom: 8px;
 
   &__rank {
@@ -92,7 +92,6 @@ body {
     margin-right: 12px;
     font-size: 13px;
     color: white;
-    opacity: 0.5;
     padding-top: 4px;
   }
 
@@ -121,6 +120,7 @@ body {
     background-color: transparent;
     display: block;
     text-align: right;
+    color: #fdc41d;
   }
 
   &--qualified {
