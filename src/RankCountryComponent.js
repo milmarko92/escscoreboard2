@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {getFlagForCountry} from "./images";
-import {countryNameMap} from "./constants";
+import {countryNameMap, get_edtion_for_country} from "./constants";
 
 export default class RankCountryComponent extends Component {
 
@@ -15,8 +15,12 @@ export default class RankCountryComponent extends Component {
     }
 
     render() {
+        let class_name = this.props.currentRank === 1 ? "country country--3" : this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"
+
+        class_name = class_name + " country--" + get_edtion_for_country(this.props.country)
+
         return(
-            <div className={this.props.currentRank === 1 ? "country country--3" : this.props.gotLastVote ? "country country--2" : this.props.inCurrentVotes ? "country country--1" : "country"}>
+            <div className= { class_name }>
                 { this.flagOrRanking() }
                 <span className={"country__flag"}>
                     <img alt="" src={getFlagForCountry(this.props.country)}/>

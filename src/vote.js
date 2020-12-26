@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import countries, {all_voters, countryNameMap, currentEdition, magic_code} from "./constants";
+import countries, {all_voters, countryNameMap, edition_id, get_countries, magic_code} from "./constants";
 import { getFlagForCountry } from "./images";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import queryString from "query-string";
 
 function handleErrors(response) {
   if (!response.ok) {
@@ -15,10 +16,17 @@ function handleErrors(response) {
 export default class Vote extends Component {
   constructor(props) {
     super(props);
+      let params = queryString.parse(location.search);
+      let edition = ""
+      if ("edition" in params && params["edition"].length > 0) {
+          edition = params["edition"].toLowerCase();
+      }
+
     this.state = {
-      all_countries: countries,
-      unlocked: false,
+      all_countries: get_countries(edition),
+      unlocked: true,
       code: "",
+      edition: edition
     };
   }
 
@@ -52,7 +60,7 @@ export default class Vote extends Component {
     });
     fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote", {
       method: "post",
-      body: JSON.stringify({ name: this.state["currentVoter"], votes: votes , edition: currentEdition}),
+      body: JSON.stringify({ name: this.state["currentVoter"], votes: votes , edition: edition_id(this.state["edition"])}),
     })
       .then(handleErrors)
       .then((response) => {
@@ -61,23 +69,6 @@ export default class Vote extends Component {
       .catch((error) => {
         alert(error);
       });
-    // console.log("cdfvgbh")
-    // var xhr = new XMLHttpRequest()
-    //
-    // // get a callback when the server responds
-    // xhr.addEventListener('load', () => {
-    //     // update the state of the component with the result here
-    //     console.log(xhr.responseText)
-    // })
-    // const votes = this.state["all_countries"].map(
-    //     (value, index) => {
-    //         return {rank: index+1, code: value}
-    //     }
-    // )
-    // console.log(votes)
-    // // open the request with the verb and the url
-    // xhr.open('POST', 'https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote')
-    // xhr.send(JSON.stringify({ name: this.state["currentVoter"],  votes: votes}))
   }
 
   _onSelect(event) {
@@ -109,8 +100,10 @@ export default class Vote extends Component {
   }
 
   whatever(){
-    return (
-        <div className="votingPanel">
+        const edition = this.state["edition"]
+      const name=`votingPanel ${edition}`
+      return (
+        <div className={name}>
           <h2>Select your name</h2>
           <Dropdown
               options={all_voters}
@@ -150,12 +143,12 @@ export default class Vote extends Component {
           </DragDropContext>
           <button onClick={this.sendVote.bind(this)}>Submit</button>
         </div>
-    );
+        );
   }
 
   render() {
     console.log(this.state["unlocked"])
-    const to_render = this.state["unlocked"] ? this.whatever() : this.block_entry()
+    const to_render = this.whatever()
     return (to_render);
   }
 }
