@@ -7,20 +7,21 @@ body {
   padding: 0;
   background-position: center;
   font-family: "Noto Sans", sans-serif;
-  background-color: #004ca6;
+  background-color: #93b5ce;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
 .App {
-  background-color: #004ca6;
+  background-color: #93b5ce;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
+  background-image: url("img/clouds.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -105,8 +106,7 @@ body {
   width: 72px;
   background-color: transparent;
   display: block;
-  text-align: right;
-  color: #fdc41d; }
+  text-align: right; }
 
 .country--qualified {
   opacity: 0.2; }
@@ -163,23 +163,23 @@ body {
   font-weight: 700;
   z-index: 5;
   border: none;
-  background-color: #00408d;
-  color: #fdc41d; }
+  background-color: #81a9c6;
+  color: #4a4645; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #fdc41d;
-  color: #004ca6;
+  background-color: #4a4645;
+  color: #93b5ce;
   background-image: none; }
 
 .country--3 .country__rank {
-  color: #004ca6; }
+  color: #93b5ce; }
 
 .country--3 .country__current-rank {
   background-color: white;
-  color: #004ca6; }
+  color: #93b5ce; }
 
 .Scoreboard {
   display: flex;
@@ -210,8 +210,8 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #fdc41d;
-  color: #004ca6; }
+  background-color: #4a4645;
+  color: #93b5ce; }
 
 #picker {
   padding: 48px; }
@@ -247,7 +247,7 @@ button:hover {
   margin-top: 24px; }
 
 .vote {
-  background-color: #003573;
+  background-color: #709dbe;
   padding: 2px 6px 1px;
   margin: 0 0 4px;
   counter-increment: count;
@@ -297,7 +297,7 @@ button:hover {
   font-size: 13px; }
 
 .votingPanel button {
-  background-color: #fdc41d;
+  background-color: #4a4645;
   margin: 24px auto 0;
   text-align: center;
   display: block; }
@@ -320,21 +320,21 @@ button:hover {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 24px;
-  background-color: rgba(0, 64, 141, 0.25);
-  border-top: 2px solid rgba(0, 99, 217, 0.25);
-  border-bottom: 1px solid rgba(0, 99, 217, 0.25); }
+  background-color: rgba(129, 169, 198, 0.25);
+  border-top: 2px solid rgba(182, 205, 222, 0.25);
+  border-bottom: 1px solid rgba(182, 205, 222, 0.25); }
 
 .results__left h2 {
   text-align: center; }
 
 .results__countries {
-  background-color: rgba(0, 53, 115, 0.75);
+  background-color: rgba(112, 157, 190, 0.75);
   text-align: left;
   padding: 24px;
   display: flex;
   flex-flow: column nowrap;
-  border-top: 2px solid #0063d9;
-  border-bottom: 1px solid #0063d9;
+  border-top: 2px solid #b6cdde;
+  border-bottom: 1px solid #b6cdde;
   justify-content: center;
   position: relative; }
 
@@ -342,7 +342,7 @@ button:hover {
   margin-bottom: 8px; }
 
 .results button {
-  background-color: #fdc41d;
+  background-color: #4a4645;
   margin: 24px auto 0;
   text-align: center;
   display: block; }
