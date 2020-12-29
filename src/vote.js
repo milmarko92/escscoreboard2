@@ -21,12 +21,18 @@ export default class Vote extends Component {
       if ("edition" in params && params["edition"].length > 0) {
           edition = params["edition"].toLowerCase();
       }
+      let voter_list = all_voters;
+      if ("voters" in params && params["voters"].length > 0) {
+          const additional_voters = params["voters"].toLowerCase().split(",");
+          voter_list = voter_list.concat(additional_voters)
+      }
 
     this.state = {
       all_countries: get_countries(edition),
       unlocked: true,
       code: "",
-      edition: edition
+      edition: edition,
+        voter_list: voter_list
     };
   }
 
@@ -106,7 +112,7 @@ export default class Vote extends Component {
         <div className={name}>
           <h2>Select your name</h2>
           <Dropdown
-              options={all_voters}
+              options={this.state["voter_list"]}
               onChange={this._onSelect.bind(this)}
               value={"Choose Your Name!"}
               placeholder="Who are you??"

@@ -303,6 +303,10 @@ export const all_voters = [
   //"Victoria",
   "Vladan",
   "Wiv",
+    "Aleksandra",
+    "Michael",
+    "Hannah",
+
 ];
 
 export const audioMap = {};
@@ -311,7 +315,7 @@ export const magic_code = "raging";
 
 export default countries;
 
-export const currentEdition = "yugo";
+export const currentEdition = "raging";
 
 const edition_map = {
   "yugo": 10,
