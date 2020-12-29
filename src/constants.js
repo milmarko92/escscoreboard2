@@ -315,7 +315,7 @@ export const magic_code = "raging";
 
 export default countries;
 
-export const currentEdition = "yugo";
+export const currentEdition = "raging";
 
 const edition_map = {
   "yugo": 10,

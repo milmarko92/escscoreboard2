@@ -96,18 +96,8 @@ class Scoreboard extends Component {
       }
     }
     else if (data.new_rank === 1) {
-      if (this.state["remainingVoters"].length % 3 === 0) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/highest-moment-of-my-life.m4a");
-        audio.play();
-      }
-      if (this.state["remainingVoters"].length % 3 === 1) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/wunderbar.m4a");
-        audio.play();
-      }
-      if (this.state["remainingVoters"].length % 3 === 2) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/great-song.m4a");
-        audio.play();
-      }
+      var audio = new Audio(process.env.PUBLIC_URL + "/audio/applause.mp3");
+      audio.play();
     }
     let currentVotes = this.state.currentVoting;
     let ranking = this.state.overallRanking;
