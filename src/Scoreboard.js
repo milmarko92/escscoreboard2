@@ -55,40 +55,60 @@ class Scoreboard extends Component {
       );
       audio.play();
     }
-    // else if (data.country === "greece" && data.new_rank <= 3){
-    //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-love-greece.mp3")
-    //     audio.play()
-    // }
-    // else if (data.new_rank <= 3){
-    //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/ding.wav")
-    //     audio.play()
-    // }
-    // else if (data.country === "belgium" && data.new_rank >= 24){
-    //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
-    //     audio.play()
-    // }
     else if (data.new_rank === this.state["country_list"].length) {
-      // if(this.state["remainingVoters"].length % 4 === 0) {
-      //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
-      //     audio.play()
-      // }
-      if (this.state["remainingVoters"].length % 5 === 0) {
+      if (this.state["currentVoter"] === "Marko") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/marko-trash.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Matteo") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo-ROTTEN.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Nathan") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/Nathan-batshitvoting.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Pedro") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/pedro-torture.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Rodrigo") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/rodrigo-ihatethem.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Wiv") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Philip") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/philip-itis.m4a");
+        audio.play();
+      }
+      else if(this.state["currentVoter"] === "Costa") {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/costa-jemini.m4a");
+        audio.play();
+      }
+      else if (this.state["remainingVoters"].length % 5 === 0) {
         var audio = new Audio(process.env.PUBLIC_URL + "/audio/all-so-shitty.m4a");
         audio.play();
-      } else if (this.state["remainingVoters"].length % 5 === 1) {
+      }
+      else if (this.state["remainingVoters"].length % 5 === 1) {
         var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-need-more-wine.m4a");
         audio.play();
-      } else if (this.state["remainingVoters"].length % 5 === 2) {
+      }
+      else if (this.state["remainingVoters"].length % 5 === 2) {
         var audio = new Audio(
           process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a"
         );
         audio.play();
-      } else if (this.state["remainingVoters"].length % 5 === 3) {
+      }
+      else if (this.state["remainingVoters"].length % 5 === 3) {
         var audio = new Audio(
           process.env.PUBLIC_URL + "/audio/pure-torture.m4a"
         );
         audio.play();
-      } else if (this.state["remainingVoters"].length % 5 === 4) {
+      }
+      else if (this.state["remainingVoters"].length % 5 === 4) {
         var audio = new Audio(
           process.env.PUBLIC_URL + "/audio/its-dire.m4a"
         );
