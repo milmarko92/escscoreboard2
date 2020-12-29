@@ -303,6 +303,10 @@ export const all_voters = [
   //"Victoria",
   "Vladan",
   "Wiv",
+    "Aleksandra",
+    "Michael",
+    "Hannah",
+
 ];
 
 export const audioMap = {};
