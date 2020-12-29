@@ -50,26 +50,35 @@ export const countries = [
   // "ukraine",
   // "united kingdom",
   // "yugoslavia",
-  "austria1993",
-"slovakia1998",
-"unitedkingdom1993",
-"cyprus2011",
-"israel1979",
-"sweden1999",
-"malta2005",
-"finland2006",
-"latvia2011",
-"albania2010",
-"georgia2017",
-"netherlands1998",
-"slovenia1998",
-"latvia2010",
-"cyprus1998",
-"norway1988",
-"serbia2007",
-"iceland2001",
-"greece1995",
-"israel1995",
+  "germany2003",
+  "belgium2006",
+  "ireland2011",
+  "france2010",
+  "hungary2011",
+
+  "slovenia2006",
+  "croatia2006",
+  "bosnia2004",
+  "serbia2020",
+  "macedonia2006",
+
+  "greece2009",
+  "cyprus2012",
+  "israel2015",
+  "spain2009",
+  "portugal2014",
+
+  "iceland2008",
+  "denmark2007",
+  "norway2019",
+  "sweden2008",
+  "finland2009",
+
+  "belarus2019",
+  "ukraine2010",
+  "moldova2010",
+  "bulgaria2012",
+  "latvia2020",
 ];
 
 export const countryNameMap = {
@@ -124,26 +133,32 @@ export const countryNameMap = {
   // ukraine: "Ukraine",
   // "united kingdom": "United Kingdom",
   // yugoslavia: "Yugoslavia",
-  "austria1993": "Austria (1993)",
-"slovakia1998": "Slovakia (1998)",
-"unitedkingdom1993": "United Kingdom (1993)",
-"cyprus2011": "Cyprus (2011)",
-"israel1979": "Israel (1979)",
-"sweden1999": "Sweden (1999)",
-"malta2005": "Malta (2005)",
-"finland2006": "Finland (2006)",
-"latvia2011": "Latvia (2011)",
-"albania2010": "Albania (2010)",
-"georgia2017": "Georgia (2017)",
-"netherlands1998": "The Netherlands (1998)",
-"slovenia1998": "Slovenia (1998)",
-"latvia2010": "Latvia (2010)",
-"cyprus1998": "Cyprus (1998)",
-"norway1988": "Norway (1988)",
-"serbia2007": "Serbia (2007)",
-"iceland2001": "Iceland (2001)",
-"greece1995": "Greece (1995)",
-"israel1995": "Israel (1995)",
+  "germany2003": "germany",
+  "belgium2006": "belgium",
+  "ireland2011": "ireland",
+  "france2010": "france",
+  "hungary2011": "hungary",
+  "slovenia2006": "slovenia",
+  "croatia2006": "croatia",
+  "bosnia2004": "bosnia and herzegovina",
+  "serbia2020": "Serbia",
+  "macedonia2006": "macedonia",
+  "greece2009": "greece",
+  "cyprus2012": "cyprus",
+  "israel2015": "israel",
+  "spain2009": "spain",
+  "portugal2014": "portugal",
+  "iceland2008": "iceland",
+  "denmark2007": "denmark",
+  "norway2019": "Norway",
+  "sweden2008": "sweden",
+  "finland2009": "finland",
+  "belarus2019": "Belarus",
+  "ukraine2010": "ukraine",
+  "moldova2010": "moldova",
+  "bulgaria2012": "bulgaria",
+  "latvia2020": "latvia",
+
 };
 
 export const countryFlagMap = {
@@ -198,26 +213,35 @@ export const countryFlagMap = {
   // australia: "australia.png",
   // georgia: "georgia.png",
   // morocco: "morocco.png",
-  "austria1993": "austria.png",
-"slovakia1998": "slovakia.png",
-"unitedkingdom1993": "united-kingdom.png",
-"cyprus2011": "cyprus.png",
-"israel1979": "israel.png",
-"sweden1999": "sweden.png",
-"malta2005": "malta.png",
-"finland2006": "finland.png",
-"latvia2011": "latvia.png",
-"albania2010": "albania.png",
-"georgia2017": "georgia.png",
-"netherlands1998": "netherlands.png",
-"slovenia1998": "slovenia.png",
-"latvia2010": "latvia.png",
-"cyprus1998": "cyprus.png",
-"norway1988": "norway.png",
-"serbia2007": "serbia.png",
-"iceland2001": "iceland.png",
-"greece1995": "greece.png",
-"israel1995": "israel.png",
+  "germany2003": "germany.png",
+  "belgium2006": "belgium.png",
+  "ireland2011": "ireland.png",
+  "france2010": "france.png",
+  "hungary2011": "hungary.png",
+
+  "slovenia2006": "slovenia.png",
+  "croatia2006": "croatia.png",
+  "bosnia2004": "bosnia-and-herzegovina.png",
+  "serbia2020": "serbia.png",
+  "macedonia2006": "macedonia.png",
+
+  "greece2009": "greece.png",
+  "cyprus2012": "cyprus.png",
+  "israel2015": "israel.png",
+  "spain2009": "spain.png",
+  "portugal2014": "portugal.png",
+
+  "iceland2008": "iceland.png",
+  "denmark2007": "denmark.png",
+  "norway2019": "norway.png",
+  "sweden2008": "sweden.png",
+  "finland2009": "finland.png",
+
+  "belarus2019": "belarus.png",
+  "ukraine2010": "ukraine.png",
+  "moldova2010": "moldova.png",
+  "bulgaria2012": "bulgaria.png",
+  "latvia2020": "latvia.png",
 };
 
 export const rankToPointsMap = {
@@ -283,8 +307,114 @@ export const all_voters = [
 
 export const audioMap = {};
 
-export const magic_code = "movetheworld";
-
-export const currentEdition = "5";
+export const magic_code = "raging";
 
 export default countries;
+
+export const currentEdition = "yugo";
+
+const edition_map = {
+  "yugo": 10,
+  "east": 7,
+  "west": 6,
+  "south": 8,
+  "north": 9,
+  "raging": 11,
+
+}
+
+export function edition_id(edition_name=""){
+  if (edition_name === ""){
+    edition_name=currentEdition
+  }
+
+  if (edition_name in edition_map){
+    return edition_map[edition_name]
+  }
+  return 0
+}
+
+export const edition_list = {
+  "west": [
+    "germany2003",
+    "belgium2006",
+    "ireland2011",
+    "france2010",
+    "hungary2011",
+  ],
+  "east": [
+    "belarus2019",
+    "ukraine2010",
+    "moldova2010",
+    "bulgaria2012",
+    "latvia2020"
+  ],
+  "south": [
+    "greece2009",
+    "cyprus2012",
+    "israel2015",
+    "spain2009",
+    "portugal2014",
+  ],
+  "north": [
+    "iceland2008",
+    "denmark2007",
+    "norway2019",
+    "sweden2008",
+    "finland2009",
+  ],
+  "yugo": [
+    "slovenia2006",
+    "croatia2006",
+    "bosnia2004",
+    "serbia2020",
+    "macedonia2006",
+  ],
+  "raging": countries
+}
+
+export function get_countries(edition_name=""){
+  if (edition_name === ""){
+    edition_name=currentEdition
+  }
+
+  if (edition_name in edition_list){
+    return edition_list[edition_name]
+  }
+  return countries
+}
+
+export const num_of_qualifiers = 2
+
+
+const country_to_edition_map = {
+  "germany2003": "west",
+    "belgium2006": "west",
+    "ireland2011": "west",
+    "france2010": "west",
+    "hungary2011": "west",
+    "belarus2019": "east",
+    "ukraine2010": "east",
+    "moldova2010": "east",
+    "bulgaria2012": "east",
+    "latvia2020": "east",
+  "greece2009": "south",
+    "cyprus2012": "south",
+    "israel2015": "south",
+    "spain2009": "south",
+    "portugal2014": "south",
+    "iceland2008": "north",
+    "denmark2007": "north",
+    "norway2019": "north",
+    "sweden2008": "north",
+    "finland2009": "north",
+    "slovenia2006": "yugo",
+    "croatia2006": "yugo",
+    "bosnia2004": "yugo",
+    "serbia2020": "yugo",
+    "macedonia2006": "yugo",
+}
+
+export function get_edtion_for_country(country){
+  return country_to_edition_map[country]
+}

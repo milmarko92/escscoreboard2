@@ -4,20 +4,20 @@ import NameComponent from "./NameComponent";
 import ScoreboardComponent from "./ScoreboardComponent";
 import {
   countryNameMap,
-  countries,
   rankToPointsMap,
-  all_voters,
+  all_voters, get_countries,
 } from "./constants";
 import FlipMove from "react-flip-move";
 import { saveAs } from "file-saver";
 import { getFlagForCountry } from "./images";
 import queryString from "query-string";
 
+
 class Scoreboard extends Component {
   constructor(props) {
     super(props);
     let initial = {};
-    let country_list = countries;
+    let country_list = get_countries();
     let params = queryString.parse(location.search);
     console.log(params);
     if ("country_list" in params && params["country_list"].length > 0) {
@@ -67,7 +67,7 @@ class Scoreboard extends Component {
     //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo.mp3")
     //     audio.play()
     // }
-    else if (data.new_rank === 24) {
+    else if (data.new_rank === this.state["country_list"].length) {
       // if(this.state["remainingVoters"].length % 4 === 0) {
       //     var audio = new Audio(process.env.PUBLIC_URL + "/audio/rotten.mp3")
       //     audio.play()

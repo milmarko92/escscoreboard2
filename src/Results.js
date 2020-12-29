@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import countries, {
   audioMap,
   countryNameMap,
-  currentEdition,
-  magic_code,
+  edition_id, get_countries,
+  magic_code, num_of_qualifiers,
 } from "./constants";
 import { getFlagForCountry } from "./images";
 
@@ -14,14 +14,6 @@ export default class Results extends Component {
       fetched: false,
       displayed: [],
       strings: [
-        "???",
-        "???",
-        "???",
-        "???",
-        "???",
-        "???",
-        "???",
-        "???",
         "???",
         "???",
       ],
@@ -62,7 +54,7 @@ export default class Results extends Component {
     console.log("ddddaaaa");
     fetch(
       "https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result/" +
-        currentEdition +
+        edition_id() +
         "/"
     )
       .then((response) => response.json())
@@ -70,22 +62,23 @@ export default class Results extends Component {
         this.setState({
           result: data["results"],
           fetched: true,
-          qualifiers: this.shuffle(data["results"].slice(0, 10)),
+          qualifiers: this.shuffle(data["results"].slice(0, num_of_qualifiers)),
         });
         console.log(data);
       });
   }
+
   displayQualifier() {
-    if (this.state["displayed"].length === 10) {
+    if (this.state["displayed"].length === num_of_qualifiers) {
       return;
     }
     var qualifiers = this.state["qualifiers"];
-    var num = Math.floor(Math.random() * 10);
+    var num = Math.floor(Math.random() * num_of_qualifiers);
     var displayed = this.state["displayed"];
     while (
       this.array_contains(this.state["displayed"], qualifiers[num]) === true
     ) {
-      num = Math.floor(Math.random() * 10);
+      num = Math.floor(Math.random() * num_of_qualifiers);
     }
     displayed.push(qualifiers[num]);
     console.log(displayed);
@@ -98,7 +91,7 @@ export default class Results extends Component {
   }
 
   all_countries() {
-    return countries.sort().map((value, index) => {
+    return get_countries().sort().map((value, index) => {
       const qualified = this.array_contains(this.state["strings"], value);
       let classname = "country country--small";
       if (qualified === true) {
