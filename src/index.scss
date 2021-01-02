@@ -7,11 +7,6 @@
   src: url("fonts/Gotham-Medium.otf");
 }
 
-@font-face {
-  font-family: "Intro";
-  src: url("fonts/Intro.ttf");
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -25,13 +20,14 @@ body {
 }
 
 .App {
-  background-color: #111;
+  background-color: #1B1C3B;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 88% 12%;
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
+  background-image: url(img/brexit.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,8 +45,7 @@ body {
   h1 {
     font-size: 48px;
     margin: 0 0 8px;
-    color: #white;
-    font-family: "Intro";
+    color: white;
     font-weight: 700;
   }
 }
@@ -92,25 +87,8 @@ body {
   font-size: 15px;
   margin: 0;
   position: relative;
-  background-color: #222;
+  background-color: darken(#1B1C3B, 5%);
   margin-bottom: 8px;
-  border-radius: 240px;
-
-  &--north {
-    color: yellow;
-  }
-  &--south {
-    color: lime;
-  }
-  &--west {
-    color: magenta;
-  }
-  &--yugo {
-    color: blue;
-  }
-  &--east {
-    color: red;
-  }
 
   &__rank {
     margin-left: auto;
@@ -124,7 +102,6 @@ body {
 
   &__name {
     padding: 10px 0 9px;
-    font-family: "Intro";
   }
 
   &__flag {
@@ -138,7 +115,6 @@ body {
       width: 24px;
       height: 24px;
       filter: saturate(1.5);
-      border-radius: 100%;
     }
   }
 
@@ -197,7 +173,7 @@ body {
   &--1,
   &--2,
   &--3 {
-    background-color: rgba(white, 0.1);
+    background-color: lighten(#1B1C3B, 5%);
     position: relative;
     .country {
       &__average {
@@ -214,7 +190,7 @@ body {
         height: 40px;
         line-height: 42px;
         text-align: center;
-        color: black;
+        color: #d63031;
         position: absolute;
         left: 0;
         top: 0;
@@ -223,7 +199,6 @@ body {
         z-index: 5;
         border: none;
         background-color: white;
-        border-radius: 100%;
         & + .country__flag {
           visibility: hidden;
         }
@@ -275,7 +250,6 @@ button {
   text-transform: capitalize;
   margin: 2px;
   transition: 0.4s ease;
-  border-radius: 240px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -284,8 +258,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: cyan;
-    color: black;
+    background-color: #d63031;
+    color: white;
   }
 }
 
