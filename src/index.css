@@ -24,7 +24,7 @@ body {
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px;
-  background-image: url(img/brexit.png);
+  background-image: url(img/remain.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -160,7 +160,7 @@ body {
   height: 40px;
   line-height: 42px;
   text-align: center;
-  color: #d63031;
+  color: #FECD03;
   position: absolute;
   left: 0;
   top: 0;
@@ -215,7 +215,7 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #d63031;
+  background-color: #FECD03;
   color: white; }
 
 #picker {
@@ -302,7 +302,7 @@ button:hover {
   font-size: 13px; }
 
 .votingPanel button {
-  background-color: #d63031;
+  background-color: #FECD03;
   margin: 24px auto 0;
   text-align: center;
   display: block; }
@@ -347,7 +347,7 @@ button:hover {
   margin-bottom: 8px; }
 
 .results button {
-  background-color: #d63031;
+  background-color: #FECD03;
   margin: 24px auto 0;
   text-align: center;
   display: block; }
