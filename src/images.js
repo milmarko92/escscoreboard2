@@ -9,7 +9,7 @@ function importAll(r) {
 }
 
 const images = importAll(
-  require.context("./flags/circle", false, /\.(png|jpe?g|svg)$/)
+  require.context("./flags", false, /\.(png|jpe?g|svg)$/)
 );
 
 export function getFlagForCountry(country) {

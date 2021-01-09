@@ -5,13 +5,13 @@ import ScoreboardComponent from "./ScoreboardComponent";
 import {
   countryNameMap,
   rankToPointsMap,
-  all_voters, get_countries,
+  all_voters,
+  get_countries,
 } from "./constants";
 import FlipMove from "react-flip-move";
 import { saveAs } from "file-saver";
 import { getFlagForCountry } from "./images";
 import queryString from "query-string";
-
 
 class Scoreboard extends Component {
   constructor(props) {
@@ -54,70 +54,71 @@ class Scoreboard extends Component {
         process.env.PUBLIC_URL + "/audio/fucking-sweden-maria.mp3"
       );
       audio.play();
-    }
-    else if (data.new_rank === this.state["country_list"].length) {
+    } else if (data.new_rank === this.state["country_list"].length) {
       if (this.state["currentVoter"] === "Marko") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/marko-trash.m4a");
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/marko-trash.m4a"
+        );
         audio.play();
-      }
-      else if(this.state["currentVoter"] === "Matteo") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/matteo-ROTTEN.m4a");
+      } else if (this.state["currentVoter"] === "Matteo") {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/matteo-ROTTEN.m4a"
+        );
         audio.play();
-      }
-      else if(this.state["currentVoter"] === "Nathan") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/Nathan-batshitvoting.m4a");
+      } else if (this.state["currentVoter"] === "Nathan") {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/Nathan-batshitvoting.m4a"
+        );
         audio.play();
-      }
-      else if(this.state["currentVoter"] === "Pedro") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/pedro-torture.m4a");
+      } else if (this.state["currentVoter"] === "Pedro") {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/pedro-torture.m4a"
+        );
         audio.play();
-      }
-      else if(this.state["currentVoter"] === "Rodrigo") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/rodrigo-ihatethem.m4a");
+      } else if (this.state["currentVoter"] === "Rodrigo") {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/rodrigo-ihatethem.m4a"
+        );
         audio.play();
-      }
-      else if(this.state["currentVoter"] === "Wiv") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a");
-        audio.play();
-      }
-      else if(this.state["currentVoter"] === "Philip") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/philip-itis.m4a");
-        audio.play();
-      }
-      else if(this.state["currentVoter"] === "Costa") {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/costa-jemini.m4a");
-        audio.play();
-      }
-      else if (this.state["remainingVoters"].length % 5 === 0) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/all-so-shitty.m4a");
-        audio.play();
-      }
-      else if (this.state["remainingVoters"].length % 5 === 1) {
-        var audio = new Audio(process.env.PUBLIC_URL + "/audio/i-need-more-wine.m4a");
-        audio.play();
-      }
-      else if (this.state["remainingVoters"].length % 5 === 2) {
+      } else if (this.state["currentVoter"] === "Wiv") {
         var audio = new Audio(
           process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a"
         );
         audio.play();
-      }
-      else if (this.state["remainingVoters"].length % 5 === 3) {
+      } else if (this.state["currentVoter"] === "Philip") {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/philip-itis.m4a"
+        );
+        audio.play();
+      } else if (this.state["currentVoter"] === "Costa") {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/costa-jemini.m4a"
+        );
+        audio.play();
+      } else if (this.state["remainingVoters"].length % 5 === 0) {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/all-so-shitty.m4a"
+        );
+        audio.play();
+      } else if (this.state["remainingVoters"].length % 5 === 1) {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/i-need-more-wine.m4a"
+        );
+        audio.play();
+      } else if (this.state["remainingVoters"].length % 5 === 2) {
+        var audio = new Audio(
+          process.env.PUBLIC_URL + "/audio/worst-entry-ever.m4a"
+        );
+        audio.play();
+      } else if (this.state["remainingVoters"].length % 5 === 3) {
         var audio = new Audio(
           process.env.PUBLIC_URL + "/audio/pure-torture.m4a"
         );
         audio.play();
-      }
-      else if (this.state["remainingVoters"].length % 5 === 4) {
-        var audio = new Audio(
-          process.env.PUBLIC_URL + "/audio/its-dire.m4a"
-        );
+      } else if (this.state["remainingVoters"].length % 5 === 4) {
+        var audio = new Audio(process.env.PUBLIC_URL + "/audio/its-dire.m4a");
         audio.play();
       }
-    }
-    else if (data.new_rank === 1) {
-      var audio = new Audio(process.env.PUBLIC_URL + "/audio/applause.mp3");
-      audio.play();
     }
     let currentVotes = this.state.currentVoting;
     let ranking = this.state.overallRanking;
@@ -361,18 +362,9 @@ class Scoreboard extends Component {
   render() {
     return (
       <div className="App">
-        <div className={"Scoreboard"}>
-          <ScoreboardComponent
-            ranking={this.getRanking()}
-            twelvePointSystem={this.state.twelves}
-            completedVoters={this.state.completedVoters}
-            currentVoting={this.state.currentVoting}
-          />
-        </div>
         <div className={"Voting"}>
-          <NameComponent voterName={this.state.currentVoter} />
           <div className={"Ranking"}>{this.ongoingRank()}</div>
-          {this.votingPanel()}
+          <div className={"Countries"}>{this.votingPanel()}</div>
           <button
             className={"save-button"}
             onClick={(e) => {
@@ -396,7 +388,16 @@ class Scoreboard extends Component {
             Save file
           </button>
         </div>
-        <div>
+        <div className={"Scoreboard"}>
+          <ScoreboardComponent
+            ranking={this.getRanking()}
+            twelvePointSystem={this.state.twelves}
+            completedVoters={this.state.completedVoters}
+            currentVoting={this.state.currentVoting}
+          />
+        </div>
+        <NameComponent voterName={this.state.currentVoter} />
+        <div className={"Voters"}>
           {this.state.remainingVoters.map((name) => {
             return (
               <button

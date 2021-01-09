@@ -7,6 +7,11 @@
   src: url("fonts/Gotham-Medium.otf");
 }
 
+@font-face {
+  font-family: "Intro";
+  src: url("fonts/Intro.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -22,34 +27,43 @@ body {
 .App {
   background-color: #1B1C3B;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 88% 12%;
-  grid-gap: 24px 0;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 104px;
+  grid-gap: 0;
   height: 100vh;
-  padding: 72px 128px;
-  background-image: url(img/originals.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  padding: 64px 96px;
+  background-image: url(img/food.jpg);
+  background-size: 50%;
   background-position: center;
 }
 
-.Voting {
-  background-color: rgba(#FE2B00, 0.5);
-  border: 8px solid white;
-  text-align: left;
+h1 {
+  font-size: 32px;
+  margin: 0;
+  font-family: "Intro";
+  color: #DA291C;
+  background-color: #FECD03;
+  border-radius: 0 0 0 24px;
   padding: 24px;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  position: relative;
-  border-radius: 32px;
+  align-items: center;
+  line-height: 1;
+}
 
-  h1 {
-    font-size: 32px;
-    margin: 0 0 16px;
-    color: white;
-    font-weight: 700;
-  }
+.Voting {
+  background-color: darken(#DA291C, 5%);
+  text-align: left;
+  padding: 24px 24px 72px 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  border-radius: 24px 0 0 0;
+}
+
+.Voters {
+  padding: 24px;
+  background-color: darken(#DA291C, 5%);
+  border-radius: 0 0 24px 0;
 }
 
 .Ranking {
@@ -91,19 +105,21 @@ body {
   position: relative;
   background-color: darken(white, 5%);
   margin-bottom: 8px;
-  border-radius: 240px;
+  border-radius: 8px;
 
   &__rank {
     margin-left: auto;
     margin-right: 0;
     font-size: 13px;
-    color: #FE2B00;
+    color: #FECD03;
     padding-top: 4px;
     display: inline-block;
   }
 
   &__name {
-    padding: 10px 0 7px;
+    font-size: 16px;
+    padding: 8px 0 7px;
+    font-family: "Intro";
   }
 
   &__flag {
@@ -114,10 +130,10 @@ body {
 
     img {
       display: block;
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 20px;
       filter: saturate(1.5);
-      border-radius: 240px;
+      border-radius: 4px;
     }
   }
 
@@ -152,9 +168,9 @@ body {
         color: white;
       }
       &__name {
-        padding: 2px 0;
+        padding: 1px 0;
         font-family: "Gotham";
-        font-size: 10px;
+        font-size: 11px;
         text-transform: capitalize;
       }
       &__flag {
@@ -162,7 +178,7 @@ body {
         padding: 0;
         img {
           width: 16px;
-          height: 16px;
+          height: 12px;
         }
       }
     }
@@ -192,14 +208,14 @@ body {
           display: inline-block;
           width: 16px;
           height: 16px;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FE2B00' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FECD03' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E");
         }
       }
       &__current-rank {
-        margin: 8px;
-        width: 24px;
+        margin: 6px;
+        width: 32px;
         height: 24px;
-        line-height: 27px;
+        line-height: 26px;
         text-align: center;
         color: white;
         position: absolute;
@@ -209,8 +225,9 @@ body {
         font-weight: 700;
         z-index: 5;
         border: none;
-        background-color: #FE2B00;
-        border-radius: 240px;
+        background-color: #FECD03;
+        color: #DA291C;
+        border-radius: 8px;
         & + .country__flag {
           visibility: hidden;
         }
@@ -222,17 +239,18 @@ body {
     }
   }
   &--3 {
-    background-color: lighten(#FE2B00, 10%);
+    background-color: #FECD03;
     color: white;
     .country {
       &__rank {
         color: white;
       }
       &__current-rank {
-        background-color: white;
-        color: #FE2B00;
+        background-color: #DA291C;
+        color: #FECD03;
       }
       &__name {
+        color: #DA291C;
         &:after {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E");
         }
@@ -244,8 +262,9 @@ body {
 .Scoreboard {
   display: flex;
   align-items: center;
-  padding: 0;
-  padding-right: 24px;
+  padding: 24px;
+  background-color: #DA291C;
+  border-radius: 0 24px 0 0;
   > div {
     columns: 2;
     column-gap: 8px;
@@ -256,8 +275,8 @@ body {
 button {
   appearance: none;
   border: none;
-  background-color: rgba(white, 1);
-  color: black;
+  background-color: darken(#DA291C, 10%);
+  color: white;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
   display: inline-block;
@@ -266,7 +285,7 @@ button {
   text-transform: capitalize;
   margin: 0 8px 8px 0;
   transition: 0.4s ease;
-  border-radius: 240px;
+  border-radius: 8px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -275,8 +294,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: white;
-    color: #FE2B00;
+    background-color: #FECD03;
+    color: #DA291C;
   }
 }
 
