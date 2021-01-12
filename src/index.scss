@@ -32,7 +32,7 @@ body {
   grid-gap: 0;
   height: 100vh;
   padding: 64px 96px;
-  background-image: url(img/food.jpg);
+  background-color: darken(#6EDB6E, 10%);
   background-size: 50%;
   background-position: center;
 }
@@ -41,9 +41,8 @@ h1 {
   font-size: 32px;
   margin: 0;
   font-family: "Intro";
-  color: #DA291C;
-  background-color: #FECD03;
-  border-radius: 0 0 0 24px;
+  color: #222063;
+  background-color: #6EDB6E;
   padding: 24px;
   display: flex;
   align-items: center;
@@ -51,19 +50,17 @@ h1 {
 }
 
 .Voting {
-  background-color: darken(#DA291C, 5%);
+  background-color: darken(#222063, 5%);
   text-align: left;
   padding: 24px 24px 72px 24px;
   display: flex;
   flex-flow: column nowrap;
   position: relative;
-  border-radius: 24px 0 0 0;
 }
 
 .Voters {
   padding: 24px;
-  background-color: darken(#DA291C, 5%);
-  border-radius: 0 0 24px 0;
+  background-color: darken(#222063, 5%);
 }
 
 .Ranking {
@@ -105,13 +102,12 @@ h1 {
   position: relative;
   background-color: darken(white, 5%);
   margin-bottom: 8px;
-  border-radius: 8px;
 
   &__rank {
     margin-left: auto;
     margin-right: 0;
     font-size: 13px;
-    color: #DA291C;
+    color: #222063;
     padding-top: 4px;
     display: inline-block;
   }
@@ -133,7 +129,6 @@ h1 {
       width: 28px;
       height: 20px;
       filter: saturate(1.5);
-      border-radius: 4px;
     }
   }
 
@@ -208,7 +203,7 @@ h1 {
           display: inline-block;
           width: 16px;
           height: 16px;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FECD03' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%236EDB6E' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E");
         }
       }
       &__current-rank {
@@ -225,9 +220,8 @@ h1 {
         font-weight: 700;
         z-index: 5;
         border: none;
-        background-color: #FECD03;
-        color: #DA291C;
-        border-radius: 8px;
+        background-color: #6EDB6E;
+        color: #222063;
         & + .country__flag {
           visibility: hidden;
         }
@@ -239,18 +233,18 @@ h1 {
     }
   }
   &--3 {
-    background-color: #FECD03;
+    background-color: #6EDB6E;
     color: white;
     .country {
       &__rank {
         color: white;
       }
       &__current-rank {
-        background-color: #DA291C;
-        color: #FECD03;
+        background-color: #222063;
+        color: #6EDB6E;
       }
       &__name {
-        color: #DA291C;
+        color: #222063;
         &:after {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E");
         }
@@ -263,8 +257,7 @@ h1 {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #DA291C;
-  border-radius: 0 24px 0 0;
+  background-color: #222063;
   > div {
     columns: 2;
     column-gap: 8px;
@@ -275,7 +268,7 @@ h1 {
 button {
   appearance: none;
   border: none;
-  background-color: darken(#DA291C, 10%);
+  background-color: darken(#222063, 10%);
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -285,7 +278,6 @@ button {
   text-transform: capitalize;
   margin: 0 8px 8px 0;
   transition: 0.4s ease;
-  border-radius: 8px;
   &:hover {
     opacity: 0.75;
     cursor: pointer;
@@ -294,8 +286,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: #FECD03;
-    color: #DA291C;
+    background-color: #6EDB6E;
+    color: #222063;
   }
 }
 
@@ -394,7 +386,7 @@ button {
   }
 
   button {
-    background-color: #FECD03;
+    background-color: #6EDB6E;
     margin: 24px auto 0;
     text-align: center;
     display: block;
@@ -440,7 +432,7 @@ button {
     }
   }
   button {
-    background-color: #FECD03;
+    background-color: #6EDB6E;
     margin: 24px auto 0;
     text-align: center;
     display: block;
