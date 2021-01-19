@@ -114,6 +114,10 @@ export default class Results extends Component {
           <h2>Qualified for the Final</h2>
           <div className="results__qualifiers">
             {this.state["strings"].map((value, index) => {
+              let clname = "country"
+              if (value === "???"){
+                clname +="__unknown"
+              }
               return (
                 <span>
                   <div className={"qualifier"}>
@@ -136,13 +140,12 @@ export default class Results extends Component {
                         />
                     }
                   </div>
-                <div className="country" key={"q" + index}>
-                  <span className="country__flag">
-                    <img src={getFlagForCountry(value)} />
-                  </span>
-                  <span className="country__name">{countryNameMap[value]}</span>
-
-                </div>
+                  <div className={clname} key={"q" + index}>
+                    <span className="country__flag">
+                      <img src={getFlagForCountry(value)} />
+                    </span>
+                    <span className="country__name">{countryNameMap[value]}</span>
+                  </div>
                 </span>
               );
             })}
