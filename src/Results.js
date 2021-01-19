@@ -5,7 +5,8 @@ import countries, {
   edition_id, get_countries,
   magic_code, num_of_qualifiers,
 } from "./constants";
-import { getFlagForCountry } from "./images";
+import {envelopeImg, getFlagForCountry} from "./images";
+import ReactPlayer from "react-player";
 
 export default class Results extends Component {
   constructor(props) {
@@ -13,10 +14,7 @@ export default class Results extends Component {
     this.state = {
       fetched: false,
       displayed: [],
-      strings: [
-        "???",
-        "???",
-      ],
+      strings: Array.from({length: num_of_qualifiers}, () => "???")
     };
     this.getResults();
   }
@@ -53,7 +51,7 @@ export default class Results extends Component {
   getResults() {
     console.log("ddddaaaa");
     fetch(
-      "https://django-cloudrun-ed7wjo25ka-ew.a.run.app/result/" +
+      "https://django-cloudrun-4fdxp3ewaq-ew.a.run.app/result/" +
         edition_id() +
         "/"
     )
@@ -121,6 +119,14 @@ export default class Results extends Component {
                     <img src={getFlagForCountry(value)} />
                   </span>
                   <span className="country__name">{countryNameMap[value]}</span>
+                  {value === "???" ? <img className={'qualifier__hidden'} src={process.env.PUBLIC_URL + "/img/envelope.png"}/>:<ReactPlayer
+                      className='qualifier__revealed'
+                      url= {process.env.PUBLIC_URL + "/video/" + "test.mp4"}//audioMap[value]}
+                      width='10%'
+                      height='10%'
+                      controls = {true}
+                      playing={true}
+                  />}
                 </div>
               );
             })}

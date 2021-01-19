@@ -90,128 +90,107 @@ h1 {
   background-color: #f2f2f2;
   margin-bottom: 8px;
   border-radius: 24px; }
-
-.country__rank {
-  margin-left: auto;
-  margin-right: 0;
-  font-size: 13px;
-  color: #333;
-  padding-top: 4px;
-  display: inline-block; }
-
-.country__name {
-  font-size: 16px;
-  padding: 8px 0 7px;
-  font-family: "Gotham"; }
-
-.country__flag {
-  vertical-align: middle;
-  margin: 0;
-  margin-right: 0;
-  padding: 8px; }
-
-.country__flag img {
-  display: block;
-  width: 28px;
-  height: 20px;
-  filter: saturate(1.5);
-  border-radius: 24px; }
-
-.country__average {
-  text-align: right;
-  padding: 8px 12px 6px;
-  width: 72px;
-  background-color: transparent;
-  font-size: 16px;
-  display: block;
-  text-align: right; }
-
-.country--qualified {
-  opacity: 0.2; }
-
-.country--small {
-  box-shadow: none;
-  font-size: 10px;
-  transition: 0.4s ease;
-  margin: 0 0 4px;
-  background-color: transparent;
-  color: white; }
-
-.country--small .country__rank {
-  padding: 0 8px;
-  float: right;
-  margin-left: auto;
-  margin-right: 0;
-  font-size: 10px;
-  color: white; }
-
-.country--small .country__name {
-  padding: 1px 0;
-  font-family: "Gotham";
-  font-size: 11px;
-  text-transform: capitalize; }
-
-.country--small .country__flag {
-  margin-right: 8px;
-  padding: 0; }
-
-.country--small .country__flag img {
-  width: 16px;
-  height: 12px; }
-
-.country--small:hover {
-  opacity: 0.5;
-  cursor: pointer; }
-
-.country--1, .country--2, .country--3 {
-  background-color: white;
-  position: relative; }
-
-.country--1 .country__name:after, .country--2 .country__name:after, .country--3 .country__name:after {
-  content: "";
-  margin-left: 8px;
-  vertical-align: middle;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
-
-.country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
-  margin: 6px;
-  width: 32px;
-  height: 24px;
-  line-height: 26px;
-  text-align: center;
-  color: white;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 13px;
-  font-weight: 700;
-  z-index: 5;
-  border: none;
-  background-color: #666;
-  color: #333; }
-
-.country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
-  visibility: hidden; }
-
-.country--3 {
-  background-color: #666;
-  color: white; }
-
-.country--3 .country__rank {
-  color: white; }
-
-.country--3 .country__current-rank {
-  background-color: #333;
-  color: #666; }
-
-.country--3 .country__name {
-  color: #333; }
-
-.country--3 .country__name:after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
+  .country__rank {
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 13px;
+    color: #333;
+    padding-top: 4px;
+    display: inline-block; }
+  .country__name {
+    font-size: 16px;
+    padding: 8px 0 7px;
+    font-family: "Gotham"; }
+  .country__flag {
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 0;
+    padding: 8px; }
+    .country__flag img {
+      display: block;
+      width: 28px;
+      height: 20px;
+      filter: saturate(1.5);
+      border-radius: 24px; }
+  .country__average {
+    text-align: right;
+    padding: 8px 12px 6px;
+    width: 72px;
+    background-color: transparent;
+    font-size: 16px;
+    display: block;
+    text-align: right; }
+  .country--qualified {
+    opacity: 0.2; }
+  .country--small {
+    box-shadow: none;
+    font-size: 10px;
+    transition: 0.4s ease;
+    margin: 0 0 4px;
+    background-color: transparent;
+    color: white; }
+    .country--small .country__rank {
+      padding: 0 8px;
+      float: right;
+      margin-left: auto;
+      margin-right: 0;
+      font-size: 10px;
+      color: white; }
+    .country--small .country__name {
+      padding: 1px 0;
+      font-family: "Gotham";
+      font-size: 11px;
+      text-transform: capitalize; }
+    .country--small .country__flag {
+      margin-right: 8px;
+      padding: 0; }
+      .country--small .country__flag img {
+        width: 16px;
+        height: 12px; }
+    .country--small:hover {
+      opacity: 0.5;
+      cursor: pointer; }
+  .country--1, .country--2, .country--3 {
+    background-color: white;
+    position: relative; }
+    .country--1 .country__name:after, .country--2 .country__name:after, .country--3 .country__name:after {
+      content: "";
+      margin-left: 8px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
+    .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
+      margin: 6px;
+      width: 32px;
+      height: 24px;
+      line-height: 26px;
+      text-align: center;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 13px;
+      font-weight: 700;
+      z-index: 5;
+      border: none;
+      background-color: #666;
+      color: #333; }
+      .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
+        visibility: hidden; }
+  .country--3 {
+    background-color: #666;
+    color: white; }
+    .country--3 .country__rank {
+      color: white; }
+    .country--3 .country__current-rank {
+      background-color: #333;
+      color: #666; }
+    .country--3 .country__name {
+      color: #333; }
+      .country--3 .country__name:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
 
 .Scoreboard {
   display: flex;
@@ -219,11 +198,10 @@ h1 {
   padding: 24px;
   background-color: #333;
   border-radius: 0 24px 0 0; }
-
-.Scoreboard > div {
-  columns: 2;
-  column-gap: 8px;
-  width: 100%; }
+  .Scoreboard > div {
+    columns: 2;
+    column-gap: 8px;
+    width: 100%; }
 
 button {
   appearance: none;
@@ -239,10 +217,9 @@ button {
   margin: 0 8px 8px 0;
   transition: 0.4s ease;
   border-radius: 24px; }
-
-button:hover {
-  opacity: 0.75;
-  cursor: pointer; }
+  button:hover {
+    opacity: 0.75;
+    cursor: pointer; }
 
 .Button--12 {
   background-color: #666;
@@ -250,36 +227,31 @@ button:hover {
 
 #picker {
   padding: 48px; }
-
-#picker .country {
-  display: inline-block;
-  margin: 0 8px 8px 0;
-  background-color: white;
-  color: black;
-  border: none; }
-
-#picker .country__flag {
-  display: inline-block;
-  padding: 0;
-  vertical-align: middle;
-  margin: 0 6px 0 4px; }
-
-#picker .country__name {
-  display: inline-block;
-  padding: 6px 8px 6px 0;
-  text-transform: uppercase;
-  font-family: "Gotham"; }
-
-#picker .country__name2 {
-  display: inline-block;
-  padding: 4px 6px 4px 6px;
-  text-transform: uppercase;
-  font-family: "Gotham"; }
-
-#picker > button {
-  float: right;
-  font-size: 11px;
-  margin-top: 24px; }
+  #picker .country {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    background-color: white;
+    color: black;
+    border: none; }
+    #picker .country__flag {
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+      margin: 0 6px 0 4px; }
+    #picker .country__name {
+      display: inline-block;
+      padding: 6px 8px 6px 0;
+      text-transform: uppercase;
+      font-family: "Gotham"; }
+    #picker .country__name2 {
+      display: inline-block;
+      padding: 4px 6px 4px 6px;
+      text-transform: uppercase;
+      font-family: "Gotham"; }
+  #picker > button {
+    float: right;
+    font-size: 11px;
+    margin-top: 24px; }
 
 .vote {
   background-color: #1a1a1a;
@@ -287,19 +259,17 @@ button:hover {
   margin: 0 0 4px;
   counter-increment: count;
   position: relative; }
-
-.vote .country__name {
-  font-size: 13px;
-  padding: 6px 0 2px; }
-
-.vote:after {
-  content: "#" counter(count);
-  opacity: 0.5;
-  font-size: 10px;
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%); }
+  .vote .country__name {
+    font-size: 13px;
+    padding: 6px 0 2px; }
+  .vote:after {
+    content: "#" counter(count);
+    opacity: 0.5;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%); }
 
 .votingPanel {
   max-width: 480px;
@@ -307,35 +277,28 @@ button:hover {
   background-color: rgba(242, 242, 242, 0.2);
   padding: 24px;
   counter-set: count; }
-
-@media screen and (max-width: 720px) {
-  .votingPanel {
-    max-width: 100%; } }
-
-.votingPanel h2 {
-  margin: 0 0 8px;
-  font-size: 16px; }
-
-.votingPanel .Dropdown-root {
-  margin-bottom: 36px; }
-
-.votingPanel .Dropdown-control {
-  font-size: 13px;
-  padding: 6px 52px 4px 10px;
-  border: none;
-  border-radius: 0; }
-
-.votingPanel .Dropdown-arrow {
-  top: 11px; }
-
-.votingPanel .Dropdown-menu {
-  font-size: 13px; }
-
-.votingPanel button {
-  background-color: #666;
-  margin: 24px auto 0;
-  text-align: center;
-  display: block; }
+  @media screen and (max-width: 720px) {
+    .votingPanel {
+      max-width: 100%; } }
+  .votingPanel h2 {
+    margin: 0 0 8px;
+    font-size: 16px; }
+  .votingPanel .Dropdown-root {
+    margin-bottom: 36px; }
+  .votingPanel .Dropdown-control {
+    font-size: 13px;
+    padding: 6px 52px 4px 10px;
+    border: none;
+    border-radius: 0; }
+  .votingPanel .Dropdown-arrow {
+    top: 11px; }
+  .votingPanel .Dropdown-menu {
+    font-size: 13px; }
+  .votingPanel button {
+    background-color: #666;
+    margin: 24px auto 0;
+    text-align: center;
+    display: block; }
 
 .results {
   display: grid;
@@ -344,43 +307,37 @@ button:hover {
   grid-gap: 24px 0;
   height: 100vh;
   padding: 72px 128px; }
-
-.results__qualifiers {
-  columns: 2;
-  column-gap: 8px; }
-
-.results__left {
-  display: flex;
-  flex-flow: row wrap;
-  flex-flow: column nowrap;
-  justify-content: center;
-  padding: 24px;
-  background-color: rgba(38, 38, 38, 0.25);
-  border-top: 2px solid rgba(77, 77, 77, 0.25);
-  border-bottom: 1px solid rgba(77, 77, 77, 0.25); }
-
-.results__left h2 {
-  text-align: center; }
-
-.results__countries {
-  background-color: rgba(26, 26, 26, 0.75);
-  text-align: left;
-  padding: 24px;
-  display: flex;
-  flex-flow: column nowrap;
-  border-top: 2px solid #4d4d4d;
-  border-bottom: 1px solid #4d4d4d;
-  justify-content: center;
-  position: relative; }
-
-.results__countries .country {
-  margin-bottom: 8px; }
-
-.results button {
-  background-color: #666;
-  margin: 24px auto 0;
-  text-align: center;
-  display: block; }
+  .results__qualifiers {
+    columns: 2;
+    column-gap: 8px; }
+  .results__left {
+    display: flex;
+    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(38, 38, 38, 0.25);
+    border-top: 2px solid rgba(77, 77, 77, 0.25);
+    border-bottom: 1px solid rgba(77, 77, 77, 0.25); }
+    .results__left h2 {
+      text-align: center; }
+  .results__countries {
+    background-color: rgba(26, 26, 26, 0.75);
+    text-align: left;
+    padding: 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-top: 2px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+    justify-content: center;
+    position: relative; }
+    .results__countries .country {
+      margin-bottom: 8px; }
+  .results button {
+    background-color: #666;
+    margin: 24px auto 0;
+    text-align: center;
+    display: block; }
 
 .votingPassword {
   display: flex;
@@ -389,12 +346,11 @@ button:hover {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
-
-.votingPassword input {
-  display: block;
-  height: 25px;
-  border: none;
-  box-shadow: none;
-  padding: 0 8px;
-  font-family: "Gotham";
-  margin-right: 8px; }
+  .votingPassword input {
+    display: block;
+    height: 25px;
+    border: none;
+    box-shadow: none;
+    padding: 0 8px;
+    font-family: "Gotham";
+    margin-right: 8px; }

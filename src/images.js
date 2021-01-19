@@ -15,3 +15,5 @@ const images = importAll(
 export function getFlagForCountry(country) {
   return images[countryFlagMap[country.toLowerCase()]];
 }
+
+export const envelopeImg = images["envelope.png"]

@@ -64,7 +64,7 @@ export default class Vote extends Component {
     const votes = this.state["all_countries"].map((value, index) => {
       return { rank: index + 1, code: value };
     });
-    fetch("https://django-cloudrun-ed7wjo25ka-ew.a.run.app/cast-vote", {
+    fetch("https://django-cloudrun-4fdxp3ewaq-ew.a.run.app/cast-vote", {
       method: "post",
       body: JSON.stringify({ name: this.state["currentVoter"], votes: votes , edition: edition_id(this.state["edition"])}),
     })
@@ -106,7 +106,7 @@ export default class Vote extends Component {
   }
 
   whatever(){
-        const edition = this.state["edition"]
+    const edition = this.state["edition"]
       const name=`votingPanel ${edition}`
       return (
         <div className={name}>

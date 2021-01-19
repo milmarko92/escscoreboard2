@@ -50,29 +50,26 @@ export const countries = [
   // "ukraine",
   // "united kingdom",
   // "yugoslavia",
-  "latvia2003",
-"portugal1981",
-"norway1994",
-"luxembourg1980",
-"sweden1979",
-"austria2000",
-"france1972",
-"israel1983",
-"belgium1969",
-"macedonia2004",
-"denmark1963",
-"italy1977",
-"ireland1968",
-"bosnia2009",
-"belgium1977",
-"france1961",
-"latvia2000",
-"monaco1973",
-"romania1998",
-"belgium1975",
-"denmark1993",
-"macedonia2011",
-"germany2007",
+  "sweden2012",
+  "sweden2014a",
+  "sweden2011",
+  "portugal1976",
+  "germany2013",
+  "albania2021",
+  "greece2013",
+  "italy2020",
+  "estonia2018",
+  "spain2017",
+  "sweden2014b",
+  "portugal2010",
+  "estonia2016",
+  "iceland2012",
+  "norway2016",
+  "ukraine2020",
+  "croatia2019",
+  "ireland2012",
+  "latvia2018",
+  "slovenia2017",
 ];
 
 export const countryNameMap = {
@@ -127,29 +124,28 @@ export const countryNameMap = {
   // ukraine: "Ukraine",
   // "united kingdom": "United Kingdom",
   // yugoslavia: "Yugoslavia",
-  "latvia2003": "Latvia (2003)",
-"portugal1981": "Portugal (1981)",
-"norway1994": "Norway (1994)",
-"luxembourg1980": "Luxembourg (1980)",
-"sweden1979": "Sweden (1979)",
-"austria2000": "Austria (2000)",
-"france1972": "France (1972)",
-"israel1983": "Israel (1983)",
-"belgium1969": "Belgium (1969)",
-"macedonia2004": "North Macedonia (2004)",
-"denmark1963": "Denmark (1963)",
-"italy1977": "Italy (1977)",
-"ireland1968": "Ireland (1968)",
-"bosnia2009": "Bosnia and Herzegovina (2009)",
-"belgium1977": "Belgium (1977)",
-"france1961": "France (1961)",
-"latvia2000": "Latvia (2000)",
-"monaco1973": "Monaco (1973)",
-"romania1998": "Romania (1998)",
-"belgium1975": "Belgium (1975)",
-"denmark1993": "Denmark (1993)",
-"macedonia2011": "North Macedonia (2011)",
-"germany2007": "Germany (2007)",
+
+
+  "sweden2012": "Why start a fire",
+  "sweden2014a": "Songbird",
+  "sweden2011": "Oh My God!",
+  "portugal1976": "No teu poema",
+  "germany2013": "Craving",
+  "albania2021": "Zjarri im",
+  "greece2013": "Kai Mia Nihtes",
+  "italy2020": "Musica (E il resto scompare)",
+  "estonia2018": "Drop That Boogie",
+  "spain2017": "Contigo",
+  "sweden2014b": "Survivor",
+  "portugal2010": "Canta por mim",
+  "estonia2016": "Patience",
+  "iceland2012": "Brennur",
+  "norway2016": "Afterglow",
+  "ukraine2020": "Call for Love",
+  "croatia2019": "Tower Of Babylon",
+  "ireland2012": "Here I Am",
+  "latvia2018": "Esamība",
+  "slovenia2017": "Heart of Gold",
 };
 
 export const countryFlagMap = {
@@ -204,29 +200,26 @@ export const countryFlagMap = {
   // australia: "australia.png",
   // georgia: "georgia.png",
   // morocco: "morocco.png",
-  "latvia2003": "latvia.png",
-"portugal1981": "portugal.png",
-"norway1994": "norway.png",
-"luxembourg1980": "luxembourg.png",
-"sweden1979": "sweden.png",
-"austria2000": "austria.png",
-"france1972": "france.png",
-"israel1983": "israel.png",
-"belgium1969": "belgium.png",
-"macedonia2004": "macedonia.png",
-"denmark1963": "denmark.png",
-"italy1977": "italy.png",
-"ireland1968": "ireland.png",
-"bosnia2009": "bosnia-and-herzegovina.png",
-"belgium1977": "belgium.png",
-"france1961": "france.png",
-"latvia2000": "latvia.png",
-"monaco1973": "monaco.png",
-"romania1998": "romania.png",
-"belgium1975": "belgium.png",
-"denmark1993": "denmark.png",
-"macedonia2011": "macedonia.png",
-"germany2007": "germany.png",
+  "sweden2012": "sweden.png",
+  "sweden2014a": "sweden.png",
+  "sweden2011": "sweden.png",
+  "portugal1976": "portugal.png",
+  "germany2013": "germany.png",
+  "albania2021": "albania.png",
+  "greece2013": "greece.png",
+  "italy2020": "italy.png",
+  "estonia2018": "estonia.png",
+  "spain2017": "spain.png",
+  "sweden2014b": "sweden.png",
+  "portugal2010": "portugal.png",
+  "estonia2016": "estonia.png",
+  "iceland2012": "iceland.png",
+  "norway2016": "norway.png",
+  "ukraine2020": "ukraine.png",
+  "croatia2019": "croatia.png",
+  "ireland2012": "ireland.png",
+  "latvia2018": "latvia.png",
+  "slovenia2017": "slovenia.png",
 };
 
 export const rankToPointsMap = {
@@ -300,7 +293,7 @@ export const magic_code = "raging";
 
 export default countries;
 
-export const currentEdition = "raging";
+export const currentEdition = "2";
 
 const edition_map = {
   yugo: 10,
@@ -312,14 +305,16 @@ const edition_map = {
 };
 
 export function edition_id(edition_name = "") {
-  if (edition_name === "") {
-    edition_name = currentEdition;
-  }
-
-  if (edition_name in edition_map) {
-    return edition_map[edition_name];
-  }
-  return 0;
+  return currentEdition
+  // console.log("Edition "+ edition_name)
+  // if (edition_name === "") {
+  //   edition_name = currentEdition;
+  // }
+  //
+  // if (edition_name in edition_map) {
+  //   return edition_map[edition_name];
+  // }
+  // return 0;
 }
 
 export const edition_list = {
@@ -372,7 +367,7 @@ export function get_countries(edition_name = "") {
   return countries;
 }
 
-export const num_of_qualifiers = 2;
+export const num_of_qualifiers = 10;
 
 const country_to_edition_map = {
   germany2003: "west",
