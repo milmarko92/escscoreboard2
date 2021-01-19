@@ -112,8 +112,12 @@ export default class Results extends Component {
   }
 
   ett_resultat() {
+    let resultclass = "results"
+    if(this.state["displayed"].length === 10){
+      resultclass += " results__done"
+    }
     return (
-      <div className="results">
+      <div className={resultclass}>
         <div className="results__left">
           <div className="results__video">Next qualifier is...</div>
           <div className="results__countries">{this.all_countries()}</div>
