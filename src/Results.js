@@ -121,9 +121,9 @@ export default class Results extends Component {
                   <span className="country__name">{countryNameMap[value]}</span>
                   {value === "???" ? <img className={'qualifier__hidden'} src={process.env.PUBLIC_URL + "/img/envelope.png"}/>:<ReactPlayer
                       className='qualifier__revealed'
-                      url= {process.env.PUBLIC_URL + "/video/" + "test.mp4"}//audioMap[value]}
-                      width='10%'
-                      height='10%'
+                      url= {process.env.PUBLIC_URL + "/video/" + value + ".mp4"}//audioMap[value]}
+                      width='50%'
+                      height='50%'
                       controls = {true}
                       playing={true}
                   />}
