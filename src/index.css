@@ -367,6 +367,9 @@ button:hover {
   font-family: "Intro";
   margin-top: 8px; }
 
+.results__qualifiers .country--unknown .country__flag {
+  visibility: hidden; }
+
 .results__right {
   display: flex;
   flex-flow: row wrap;

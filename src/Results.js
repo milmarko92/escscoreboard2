@@ -121,6 +121,10 @@ export default class Results extends Component {
         <div className="results__right">
           <div className="results__qualifiers">
             {this.state["strings"].map((value, index) => {
+              let clname = "country";
+              if (value === "???") {
+                clname = "country country--unknown";
+              }
               return (
                 <span>
                   <div className={"qualifier"}>
@@ -145,7 +149,7 @@ export default class Results extends Component {
                           />
                         )}
                   </div>
-                  <div className="country" key={"q" + index}>
+                  <div className={clname} key={"q" + index}>
                     <span className="country__flag">
                       <img src={getFlagForCountry(value)} />
                     </span>

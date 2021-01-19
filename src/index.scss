@@ -412,6 +412,15 @@ button {
       font-family: "Intro";
       margin-top: 8px;
     }
+    .country {
+      &--unknown {
+        .country {
+          &__flag {
+            visibility: hidden;
+          }
+        }
+      }
+    }
   }
   &__right {
     display: flex;
