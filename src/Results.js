@@ -14,7 +14,8 @@ export default class Results extends Component {
     this.state = {
       fetched: false,
       displayed: [],
-      strings: Array.from({length: num_of_qualifiers}, () => "???")
+      strings: Array.from({length: num_of_qualifiers}, () => "???"),
+      completed_videos: [],
     };
     this.getResults();
   }
@@ -119,14 +120,24 @@ export default class Results extends Component {
                     <img src={getFlagForCountry(value)} />
                   </span>
                   <span className="country__name">{countryNameMap[value]}</span>
-                  {value === "???" ? <img className={'qualifier__hidden'} src={process.env.PUBLIC_URL + "/img/envelope.png"}/>:<ReactPlayer
+                  {value === "???" ?
+                    <img className={'qualifier__hidden'} src={process.env.PUBLIC_URL + "/img/envelope.png"}/>
+                    :
+                    !this.state["completed_videos"].includes(value) && <ReactPlayer
                       className='qualifier__revealed'
                       url= {process.env.PUBLIC_URL + "/video/" + value + ".mp4"}//audioMap[value]}
                       width='50%'
                       height='50%'
                       controls = {true}
                       playing={true}
-                  />}
+                      onEnded={
+                        (element) => {
+                          let completed = this.state["completed_videos"]
+                          completed.push(value)
+                          this.setState({"completed_videos": completed})}
+                        }
+                    />
+                  }
                 </div>
               );
             })}
