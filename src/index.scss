@@ -272,8 +272,8 @@ button {
 
 .Button {
   &--12 {
-    background-color: #666;
-    color: #0827B4;
+    background-color: #df13a5;
+    color: white;
   }
 }
 
@@ -344,10 +344,11 @@ button {
   h2 {
     margin: 0 0 8px;
     font-size: 16px;
+    display: none;
   }
 
   .Dropdown-root {
-    margin-bottom: 36px;
+    margin-bottom: 24px;
   }
 
   .Dropdown-control {
@@ -355,7 +356,7 @@ button {
     padding: 8px 52px 6px 10px;
     border: none;
     border-radius: 0;
-    background-color: darken(#0827B4, 5%);
+    background-color: darken(#df13a5, 5%);
     color: white;
     font-family: "Intro";
   }
@@ -381,18 +382,36 @@ button {
       background-color: #0827B4;
     }
   }
+
+  button {
+    background-color: #df13a5;
+    font-size: 16px;
+    margin-top: 8px;
+    width: 100%;
+    display: block;
+    font-family: "Intro";
+  }
 }
 
 .results {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 640px auto;
   grid-template-rows: 360px auto;
   grid-gap: 0;
   height: 100vh;
   padding: 64px 96px;
+  position: relative;
   &__qualifiers {
     columns: 2;
     column-gap: 8px;
+    & + button {
+      background-color: #df13a5;
+      width: 100%;
+      display: block;
+      font-size: 16px;
+      font-family: "Intro";
+      margin-top: 8px;
+    }
   }
   &__right {
     display: flex;
@@ -401,26 +420,53 @@ button {
     justify-content: center;
     padding: 24px;
     background-color: #0827B4;
+    grid-row: 1 / 3;
     h2 {
       text-align: center;
     }
   }
   &__left {
-    padding: 24px;
+    grid-row: 1 / 3;
     background-color: darken(#0827B4, 5%);
   }
+  &__video {
+    grid-row: 1 / 2;
+    height: 360px;
+    background-color: #df13a5;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Intro";
+    font-size: 48px;
+  }
   &__countries {
+    padding: 24px;
     text-align: left;
     position: relative;
+    grid-row: 2 / 3;
     columns: 2;
     column-gap: 8px;
     .country {
       margin-bottom: 8px;
+      background-color: #0827B4;
+      &__name {
+        padding: 4px 0 2px;
+        font-size: 12px;
+        font-family: "Intro";
+      }
+      &__flag {
+        padding: 0 0 0 6px;
+        img {
+          width: 20px;
+          height: 12px;
+        }
+      }
     }
   }
   .qualifier__revealed {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 64px;
+    left: 96px;
   }
 }

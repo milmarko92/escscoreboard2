@@ -114,34 +114,46 @@ export default class Results extends Component {
   ett_resultat() {
     return (
       <div className="results">
-        <div className="results__left">{this.all_countries()}</div>
+        <div className="results__left">
+          <div className="results__video">Next qualifier is...</div>
+          <div className="results__countries">{this.all_countries()}</div>
+        </div>
         <div className="results__right">
           <div className="results__qualifiers">
             {this.state["strings"].map((value, index) => {
               return (
-                <div className="country" key={"q" + index}>
-                  <span className="country__flag">
-                    <img src={getFlagForCountry(value)} />
-                  </span>
-                  <span className="country__name">{countryNameMap[value]}</span>
-                  {value === "???"
-                    ? ""
-                    : !this.state["completed_videos"].includes(value) && (
-                        <ReactPlayer
-                          className="qualifier__revealed"
-                          url={
-                            process.env.PUBLIC_URL + "/video/" + value + ".mp4"
-                          } //audioMap[value]}
-                          controls={false}
-                          playing={true}
-                          onEnded={(element) => {
-                            let completed = this.state["completed_videos"];
-                            completed.push(value);
-                            this.setState({ completed_videos: completed });
-                          }}
-                        />
-                      )}
-                </div>
+                <span>
+                  <div className={"qualifier"}>
+                    {value === "???"
+                      ? ""
+                      : !this.state["completed_videos"].includes(value) && (
+                          <ReactPlayer
+                            className="qualifier__revealed"
+                            url={
+                              process.env.PUBLIC_URL +
+                              "/video/" +
+                              value +
+                              ".mp4"
+                            } //audioMap[value]}
+                            controls={false}
+                            playing={true}
+                            onEnded={(element) => {
+                              let completed = this.state["completed_videos"];
+                              completed.push(value);
+                              this.setState({ completed_videos: completed });
+                            }}
+                          />
+                        )}
+                  </div>
+                  <div className="country" key={"q" + index}>
+                    <span className="country__flag">
+                      <img src={getFlagForCountry(value)} />
+                    </span>
+                    <span className="country__name">
+                      {countryNameMap[value]}
+                    </span>
+                  </div>
+                </span>
               );
             })}
           </div>
