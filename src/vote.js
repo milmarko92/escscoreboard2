@@ -107,15 +107,14 @@ export default class Vote extends Component {
 
   whatever(){
     const edition = this.state["edition"]
-      const name=`votingPanel ${edition}`
+      const name=`votingPanel votingPanel--${edition}`
       return (
         <div className={name}>
           <h2>Select your name</h2>
           <Dropdown
               options={this.state["voter_list"]}
               onChange={this._onSelect.bind(this)}
-              value={"Choose Your Name!"}
-              placeholder="Who are you??"
+              placeholder="What's your name?"
           />
           <DragDropContext onDragEnd={this.onDragEnd}>
             <Droppable droppableId="votes">

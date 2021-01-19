@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import countries, {
   audioMap,
   countryNameMap,
-  edition_id, get_countries,
-  magic_code, num_of_qualifiers,
+  edition_id,
+  get_countries,
+  magic_code,
+  num_of_qualifiers,
 } from "./constants";
-import {envelopeImg, getFlagForCountry} from "./images";
+import { envelopeImg, getFlagForCountry } from "./images";
 import ReactPlayer from "react-player";
 
 export default class Results extends Component {
@@ -14,7 +16,7 @@ export default class Results extends Component {
     this.state = {
       fetched: false,
       displayed: [],
-      strings: Array.from({length: num_of_qualifiers}, () => "???"),
+      strings: Array.from({ length: num_of_qualifiers }, () => "???"),
       completed_videos: [],
     };
     this.getResults();
@@ -90,28 +92,30 @@ export default class Results extends Component {
   }
 
   all_countries() {
-    return get_countries().sort().map((value, index) => {
-      const qualified = this.array_contains(this.state["strings"], value);
-      let classname = "country country--small";
-      if (qualified === true) {
-        classname = "country country--small country--qualified";
-      }
-      return (
-        <div class={classname}>
-          <span className="country__flag">
-            <img src={getFlagForCountry(value)} />
-          </span>
-          <span className="country__name">{countryNameMap[value]}</span>
-        </div>
-      );
-    });
+    return get_countries()
+      .sort()
+      .map((value, index) => {
+        const qualified = this.array_contains(this.state["strings"], value);
+        let classname = "country country--small";
+        if (qualified === true) {
+          classname = "country country--small country--qualified";
+        }
+        return (
+          <div class={classname}>
+            <span className="country__flag">
+              <img src={getFlagForCountry(value)} />
+            </span>
+            <span className="country__name">{countryNameMap[value]}</span>
+          </div>
+        );
+      });
   }
 
   ett_resultat() {
     return (
       <div className="results">
-        <div className="results__left">
-          <h2>Qualified for the Final</h2>
+        <div className="results__left">{this.all_countries()}</div>
+        <div className="results__right">
           <div className="results__qualifiers">
             {this.state["strings"].map((value, index) => {
               return (
@@ -120,33 +124,31 @@ export default class Results extends Component {
                     <img src={getFlagForCountry(value)} />
                   </span>
                   <span className="country__name">{countryNameMap[value]}</span>
-                  {value === "???" ?
-                    <img className={'qualifier__hidden'} src={process.env.PUBLIC_URL + "/img/envelope.png"}/>
-                    :
-                    !this.state["completed_videos"].includes(value) && <ReactPlayer
-                      className='qualifier__revealed'
-                      url= {process.env.PUBLIC_URL + "/video/" + value + ".mp4"}//audioMap[value]}
-                      width='50%'
-                      height='50%'
-                      controls = {true}
-                      playing={true}
-                      onEnded={
-                        (element) => {
-                          let completed = this.state["completed_videos"]
-                          completed.push(value)
-                          this.setState({"completed_videos": completed})}
-                        }
-                    />
-                  }
+                  {value === "???"
+                    ? ""
+                    : !this.state["completed_videos"].includes(value) && (
+                        <ReactPlayer
+                          className="qualifier__revealed"
+                          url={
+                            process.env.PUBLIC_URL + "/video/" + value + ".mp4"
+                          } //audioMap[value]}
+                          controls={false}
+                          playing={true}
+                          onEnded={(element) => {
+                            let completed = this.state["completed_videos"];
+                            completed.push(value);
+                            this.setState({ completed_videos: completed });
+                          }}
+                        />
+                      )}
                 </div>
               );
             })}
           </div>
           <button onClick={this.displayQualifier.bind(this)}>
-            Click Me with Your Mouse
+            Next Qualifier
           </button>
         </div>
-        <div className="results__countries">{this.all_countries()}</div>
       </div>
     );
   }
