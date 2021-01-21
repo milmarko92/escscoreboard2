@@ -112,9 +112,9 @@ export default class Results extends Component {
   }
 
   ett_resultat() {
-    let resultclass = "results"
-    if(this.state["displayed"].length === 10){
-      resultclass += " results__done"
+    let resultclass = "results";
+    if (this.state["displayed"].length === 10) {
+      resultclass += " results--done";
     }
     return (
       <div className={resultclass}>
