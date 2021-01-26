@@ -7,19 +7,18 @@
 
 @font-face {
   font-family: "Intro";
-  src: url("fonts/Intro.ttf"); }
+  src: url("fonts/sims.otf"); }
 
 body {
   margin: 0;
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #0827b4;
+  background-color: #2781de;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("img/background.jpg");
   min-height: 100vh; }
 
 .App {
@@ -35,14 +34,14 @@ h1 {
   margin: 0;
   font-family: "Intro";
   color: #fff;
-  background-color: #df13a5;
+  background-color: #23B345;
   padding: 24px;
   display: flex;
   align-items: center;
   line-height: 1; }
 
 .Voting {
-  background-color: #07229c;
+  background-color: #1c67b7;
   text-align: left;
   padding: 24px 24px 72px 24px;
   display: flex;
@@ -51,7 +50,7 @@ h1 {
 
 .Voters {
   padding: 24px;
-  background-color: #07229c; }
+  background-color: #1c67b7; }
 
 .Ranking button {
   width: 100%;
@@ -86,14 +85,14 @@ h1 {
   font-size: 15px;
   margin: 0;
   position: relative;
-  background-color: #07229c;
+  background-color: #1c67b7;
   margin-bottom: 8px; }
 
 .country__rank {
   margin-left: auto;
   margin-right: 0;
   font-size: 13px;
-  color: #0a32e5;
+  color: #3d8ee2;
   padding-top: 4px;
   display: inline-block; }
 
@@ -131,7 +130,7 @@ h1 {
   font-size: 10px;
   transition: 0.4s ease;
   margin: 0 0 4px;
-  background-color: #0827b4;
+  background-color: #1F74CD;
   color: white; }
 
 .country--small .country__rank {
@@ -170,7 +169,7 @@ h1 {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23df13a5' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%2323B345' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   width: 36px;
@@ -184,22 +183,22 @@ h1 {
   font-weight: 700;
   z-index: 5;
   border: none;
-  background-color: #df13a5;
+  background-color: #23B345;
   color: white; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #df13a5;
+  background-color: #23B345;
   color: white; }
 
 .country--3 .country__rank {
-  color: #0827b4; }
+  color: #1F74CD; }
 
 .country--3 .country__current-rank {
   background-color: white;
-  color: #0827b4; }
+  color: #1F74CD; }
 
 .country--3 .country__name {
   color: white; }
@@ -211,7 +210,7 @@ h1 {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #0827b4; }
+  background-color: #1F74CD; }
 
 .Scoreboard > div {
   columns: 2;
@@ -221,7 +220,7 @@ h1 {
 button {
   appearance: none;
   border: none;
-  background-color: #061c83;
+  background-color: #185ba1;
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -240,7 +239,7 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #df13a5;
+  background-color: #23B345;
   color: white; }
 
 #picker {
@@ -277,7 +276,7 @@ button:hover {
   margin-top: 24px; }
 
 .vote {
-  background-color: #07229c;
+  background-color: #1c67b7;
   counter-increment: count;
   position: relative;
   padding: 4px 8px;
@@ -300,7 +299,7 @@ button:hover {
 
 .votingPanel {
   padding: 24px;
-  background-color: #0827b4;
+  background-color: #1F74CD;
   margin: 0 auto;
   counter-set: count;
   max-width: 480px; }
@@ -322,7 +321,7 @@ button:hover {
   padding: 8px 52px 6px 10px;
   border: none;
   border-radius: 0;
-  background-color: #c81194;
+  background-color: #1f9e3d;
   color: white;
   font-family: "Intro"; }
 
@@ -333,20 +332,20 @@ button:hover {
 .votingPanel .Dropdown-menu {
   border: none;
   font-size: 13px;
-  background-color: #061c83; }
+  background-color: #185ba1; }
 
 .votingPanel .Dropdown-option {
   color: white;
   font-family: "Intro"; }
 
 .votingPanel .Dropdown-option:hover {
-  background-color: #df13a5; }
+  background-color: #23B345; }
 
 .votingPanel .Dropdown-option.is-selected {
-  background-color: #0827b4; }
+  background-color: #1F74CD; }
 
 .votingPanel button {
-  background-color: #df13a5;
+  background-color: #23B345;
   font-size: 16px;
   margin-top: 8px;
   width: 100%;
@@ -370,7 +369,7 @@ button:hover {
   font-size: 48px; }
 
 .results--done .results__qualifiers + button {
-  background-color: #07229c;
+  background-color: #1c67b7;
   font-size: 0;
   pointer-events: none; }
 
@@ -383,7 +382,7 @@ button:hover {
   column-gap: 8px; }
 
 .results__qualifiers + button {
-  background-color: #df13a5;
+  background-color: #23B345;
   width: 100%;
   display: block;
   font-size: 16px;
@@ -399,7 +398,7 @@ button:hover {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 24px;
-  background-color: #0827b4;
+  background-color: #1F74CD;
   grid-row: 1 / 3; }
 
 .results__right h2 {
@@ -407,12 +406,12 @@ button:hover {
 
 .results__left {
   grid-row: 1 / 3;
-  background-color: #07229c; }
+  background-color: #1c67b7; }
 
 .results__video {
   grid-row: 1 / 2;
   height: 360px;
-  background-color: #df13a5;
+  background-color: #23B345;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -430,7 +429,7 @@ button:hover {
 
 .results__countries .country {
   margin-bottom: 8px;
-  background-color: #0827b4; }
+  background-color: #1F74CD; }
 
 .results__countries .country__name {
   padding: 4px 0 2px;
