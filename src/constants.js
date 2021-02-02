@@ -156,7 +156,7 @@ export const countryNameMap = {
   "strangers": "08 Strangers",
   "gioventù_bruciata": "09 Gioventù Bruciata",
   "traffic_lights": "10 Traffic Lights",
-  "i_will_love_again": "11 I Will Love Again",
+  "i_will_love_again": "11 J'y crois encore",
   "hayastani_axjikner": "12 Hayastani Axjikner",
   "io_ti_aspetto": "13 Io ti aspetto",
   "λόγια": "14 Lόgia",
