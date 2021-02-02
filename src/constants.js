@@ -159,7 +159,7 @@ export const countryNameMap = {
   "i_will_love_again": "I Will Love Again",
   "hayastani_axjikner": "Hayastani Axjikner",
   "io_ti_aspetto": "Io ti aspetto",
-  "λόγια": "Λόγια",
+  "λόγια": "Lógia",
   "living_it_up_tonight_(starlight)": " Living It Up Tonight (Starlight)",
   "on_sest_aimé_à_cause": "On s'est aimé à cause",
   "barrio": "Barrio",
