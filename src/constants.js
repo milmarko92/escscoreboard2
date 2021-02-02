@@ -146,6 +146,7 @@ export const countryNameMap = {
   // ukraine: "Ukraine",
   // "united kingdom": "United Kingdom",
   // yugoslavia: "Yugoslavia",
+<<<<<<< HEAD
   "varnice": "Varnice",
   "lets_get_physical": "Lets Get Physical",
   "aalbal": "Aalbal",
@@ -168,6 +169,30 @@ export const countryNameMap = {
   "kao": "Kao",
   "csak_veled": "Csak Veled",
   "klámstrákur": "Klámstrákur",
+=======
+  "varnice": "01 Varnice",
+  "lets_get_physical": "02 Lets Get Physical",
+  "aalbal": "03 Aalbal",
+  "mud_blood": "04 Mud Blood",
+  "amsterdam": "05 Amsterdam",
+  "hit_me": "06 Hit Me",
+  "geceler_kecir": "07 Geceler Kecir",
+  "strangers": "08 Strangers",
+  "gioventù_bruciata": "09 Gioventù Bruciata",
+  "traffic_lights": "10 Traffic Lights",
+  "i_will_love_again": "11 I Will Love Again",
+  "hayastani_axjikner": "12 Hayastani Axjikner",
+  "io_ti_aspetto": "13 Io ti aspetto",
+  "λόγια": "14 Λόγια",
+  "living_it_up_tonight_(starlight)": "15 Living It Up Tonight (Starlight)",
+  "on_sest_aimé_à_cause": "16 On s'est aimé à cause",
+  "barrio": "17 Barrio",
+  "por_si_volvieras": "18 Por si volvieras",
+  "powder": "19 Powder",
+  "kao": "20 Kao",
+  "csak_veled": "21 Csak Veled",
+  "klámstrákur": "22 Klámstrákur",
+>>>>>>> eb6c270f49a0adbb1cf5e6e08e65df9f93b481a5
 };
 
 export const countryFlagMap = {
@@ -423,4 +448,30 @@ const country_to_edition_map = {
 
 export function get_edtion_for_country(country) {
   return country_to_edition_map[country];
+}
+
+export const videomap = {
+
+  "varnice": "1.mp4",
+  "lets_get_physical": "2.mp4",
+  "aalbal": "3.mp4",
+  "mud_blood": "4.mp4",
+  "amsterdam": "5.mp4",
+  "hit_me": "6.mp4",
+  "geceler_kecir": "7.mp4",
+  "strangers": "8.mp4",
+  "gioventù_bruciata": "9.mp4",
+  "traffic_lights": "10.mp4",
+  "i_will_love_again": "11.mp4",
+  "hayastani_axjikner": "12.mp4",
+  "io_ti_aspetto": "13.mp4",
+  "λόγια": "14.mp4",
+  "living_it_up_tonight_(starlight)": "15.mp4",
+  "on_sest_aimé_à_cause": "16.mp4",
+  "barrio": "17.mp4",
+  "por_si_volvieras": "18.mp4",
+  "powder": "19.mp4",
+  "kao": "20.mp4",
+  "csak_veled": "21.mp4",
+  "klámstrákur": "22.mp4",
 }
