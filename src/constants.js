@@ -146,30 +146,6 @@ export const countryNameMap = {
   // ukraine: "Ukraine",
   // "united kingdom": "United Kingdom",
   // yugoslavia: "Yugoslavia",
-<<<<<<< HEAD
-  "varnice": "Varnice",
-  "lets_get_physical": "Lets Get Physical",
-  "aalbal": "Aalbal",
-  "mud_blood": "Mud Blood",
-  "amsterdam": "Amsterdam",
-  "hit_me": "Hit Me",
-  "geceler_kecir": "Geceler Kecir",
-  "strangers": "Strangers",
-  "gioventù_bruciata": "Gioventù Bruciata",
-  "traffic_lights": "Traffic Lights",
-  "i_will_love_again": "I Will Love Again",
-  "hayastani_axjikner": "Hayastani Axjikner",
-  "io_ti_aspetto": "Io ti aspetto",
-  "λόγια": "Lógia",
-  "living_it_up_tonight_(starlight)": " Living It Up Tonight (Starlight)",
-  "on_sest_aimé_à_cause": "On s'est aimé à cause",
-  "barrio": "Barrio",
-  "por_si_volvieras": "Por si volvieras",
-  "powder": "Powder",
-  "kao": "Kao",
-  "csak_veled": "Csak Veled",
-  "klámstrákur": "Klámstrákur",
-=======
   "varnice": "01 Varnice",
   "lets_get_physical": "02 Lets Get Physical",
   "aalbal": "03 Aalbal",
@@ -183,7 +159,7 @@ export const countryNameMap = {
   "i_will_love_again": "11 I Will Love Again",
   "hayastani_axjikner": "12 Hayastani Axjikner",
   "io_ti_aspetto": "13 Io ti aspetto",
-  "λόγια": "14 Λόγια",
+  "λόγια": "14 Lόgia",
   "living_it_up_tonight_(starlight)": "15 Living It Up Tonight (Starlight)",
   "on_sest_aimé_à_cause": "16 On s'est aimé à cause",
   "barrio": "17 Barrio",
@@ -192,7 +168,6 @@ export const countryNameMap = {
   "kao": "20 Kao",
   "csak_veled": "21 Csak Veled",
   "klámstrákur": "22 Klámstrákur",
->>>>>>> eb6c270f49a0adbb1cf5e6e08e65df9f93b481a5
 };
 
 export const countryFlagMap = {
