@@ -5,7 +5,7 @@ import countries, {
   edition_id,
   get_countries,
   magic_code,
-  num_of_qualifiers,
+  num_of_qualifiers, videomap,
 } from "./constants";
 import { envelopeImg, getFlagForCountry } from "./images";
 import ReactPlayer from "react-player";
@@ -139,9 +139,7 @@ export default class Results extends Component {
                             className="qualifier__revealed"
                             url={
                               process.env.PUBLIC_URL +
-                              "/video/" +
-                              value +
-                              ".mp4"
+                              "/video/" + videomap[value]
                             } //audioMap[value]}
                             controls={false}
                             playing={true}
