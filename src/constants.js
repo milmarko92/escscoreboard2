@@ -237,15 +237,16 @@ export function get_edtion_for_country(country) {
   return country_to_edition_map[country];
 }
 
-export const videomap = {"norway2021witchwoods": "1.mp4",
-"italy2021unmilionidicosadadirti": "2.mp4",
-"sweden2021littletot": "3.mp4",
-"france2021magique": "4.mp4",
-"norway2021nordlyset": "5.mp4",
-"estonia2021tartu": "6.mp4",
-"sweden2021onetouch": "7.mp4",
-"portugal2021namaisprofundasaudade": "8.mp4",
-"finland2021iloveyou": "9.mp4",
+export const videomap = {
+"norway2021witchwoods": "01.mp4",
+"italy2021unmilionidicosadadirti": "02.mp4",
+"sweden2021littletot": "03.mp4",
+"france2021magique": "04.mp4",
+"norway2021nordlyset": "05.mp4",
+"estonia2021tartu": "06.mp4",
+"sweden2021onetouch": "07.mp4",
+"portugal2021namaisprofundasaudade": "08.mp4",
+"finland2021iloveyou": "09.mp4",
 "albania2021pendese": "10.mp4",
 "croatia2021mazamisli": "11.mp4",
 "portugal2021volteface": "12.mp4",
