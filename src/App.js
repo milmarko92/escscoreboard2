@@ -8,6 +8,7 @@ import Setup from "./Setup";
 import Scoreboard from "./Scoreboard";
 import Vote from "./vote";
 import Results from "./Results";
+import Ranker from "./ranker";
 
 export default function App() {
     return (
@@ -25,6 +26,9 @@ export default function App() {
                     </Route>
                     <Route path="/result">
                         <Results />
+                    </Route>
+                    <Route path="/sort">
+                        <Ranker />
                     </Route>
                     <Route path="/">
                         <Setup />

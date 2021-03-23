@@ -32,6 +32,7 @@ export default class Results extends Component {
   }
 
   shuffle(array) {
+    return array
     var currentIndex = array.length,
       temporaryValue,
       randomIndex;
@@ -74,12 +75,13 @@ export default class Results extends Component {
       return;
     }
     var qualifiers = this.state["qualifiers"];
-    var num = Math.floor(Math.random() * num_of_qualifiers);
+    var num = 0; // Math.floor(Math.random() * num_of_qualifiers);
     var displayed = this.state["displayed"];
     while (
       this.array_contains(this.state["displayed"], qualifiers[num]) === true
     ) {
-      num = Math.floor(Math.random() * num_of_qualifiers);
+      num = num+ 1
+      // num = Math.floor(Math.random() * num_of_qualifiers);
     }
     displayed.push(qualifiers[num]);
     console.log(displayed);
@@ -93,7 +95,6 @@ export default class Results extends Component {
 
   all_countries() {
     return get_countries()
-      .sort()
       .map((value, index) => {
         const qualified = this.array_contains(this.state["strings"], value);
         let classname = "country country--small";
@@ -113,7 +114,7 @@ export default class Results extends Component {
 
   ett_resultat() {
     let resultclass = "results";
-    if (this.state["displayed"].length === 10) {
+    if (this.state["displayed"].length === num_of_qualifiers) {
       resultclass += " results--done";
     }
     return (
