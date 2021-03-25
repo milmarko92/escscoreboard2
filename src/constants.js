@@ -1,63 +1,7 @@
-export const countries = ["norway2021witchwoods",
-"italy2021unmilionidicosadadirti",
-"sweden2021littletot",
-"france2021magique",
-"norway2021nordlyset",
-"estonia2021tartu",
-"sweden2021onetouch",
-"portugal2021namaisprofundasaudade",
-"finland2021iloveyou",
-"albania2021pendese",
-"croatia2021mazamisli",
-"portugal2021volteface",
-"france2021bahnon",
-"sweden2021themissingpiece",
-"norway2021monument",
-"italy2021chiamamipernome",
-"bulgaria2021thefuneralsong",
-"sweden2021renaramadingdong",
-];
-
-export const countryNameMap = {"norway2021witchwoods": "Witch Woods",
-"italy2021unmilionidicosadadirti": "Un milioni di cosa da dirti",
-"sweden2021littletot": "Little Tot",
-"france2021magique": "Magique",
-"norway2021nordlyset": "Nordlyset",
-"estonia2021tartu": "Tartu",
-"sweden2021onetouch": "One Touch",
-"portugal2021namaisprofundasaudade": "Na mais profunda saudade",
-"finland2021iloveyou": "I Love You",
-"albania2021pendese": "Pendesë",
-"croatia2021mazamisli": "Ma zamisli",
-"portugal2021volteface": "VOLTE-FACE",
-"france2021bahnon": "Bah non",
-"sweden2021themissingpiece": "The Missing Piece",
-"norway2021monument": "Monument",
-"italy2021chiamamipernome": "Chiamami per nome",
-"bulgaria2021thefuneralsong": "The Funeral Song",
-"sweden2021renaramadingdong": "Rena Rama Ding Dong",
-};
-
-export const countryFlagMap = {"norway2021witchwoods": "norway.png",
-"italy2021unmilionidicosadadirti": "italy.png",
-"sweden2021littletot": "sweden.png",
-"france2021magique": "france.png",
-"norway2021nordlyset": "norway.png",
-"estonia2021tartu": "estonia.png",
-"sweden2021onetouch": "sweden.png",
-"portugal2021namaisprofundasaudade": "portugal.png",
-"finland2021iloveyou": "finland.png",
-"albania2021pendese": "albania.png",
-"croatia2021mazamisli": "croatia.png",
-"portugal2021volteface": "portugal.png",
-"france2021bahnon": "france.png",
-"sweden2021themissingpiece": "sweden.png",
-"norway2021monument": "norway.png",
-"italy2021chiamamipernome": "italy.png",
-"bulgaria2021thefuneralsong": "bulgaria.png",
-"sweden2021renaramadingdong": "sweden.png",
-};
-
+export const countries = ["sweden2021stillyoung","albania2021vashezo","france2021amourfou","norway2021ican'tescape","sweden2021bailabaila","finland2021kellemäsoitan","italy2021potevifaredipiù","france2021onamangélesoleil","albania2021nesevdes","lithuania2021home","israel2021uelala","sweden2021behöverintedigidag","norway2021letloose","france2021pourvuqu'onm'aime","belarus2021braids","sweden2021everyminute","italy2021voce","estonia2021magusmelanhoolia","france2021maeva",]
+export const countryNameMap = {"sweden2021stillyoung": "Still young","albania2021vashezo": "Vashëzo","france2021amourfou": "Amour fou","norway2021ican'tescape": "I can't escape","sweden2021bailabaila": "Baila baila","finland2021kellemäsoitan": "Kelle mä soitan","italy2021potevifaredipiù": "Potevi fare di più","france2021onamangélesoleil": "On a mangé le soleil","albania2021nesevdes": "Nëse vdes","lithuania2021home": "Home","israel2021uelala": "Ue la la","sweden2021behöverintedigidag": "Behöver inte dig idag","norway2021letloose": "Let loose","france2021pourvuqu'onm'aime": "Pourvu qu'on m'aime","belarus2021braids": "Braids","sweden2021everyminute": "Every minute","italy2021voce": "Voce","estonia2021magusmelanhoolia": "Magus melanhoolia","france2021maeva": "Maeva",}
+export const countryFlagMap = {"sweden2021stillyoung": "sweden.png","albania2021vashezo": "albania.png","france2021amourfou": "france.png","norway2021ican'tescape": "norway.png","sweden2021bailabaila": "sweden.png","finland2021kellemäsoitan": "finland.png","italy2021potevifaredipiù": "italy.png","france2021onamangélesoleil": "france.png","albania2021nesevdes": "albania.png","lithuania2021home": "lithuania.png","israel2021uelala": "israel.png","sweden2021behöverintedigidag": "sweden.png","norway2021letloose": "norway.png","france2021pourvuqu'onm'aime": "france.png","belarus2021braids": "belarus.png","sweden2021everyminute": "sweden.png","italy2021voce": "italy.png","estonia2021magusmelanhoolia": "estonia.png","france2021maeva": "france.png",}
+export const videomap = {"sweden2021stillyoung": "01.mp4","albania2021vashëzo": "02.mp4","france2021amourfou": "03.mp4","norway2021icantescape": "04.mp4","sweden2021bailabaila": "05.mp4","finland2021kellemäsoitan": "06.mp4","italy2021potevifaredipiù": "07.mp4","france2021onamangélesoleil": "08.mp4","albania2021nësevdes": "09.mp4","lithuania2021home": "10.mp4","israel2021uelala": "11.mp4","sweden2021behöverintedigidag": "12.mp4","norway2021letloose": "13.mp4","france2021pourvuquonmaime": "14.mp4","belarus2021braids": "15.mp4","sweden2021everyminute": "16.mp4","italy2021voce": "17.mp4","estonia2021magusmelanhoolia": "18.mp4","france2021maeva": "19.mp4",}
 export const rankToPointsMap = {
   1: 12,
   2: 10,
@@ -236,24 +180,3 @@ const country_to_edition_map = {
 export function get_edtion_for_country(country) {
   return country_to_edition_map[country];
 }
-
-export const videomap = {
-"norway2021witchwoods": "01.mp4",
-"italy2021unmilionidicosadadirti": "02.mp4",
-"sweden2021littletot": "03.mp4",
-"france2021magique": "04.mp4",
-"norway2021nordlyset": "05.mp4",
-"estonia2021tartu": "06.mp4",
-"sweden2021onetouch": "07.mp4",
-"portugal2021namaisprofundasaudade": "08.mp4",
-"finland2021iloveyou": "09.mp4",
-"albania2021pendese": "10.mp4",
-"croatia2021mazamisli": "11.mp4",
-"portugal2021volteface": "12.mp4",
-"france2021bahnon": "13.mp4",
-"sweden2021themissingpiece": "14.mp4",
-"norway2021monument": "15.mp4",
-"italy2021chiamamipernome": "16.mp4",
-"bulgaria2021thefuneralsong": "17.mp4",
-"sweden2021renaramadingdong": "18.mp4",
-};

@@ -75,13 +75,12 @@ export default class Results extends Component {
       return;
     }
     var qualifiers = this.state["qualifiers"];
-    var num = 0; // Math.floor(Math.random() * num_of_qualifiers);
+    var num = Math.floor(Math.random() * num_of_qualifiers);
     var displayed = this.state["displayed"];
     while (
       this.array_contains(this.state["displayed"], qualifiers[num]) === true
     ) {
-      num = num+ 1
-      // num = Math.floor(Math.random() * num_of_qualifiers);
+      num = Math.floor(Math.random() * num_of_qualifiers);
     }
     displayed.push(qualifiers[num]);
     console.log(displayed);
