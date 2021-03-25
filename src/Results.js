@@ -32,7 +32,6 @@ export default class Results extends Component {
   }
 
   shuffle(array) {
-    return array
     var currentIndex = array.length,
       temporaryValue,
       randomIndex;
@@ -75,6 +74,7 @@ export default class Results extends Component {
       return;
     }
     var qualifiers = this.state["qualifiers"];
+    console.log(qualifiers)
     var num = Math.floor(Math.random() * num_of_qualifiers);
     var displayed = this.state["displayed"];
     while (
@@ -83,7 +83,6 @@ export default class Results extends Component {
       num = Math.floor(Math.random() * num_of_qualifiers);
     }
     displayed.push(qualifiers[num]);
-    console.log(displayed);
     var strings = this.state["strings"];
     const entry = qualifiers[num]["entry"];
     strings[num] = entry;
