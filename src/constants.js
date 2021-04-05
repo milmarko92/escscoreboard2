@@ -1,6 +1,57 @@
-export const countries = ["sweden2000","serbia2013","portugal1964","slovenia2003","israel1988","italy2017","poland1996","belgium2000","cyprus1995","northmacedonia2016","unitedkingdom1991","norway2019","luxembourg1988","slovakia2012","switzerland1960","hungary1994","cyprus2021","luxembourg1970","ukraine2016","israel1977","croatia2019","greece1979","northmacedonia2009","azerbaijan2020",]
-export const countryNameMap = {"sweden2000": "Sweden 2000","serbia2013": "Serbia 2013","portugal1964": "Portugal 1964","slovenia2003": "Slovenia 2003","israel1988": "Israel 1988","italy2017": "Italy 2017","poland1996": "Poland 1996","belgium2000": "Belgium 2000","cyprus1995": "Cyprus 1995","northmacedonia2016": "North Macedonia 2016","unitedkingdom1991": "United Kingdom 1991","norway2019": "Norway 2019","luxembourg1988": "Luxembourg 1988","slovakia2012": "Slovakia 2012","switzerland1960": "Switzerland 1960","hungary1994": "Hungary 1994","cyprus2021": "Cyprus 2021","luxembourg1970": "Luxembourg 1970","ukraine2016": "Ukraine 2016","israel1977": "Israel 1977","croatia2019": "Croatia 2019","greece1979": "Greece 1979","northmacedonia2009": "North Macedonia 2009","azerbaijan2020": "Azerbaijan 2020",}
-export const countryFlagMap = {"sweden2000": "sweden.png","serbia2013": "serbia.png","portugal1964": "portugal.png","slovenia2003": "slovenia.png","israel1988": "israel.png","italy2017": "italy.png","poland1996": "poland.png","belgium2000": "belgium.png","cyprus1995": "cyprus.png","northmacedonia2016": "macedonia.png","unitedkingdom1991": "united-kingdom.png","norway2019": "norway.png","luxembourg1988": "luxembourg.png","slovakia2012": "slovakia.png","switzerland1960": "switzerland.png","hungary1994": "hungary.png","cyprus2021": "cyprus.png","luxembourg1970": "luxembourg.png","ukraine2016": "ukraine.png","israel1977": "israel.png","croatia2019": "croatia.png","greece1979": "greece.png","northmacedonia2009": "macedonia.png","azerbaijan2020": "azerbaijan.png",}
+export const countries = [
+    "lithuania",
+  "slovenia",
+  "russia",
+  "sweden",
+  "australia",
+  "macedonia",
+  "ireland",
+  "cyprus",
+  "norway",
+  "croatia",
+  "belgium",
+  "israel",
+  "romania",
+  "azerbaijan",
+  "ukraine",
+  "malta",]
+export const countryNameMap = {
+  "lithuania": "Lithuania",
+  "slovenia": "Slovenia",
+  "russia": "Russia",
+  "sweden": "Sweden",
+  "australia": "Australia",
+  "macedonia": "North Macedonia",
+  "ireland": "Ireland",
+  "cyprus": "Cyprus",
+  "norway": "Norway",
+  "croatia": "Croatia",
+  "belgium": "Belgium",
+  "israel": "Israel",
+  "romania": "Romania",
+  "azerbaijan": "Azerbaijan",
+  "ukraine": "Ukraine",
+  "malta": "Malta"
+  }
+export const countryFlagMap = {"lithuania": "lithuania.png" ,
+  "slovenia": "slovenia.png" ,
+  "russia": "russia.png" ,
+  "sweden": "sweden.png" ,
+  "australia": "australia.png" ,
+  "macedonia": "macedonia.png" ,
+  "ireland": "ireland.png" ,
+  "cyprus": "cyprus.png" ,
+  "norway": "norway.png" ,
+  "croatia": "croatia.png" ,
+  "belgium": "belgium.png" ,
+  "israel": "israel.png" ,
+  "romania": "romania.png" ,
+  "azerbaijan": "azerbaijan.png" ,
+  "ukraine": "ukraine.png" ,
+  "malta": "malta.png" ,
+  }
+
+  export const videomap = {}
 export const rankToPointsMap = {
   1: 12,
   2: 10,
@@ -72,7 +123,7 @@ export const magic_code = "raging";
 
 export default countries;
 
-export const currentEdition = "8";
+export const currentEdition = "10";
 
 const edition_map = {
   yugo: 10,
