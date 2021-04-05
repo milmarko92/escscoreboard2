@@ -33,7 +33,8 @@ export const countryNameMap = {
   "ukraine": "Ukraine",
   "malta": "Malta"
   }
-export const countryFlagMap = {"lithuania": "lithuania.png" ,
+export const countryFlagMap = {
+  "lithuania": "lithuania.png" ,
   "slovenia": "slovenia.png" ,
   "russia": "russia.png" ,
   "sweden": "sweden.png" ,
@@ -51,7 +52,24 @@ export const countryFlagMap = {"lithuania": "lithuania.png" ,
   "malta": "malta.png" ,
   }
 
-  export const videomap = {}
+  export const videomap = {
+    "lithuania": "lithuania.mov" ,
+    "slovenia": "slovenia.mov" ,
+    "russia": "russia.mov" ,
+    "sweden": "sweden.mov" ,
+    "australia": "australia.mov" ,
+    "macedonia": "macedonia.mov" ,
+    "ireland": "ireland.mov" ,
+    "cyprus": "cyprus.mov" ,
+    "norway": "norway.mov" ,
+    "croatia": "croatia.mov" ,
+    "belgium": "belgium.mov" ,
+    "israel": "israel.mov" ,
+    "romania": "romania.mov" ,
+    "azerbaijan": "azerbaijan.mov" ,
+    "ukraine": "ukraine.mov" ,
+    "malta": "malta.mov" ,
+  }
 export const rankToPointsMap = {
   1: 12,
   2: 10,
