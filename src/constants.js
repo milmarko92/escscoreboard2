@@ -84,7 +84,8 @@ export const all_voters = [
   "Vladan",
   "Wiv",
     "Jelena",
-    "Meg"
+    "Meg",
+    "Anthony"
 ];
 
 export const audioMap = {};
