@@ -83,7 +83,8 @@ export const all_voters = [
   "Victoria",
   "Vladan",
   "Wiv",
-    "Jelena"
+    "Jelena",
+    "Meg"
 ];
 
 export const audioMap = {};
