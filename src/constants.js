@@ -1,59 +1,6 @@
-export const countries = ["san_marino",
-  "estonia",
-  "czech_republic",
-  "greece",
-  "austria",
-  "poland",
-  "moldova",
-  "iceland",
-  "serbia",
-  "georgia",
-  "albania",
-  "portugal",
-  "bulgaria",
-  "finland",
-  "latvia",
-  "switzerland",
-  "denmark",]
-export const countryNameMap = {
-  "san_marino": "San Marino",
-  "estonia": "Estonia",
-  "czech_republic": "Czech Republic",
-  "greece": "Greece",
-  "austria": "Austria",
-  "poland": "Poland",
-  "moldova": "Moldova",
-  "iceland": "Iceland",
-  "serbia": "Serbia",
-  "georgia": "Georgia",
-  "albania": "Albania",
-  "portugal": "Portugal",
-  "bulgaria": "Bulgaria",
-  "finland": "Finland",
-  "latvia": "Latvia",
-  "switzerland": "Switzerland",
-  "denmark": "Denmark",
-  }
-export const countryFlagMap = {
-  "san_marino": "san-marino.png",
-  "estonia": "estonia.png",
-  "czech_republic": "czech-republic.png",
-  "greece": "greece.png",
-  "austria": "austria.png",
-  "poland": "poland.png",
-  "moldova": "moldova.png",
-  "iceland": "iceland.png",
-  "serbia": "serbia.png",
-  "georgia": "georgia.png",
-  "albania": "albania.png",
-  "portugal": "portugal.png",
-  "bulgaria": "bulgaria.png",
-  "finland": "finland.png",
-  "latvia": "latvia.png",
-  "switzerland": "switzerland.png",
-  "denmark": "denmark.png",
-  }
-
+export const countries = ["malta2021","spain2021","australia2021","belgium2021","ukraine2021","norway2021","france2021","moldova2021","russia2021","sanmarino2021","lithuania2021","israel2021","latvia2021","bulgaria2021","czechrepublic2021","serbia2021","germany2021","cyprus2021","finland2021","greece2021","iceland2021","uk2021","netherlands2021","croatia2021","switzerland2021","italy2021",]
+export const countryNameMap = {"malta2021": "Malta","spain2021": "Spain","australia2021": "Australia","belgium2021": "Belgium","ukraine2021": "Ukraine","norway2021": "Norway","france2021": "France","moldova2021": "Moldova","russia2021": "Russia","sanmarino2021": "San Marino","lithuania2021": "Lithuania","israel2021": "Israel","latvia2021": "Latvia","bulgaria2021": "Bulgaria","czechrepublic2021": "Czech  Republic","serbia2021": "Serbia","germany2021": "Germany","cyprus2021": "Cyprus","finland2021": "Finland","greece2021": "Greece","iceland2021": "Iceland","uk2021": "UK","netherlands2021": "Netherlands","croatia2021": "Croatia","switzerland2021": "Switzerland","italy2021": "Italy",}
+export const countryFlagMap = {"malta2021": "malta.png","spain2021": "spain.png","australia2021": "australia.png","belgium2021": "belgium.png","ukraine2021": "ukraine.png","norway2021": "norway.png","france2021": "france.png","moldova2021": "moldova.png","russia2021": "russia.png","sanmarino2021": "san-marino.png","lithuania2021": "lithuania.png","israel2021": "israel.png","latvia2021": "latvia.png","bulgaria2021": "bulgaria.png","czechrepublic2021": "czech-republic.png","serbia2021": "serbia.png","germany2021": "germany.png","cyprus2021": "cyprus.png","finland2021": "finland.png","greece2021": "greece.png","iceland2021": "iceland.png","uk2021": "united-kingdom.png","netherlands2021": "netherlands.png","croatia2021": "croatia.png","switzerland2021": "switzerland.png","italy2021": "italy.png",}
   export const videomap = {
   "san_marino": "san_marino.mov",
     "estonia": "estonia.mov",
@@ -136,6 +83,7 @@ export const all_voters = [
   "Victoria",
   "Vladan",
   "Wiv",
+    "Jelena"
 ];
 
 export const audioMap = {};
