@@ -9,18 +9,13 @@
   font-family: "Intro";
   src: url("fonts/Inter.ttf"); }
 
-@font-face {
-  font-family: "Crayon";
-  src: url("fonts/Crayon.ttf"); }
-
 body {
   margin: 0;
   padding: 0;
   background-position: center;
   font-family: "Gotham", sans-serif;
-  background-color: #303030;
+  background-color: #1e1e1e;
   color: white;
-  background-image: url("img/blackboard.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,21 +30,18 @@ body {
   padding: 64px 96px; }
 
 h1 {
-  font-size: 64px;
+  font-size: 40px;
   margin: 0;
   font-family: "Intro";
-  color: white;
-  background-color: black;
-  padding: 24px 24px 0;
+  color: #111;
+  background-color: #EC1D24;
+  padding: 24px;
   display: flex;
   align-items: center;
-  line-height: 1;
-  font-family: "Crayon";
-  font-weight: 400;
-  letter-spacing: 4px; }
+  line-height: 1; }
 
 .Voting {
-  background-color: #161616;
+  background-color: #040404;
   text-align: left;
   padding: 24px;
   display: flex;
@@ -58,7 +50,7 @@ h1 {
 
 .Voters {
   padding: 24px;
-  background-color: #161616; }
+  background-color: #040404; }
 
 .Ranking button {
   width: 100%;
@@ -93,14 +85,14 @@ h1 {
   font-size: 15px;
   margin: 0;
   position: relative;
-  background-color: #161616;
+  background-color: #040404;
   margin-bottom: 8px; }
 
 .country__rank {
   margin-left: auto;
   margin-right: 0;
   font-size: 13px;
-  color: #3d3d3d;
+  color: #2b2b2b;
   padding-top: 4px;
   display: inline-block; }
 
@@ -138,7 +130,7 @@ h1 {
   font-size: 10px;
   transition: 0.4s ease;
   margin: 0 0 4px;
-  background-color: #232323;
+  background-color: #111;
   color: white; }
 
 .country--small .country__rank {
@@ -177,7 +169,7 @@ h1 {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFF88' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23EC1D24' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
 
 .country--1 .country__current-rank, .country--2 .country__current-rank, .country--3 .country__current-rank {
   width: 36px;
@@ -191,34 +183,34 @@ h1 {
   font-weight: 700;
   z-index: 5;
   border: none;
-  background-color: #FFFF88;
-  color: black; }
+  background-color: #EC1D24;
+  color: #111; }
 
 .country--1 .country__current-rank + .country__flag, .country--2 .country__current-rank + .country__flag, .country--3 .country__current-rank + .country__flag {
   visibility: hidden; }
 
 .country--3 {
-  background-color: #FFFF88;
-  color: black; }
+  background-color: #EC1D24;
+  color: #111; }
 
 .country--3 .country__rank {
-  color: black; }
+  color: #111; }
 
 .country--3 .country__current-rank {
   background-color: white;
-  color: #232323; }
+  color: #111; }
 
 .country--3 .country__name {
-  color: black; }
+  color: #111; }
 
 .country--3 .country__name:after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23111' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3E%3C/svg%3E"); }
 
 .Scoreboard {
   display: flex;
   align-items: center;
   padding: 24px;
-  background-color: #232323; }
+  background-color: #111; }
 
 .Scoreboard > div {
   columns: 2;
@@ -228,7 +220,7 @@ h1 {
 button {
   appearance: none;
   border: none;
-  background-color: #0a0a0a;
+  background-color: black;
   color: white;
   font-family: "Gotham", sans-serif;
   padding: 6px 8px;
@@ -247,8 +239,8 @@ button:hover {
   cursor: pointer; }
 
 .Button--12 {
-  background-color: #FFFF88;
-  color: black; }
+  background-color: #EC1D24;
+  color: #111; }
 
 #picker {
   padding: 48px; }
@@ -284,7 +276,7 @@ button:hover {
   margin-top: 24px; }
 
 .vote {
-  background-color: #161616;
+  background-color: #040404;
   counter-increment: count;
   position: relative;
   padding: 4px 8px;
@@ -310,7 +302,7 @@ button:hover {
 
 .votingPanel {
   padding: 24px;
-  background-color: #232323;
+  background-color: #111;
   margin: 0 auto;
   counter-set: count;
   max-width: 480px; }
@@ -332,7 +324,7 @@ button:hover {
   padding: 8px 52px 6px 10px;
   border: none;
   border-radius: 0;
-  background-color: #ffff6f;
+  background-color: #dd1319;
   color: white;
   font-family: "Intro"; }
 
@@ -343,20 +335,20 @@ button:hover {
 .votingPanel .Dropdown-menu {
   border: none;
   font-size: 13px;
-  background-color: #0a0a0a; }
+  background-color: black; }
 
 .votingPanel .Dropdown-option {
   color: white;
   font-family: "Intro"; }
 
 .votingPanel .Dropdown-option:hover {
-  background-color: #FFFF88; }
+  background-color: #EC1D24; }
 
 .votingPanel .Dropdown-option.is-selected {
-  background-color: #232323; }
+  background-color: #111; }
 
 .votingPanel button {
-  background-color: #FFFF88;
+  background-color: #EC1D24;
   font-size: 16px;
   margin-top: 8px;
   width: 100%;
@@ -381,7 +373,7 @@ button:hover {
   font-size: 48px; }
 
 .results--done .results__qualifiers + button {
-  background-color: #161616;
+  background-color: #040404;
   font-size: 0;
   pointer-events: none; }
 
@@ -394,7 +386,7 @@ button:hover {
   column-gap: 8px; }
 
 .results__qualifiers + button {
-  background-color: #FFFF88;
+  background-color: #EC1D24;
   width: 100%;
   display: block;
   font-size: 16px;
@@ -410,7 +402,7 @@ button:hover {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 24px;
-  background-color: #232323;
+  background-color: #111;
   grid-row: 1 / 3; }
 
 .results__right h2 {
@@ -418,13 +410,13 @@ button:hover {
 
 .results__left {
   grid-row: 1 / 3;
-  background-color: #161616; }
+  background-color: #040404; }
 
 .results__video {
   overflow: hidden;
   grid-row: 1 / 2;
   height: 360px;
-  background-color: #FFFF88;
+  background-color: #EC1D24;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -442,7 +434,7 @@ button:hover {
 
 .results__countries .country {
   margin-bottom: 8px;
-  background-color: #232323; }
+  background-color: #111; }
 
 .results__countries .country__name {
   padding: 4px 0 2px;
