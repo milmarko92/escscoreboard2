@@ -1,76 +1,6 @@
-export const countries = [
-  "germany1971",
-  "portugal2014",
-  "poland2003",
-  "unitedkingdom1998",
-  "cyprus1981",
-  "portugal1967",
-  "ukraine2010",
-  "greece1992",
-  "poland1997",
-  "sweden1996",
-  "turkey1980",
-  "malta2000",
-  "france1959",
-  "slovenia1997",
-  "portugal1971",
-  "ireland1993",
-  "moldova2015",
-  "russia1994",
-  "greece1997",
-  "slovenia2001",
-  "germany1999",
-  "portugal2008",
-];
-export const countryNameMap = {
-  germany1971: "Germany 1971",
-  portugal2014: "Portugal 2014",
-  poland2003: "Poland 2003",
-  unitedkingdom1998: "United Kingdom 1998",
-  cyprus1981: "Cyprus 1981",
-  portugal1967: "Portugal 1967",
-  ukraine2010: "Ukraine 2010",
-  greece1992: "Greece 1992",
-  poland1997: "Poland 1997",
-  sweden1996: "Sweden 1996",
-  turkey1980: "Turkey 1980",
-  malta2000: "Malta 2000",
-  france1959: "France 1959",
-  slovenia1997: "Slovenia 1997",
-  portugal1971: "Portugal 1971",
-  ireland1993: "Ireland 1993",
-  moldova2015: "Moldova 2015",
-  russia1994: "Russia 1994",
-  greece1997: "Greece 1997",
-  slovenia2001: "Slovenia 2001",
-  germany1999: "Germany 1999",
-  portugal2008: "Portugal 2008",
-};
-export const countryFlagMap = {
-  germany1971: "germany.png",
-  portugal2014: "portugal.png",
-  poland2003: "poland.png",
-  unitedkingdom1998: "united-kingdom.png",
-  cyprus1981: "cyprus.png",
-  portugal1967: "portugal.png",
-  ukraine2010: "ukraine.png",
-  greece1992: "greece.png",
-  poland1997: "poland.png",
-  sweden1996: "sweden.png",
-  turkey1980: "turkey.png",
-  malta2000: "malta.png",
-  france1959: "france.png",
-  slovenia1997: "slovenia.png",
-  portugal1971: "portugal.png",
-  ireland1993: "ireland.png",
-  moldova2015: "moldova.png",
-  russia1994: "russia.png",
-  greece1997: "greece.png",
-  slovenia2001: "slovenia.png",
-  germany1999: "germany.png",
-  portugal2008: "portugal.png",
-};
-
+export const countries = ["coolmedown","jutro","cry","randäjad","statements","mojotsvet","stay","lamoreefemmina","onitgoes","showmeheaven","chiamamipernome","cantapormim","pameaptinarhi","nononever","mëmerrnëëndërr","soldi","rockintheride","quedateconmigo","iflovewasacrime","mudblood","mojaštikla","glorious","shegotme","wildchild",]
+export const countryNameMap = {"coolmedown": "Cool Me Down","jutro": "Jutro","cry": "Cry","randäjad": "Randäjad","statements": "Statements","mojotsvet": "Mojot svet","stay": "Stay","lamoreefemmina": "L'amore e femmina","onitgoes": "On It Goes","showmeheaven": "Show Me Heaven","chiamamipernome": "Chiamami per nome","cantapormim": "Canta por mim","pameaptinarhi": "Pame ap' tin arhi","nononever": "No No Never","mëmerrnëëndërr": "Më merr në ëndërr","soldi": "Soldi","rockintheride": "Rockin' the Ride","quedateconmigo": "Quedate conmigo","iflovewasacrime": "If Love Was a Crime","mudblood": "Mud Blood","mojaštikla": "Moja štikla","glorious": "Glorious","shegotme": "She Got Me","wildchild": "Wild Child",}
+export const countryFlagMap = {"coolmedown": "poland.png","jutro": "serbia and montenegro.png","cry": "sweden.png","randäjad": "estonia.png","statements": "sweden.png","mojotsvet": "macedonia.png","stay": "norway.png","lamoreefemmina": "italy.png","onitgoes": "finland.png","showmeheaven": "sweden.png","chiamamipernome": "italy.png","cantapormim": "portugal.png","pameaptinarhi": "cyprus.png","nononever": "germany.png","mëmerrnëëndërr": "albania.png","soldi": "italy.png","rockintheride": "sweden.png","quedateconmigo": "spain.png","iflovewasacrime": "bulgaria.png","mudblood": "belgium.png","mojaštikla": "croatia.png","glorious": "germany.png","shegotme": "switzerland.png","wildchild": "sweden.png",}
 export const rankToPointsMap = {
   1: 12,
   2: 10,
@@ -146,7 +76,7 @@ export const magic_code = "raging";
 
 export default countries;
 
-export const currentEdition = "11";
+export const currentEdition = "13";
 
 const edition_map = {
   yugo: 10,
